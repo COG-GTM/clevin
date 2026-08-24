@@ -1,0 +1,24 @@
+{
+  "name": "clevin",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.23.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "format": "biome format --write package.json pnpm-workspace.yaml tsconfig.base.json biome.json packages",
+    "format:check": "biome format package.json pnpm-workspace.yaml tsconfig.base.json biome.json packages",
+    "lint": "biome lint package.json pnpm-workspace.yaml tsconfig.base.json biome.json packages && pnpm --filter @clevin/provision typecheck",
+    "test": "pnpm --filter @clevin/provision test",
+    "typecheck": "pnpm --filter @clevin/provision typecheck",
+    "verify": "pnpm format:check && pnpm lint && pnpm test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.2",
+    "@types/node": "24.3.0",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
+  }
+}

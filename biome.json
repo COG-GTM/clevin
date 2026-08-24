@@ -1,0 +1,31 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+  "files": {
+    "includes": [
+      "**",
+      "!!node_modules",
+      "!!packages/provision/node_modules",
+      "!!runtime/.venv",
+      "!!runtime/uv.lock",
+      "!!runtime/dist",
+      "!!.mypy_cache",
+      "!!.pytest_cache",
+      "!!.ruff_cache",
+      "!!runtime/.pytest_cache",
+      "!!runtime/.ruff_cache",
+      "!!runtime/src/clevin_runtime/__pycache__",
+      "!!runtime/tests/__pycache__"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    }
+  }
+}
