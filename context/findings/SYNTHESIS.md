@@ -130,6 +130,25 @@ What caps the ceiling (irreducible D, or C with model-dependent behaviour):
    are model-dependent C, not platform A.
 5. **No browser/Computer Use** — the tool types are rejected outright (pre-verified D).
 
+```text
+                Devin                          Managed Agents ceiling
+  ┌─────────────────────────────┐        ┌─────────────────────────────┐
+  │ LIFECYCLE LAYER             │        │ LIFECYCLE LAYER             │
+  │  webhook wake (seconds) ────┼──►     │  cron polling (≥60 s), D    │
+  │  crash detect + re-dispatch │        │  dead worker strands run, D │
+  │  session fork / checkpoint  │        │  no fork/clone/snapshot, D  │
+  │  scoped knowledge push      │        │  model greps the mount, C   │
+  ├─────────────────────────────┤        ├─────────────────────────────┤
+  │ EXECUTION LAYER             │        │ EXECUTION LAYER             │
+  │  sandboxed multi-hour runs  │  ≈     │  sessions + volume, A/B     │
+  │  steering / ask-and-block   │  ≈     │  interrupt + custom tool, A/B│
+  │  delegation (nested)        │  ~     │  subagents (depth 1), A     │
+  │  agent config as code       │  ≈     │  immutable versions, A      │
+  │  cost accounting            │  ≈     │  usage + per-thread cost, A │
+  └─────────────────────────────┘        └─────────────────────────────┘
+        ≈ at parity   ~ partial   D = missing primitive, forbidden to rebuild
+```
+
 Distance to Devin, in one sentence: Managed Agents can natively reproduce Devin's *execution*
 (sandboxed multi-hour coding with steering, delegation, scheduling, and accounting) but not
 Devin's *lifecycle* — the always-on, event-woken, crash-recovering, knowledge-primed loop around
