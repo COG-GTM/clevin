@@ -1,0 +1,353 @@
+{
+  "session_id": "sesn_01YDmDJtbTgYkhXRisHri7XZ",
+  "collected_at": "2026-08-28T04:41:53.918582+00:00",
+  "correlation_keys": {
+    "agent_id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+    "agent_version": 1,
+    "model": {
+      "id": "claude-haiku-4-5-20251001",
+      "effort": null,
+      "inference_geo": null,
+      "speed": "standard"
+    },
+    "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+    "deployment_id": null,
+    "metadata": {
+      "case": "c3-kill-before",
+      "experiment": "clevin-swarm-C"
+    },
+    "status": "idle",
+    "resources": []
+  },
+  "event_counts": {
+    "agent.message": 1,
+    "agent.thinking": 1,
+    "agent.tool_use": 1,
+    "session.status_idle": 2,
+    "session.status_running": 2,
+    "session.thread_status_idle": 2,
+    "session.thread_status_running": 2,
+    "session.usage": 2,
+    "span.model_request_end": 2,
+    "span.model_request_start": 2,
+    "user.message": 1,
+    "user.tool_result": 1
+  },
+  "event_total": 19,
+  "status_transitions": [
+    {
+      "type": "session.status_running",
+      "at": "2026-08-28T02:35:17.402650Z",
+      "session_thread_id": null,
+      "agent_name": null,
+      "stop_reason": null
+    },
+    {
+      "type": "session.thread_status_running",
+      "at": "2026-08-28T02:35:17.813410Z",
+      "session_thread_id": "sthr_01Sx2iwDTaX6UYqzCczaxy6i",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "stop_reason": null
+    },
+    {
+      "type": "session.thread_status_idle",
+      "at": "2026-08-28T02:35:19.420167Z",
+      "session_thread_id": "sthr_01Sx2iwDTaX6UYqzCczaxy6i",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_0197CcGssxZMPjyPBCmrjKjC"
+        ],
+        "type": "requires_action"
+      }
+    },
+    {
+      "type": "session.status_idle",
+      "at": "2026-08-28T02:35:19.420169Z",
+      "session_thread_id": null,
+      "agent_name": null,
+      "stop_reason": {
+        "event_ids": [
+          "sevt_0197CcGssxZMPjyPBCmrjKjC"
+        ],
+        "type": "requires_action"
+      }
+    },
+    {
+      "type": "session.status_running",
+      "at": "2026-08-28T02:42:26.885041Z",
+      "session_thread_id": null,
+      "agent_name": null,
+      "stop_reason": null
+    },
+    {
+      "type": "session.thread_status_running",
+      "at": "2026-08-28T02:42:26.885042Z",
+      "session_thread_id": "sthr_01Sx2iwDTaX6UYqzCczaxy6i",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "stop_reason": null
+    },
+    {
+      "type": "session.thread_status_idle",
+      "at": "2026-08-28T02:42:28.301200Z",
+      "session_thread_id": "sthr_01Sx2iwDTaX6UYqzCczaxy6i",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "stop_reason": {
+        "type": "end_turn"
+      }
+    },
+    {
+      "type": "session.status_idle",
+      "at": "2026-08-28T02:42:28.301202Z",
+      "session_thread_id": null,
+      "agent_name": null,
+      "stop_reason": {
+        "type": "end_turn"
+      }
+    }
+  ],
+  "model_spans": [
+    {
+      "start_event_id": "sevt_01YDih7MffF1yEG7nJW7uihM",
+      "end_event_id": "sevt_018kBP545C4qxxG4SidHFhd8",
+      "started_at": "2026-08-28T02:35:17.885708Z",
+      "ended_at": "2026-08-28T02:35:19.271683Z",
+      "latency_s": 1.3859748840332031,
+      "is_error": false,
+      "input_tokens": 10,
+      "output_tokens": 116,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5364,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_01Lx8tKsTdtfUzK3A9Eo6Apw",
+      "end_event_id": "sevt_01EbZPKcNNFmfT64uJh4mPDT",
+      "started_at": "2026-08-28T02:42:26.966471Z",
+      "ended_at": "2026-08-28T02:42:28.193302Z",
+      "latency_s": 1.2268309593200684,
+      "is_error": false,
+      "input_tokens": 7,
+      "output_tokens": 42,
+      "cache_creation_input_tokens": 5522,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool_use_id": "sevt_0197CcGssxZMPjyPBCmrjKjC",
+      "name": "bash",
+      "kind": "agent.tool_use",
+      "result_kind": "user.tool_result",
+      "requested_at": "2026-08-28T02:35:19.271682Z",
+      "completed_at": "2026-08-28T02:42:26.798996Z",
+      "latency_s": 427.5273139476776,
+      "is_error": true,
+      "result_bytes": 95,
+      "session_thread_id": null,
+      "input_keys": [
+        "command"
+      ]
+    }
+  ],
+  "compactions": [],
+  "errors": [],
+  "threads": [
+    {
+      "id": "sthr_01Sx2iwDTaX6UYqzCczaxy6i",
+      "parent_thread_id": null,
+      "agent": {
+        "id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+        "description": "Temporary workstream C reliability/tool-surface harness agent.",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-haiku-4-5-20251001",
+          "effort": null,
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-C-20260828T021326Z-63059d",
+        "skills": [],
+        "system": "You are a reliability test harness agent. You run inside a self-hosted sandbox with native bash and filesystem tools.\n\nRules:\n- Do exactly what the user message asks, using the fewest tool calls possible.\n- Never use git, never touch anything outside /workspace, never inspect or print environment variables, and never modify external state.\n- When a tool call fails, report the failure verbatim in one short sentence, then decide: retry once only if the error looks transient, otherwise stop and explain.\n- Keep your prose replies to at most three short sentences.\n",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "status": "idle",
+      "created_at": "2026-08-28T02:35:16.863019Z",
+      "stats": {
+        "active_seconds": 2.742,
+        "duration_seconds": 7595.009736785,
+        "startup_seconds": 0.0
+      },
+      "list_cost_usd": 0.01,
+      "usage": {
+        "active_seconds": 2.742,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5522
+        },
+        "cache_read_input_tokens": 5364,
+        "input_tokens": 17,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 158,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "event_counts": {
+        "agent.message": 1,
+        "agent.thinking": 1,
+        "agent.tool_use": 1,
+        "session.status_idle": 2,
+        "session.status_running": 2,
+        "session.thread_status_idle": 2,
+        "session.thread_status_running": 2,
+        "session.usage": 2,
+        "span.model_request_end": 2,
+        "span.model_request_start": 2,
+        "user.message": 1,
+        "user.tool_result": 1
+      },
+      "event_count": 19
+    }
+  ],
+  "usage_snapshots": [
+    {
+      "at": "2026-08-28T02:35:19.420168Z",
+      "list_cost_usd": 0.0,
+      "input_tokens": 10,
+      "output_tokens": 116,
+      "cache_read_input_tokens": 5364,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "active_seconds": 1.825,
+      "budget_usd": 1.0
+    },
+    {
+      "at": "2026-08-28T02:42:28.301201Z",
+      "list_cost_usd": 0.01,
+      "input_tokens": 17,
+      "output_tokens": 158,
+      "cache_read_input_tokens": 5364,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 5522
+      },
+      "active_seconds": 3.528,
+      "budget_usd": 1.0
+    }
+  ],
+  "work_items": [
+    {
+      "work_id": "sesn_01YDmDJtbTgYkhXRisHri7XZ",
+      "state": "stopped",
+      "created_at": "2026-08-28T02:35:16.970882Z",
+      "acknowledged_at": "2026-08-28T02:35:17.755418Z",
+      "started_at": "2026-08-28T02:35:17.152335Z",
+      "stopped_at": "2026-08-28T02:41:18.777364Z",
+      "stop_requested_at": "2026-08-28T02:41:18.777364Z",
+      "latest_heartbeat_at": "2026-08-28T02:35:18.073552Z",
+      "metadata": {},
+      "data_keys": [
+        "id",
+        "type"
+      ]
+    }
+  ],
+  "work_stats": {
+    "depth": 0,
+    "oldest_queued_at": null,
+    "pending": 0,
+    "type": "work_queue_stats",
+    "workers_polling": 2
+  },
+  "sandbox": {
+    "sandboxes": [
+      {
+        "id": "sb-aMJS9gYX270pQQEsi22IVa",
+        "poll": null
+      },
+      {
+        "id": "sb-EJZ7GdAuEZOousWzOUsu7y",
+        "poll": null
+      }
+    ],
+    "volume_files": [],
+    "errors": [
+      "sandbox from_name: NotFoundError: Sandbox not found",
+      "volume listdir: path \"/sessions/sesn_01YDmDJtbTgYkhXRisHri7XZ\" does not exist"
+    ],
+    "volume_id": "vo-uj5BUIG4br5MnRYO6cyHbV"
+  },
+  "economics": {
+    "session_list_cost_usd": 0.01,
+    "thread_list_cost_usd": {
+      "sthr_01Sx2iwDTaX6UYqzCczaxy6i": 0.01
+    },
+    "thread_list_cost_sum_usd": 0.01,
+    "session_minus_thread_sum_usd": 0.0,
+    "session_usage_tokens": {
+      "input": 17,
+      "output": 158,
+      "cache_read": 5364,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 5522
+      }
+    },
+    "span_token_sums": {
+      "input": 17,
+      "output": 158,
+      "cache_read": 5364,
+      "cache_creation": 5522,
+      "spans": 2
+    },
+    "prompt_cache_read_fraction_of_input": 0.492,
+    "active_seconds": 3.683,
+    "stats": {
+      "active_seconds": 2.742,
+      "duration_seconds": 7594.632262261
+    },
+    "budget_usd": 1.0,
+    "final_usage_snapshot_usd": 0.01,
+    "usage_snapshot_count": 2
+  },
+  "staleness": {
+    "pending_tool_uses": [],
+    "last_idle_stop_reason": {
+      "type": "end_turn"
+    },
+    "work_item_heartbeats": [
+      {
+        "work_id": "sesn_01YDmDJtbTgYkhXRisHri7XZ",
+        "state": "stopped",
+        "latest_heartbeat_at": "2026-08-28T02:35:18.073552Z",
+        "heartbeat_age_s": 7595.845
+      }
+    ],
+    "native_alert_exists": false
+  },
+  "compaction_windows": [],
+  "gaps": []
+}

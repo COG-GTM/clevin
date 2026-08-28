@@ -1,0 +1,3100 @@
+{
+  "profile": "fleet",
+  "run_id": "20260828T043112Z-0de729",
+  "started_at": "2026-08-28T04:31:12.953474+00:00",
+  "observations": {
+    "rows": [
+      {
+        "session_id": "sesn_01RqxhRcrt9veLo3zuaV5sNy",
+        "created_at": "2026-08-28T04:30:48.442656Z",
+        "agent_id": "agent_01TQFVVP7r2YFAZuwzKyxSrB",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "arm": "b0_smoke_known_env",
+          "experiment": "clevin-swarm-B"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 12.64,
+        "input_tokens": 48,
+        "output_tokens": 605,
+        "cache_read_input_tokens": 41041,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_015ikak6ZguvnYVSo2fbBqqE",
+        "created_at": "2026-08-28T04:28:38.641410Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-I",
+          "label": "chain",
+          "run_id": "20260828T042838Z-c590d7"
+        },
+        "list_cost_usd": 0.11,
+        "active_seconds": 17.751,
+        "input_tokens": 12,
+        "output_tokens": 929,
+        "cache_read_input_tokens": 46723,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01CqH9wfNkgaHRYp7w1NtebR",
+        "created_at": "2026-08-28T04:28:34.972415Z",
+        "agent_id": "agent_01RuXj6Dy5vPWPfjGsjwtf7Y",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-I",
+          "label": "coordinator",
+          "run_id": "20260828T042833Z-3ccc18"
+        },
+        "list_cost_usd": 0.04,
+        "active_seconds": 15.224,
+        "input_tokens": 90,
+        "output_tokens": 1400,
+        "cache_read_input_tokens": 63197,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_011bF2YLtCVW7zq1hFf55q2K",
+        "created_at": "2026-08-28T04:28:08.975931Z",
+        "agent_id": "agent_01FYSveaZwz77XKcjcU6UcqD",
+        "agent_version": 1,
+        "status": "running",
+        "metadata": {
+          "arm": "b0_smoke",
+          "experiment": "clevin-swarm-B"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 184.093,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01NZifrgVqJzXzvfQTomUpZn",
+        "created_at": "2026-08-28T04:27:15.973768Z",
+        "agent_id": "agent_01Jmzj5kG84xYxwvQM8KTfsq",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {},
+        "list_cost_usd": 0.01,
+        "active_seconds": 1.422,
+        "input_tokens": 10,
+        "output_tokens": 59,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01CQUg61Qfj2bsu7AJ7fmHva",
+        "created_at": "2026-08-28T02:35:52.141564Z",
+        "agent_id": "agent_01LmcBtVuGbY15A5ZTkMeMio",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "ladder",
+          "run_id": "20260828T023550Z-01304e"
+        },
+        "list_cost_usd": 2.2,
+        "active_seconds": 406.533,
+        "input_tokens": 72,
+        "output_tokens": 33668,
+        "cache_read_input_tokens": 2608729,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01YDmDJtbTgYkhXRisHri7XZ",
+        "created_at": "2026-08-28T02:35:16.863019Z",
+        "agent_id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "case": "c3-kill-before",
+          "experiment": "clevin-swarm-C"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 3.683,
+        "input_tokens": 17,
+        "output_tokens": 158,
+        "cache_read_input_tokens": 5364,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01P5Lp1vYb35AuQJ8KvCSRWR",
+        "created_at": "2026-08-28T02:35:10.726952Z",
+        "agent_id": "agent_01M2mpYh2zVJmzXkAqmsD8Eo",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 25.81,
+        "active_seconds": 381.051,
+        "input_tokens": 2925,
+        "output_tokens": 1281,
+        "cache_read_input_tokens": 22397669,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01MAZLV4KdpbScoEA5xuZBz8",
+        "created_at": "2026-08-28T02:32:15.929191Z",
+        "agent_id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "case": "c3-kill-before",
+          "experiment": "clevin-swarm-C"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 2.954,
+        "input_tokens": 16,
+        "output_tokens": 142,
+        "cache_read_input_tokens": 5364,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_018bpVLdhxdQQZcx2eBWKUwY",
+        "created_at": "2026-08-28T02:31:27.175002Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k6-tool-inventory"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 9.451,
+        "input_tokens": 2,
+        "output_tokens": 649,
+        "cache_read_input_tokens": 8624,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01Jy86D3hNf355XH1sCbVRGL",
+        "created_at": "2026-08-28T02:30:55.925203Z",
+        "agent_id": "agent_01GBQVuUNEoj586T9bqm4cGm",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "oversize_run2",
+          "run_id": "20260828T023054Z-dee9a3"
+        },
+        "list_cost_usd": 0.14,
+        "active_seconds": 24.823,
+        "input_tokens": 14,
+        "output_tokens": 1267,
+        "cache_read_input_tokens": 58069,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01Tzf6vpydSG7t7uMvfBoZPv",
+        "created_at": "2026-08-28T02:30:55.878127Z",
+        "agent_id": "agent_01GBQVuUNEoj586T9bqm4cGm",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "oversize_run3",
+          "run_id": "20260828T023054Z-dee9a3"
+        },
+        "list_cost_usd": 0.14,
+        "active_seconds": 26.888,
+        "input_tokens": 14,
+        "output_tokens": 1497,
+        "cache_read_input_tokens": 56216,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01VXQxidKWMXbmaqZAdFRube",
+        "created_at": "2026-08-28T02:30:55.848913Z",
+        "agent_id": "agent_01GBQVuUNEoj586T9bqm4cGm",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "oversize_run1",
+          "run_id": "20260828T023054Z-dee9a3"
+        },
+        "list_cost_usd": 0.13,
+        "active_seconds": 23.976,
+        "input_tokens": 14,
+        "output_tokens": 1248,
+        "cache_read_input_tokens": 56061,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_0161m9EimLWXnxg5qtDKRTv9",
+        "created_at": "2026-08-28T02:29:54.551037Z",
+        "agent_id": "agent_013o9MCYrsZ6Ft9bDNt1QTj7",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "roster_run1",
+          "run_id": "20260828T022953Z-ac084d"
+        },
+        "list_cost_usd": 1.4,
+        "active_seconds": 671.554,
+        "input_tokens": 68,
+        "output_tokens": 59417,
+        "cache_read_input_tokens": 693330,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_0161PG75UDTV5tKLzWh2LqHN",
+        "created_at": "2026-08-28T02:29:54.513952Z",
+        "agent_id": "agent_013o9MCYrsZ6Ft9bDNt1QTj7",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "roster_run3",
+          "run_id": "20260828T022953Z-ac084d"
+        },
+        "list_cost_usd": 1.48,
+        "active_seconds": 1046.91,
+        "input_tokens": 82,
+        "output_tokens": 68016,
+        "cache_read_input_tokens": 1052971,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01QwCmkKyiZbWESbX28SQpJc",
+        "created_at": "2026-08-28T02:29:54.510038Z",
+        "agent_id": "agent_013o9MCYrsZ6Ft9bDNt1QTj7",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "roster_run2",
+          "run_id": "20260828T022953Z-ac084d"
+        },
+        "list_cost_usd": 1.53,
+        "active_seconds": 785.352,
+        "input_tokens": 64,
+        "output_tokens": 71807,
+        "cache_read_input_tokens": 829020,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_018idkR9XWbz1N8ghfmLjnCx",
+        "created_at": "2026-08-28T02:29:54.503914Z",
+        "agent_id": "agent_01BeZR83srbYz9vtTHbEmCMk",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "solo_run3",
+          "run_id": "20260828T022953Z-ac084d"
+        },
+        "list_cost_usd": 1.21,
+        "active_seconds": 643.793,
+        "input_tokens": 38,
+        "output_tokens": 24757,
+        "cache_read_input_tokens": 603648,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01Q1Z8EKv8XhFeJJnB4ydL8h",
+        "created_at": "2026-08-28T02:29:54.494599Z",
+        "agent_id": "agent_01BeZR83srbYz9vtTHbEmCMk",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "solo_run2",
+          "run_id": "20260828T022953Z-ac084d"
+        },
+        "list_cost_usd": 0.54,
+        "active_seconds": 197.204,
+        "input_tokens": 20,
+        "output_tokens": 13639,
+        "cache_read_input_tokens": 160207,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01EHYeCmMn5UYgcszjnamqHb",
+        "created_at": "2026-08-28T02:29:54.483791Z",
+        "agent_id": "agent_01BeZR83srbYz9vtTHbEmCMk",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "solo_run1",
+          "run_id": "20260828T022953Z-ac084d"
+        },
+        "list_cost_usd": 1.11,
+        "active_seconds": 652.711,
+        "input_tokens": 48,
+        "output_tokens": 23728,
+        "cache_read_input_tokens": 602325,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+        "created_at": "2026-08-28T02:29:48.946919Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k2-ask-and-block"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 8.938,
+        "input_tokens": 8,
+        "output_tokens": 419,
+        "cache_read_input_tokens": 36807,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01TkUCM7ZQ6Qte5ZWum1qYFz",
+        "created_at": "2026-08-28T02:29:08.347328Z",
+        "agent_id": "agent_01YFyrU3fDGToypHKMM8VQDF",
+        "agent_version": 2,
+        "status": "idle",
+        "metadata": {
+          "probe": "08",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 3.576,
+        "input_tokens": 1,
+        "output_tokens": 174,
+        "cache_read_input_tokens": 4613,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_011BjJkiV67A5az7yyVVZy1c",
+        "created_at": "2026-08-28T02:28:35.299980Z",
+        "agent_id": "agent_01YFyrU3fDGToypHKMM8VQDF",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "08",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 7.499,
+        "input_tokens": 3,
+        "output_tokens": 386,
+        "cache_read_input_tokens": 13219,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_012kf3UKyKjg3KVtmf3Muozk",
+        "created_at": "2026-08-28T02:28:31.338572Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "09",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 3.0,
+        "active_seconds": 142.234,
+        "input_tokens": 50,
+        "output_tokens": 5378,
+        "cache_read_input_tokens": 7443776,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01HibtefzcKjxrNmPBYZ4iLv",
+        "created_at": "2026-08-28T02:28:22.345429Z",
+        "agent_id": "agent_01XoUwd12Zf1CmLvck4UVy5D",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 23.27,
+        "active_seconds": 323.79,
+        "input_tokens": 2951,
+        "output_tokens": 1529,
+        "cache_read_input_tokens": 24221989,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01UdP9MhwNwnGRZsSiZmhuPo",
+        "created_at": "2026-08-28T02:28:01.488665Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k6-replay-nomemory"
+        },
+        "list_cost_usd": 0.17,
+        "active_seconds": 68.885,
+        "input_tokens": 16,
+        "output_tokens": 4253,
+        "cache_read_input_tokens": 78808,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01EC7pdWNdtPewNAg6NomHRh",
+        "created_at": "2026-08-28T02:27:59.806461Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k5c-skill-discovery-prompt"
+        },
+        "list_cost_usd": 0.07,
+        "active_seconds": 11.149,
+        "input_tokens": 8,
+        "output_tokens": 731,
+        "cache_read_input_tokens": 32233,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01DgUi228gLuUsRWb7eRrSPa",
+        "created_at": "2026-08-28T02:26:57.960972Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k6-replay-memory"
+        },
+        "list_cost_usd": 0.12,
+        "active_seconds": 45.078,
+        "input_tokens": 12,
+        "output_tokens": 2489,
+        "cache_read_input_tokens": 68839,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01PsohyYFdjmboRbQRHHMHBQ",
+        "created_at": "2026-08-28T02:26:41.039680Z",
+        "agent_id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "case": "c3-kill-before",
+          "experiment": "clevin-swarm-C"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.938,
+        "input_tokens": 10,
+        "output_tokens": 129,
+        "cache_read_input_tokens": 4983,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01ApSEqWounmC9MbY1RvYWDi",
+        "created_at": "2026-08-28T02:26:40.776029Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k5b-skill-discovery"
+        },
+        "list_cost_usd": 0.11,
+        "active_seconds": 29.597,
+        "input_tokens": 8,
+        "output_tokens": 2448,
+        "cache_read_input_tokens": 40011,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_012V47pgxTBb3oF2KvkAcDfJ",
+        "created_at": "2026-08-28T02:25:49.810325Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "07",
+          "swarm_workstream": "E",
+          "variant": "narrow_2_entries"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 10.059,
+        "input_tokens": 5,
+        "output_tokens": 463,
+        "cache_read_input_tokens": 22429,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01WXVMGEntCvc7ECRQwFMxXD",
+        "created_at": "2026-08-28T02:25:27.158265Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "07",
+          "swarm_workstream": "E",
+          "variant": "wide_200_entries"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 10.451,
+        "input_tokens": 5,
+        "output_tokens": 505,
+        "cache_read_input_tokens": 22892,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01YKYpyVmLzgS8zMm1KD3JX3",
+        "created_at": "2026-08-28T02:25:08.853821Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k3-poll"
+        },
+        "list_cost_usd": 0.25,
+        "active_seconds": 23.788,
+        "input_tokens": 12,
+        "output_tokens": 1252,
+        "cache_read_input_tokens": 336396,
+        "deployment_id": "depl_0118D9QiqeNRZPN5FUEocguk"
+      },
+      {
+        "session_id": "sesn_0118gtfxnEj121tEkCYY2QqQ",
+        "created_at": "2026-08-28T02:25:08.078311Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k6-seed-write"
+        },
+        "list_cost_usd": 0.29,
+        "active_seconds": 97.568,
+        "input_tokens": 26,
+        "output_tokens": 5198,
+        "cache_read_input_tokens": 160362,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01ExdTWVu3EowammKKQVZWHd",
+        "created_at": "2026-08-28T02:24:45.939453Z",
+        "agent_id": "agent_012tf8W93K9NiMW2wR2nLZ9G",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 12.71,
+        "active_seconds": 145.946,
+        "input_tokens": 1833,
+        "output_tokens": 877,
+        "cache_read_input_tokens": 10547780,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_018vc8k6kxfYnG8Jr9zZxSnQ",
+        "created_at": "2026-08-28T02:24:26.878997Z",
+        "agent_id": "agent_01JG15oTwARP4rLDaW3yk2sg",
+        "agent_version": 2,
+        "status": "idle",
+        "metadata": {
+          "probe": "08",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 2.864,
+        "input_tokens": 1,
+        "output_tokens": 161,
+        "cache_read_input_tokens": 4613,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01Tejtb1ayCa8SuU1TmSaW4U",
+        "created_at": "2026-08-28T02:24:19.155367Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k5-v1-repinned"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 12.649,
+        "input_tokens": 2,
+        "output_tokens": 835,
+        "cache_read_input_tokens": 8831,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01KnXPNRV9rSxWEj5BKURjJM",
+        "created_at": "2026-08-28T02:24:06.779369Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k5-v2-latest"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 8.434,
+        "input_tokens": 2,
+        "output_tokens": 531,
+        "cache_read_input_tokens": 8831,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01QcaxdXYJ1QyNsJsnw38nfS",
+        "created_at": "2026-08-28T02:24:05.753595Z",
+        "agent_id": "agent_01Wwetu9vtyuVmdEBt6taxzz",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.695,
+        "input_tokens": 1691,
+        "output_tokens": 97,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01NdyCyQGsZzxQUfJK9tg7VR"
+      },
+      {
+        "session_id": "sesn_016vDGtLtEjVydsavKjaw12W",
+        "created_at": "2026-08-28T02:24:05.229614Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k3-poll"
+        },
+        "list_cost_usd": 0.24,
+        "active_seconds": 22.421,
+        "input_tokens": 12,
+        "output_tokens": 1174,
+        "cache_read_input_tokens": 336140,
+        "deployment_id": "depl_0118D9QiqeNRZPN5FUEocguk"
+      },
+      {
+        "session_id": "sesn_01XcUXuueWTC3ouiwVx31Qgr",
+        "created_at": "2026-08-28T02:23:53.830065Z",
+        "agent_id": "agent_01JG15oTwARP4rLDaW3yk2sg",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "08",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 5.348,
+        "input_tokens": 3,
+        "output_tokens": 337,
+        "cache_read_input_tokens": 13217,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_0124MazLSLKkRmxyiEyWahoB",
+        "created_at": "2026-08-28T02:23:43.081279Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k5-v1-pinned"
+        },
+        "list_cost_usd": 0.05,
+        "active_seconds": 11.335,
+        "input_tokens": 2,
+        "output_tokens": 682,
+        "cache_read_input_tokens": 4609,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_0121vYD45Cr7EkC9rbpWzXzQ",
+        "created_at": "2026-08-28T02:23:09.460486Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k3-poll"
+        },
+        "list_cost_usd": 0.25,
+        "active_seconds": 23.417,
+        "input_tokens": 12,
+        "output_tokens": 1252,
+        "cache_read_input_tokens": 336310,
+        "deployment_id": "depl_0118D9QiqeNRZPN5FUEocguk"
+      },
+      {
+        "session_id": "sesn_011kWZH8h7CLWp7oFF58Ng2J",
+        "created_at": "2026-08-28T02:23:06.859616Z",
+        "agent_id": "agent_01Chmwz3rYc7jdjAgdrNF27L",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 6.08,
+        "active_seconds": 69.018,
+        "input_tokens": 706,
+        "output_tokens": 275,
+        "cache_read_input_tokens": 4739220,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01XUVfPC2uabwZVtfHKrCqAK",
+        "created_at": "2026-08-28T02:23:05.410820Z",
+        "agent_id": "agent_01Wwetu9vtyuVmdEBt6taxzz",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.536,
+        "input_tokens": 1691,
+        "output_tokens": 76,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01NdyCyQGsZzxQUfJK9tg7VR"
+      },
+      {
+        "session_id": "sesn_017ydJewVpnZ42ZP1cE4ujbu",
+        "created_at": "2026-08-28T02:23:05.325215Z",
+        "agent_id": "agent_018PPXS1K6jwqXd5CTiADYKp",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 6.195,
+        "input_tokens": 17,
+        "output_tokens": 201,
+        "cache_read_input_tokens": 49958,
+        "deployment_id": "depl_01DfMVvFyLrbDTMUozvTLCND"
+      },
+      {
+        "session_id": "sesn_01GhgQMW5VxeTJMQtX3UidHH",
+        "created_at": "2026-08-28T02:23:00.403400Z",
+        "agent_id": "agent_01GCAj6MYKbc6afTCrNdHCNF",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "role": "pinned-1",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 3.2,
+        "input_tokens": 10,
+        "output_tokens": 248,
+        "cache_read_input_tokens": 5408,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01NMjpF23dC3bToSshyTpLaL",
+        "created_at": "2026-08-28T02:23:00.048577Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "08",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.67,
+        "active_seconds": 37.188,
+        "input_tokens": 19,
+        "output_tokens": 1337,
+        "cache_read_input_tokens": 692067,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_011crTfhtqtpPjtoc5eYKCHP",
+        "created_at": "2026-08-28T02:22:56.771854Z",
+        "agent_id": "agent_01G3BGBVRyf5aNCRAEy89fvu",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "07",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.2,
+        "active_seconds": 63.784,
+        "input_tokens": 51,
+        "output_tokens": 6998,
+        "cache_read_input_tokens": 263791,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01LP1pjukhvc8V5FPw3QA44w",
+        "created_at": "2026-08-28T02:22:56.501769Z",
+        "agent_id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "case": "c2-tool-hang",
+          "experiment": "clevin-swarm-C"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 3.804,
+        "input_tokens": 17,
+        "output_tokens": 204,
+        "cache_read_input_tokens": 5369,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01ALHD2k29mpdYCHBUtFDuET",
+        "created_at": "2026-08-28T02:22:49.199784Z",
+        "agent_id": "agent_01GCAj6MYKbc6afTCrNdHCNF",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "role": "pinned-0",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.285,
+        "input_tokens": 10,
+        "output_tokens": 164,
+        "cache_read_input_tokens": 5408,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01BDXcdPrBbRdbBXsVk8c6XH",
+        "created_at": "2026-08-28T02:22:37.000978Z",
+        "agent_id": "agent_01GCAj6MYKbc6afTCrNdHCNF",
+        "agent_version": 2,
+        "status": "terminated",
+        "metadata": {
+          "role": "fresh-latest",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 3.699,
+        "input_tokens": 10,
+        "output_tokens": 260,
+        "cache_read_input_tokens": 5408,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01GZxwvwfnnjyQRuduEBHddu",
+        "created_at": "2026-08-28T02:22:15.003430Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k4-review-ci",
+          "pull_number": "6"
+        },
+        "list_cost_usd": 0.58,
+        "active_seconds": 90.916,
+        "input_tokens": 36,
+        "output_tokens": 4272,
+        "cache_read_input_tokens": 516127,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01EkN4DZgvK1G9LPPBFAJt3Z",
+        "created_at": "2026-08-28T02:22:14.143861Z",
+        "agent_id": "agent_01GCAj6MYKbc6afTCrNdHCNF",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "role": "live",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 5.783,
+        "input_tokens": 20,
+        "output_tokens": 408,
+        "cache_read_input_tokens": 10816,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01ESt5jnkZZQveaDXRmH8ATY",
+        "created_at": "2026-08-28T02:22:08.453049Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k3-poll"
+        },
+        "list_cost_usd": 0.24,
+        "active_seconds": 25.253,
+        "input_tokens": 12,
+        "output_tokens": 1016,
+        "cache_read_input_tokens": 335400,
+        "deployment_id": "depl_0118D9QiqeNRZPN5FUEocguk"
+      },
+      {
+        "session_id": "sesn_012uB9Xmmf4WWX9dTgzydZKF",
+        "created_at": "2026-08-28T02:22:07.397537Z",
+        "agent_id": "agent_01Wwetu9vtyuVmdEBt6taxzz",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.615,
+        "input_tokens": 1691,
+        "output_tokens": 80,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01NdyCyQGsZzxQUfJK9tg7VR"
+      },
+      {
+        "session_id": "sesn_01M9WK5W7RNDdmYCu6C1yyVm",
+        "created_at": "2026-08-28T02:22:02.142778Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "06",
+          "round": "round4_warm_repeat",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 22.094,
+        "input_tokens": 9,
+        "output_tokens": 1847,
+        "cache_read_input_tokens": 51008,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_012vJtDMGa3ah2qvLQcgiH2a",
+        "created_at": "2026-08-28T02:22:01.488840Z",
+        "agent_id": "agent_018PPXS1K6jwqXd5CTiADYKp",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 6.468,
+        "input_tokens": 17,
+        "output_tokens": 252,
+        "cache_read_input_tokens": 49958,
+        "deployment_id": "depl_01DfMVvFyLrbDTMUozvTLCND"
+      },
+      {
+        "session_id": "sesn_01HyPB8xE9m3MLtQQt8buphZ",
+        "created_at": "2026-08-28T02:21:23.355539Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "06",
+          "round": "round3_warm_with_learned_store",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.05,
+        "active_seconds": 23.989,
+        "input_tokens": 11,
+        "output_tokens": 2211,
+        "cache_read_input_tokens": 65267,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01QQSiDK1tnxiuZK5sWEVhno",
+        "created_at": "2026-08-28T02:21:20.861103Z",
+        "agent_id": "agent_01VxSnP7Z28pSpKYxUVDdYNq",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "role": "pinned-1",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 3.461,
+        "input_tokens": 10,
+        "output_tokens": 283,
+        "cache_read_input_tokens": 5408,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01DGEkvxALE8N6QFmjXJ1EyL",
+        "created_at": "2026-08-28T02:21:09.748801Z",
+        "agent_id": "agent_01VxSnP7Z28pSpKYxUVDdYNq",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "role": "pinned-0",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.83,
+        "input_tokens": 10,
+        "output_tokens": 209,
+        "cache_read_input_tokens": 5408,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_011aVduTUHuiubu7N3nxSB4g",
+        "created_at": "2026-08-28T02:21:09.441821Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k3-poll"
+        },
+        "list_cost_usd": 0.24,
+        "active_seconds": 23.308,
+        "input_tokens": 12,
+        "output_tokens": 1182,
+        "cache_read_input_tokens": 335603,
+        "deployment_id": "depl_0118D9QiqeNRZPN5FUEocguk"
+      },
+      {
+        "session_id": "sesn_0194Nu6fSco6v7KCPGWcjL9p",
+        "created_at": "2026-08-28T02:21:00.532712Z",
+        "agent_id": "agent_01Wwetu9vtyuVmdEBt6taxzz",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.681,
+        "input_tokens": 1691,
+        "output_tokens": 88,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01NdyCyQGsZzxQUfJK9tg7VR"
+      },
+      {
+        "session_id": "sesn_01AVyqw4Zuqw1qpWkkQQZnnK",
+        "created_at": "2026-08-28T02:20:57.599948Z",
+        "agent_id": "agent_01VxSnP7Z28pSpKYxUVDdYNq",
+        "agent_version": 2,
+        "status": "terminated",
+        "metadata": {
+          "role": "fresh-latest",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.344,
+        "input_tokens": 10,
+        "output_tokens": 173,
+        "cache_read_input_tokens": 5408,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01DwdKxDKnWqnjpEuWWW2Ejq",
+        "created_at": "2026-08-28T02:20:44.981525Z",
+        "agent_id": "agent_01VxSnP7Z28pSpKYxUVDdYNq",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "role": "live",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 4.892,
+        "input_tokens": 20,
+        "output_tokens": 332,
+        "cache_read_input_tokens": 10843,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01JhLxxtStGo6aMsBweh6C8i",
+        "created_at": "2026-08-28T02:20:36.768734Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k1-interrupt"
+        },
+        "list_cost_usd": 0.28,
+        "active_seconds": 34.253,
+        "input_tokens": 16,
+        "output_tokens": 1671,
+        "cache_read_input_tokens": 445953,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01AMomXu7bJrpa1yNAMfsqWE",
+        "created_at": "2026-08-28T02:20:28.115426Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "06",
+          "round": "round2_cold_with_empty_store",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.08,
+        "active_seconds": 41.864,
+        "input_tokens": 21,
+        "output_tokens": 3460,
+        "cache_read_input_tokens": 113462,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01LwMuvVs3d5EkP4Hrsf7LvR",
+        "created_at": "2026-08-28T02:20:24.690261Z",
+        "agent_id": "agent_01QBLYa2kgEWdMQNt1p7yDRK",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.04,
+        "active_seconds": 54.963,
+        "input_tokens": 129,
+        "output_tokens": 3568,
+        "cache_read_input_tokens": 100127,
+        "deployment_id": "depl_01LtbAcgnhGk5Q6J9oYUmmPP"
+      },
+      {
+        "session_id": "sesn_017FfVBVXjwLvjophmMHXfTz",
+        "created_at": "2026-08-28T02:20:09.508064Z",
+        "agent_id": "agent_01BJf1pQsPXTWP9ctHAtBvuZ",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 5.273,
+        "input_tokens": 10,
+        "output_tokens": 149,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_012S49QZuXJ6m6wS5UhsfUAU"
+      },
+      {
+        "session_id": "sesn_01EUs1EdjQX7UjCwCjFxLGE8",
+        "created_at": "2026-08-28T02:20:05.861848Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k3-poll"
+        },
+        "list_cost_usd": 0.25,
+        "active_seconds": 24.67,
+        "input_tokens": 12,
+        "output_tokens": 1284,
+        "cache_read_input_tokens": 336345,
+        "deployment_id": "depl_0118D9QiqeNRZPN5FUEocguk"
+      },
+      {
+        "session_id": "sesn_01HkbfQUtFdDBNyVBdz7aJAj",
+        "created_at": "2026-08-28T02:20:05.573615Z",
+        "agent_id": "agent_017rU82yJuhVPzgbfF46vqke",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.519,
+        "input_tokens": 629,
+        "output_tokens": 83,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01UMHaoA8z9kHSoqnDzVTzro"
+      },
+      {
+        "session_id": "sesn_01Y24UQ9Bp1xneUoLmHLQXFs",
+        "created_at": "2026-08-28T02:19:59.852462Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "06",
+          "round": "round1_cold_no_store",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 16.375,
+        "input_tokens": 5,
+        "output_tokens": 1603,
+        "cache_read_input_tokens": 21255,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01LFekVLThwNAJUjr8PSiGHe",
+        "created_at": "2026-08-28T02:19:57.538286Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "05",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.09,
+        "active_seconds": 50.359,
+        "input_tokens": 23,
+        "output_tokens": 4233,
+        "cache_read_input_tokens": 133139,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01PSUFa2pyaXzdkpSiep8yad",
+        "created_at": "2026-08-28T02:19:48.268499Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k4-mcp-github-no-trailing-slash"
+        },
+        "list_cost_usd": 0.06,
+        "active_seconds": 7.809,
+        "input_tokens": 4,
+        "output_tokens": 284,
+        "cache_read_input_tokens": 110019,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01B2fGn6u37k88DuYTr6Szm5",
+        "created_at": "2026-08-28T02:19:45.877567Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "04",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.07,
+        "active_seconds": 39.579,
+        "input_tokens": 13,
+        "output_tokens": 3746,
+        "cache_read_input_tokens": 68293,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01UMahEP4pAp6EjJBR5DGdYt",
+        "created_at": "2026-08-28T02:19:36.072776Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k4-mcp-as-configured"
+        },
+        "list_cost_usd": 0.07,
+        "active_seconds": 7.131,
+        "input_tokens": 4,
+        "output_tokens": 292,
+        "cache_read_input_tokens": 109179,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_015WeqLCTSpdnLqQrNrLKrf7",
+        "created_at": "2026-08-28T02:19:21.389083Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "04",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 12.833,
+        "input_tokens": 5,
+        "output_tokens": 983,
+        "cache_read_input_tokens": 22857,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01XtNTuxBGZuwwC1bY4szHLr",
+        "created_at": "2026-08-28T02:19:05.917226Z",
+        "agent_id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 52.966,
+        "input_tokens": 10,
+        "output_tokens": 455,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01JzCQVG6imi1tmpPAo2yvJJ"
+      },
+      {
+        "session_id": "sesn_01HbVSsQ9HXFSsE5rWCSmbhq",
+        "created_at": "2026-08-28T02:19:04.322916Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k3-poll"
+        },
+        "list_cost_usd": 0.27,
+        "active_seconds": 38.099,
+        "input_tokens": 12,
+        "output_tokens": 2042,
+        "cache_read_input_tokens": 337617,
+        "deployment_id": "depl_0118D9QiqeNRZPN5FUEocguk"
+      },
+      {
+        "session_id": "sesn_01RGUHeFaj4CkdKk8wYGBepE",
+        "created_at": "2026-08-28T02:18:50.319260Z",
+        "agent_id": "agent_01EvFHFZSKrAE1Lmush4zrQM",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "role": "pinned-1",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.503,
+        "input_tokens": 10,
+        "output_tokens": 191,
+        "cache_read_input_tokens": 5408,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01K4AYgK9gcqR1XnzKTfDhQ3",
+        "created_at": "2026-08-28T02:18:47.627400Z",
+        "agent_id": "agent_019uVU7LiPErnkfm7LCa4b2d",
+        "agent_version": 4,
+        "status": "terminated",
+        "metadata": {
+          "swarm_experiment": "d4",
+          "swarm_workstream": "D",
+          "variant": "rolled_back"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.114,
+        "input_tokens": 10,
+        "output_tokens": 145,
+        "cache_read_input_tokens": 5433,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01JvpEM7NVgfhQDQa7timMdR",
+        "created_at": "2026-08-28T02:18:44.094690Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k1-interrupt"
+        },
+        "list_cost_usd": 0.23,
+        "active_seconds": 38.431,
+        "input_tokens": 12,
+        "output_tokens": 1866,
+        "cache_read_input_tokens": 334883,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01Qp55F37VVa1QYMUHESqVhf",
+        "created_at": "2026-08-28T02:18:39.168162Z",
+        "agent_id": "agent_01EvFHFZSKrAE1Lmush4zrQM",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "role": "pinned-0",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.638,
+        "input_tokens": 10,
+        "output_tokens": 191,
+        "cache_read_input_tokens": 5051,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01VY1FDzEpawmuE7w2hDS7wh",
+        "created_at": "2026-08-28T02:18:34.369199Z",
+        "agent_id": "agent_019uVU7LiPErnkfm7LCa4b2d",
+        "agent_version": 3,
+        "status": "terminated",
+        "metadata": {
+          "swarm_experiment": "d4",
+          "swarm_workstream": "D",
+          "variant": "v3_broken"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 2.186,
+        "input_tokens": 10,
+        "output_tokens": 148,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01WgD9yMVvkTqoMPYWohdH3t",
+        "created_at": "2026-08-28T02:18:27.772443Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "04",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.04,
+        "active_seconds": 18.797,
+        "input_tokens": 11,
+        "output_tokens": 1360,
+        "cache_read_input_tokens": 52594,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01RRLWL5gNQTBBM176h5FHp4",
+        "created_at": "2026-08-28T02:18:27.219912Z",
+        "agent_id": "agent_01EvFHFZSKrAE1Lmush4zrQM",
+        "agent_version": 2,
+        "status": "terminated",
+        "metadata": {
+          "role": "fresh-latest",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 3.818,
+        "input_tokens": 10,
+        "output_tokens": 303,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01DYEauxkXLz4SMtFzgqjvbu",
+        "created_at": "2026-08-28T02:18:23.319101Z",
+        "agent_id": "agent_019uVU7LiPErnkfm7LCa4b2d",
+        "agent_version": 2,
+        "status": "terminated",
+        "metadata": {
+          "swarm_experiment": "d4",
+          "swarm_workstream": "D",
+          "variant": "v2_canary_b"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 2.651,
+        "input_tokens": 10,
+        "output_tokens": 208,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01KzL5tHcuNifZUuhedDYHiW",
+        "created_at": "2026-08-28T02:18:15.159615Z",
+        "agent_id": "agent_01EvFHFZSKrAE1Lmush4zrQM",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "role": "live",
+          "swarm_experiment": "d5",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 4.054,
+        "input_tokens": 20,
+        "output_tokens": 234,
+        "cache_read_input_tokens": 5408,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01HLvcLQgBsKv7s8xpDQsKZ2",
+        "created_at": "2026-08-28T02:18:13.645557Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k3-poll"
+        },
+        "list_cost_usd": 0.29,
+        "active_seconds": 39.958,
+        "input_tokens": 12,
+        "output_tokens": 2609,
+        "cache_read_input_tokens": 337355,
+        "deployment_id": "depl_0118D9QiqeNRZPN5FUEocguk"
+      },
+      {
+        "session_id": "sesn_01XAdnSwjziiTv5A6puGc5or",
+        "created_at": "2026-08-28T02:18:12.981443Z",
+        "agent_id": "agent_01VDZEoyxbGBppWk3TwaWEZA",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "swarm_experiment": "d3-override",
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.644,
+        "input_tokens": 585,
+        "output_tokens": 73,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_011TWm28iQQsgzH5frvNQYXt",
+        "created_at": "2026-08-28T02:18:12.157866Z",
+        "agent_id": "agent_019uVU7LiPErnkfm7LCa4b2d",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "swarm_experiment": "d4",
+          "swarm_workstream": "D",
+          "variant": "v1_canary_a"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 2.065,
+        "input_tokens": 10,
+        "output_tokens": 147,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01BWfMasCEBejSVjTN8DpmLa",
+        "created_at": "2026-08-28T02:18:06.743653Z",
+        "agent_id": "agent_01JFwJc296SPY7hsZ5F8c7AC",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "roster_run1",
+          "run_id": "20260828T021805Z-06fbc6"
+        },
+        "list_cost_usd": 0.97,
+        "active_seconds": 369.048,
+        "input_tokens": 70,
+        "output_tokens": 31767,
+        "cache_read_input_tokens": 570998,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_018shqTdwodEqmhwimJbdfkU",
+        "created_at": "2026-08-28T02:18:06.726089Z",
+        "agent_id": "agent_01BBEbVbrZ4EyDoaTJTQYuNB",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "solo_run2",
+          "run_id": "20260828T021805Z-06fbc6"
+        },
+        "list_cost_usd": 0.25,
+        "active_seconds": 70.536,
+        "input_tokens": 16,
+        "output_tokens": 5111,
+        "cache_read_input_tokens": 79462,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01YAcATChfu18RDL4pqpqMdK",
+        "created_at": "2026-08-28T02:18:06.723843Z",
+        "agent_id": "agent_01JFwJc296SPY7hsZ5F8c7AC",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "roster_run2",
+          "run_id": "20260828T021805Z-06fbc6"
+        },
+        "list_cost_usd": 0.76,
+        "active_seconds": 322.174,
+        "input_tokens": 52,
+        "output_tokens": 26947,
+        "cache_read_input_tokens": 364928,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01AVW4YwSv3Y4eYKNprj5z8R",
+        "created_at": "2026-08-28T02:18:06.691569Z",
+        "agent_id": "agent_01BBEbVbrZ4EyDoaTJTQYuNB",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "solo_run1",
+          "run_id": "20260828T021805Z-06fbc6"
+        },
+        "list_cost_usd": 0.21,
+        "active_seconds": 56.621,
+        "input_tokens": 10,
+        "output_tokens": 4330,
+        "cache_read_input_tokens": 40604,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01QRm23P968eA61GpGsnwp1C",
+        "created_at": "2026-08-28T02:18:05.440550Z",
+        "agent_id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 114.026,
+        "input_tokens": 16,
+        "output_tokens": 359,
+        "cache_read_input_tokens": 5517,
+        "deployment_id": "depl_01JzCQVG6imi1tmpPAo2yvJJ"
+      },
+      {
+        "session_id": "sesn_01QY3grdDmWqaWGPcGXba49j",
+        "created_at": "2026-08-28T02:18:04.467326Z",
+        "agent_id": "agent_01CCEPSTqNH4cX2caEMGTNJ4",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 4.827,
+        "input_tokens": 17,
+        "output_tokens": 293,
+        "cache_read_input_tokens": 5352,
+        "deployment_id": "depl_01MhSyiAJucG1gNqFs71gAg2"
+      },
+      {
+        "session_id": "sesn_013yxjUXrwvExMQRbCA2wt9u",
+        "created_at": "2026-08-28T02:18:02.185610Z",
+        "agent_id": "agent_01MSv56acvp1e95AG9cjMstS",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.29,
+        "active_seconds": 20.183,
+        "input_tokens": 666,
+        "output_tokens": 959,
+        "cache_read_input_tokens": 396538,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01UqPvaQx8TfpSrBLbT7Jygi",
+        "created_at": "2026-08-28T02:17:59.172683Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "04",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 12.264,
+        "input_tokens": 7,
+        "output_tokens": 702,
+        "cache_read_input_tokens": 35440,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_013jG4z88P3oApsZy2Ut5TUy",
+        "created_at": "2026-08-28T02:17:36.302886Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "04",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 10.873,
+        "input_tokens": 5,
+        "output_tokens": 461,
+        "cache_read_input_tokens": 26596,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01XzmMmg4wZLeBytJA6cor4K",
+        "created_at": "2026-08-28T02:17:30.717362Z",
+        "agent_id": "agent_016K8vLEYdDAG9PdEQp5ri67",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 26.871,
+        "input_tokens": 72,
+        "output_tokens": 2016,
+        "cache_read_input_tokens": 44889,
+        "deployment_id": "depl_01RXsYxC2qjDagsGW2JibKkm"
+      },
+      {
+        "session_id": "sesn_0167PUncQtoQ73rGDnC3ATyY",
+        "created_at": "2026-08-28T02:17:27.497219Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k1-message"
+        },
+        "list_cost_usd": 0.19,
+        "active_seconds": 42.14,
+        "input_tokens": 8,
+        "output_tokens": 2495,
+        "cache_read_input_tokens": 222035,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01PSivp3Kf6VpHGKbENFC5Le",
+        "created_at": "2026-08-28T02:17:18.458092Z",
+        "agent_id": "agent_01Cso79spcHntKMC3p5Zv3on",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.895,
+        "input_tokens": 10,
+        "output_tokens": 163,
+        "cache_read_input_tokens": 5406,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01RmzKtFRkvBXd8XyRwvqVnu",
+        "created_at": "2026-08-28T02:17:15.588464Z",
+        "agent_id": "agent_01Cso79spcHntKMC3p5Zv3on",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.455,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_013tGtyi7Zoq1srX8pzzmRAf",
+        "created_at": "2026-08-28T02:17:11.515734Z",
+        "agent_id": "agent_01Wk28vaCo1kPfaxMEHuXxjt",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 11.564,
+        "input_tokens": 50,
+        "output_tokens": 1015,
+        "cache_read_input_tokens": 19253,
+        "deployment_id": "depl_01F8EsXw7mCBkRrszmNvFS1a"
+      },
+      {
+        "session_id": "sesn_015iNjNebjUMTaKB2PrkPC1E",
+        "created_at": "2026-08-28T02:17:09.309354Z",
+        "agent_id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 158.75,
+        "input_tokens": 16,
+        "output_tokens": 485,
+        "cache_read_input_tokens": 5517,
+        "deployment_id": "depl_01JzCQVG6imi1tmpPAo2yvJJ"
+      },
+      {
+        "session_id": "sesn_014rYZ5Uqh6mLgFf2Ax9mckC",
+        "created_at": "2026-08-28T02:17:08.173830Z",
+        "agent_id": "agent_01Cso79spcHntKMC3p5Zv3on",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 4.465,
+        "input_tokens": 16,
+        "output_tokens": 287,
+        "cache_read_input_tokens": 10810,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_0117cXEc7VdBixpdAKDnvjss",
+        "created_at": "2026-08-28T02:16:53.089937Z",
+        "agent_id": "agent_01Cso79spcHntKMC3p5Zv3on",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 10.364,
+        "input_tokens": 50,
+        "output_tokens": 634,
+        "cache_read_input_tokens": 27328,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01Rtg8o8tCTwz73xTR1jEpSK",
+        "created_at": "2026-08-28T02:16:48.698048Z",
+        "agent_id": "agent_01Cso79spcHntKMC3p5Zv3on",
+        "agent_version": 3,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.714,
+        "input_tokens": 10,
+        "output_tokens": 181,
+        "cache_read_input_tokens": 5405,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01DMEcUJgFGRbuSAbL71WJoC",
+        "created_at": "2026-08-28T02:16:46.753942Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "04",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.06,
+        "active_seconds": 37.43,
+        "input_tokens": 1,
+        "output_tokens": 4413,
+        "cache_read_input_tokens": 4613,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01TtFye9KwvkpkKVNy4XYQjy",
+        "created_at": "2026-08-28T02:16:42.927841Z",
+        "agent_id": "agent_01Cso79spcHntKMC3p5Zv3on",
+        "agent_version": 2,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 3.617,
+        "input_tokens": 10,
+        "output_tokens": 112,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_012AFi77Rq37mPgKQxtupKjh",
+        "created_at": "2026-08-28T02:16:32.623258Z",
+        "agent_id": "agent_01Cso79spcHntKMC3p5Zv3on",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 5.075,
+        "input_tokens": 26,
+        "output_tokens": 284,
+        "cache_read_input_tokens": 16215,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_012ZLaenECNd4oyTvhWS99Ba",
+        "created_at": "2026-08-28T02:16:13.060580Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "04",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 17.754,
+        "input_tokens": 1,
+        "output_tokens": 1887,
+        "cache_read_input_tokens": 4613,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01PVJpjhZFN9p76YYGx7vJrR",
+        "created_at": "2026-08-28T02:16:08.356135Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "03",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.03,
+        "active_seconds": 10.644,
+        "input_tokens": 7,
+        "output_tokens": 745,
+        "cache_read_input_tokens": 32093,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_012bcoSTqZJF1NAB5X2cnoQF",
+        "created_at": "2026-08-28T02:16:02.838657Z",
+        "agent_id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 156.874,
+        "input_tokens": 10,
+        "output_tokens": 547,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01JzCQVG6imi1tmpPAo2yvJJ"
+      },
+      {
+        "session_id": "sesn_01RTbLbffJ9uPVqP1t3oSRjP",
+        "created_at": "2026-08-28T02:16:02.196491Z",
+        "agent_id": "agent_014QApyrvKwybNuGNNSCn5AJ",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 24.297,
+        "input_tokens": 48,
+        "output_tokens": 926,
+        "cache_read_input_tokens": 43422,
+        "deployment_id": "depl_01CPvHPwCY5WucVj2jQSKN3f"
+      },
+      {
+        "session_id": "sesn_01KwELAcHqFNwCZ3JZ6xAN1h",
+        "created_at": "2026-08-28T02:15:45.220378Z",
+        "agent_id": "agent_014QApyrvKwybNuGNNSCn5AJ",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 10.592,
+        "input_tokens": 36,
+        "output_tokens": 602,
+        "cache_read_input_tokens": 28117,
+        "deployment_id": "depl_01CPvHPwCY5WucVj2jQSKN3f"
+      },
+      {
+        "session_id": "sesn_017T7fvs4dJ8g5ehi2X8YE5a",
+        "created_at": "2026-08-28T02:15:39.029711Z",
+        "agent_id": "agent_01KLe1DtBwpUzj226hRWPtDy",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "oversize",
+          "run_id": "20260828T021536Z-a59a50"
+        },
+        "list_cost_usd": 0.06,
+        "active_seconds": 2.883,
+        "input_tokens": 2,
+        "output_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01PaQPWEg4fx2ncT81L8aCEt",
+        "created_at": "2026-08-28T02:15:38.937870Z",
+        "agent_id": "agent_01826CtjQ8DhaYT5K7SomsSQ",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "silent_child",
+          "run_id": "20260828T021536Z-a59a50"
+        },
+        "list_cost_usd": 0.14,
+        "active_seconds": 33.988,
+        "input_tokens": 10,
+        "output_tokens": 2105,
+        "cache_read_input_tokens": 35090,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_019L7Ah2GMgknxeXz9Rr5CNk",
+        "created_at": "2026-08-28T02:15:38.933095Z",
+        "agent_id": "agent_014WZ2z6oACpCGVkMRLGyaTB",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "edit_conflict",
+          "run_id": "20260828T021536Z-a59a50"
+        },
+        "list_cost_usd": 0.2,
+        "active_seconds": 40.636,
+        "input_tokens": 34,
+        "output_tokens": 3396,
+        "cache_read_input_tokens": 138860,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01Qc9Z6HVpLJuZUCf7zzw5Ae",
+        "created_at": "2026-08-28T02:15:38.928569Z",
+        "agent_id": "agent_01J9um8hHVNpzCWMwRzEDynU",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "hang_archive",
+          "run_id": "20260828T021536Z-a59a50"
+        },
+        "list_cost_usd": 0.32,
+        "active_seconds": 1277.717,
+        "input_tokens": 26,
+        "output_tokens": 4723,
+        "cache_read_input_tokens": 93548,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01V43Krjmv5PPhqyLFuUrwxD",
+        "created_at": "2026-08-28T02:15:28.302156Z",
+        "agent_id": "agent_014QApyrvKwybNuGNNSCn5AJ",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 12.411,
+        "input_tokens": 43,
+        "output_tokens": 690,
+        "cache_read_input_tokens": 35631,
+        "deployment_id": "depl_01CPvHPwCY5WucVj2jQSKN3f"
+      },
+      {
+        "session_id": "sesn_01YFjQcYxDGonMBgRzrZVZPr",
+        "created_at": "2026-08-28T02:15:24.808460Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k1-interrupt"
+        },
+        "list_cost_usd": 0.22,
+        "active_seconds": 31.276,
+        "input_tokens": 12,
+        "output_tokens": 1564,
+        "cache_read_input_tokens": 333330,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01KNwpV1aGtHy7k2JxZcafAG",
+        "created_at": "2026-08-28T02:15:21.842268Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k1-message"
+        },
+        "list_cost_usd": 0.29,
+        "active_seconds": 55.381,
+        "input_tokens": 14,
+        "output_tokens": 3251,
+        "cache_read_input_tokens": 392724,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01KNySPP8qDHNxmYWDDBDJ3m",
+        "created_at": "2026-08-28T02:15:03.377554Z",
+        "agent_id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 157.275,
+        "input_tokens": 10,
+        "output_tokens": 505,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01JzCQVG6imi1tmpPAo2yvJJ"
+      },
+      {
+        "session_id": "sesn_01QunnynbkSNqvzYYh36F6sB",
+        "created_at": "2026-08-28T02:14:53.365694Z",
+        "agent_id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "case": "c2-tool-hang",
+          "experiment": "clevin-swarm-C"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 3.249,
+        "input_tokens": 16,
+        "output_tokens": 164,
+        "cache_read_input_tokens": 10352,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01GEYECHwLJLZBXekEQvmA8r",
+        "created_at": "2026-08-28T02:14:12.609169Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "probe": "03",
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 9.739,
+        "input_tokens": 7,
+        "output_tokens": 589,
+        "cache_read_input_tokens": 31923,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_013yaVScLsvs18vgZxN3BDxd",
+        "created_at": "2026-08-28T02:14:11.807408Z",
+        "agent_id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "case": "c1-local-worker",
+          "experiment": "clevin-swarm-C"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 3.049,
+        "input_tokens": 16,
+        "output_tokens": 194,
+        "cache_read_input_tokens": 5364,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01A3GmGx4jBuEtP7oBAJcdSw",
+        "created_at": "2026-08-28T02:14:07.915165Z",
+        "agent_id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.821,
+        "input_tokens": 10,
+        "output_tokens": 167,
+        "cache_read_input_tokens": 5051,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_013nBj7ZsxVwtyRKiA1bbeBb",
+        "created_at": "2026-08-28T02:14:05.850273Z",
+        "agent_id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.273,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_0155ruKCQ9qp7RSyTR83sTSg",
+        "created_at": "2026-08-28T02:14:05.630959Z",
+        "agent_id": "agent_01QVjjjaS9YEN44e9SWfXbHY",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "pinning_and_grants",
+          "run_id": "20260828T021357Z-0a0a7e"
+        },
+        "list_cost_usd": 0.15,
+        "active_seconds": 35.494,
+        "input_tokens": 18,
+        "output_tokens": 1578,
+        "cache_read_input_tokens": 58710,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_018Hit5DRZ1GQ2R6iGoFMSwi",
+        "created_at": "2026-08-28T02:14:05.603307Z",
+        "agent_id": "agent_01J5Mq3jPwTvnob9sFFxunrV",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "self_recursion",
+          "run_id": "20260828T021357Z-0a0a7e"
+        },
+        "list_cost_usd": 0.15,
+        "active_seconds": 16.101,
+        "input_tokens": 10,
+        "output_tokens": 1044,
+        "cache_read_input_tokens": 27524,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01N2eNRQwaejShHqxQFvxWqh",
+        "created_at": "2026-08-28T02:14:05.585228Z",
+        "agent_id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 161.91,
+        "input_tokens": 10,
+        "output_tokens": 978,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01JzCQVG6imi1tmpPAo2yvJJ"
+      },
+      {
+        "session_id": "sesn_0181u67MEuHnmc1DEY5herCq",
+        "created_at": "2026-08-28T02:13:56.006728Z",
+        "agent_id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 3.744,
+        "input_tokens": 16,
+        "output_tokens": 254,
+        "cache_read_input_tokens": 10810,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01FFMWrRAEwPVAXW28aMDSBH",
+        "created_at": "2026-08-28T02:13:45.373747Z",
+        "agent_id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 9.721,
+        "input_tokens": 50,
+        "output_tokens": 645,
+        "cache_read_input_tokens": 27258,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_012VsLLbd3rg3Z3SWjaDdaQS",
+        "created_at": "2026-08-28T02:13:41.036296Z",
+        "agent_id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "agent_version": 3,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 2.463,
+        "input_tokens": 10,
+        "output_tokens": 158,
+        "cache_read_input_tokens": 5405,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01SgnPnJ4wjsH1TaT4Z2j543",
+        "created_at": "2026-08-28T02:13:34.748655Z",
+        "agent_id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "agent_version": 2,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 3.668,
+        "input_tokens": 10,
+        "output_tokens": 123,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01GxjLzu1AK3LxCGGQaxqSEv",
+        "created_at": "2026-08-28T02:13:23.689949Z",
+        "agent_id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 4.86,
+        "input_tokens": 26,
+        "output_tokens": 236,
+        "cache_read_input_tokens": 16215,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_011fE8R5jmbxfm2VH1chDaLu",
+        "created_at": "2026-08-28T02:13:06.742485Z",
+        "agent_id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 155.685,
+        "input_tokens": 10,
+        "output_tokens": 334,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01JzCQVG6imi1tmpPAo2yvJJ"
+      },
+      {
+        "session_id": "sesn_01DZcWsUjvhUJAAEzGPgoQ8c",
+        "created_at": "2026-08-28T02:12:56.853120Z",
+        "agent_id": "agent_01Bhx2Fo8xUoipCKrNhb4kau",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "conflict",
+          "run_id": "20260828T021253Z-2df88d"
+        },
+        "list_cost_usd": 0.29,
+        "active_seconds": 63.933,
+        "input_tokens": 34,
+        "output_tokens": 6132,
+        "cache_read_input_tokens": 148867,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+        "created_at": "2026-08-28T02:12:56.175808Z",
+        "agent_id": "agent_01XRvPxBEBhxv1zQ6qwnNH95",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "fanout",
+          "run_id": "20260828T021253Z-2df88d"
+        },
+        "list_cost_usd": 0.3,
+        "active_seconds": 66.351,
+        "input_tokens": 60,
+        "output_tokens": 3529,
+        "cache_read_input_tokens": 244556,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01VPA1FYGFiLBRvVPL145ckQ",
+        "created_at": "2026-08-28T02:12:51.747650Z",
+        "agent_id": "agent_01PF755bz4kT6JgGh2qX9yo1",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 10.166,
+        "input_tokens": 50,
+        "output_tokens": 682,
+        "cache_read_input_tokens": 26931,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01GToFDwRnwW56n6J2wW2iCd",
+        "created_at": "2026-08-28T02:12:47.103384Z",
+        "agent_id": "agent_012oEQYexrKHhu5BLbSMFib3",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-F",
+          "label": "basics",
+          "run_id": "20260828T021246Z-52ff5c"
+        },
+        "list_cost_usd": 0.2,
+        "active_seconds": 58.201,
+        "input_tokens": 18,
+        "output_tokens": 4575,
+        "cache_read_input_tokens": 74788,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01QpFXutjXFrodBWBFTMT1i8",
+        "created_at": "2026-08-28T02:12:46.675132Z",
+        "agent_id": "agent_01PF755bz4kT6JgGh2qX9yo1",
+        "agent_version": 3,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 3.117,
+        "input_tokens": 10,
+        "output_tokens": 267,
+        "cache_read_input_tokens": 5051,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01HEsNZpstxe7aZ51tnY79nq",
+        "created_at": "2026-08-28T02:12:41.872441Z",
+        "agent_id": "agent_01PF755bz4kT6JgGh2qX9yo1",
+        "agent_version": 2,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 2.869,
+        "input_tokens": 10,
+        "output_tokens": 110,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_0119Es5pYYofJFW9Et7sXyDV",
+        "created_at": "2026-08-28T02:12:31.178982Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k1-interrupt"
+        },
+        "list_cost_usd": 0.24,
+        "active_seconds": 29.795,
+        "input_tokens": 14,
+        "output_tokens": 1446,
+        "cache_read_input_tokens": 388552,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_015FvJe7n8tLNx73u2tdnGUE",
+        "created_at": "2026-08-28T02:12:29.307108Z",
+        "agent_id": "agent_01PF755bz4kT6JgGh2qX9yo1",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 5.838,
+        "input_tokens": 27,
+        "output_tokens": 334,
+        "cache_read_input_tokens": 16215,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01X7BTLEQ2zzFRpT6UVaUqxr",
+        "created_at": "2026-08-28T02:12:28.118427Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k2-ask-and-block"
+        },
+        "list_cost_usd": 0.18,
+        "active_seconds": 23.41,
+        "input_tokens": 16,
+        "output_tokens": 1014,
+        "cache_read_input_tokens": 58624,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01U33CPtwCEk1zAwk63txwfq",
+        "created_at": "2026-08-28T02:12:26.266846Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k1-message"
+        },
+        "list_cost_usd": 0.29,
+        "active_seconds": 52.284,
+        "input_tokens": 14,
+        "output_tokens": 2972,
+        "cache_read_input_tokens": 391213,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01HxTqcWhcnopDBNTQo1rnEP",
+        "created_at": "2026-08-28T02:12:01.171648Z",
+        "agent_id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 157.511,
+        "input_tokens": 10,
+        "output_tokens": 524,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01JzCQVG6imi1tmpPAo2yvJJ"
+      },
+      {
+        "session_id": "sesn_01VfpTxKZYNADUxLyFdWmsZ6",
+        "created_at": "2026-08-28T02:11:58.087101Z",
+        "agent_id": "agent_01QuMHurRb3193oeRYFYaYLi",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {
+          "swarm_workstream": "E"
+        },
+        "list_cost_usd": 0.04,
+        "active_seconds": 13.702,
+        "input_tokens": 6,
+        "output_tokens": 980,
+        "cache_read_input_tokens": 18230,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_0193JPujX5W2ize8XJsaLfsU",
+        "created_at": "2026-08-28T02:11:46.329349Z",
+        "agent_id": "agent_01VLGqudUXRxiTPBj22TvYNx",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "swarm_workstream": "D"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 5.981,
+        "input_tokens": 16,
+        "output_tokens": 122,
+        "cache_read_input_tokens": 5412,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01G78p4328BZscWwaDGYE6iA",
+        "created_at": "2026-08-28T02:10:50.139552Z",
+        "agent_id": "agent_01RDwbkZ7Rf3UcKsg9YjWbSr",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "workstream-A"
+        },
+        "list_cost_usd": 0.01,
+        "active_seconds": 6.462,
+        "input_tokens": 31,
+        "output_tokens": 328,
+        "cache_read_input_tokens": 16389,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01Ci6aYP4vLjsEsxQqPX4zVB",
+        "created_at": "2026-08-28T02:10:48.293565Z",
+        "agent_id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.374,
+        "input_tokens": 635,
+        "output_tokens": 68,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01TZrtzHN4QJvaquEmuoSKHq"
+      },
+      {
+        "session_id": "sesn_01R29p3cvhbZuD3TniYyvuHj",
+        "created_at": "2026-08-28T02:10:45.926654Z",
+        "agent_id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+        "agent_version": 1,
+        "status": "terminated",
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "list_cost_usd": 0.0,
+        "active_seconds": 1.747,
+        "input_tokens": 635,
+        "output_tokens": 102,
+        "cache_read_input_tokens": 0,
+        "deployment_id": "depl_01TZrtzHN4QJvaquEmuoSKHq"
+      },
+      {
+        "session_id": "sesn_01KRHYzwEZyWLuo4VGbvWtNs",
+        "created_at": "2026-08-28T02:09:57.033918Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "c0",
+          "workstream": "C"
+        },
+        "list_cost_usd": 0.34,
+        "active_seconds": 4.113,
+        "input_tokens": 2,
+        "output_tokens": 58,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01DJBUKKDatCWuxSsURg3uMr",
+        "created_at": "2026-08-28T02:09:43.760597Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k7-digest"
+        },
+        "list_cost_usd": 0.02,
+        "active_seconds": 6.399,
+        "input_tokens": 4,
+        "output_tokens": 268,
+        "cache_read_input_tokens": 17492,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_012k3LBeNTwXqU63chmX7HeD",
+        "created_at": "2026-08-28T02:08:48.224284Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 7,
+        "status": "idle",
+        "metadata": {
+          "experiment": "clevin-swarm-K",
+          "probe": "k1-message"
+        },
+        "list_cost_usd": 0.06,
+        "active_seconds": 3.945,
+        "input_tokens": 2,
+        "output_tokens": 185,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01ERaNc2AaTXEX3KL8EZNmT4",
+        "created_at": "2026-08-27T23:28:44.996028Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 5,
+        "status": "idle",
+        "metadata": {},
+        "list_cost_usd": 0.34,
+        "active_seconds": 6.373,
+        "input_tokens": 2,
+        "output_tokens": 106,
+        "cache_read_input_tokens": 0,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01BuA8fgCHoWtr479aY7H4ne",
+        "created_at": "2026-08-27T23:07:56.396056Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 5,
+        "status": "idle",
+        "metadata": {},
+        "list_cost_usd": 0.08,
+        "active_seconds": 9.733,
+        "input_tokens": 6,
+        "output_tokens": 490,
+        "cache_read_input_tokens": 16861,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01LnksfmKUCjwTJASMVsG5Eh",
+        "created_at": "2026-08-24T06:45:11.868098Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 5,
+        "status": "idle",
+        "metadata": {
+          "experiment_version": "clevin-0.1.0",
+          "linear_ticket_id": "HUM-6"
+        },
+        "list_cost_usd": 5.02,
+        "active_seconds": 830.786,
+        "input_tokens": 132,
+        "output_tokens": 35042,
+        "cache_read_input_tokens": 6551912,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01RSGpuNxTZFZnTTNb9WvkZX",
+        "created_at": "2026-08-24T06:04:31.475757Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 4,
+        "status": "idle",
+        "metadata": {
+          "experiment_version": "clevin-0.1.0",
+          "linear_ticket_id": "HUM-5"
+        },
+        "list_cost_usd": 3.24,
+        "active_seconds": 512.951,
+        "input_tokens": 84,
+        "output_tokens": 14491,
+        "cache_read_input_tokens": 3414533,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01JhebLpY3ehzdZvp8GxrJUH",
+        "created_at": "2026-08-24T05:47:44.616994Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 4,
+        "status": "idle",
+        "metadata": {
+          "experiment_version": "clevin-0.1.0",
+          "linear_ticket_id": "HUM-5"
+        },
+        "list_cost_usd": 1.47,
+        "active_seconds": 192.957,
+        "input_tokens": 38,
+        "output_tokens": 7275,
+        "cache_read_input_tokens": 1318480,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01FyD7NAz3KtQ3bWbDfERnqM",
+        "created_at": "2026-08-24T05:34:32.084239Z",
+        "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+        "agent_version": 4,
+        "status": "idle",
+        "metadata": {
+          "experiment_version": "clevin-0.1.0",
+          "purpose": "harmless-smoke-test"
+        },
+        "list_cost_usd": 0.63,
+        "active_seconds": 50.238,
+        "input_tokens": 18,
+        "output_tokens": 1815,
+        "cache_read_input_tokens": 447955,
+        "deployment_id": null
+      },
+      {
+        "session_id": "sesn_01LhABrtwc7i3iKSZAjF8v4t",
+        "created_at": "2026-08-24T02:05:53.457521Z",
+        "agent_id": "agent_01RR7DuH79PkeoFRNEccjigG",
+        "agent_version": 1,
+        "status": "idle",
+        "metadata": {},
+        "list_cost_usd": 0.34,
+        "active_seconds": 88.283,
+        "input_tokens": 14,
+        "output_tokens": 5012,
+        "cache_read_input_tokens": 68812,
+        "deployment_id": null
+      }
+    ],
+    "session_count": 164,
+    "api_calls": 2,
+    "wall_seconds": 0.96,
+    "cost_by_agent_version": {
+      "agent_01TQFVVP7r2YFAZuwzKyxSrB@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01Eef1xLtkWW2cDg1shFUpms@v7": {
+        "sessions": 33,
+        "list_cost_usd": 6.1
+      },
+      "agent_01RuXj6Dy5vPWPfjGsjwtf7Y@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.04
+      },
+      "agent_01FYSveaZwz77XKcjcU6UcqD@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.0
+      },
+      "agent_01Jmzj5kG84xYxwvQM8KTfsq@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01LmcBtVuGbY15A5ZTkMeMio@v1": {
+        "sessions": 1,
+        "list_cost_usd": 2.2
+      },
+      "agent_01CDtid4b87nEjESmYBPAE9Y@v1": {
+        "sessions": 6,
+        "list_cost_usd": 0.04
+      },
+      "agent_01M2mpYh2zVJmzXkAqmsD8Eo@v1": {
+        "sessions": 1,
+        "list_cost_usd": 25.81
+      },
+      "agent_01GBQVuUNEoj586T9bqm4cGm@v1": {
+        "sessions": 3,
+        "list_cost_usd": 0.41
+      },
+      "agent_013o9MCYrsZ6Ft9bDNt1QTj7@v1": {
+        "sessions": 3,
+        "list_cost_usd": 4.41
+      },
+      "agent_01BeZR83srbYz9vtTHbEmCMk@v1": {
+        "sessions": 3,
+        "list_cost_usd": 2.86
+      },
+      "agent_01YFyrU3fDGToypHKMM8VQDF@v2": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01YFyrU3fDGToypHKMM8VQDF@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.02
+      },
+      "agent_01QuMHurRb3193oeRYFYaYLi@v1": {
+        "sessions": 19,
+        "list_cost_usd": 4.34
+      },
+      "agent_01XoUwd12Zf1CmLvck4UVy5D@v1": {
+        "sessions": 1,
+        "list_cost_usd": 23.27
+      },
+      "agent_012tf8W93K9NiMW2wR2nLZ9G@v1": {
+        "sessions": 1,
+        "list_cost_usd": 12.71
+      },
+      "agent_01JG15oTwARP4rLDaW3yk2sg@v2": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01Wwetu9vtyuVmdEBt6taxzz@v1": {
+        "sessions": 4,
+        "list_cost_usd": 0.0
+      },
+      "agent_01JG15oTwARP4rLDaW3yk2sg@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.02
+      },
+      "agent_01Chmwz3rYc7jdjAgdrNF27L@v1": {
+        "sessions": 1,
+        "list_cost_usd": 6.08
+      },
+      "agent_018PPXS1K6jwqXd5CTiADYKp@v1": {
+        "sessions": 2,
+        "list_cost_usd": 0.02
+      },
+      "agent_01GCAj6MYKbc6afTCrNdHCNF@v1": {
+        "sessions": 3,
+        "list_cost_usd": 0.0
+      },
+      "agent_01G3BGBVRyf5aNCRAEy89fvu@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.2
+      },
+      "agent_01GCAj6MYKbc6afTCrNdHCNF@v2": {
+        "sessions": 1,
+        "list_cost_usd": 0.0
+      },
+      "agent_01VxSnP7Z28pSpKYxUVDdYNq@v1": {
+        "sessions": 3,
+        "list_cost_usd": 0.0
+      },
+      "agent_01VxSnP7Z28pSpKYxUVDdYNq@v2": {
+        "sessions": 1,
+        "list_cost_usd": 0.0
+      },
+      "agent_01QBLYa2kgEWdMQNt1p7yDRK@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.04
+      },
+      "agent_01BJf1pQsPXTWP9ctHAtBvuZ@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.03
+      },
+      "agent_017rU82yJuhVPzgbfF46vqke@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.0
+      },
+      "agent_012V2z1B3A9GAj6hzZff4Bqy@v1": {
+        "sessions": 8,
+        "list_cost_usd": 0.09
+      },
+      "agent_01EvFHFZSKrAE1Lmush4zrQM@v1": {
+        "sessions": 3,
+        "list_cost_usd": 0.01
+      },
+      "agent_019uVU7LiPErnkfm7LCa4b2d@v4": {
+        "sessions": 1,
+        "list_cost_usd": 0.0
+      },
+      "agent_019uVU7LiPErnkfm7LCa4b2d@v3": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01EvFHFZSKrAE1Lmush4zrQM@v2": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_019uVU7LiPErnkfm7LCa4b2d@v2": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01VDZEoyxbGBppWk3TwaWEZA@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.0
+      },
+      "agent_019uVU7LiPErnkfm7LCa4b2d@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01JFwJc296SPY7hsZ5F8c7AC@v1": {
+        "sessions": 2,
+        "list_cost_usd": 1.73
+      },
+      "agent_01BBEbVbrZ4EyDoaTJTQYuNB@v1": {
+        "sessions": 2,
+        "list_cost_usd": 0.46
+      },
+      "agent_01CCEPSTqNH4cX2caEMGTNJ4@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01MSv56acvp1e95AG9cjMstS@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.29
+      },
+      "agent_016K8vLEYdDAG9PdEQp5ri67@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.03
+      },
+      "agent_01Cso79spcHntKMC3p5Zv3on@v1": {
+        "sessions": 5,
+        "list_cost_usd": 0.01
+      },
+      "agent_01Wk28vaCo1kPfaxMEHuXxjt@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.03
+      },
+      "agent_01Cso79spcHntKMC3p5Zv3on@v3": {
+        "sessions": 1,
+        "list_cost_usd": 0.0
+      },
+      "agent_01Cso79spcHntKMC3p5Zv3on@v2": {
+        "sessions": 1,
+        "list_cost_usd": 0.02
+      },
+      "agent_014QApyrvKwybNuGNNSCn5AJ@v1": {
+        "sessions": 3,
+        "list_cost_usd": 0.06
+      },
+      "agent_01KLe1DtBwpUzj226hRWPtDy@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.06
+      },
+      "agent_01826CtjQ8DhaYT5K7SomsSQ@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.14
+      },
+      "agent_014WZ2z6oACpCGVkMRLGyaTB@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.2
+      },
+      "agent_01J9um8hHVNpzCWMwRzEDynU@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.32
+      },
+      "agent_01H3M5KhJPhJEnd12khFpfEK@v1": {
+        "sessions": 5,
+        "list_cost_usd": 0.01
+      },
+      "agent_01QVjjjaS9YEN44e9SWfXbHY@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.15
+      },
+      "agent_01J5Mq3jPwTvnob9sFFxunrV@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.15
+      },
+      "agent_01H3M5KhJPhJEnd12khFpfEK@v3": {
+        "sessions": 1,
+        "list_cost_usd": 0.0
+      },
+      "agent_01H3M5KhJPhJEnd12khFpfEK@v2": {
+        "sessions": 1,
+        "list_cost_usd": 0.02
+      },
+      "agent_01Bhx2Fo8xUoipCKrNhb4kau@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.29
+      },
+      "agent_01XRvPxBEBhxv1zQ6qwnNH95@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.3
+      },
+      "agent_01PF755bz4kT6JgGh2qX9yo1@v1": {
+        "sessions": 2,
+        "list_cost_usd": 0.01
+      },
+      "agent_012oEQYexrKHhu5BLbSMFib3@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.2
+      },
+      "agent_01PF755bz4kT6JgGh2qX9yo1@v3": {
+        "sessions": 1,
+        "list_cost_usd": 0.0
+      },
+      "agent_01PF755bz4kT6JgGh2qX9yo1@v2": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01VLGqudUXRxiTPBj22TvYNx@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01RDwbkZ7Rf3UcKsg9YjWbSr@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.01
+      },
+      "agent_01Md7QJimSHNQr1BvC9gpHdG@v1": {
+        "sessions": 2,
+        "list_cost_usd": 0.0
+      },
+      "agent_01Eef1xLtkWW2cDg1shFUpms@v5": {
+        "sessions": 3,
+        "list_cost_usd": 5.44
+      },
+      "agent_01Eef1xLtkWW2cDg1shFUpms@v4": {
+        "sessions": 3,
+        "list_cost_usd": 5.34
+      },
+      "agent_01RR7DuH79PkeoFRNEccjigG@v1": {
+        "sessions": 1,
+        "list_cost_usd": 0.34
+      }
+    },
+    "cost_by_experiment_metadata": {
+      "clevin-swarm-B": {
+        "sessions": 2,
+        "list_cost_usd": 0.01
+      },
+      "clevin-swarm-I": {
+        "sessions": 2,
+        "list_cost_usd": 0.15
+      },
+      "None": {
+        "sessions": 50,
+        "list_cost_usd": 15.79
+      },
+      "clevin-swarm-F": {
+        "sessions": 23,
+        "list_cost_usd": 13.88
+      },
+      "clevin-swarm-C": {
+        "sessions": 6,
+        "list_cost_usd": 0.04
+      },
+      "workstream-A": {
+        "sessions": 24,
+        "list_cost_usd": 68.25
+      },
+      "clevin-swarm-K": {
+        "sessions": 31,
+        "list_cost_usd": 5.65
+      },
+      "clevin-swarm-H": {
+        "sessions": 25,
+        "list_cost_usd": 0.31
+      },
+      "c0": {
+        "sessions": 1,
+        "list_cost_usd": 0.34
+      }
+    },
+    "total_list_cost_usd": 104.42
+  },
+  "cleanup_ledger": [],
+  "finished_at": "2026-08-28T04:31:13.916826+00:00"
+}

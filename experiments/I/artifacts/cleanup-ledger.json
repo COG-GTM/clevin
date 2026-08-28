@@ -1,0 +1,38 @@
+[
+  {
+    "resource": "agent_01TszZNjSDehu9E4r5boemvq",
+    "name": "clevin-swarm-I-budgetturns-20260828T043750Z-67e5e2",
+    "action": "agent archive",
+    "result": "archived"
+  },
+  {
+    "resource": "agent_01J3cHbLtBpwRkws7LQKq6XD",
+    "name": "clevin-swarm-I-compaction-20260828T043128Z-c1e94e",
+    "action": "agent archive",
+    "result": "archived"
+  },
+  {
+    "resource": "agent_01RuXj6Dy5vPWPfjGsjwtf7Y",
+    "name": "clevin-swarm-I-coordinator-20260828T042833Z-3ccc18",
+    "action": "agent archive",
+    "result": "archived"
+  },
+  {
+    "resource": "agent_015xGFfCS5YjwgwZ5sAnHyQd",
+    "name": "clevin-swarm-I-probe-b-20260828T042833Z-3ccc18",
+    "action": "agent archive",
+    "result": "archived"
+  },
+  {
+    "resource": "agent_01Eik2J4PLyQooprwornu3Da",
+    "name": "clevin-swarm-I-probe-a-20260828T042833Z-3ccc18",
+    "action": "agent archive",
+    "result": "archived"
+  },
+  {
+    "resource": "agent_01DxT5gsex9BziaE3oKmC8Nr",
+    "name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+    "action": "agent archive",
+    "result": "already archived at 2026-08-28 04:39:46.287067+00:00"
+  }
+]

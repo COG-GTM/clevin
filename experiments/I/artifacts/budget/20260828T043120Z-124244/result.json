@@ -1,0 +1,73 @@
+{
+  "profile": "budget",
+  "run_id": "20260828T043120Z-124244",
+  "started_at": "2026-08-28T04:31:20.376964+00:00",
+  "observations": {
+    "final_status": "idle",
+    "session_id": "sesn_01NEMvd9jE27VwcyQMm7PDaS",
+    "economics": {
+      "session_list_cost_usd": 0.11,
+      "thread_list_cost_usd": {
+        "sthr_01UMtYgXFVHQT1eVRLNHrhwc": 0.1
+      },
+      "thread_list_cost_sum_usd": 0.1,
+      "session_minus_thread_sum_usd": 0.01,
+      "session_usage_tokens": {
+        "input": 10,
+        "output": 18792,
+        "cache_read": 0,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5456
+        }
+      },
+      "span_token_sums": {
+        "input": 10,
+        "output": 18792,
+        "cache_read": 0,
+        "cache_creation": 5456,
+        "spans": 1
+      },
+      "prompt_cache_read_fraction_of_input": 0.0,
+      "active_seconds": 266.349,
+      "stats": {
+        "active_seconds": 265.853,
+        "duration_seconds": 271.079999765
+      },
+      "budget_usd": 0.05,
+      "final_usage_snapshot_usd": 0.11,
+      "usage_snapshot_count": 1
+    },
+    "usage_snapshots": [
+      {
+        "at": "2026-08-28T04:35:47.446005Z",
+        "list_cost_usd": 0.11,
+        "input_tokens": 10,
+        "output_tokens": 18792,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5456
+        },
+        "active_seconds": 266.062,
+        "budget_usd": 0.05
+      }
+    ],
+    "errors": []
+  },
+  "cleanup_ledger": [
+    {
+      "kind": "agent",
+      "id": "agent_0169zvjJhFHm4dYYsGokj8zs",
+      "name": "clevin-swarm-I-budget-20260828T043120Z-124244",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "session",
+      "id": "sesn_01NEMvd9jE27VwcyQMm7PDaS",
+      "name": "budget/tiny-budget",
+      "cleanup": "retained as evidence (idle, no live compute)"
+    }
+  ],
+  "finished_at": "2026-08-28T04:35:53.007694+00:00"
+}
