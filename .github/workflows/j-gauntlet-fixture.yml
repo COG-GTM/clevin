@@ -1,6 +1,11 @@
 name: j-gauntlet-fixture
 on:
+  # Only gauntlet PRs, i.e. those targeting the fixture base branch, are checked.
+  # The fixture is deliberately red until an agent fixes it, so running this on
+  # PRs into other branches (which carry the unfixed fixture) is meaningless.
   pull_request:
+    branches:
+      - "swarm/j-gauntlet-base"
     paths:
       - "experiments/J/fixture/**"
       - ".github/workflows/j-gauntlet-fixture.yml"
