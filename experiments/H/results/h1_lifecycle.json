@@ -1,0 +1,1008 @@
+{
+  "experiment": "h1_lifecycle",
+  "started_at": "2026-08-28T02:10:36.967293+00:00",
+  "finished_at": "2026-08-28T02:10:52.859342+00:00",
+  "observations": [
+    {
+      "at": "2026-08-28T02:10:37.203451+00:00",
+      "label": "agent.created",
+      "agent_id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+      "version": 1,
+      "name": "clevin-swarm-H-20260828T021036Z-f35123-h1"
+    },
+    {
+      "at": "2026-08-28T02:10:37.805390+00:00",
+      "label": "cron.every_minute.accepted",
+      "result": {
+        "id": "depl_01HGp591NsttKcPXhb4ZfrsV",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:37.808603Z",
+        "description": null,
+        "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021037Z-a0c670-h1",
+        "paused_reason": null,
+        "resources": [],
+        "schedule": {
+          "expression": "* * * * *",
+          "timezone": "UTC",
+          "type": "cron",
+          "last_run_at": null,
+          "upcoming_runs_at": [
+            "2026-08-28T02:11:00Z",
+            "2026-08-28T02:12:00Z",
+            "2026-08-28T02:13:00Z",
+            "2026-08-28T02:14:00Z",
+            "2026-08-28T02:15:00Z"
+          ]
+        },
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:37.808603Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:38.584652+00:00",
+      "label": "cron.every_minute_tz.accepted",
+      "result": {
+        "id": "depl_01MiSERB9hcbYv5dS8W1A1ko",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:38.561353Z",
+        "description": null,
+        "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021038Z-571b34-h1",
+        "paused_reason": null,
+        "resources": [],
+        "schedule": {
+          "expression": "* * * * *",
+          "timezone": "America/Los_Angeles",
+          "type": "cron",
+          "last_run_at": null,
+          "upcoming_runs_at": [
+            "2026-08-28T02:11:00Z",
+            "2026-08-28T02:12:00Z",
+            "2026-08-28T02:13:00Z",
+            "2026-08-28T02:14:00Z",
+            "2026-08-28T02:15:00Z"
+          ]
+        },
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:38.561353Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:39.293056+00:00",
+      "label": "cron.step_10s_style.accepted",
+      "result": {
+        "id": "depl_01NfKYKQbwrAVF3hDVbPrny4",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:39.241035Z",
+        "description": null,
+        "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021038Z-52706c-h1",
+        "paused_reason": null,
+        "resources": [],
+        "schedule": {
+          "expression": "*/1 * * * *",
+          "timezone": "UTC",
+          "type": "cron",
+          "last_run_at": null,
+          "upcoming_runs_at": [
+            "2026-08-28T02:11:00Z",
+            "2026-08-28T02:12:00Z",
+            "2026-08-28T02:13:00Z",
+            "2026-08-28T02:14:00Z",
+            "2026-08-28T02:15:00Z"
+          ]
+        },
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:39.241035Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:39.836280+00:00",
+      "label": "cron.six_field_seconds.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "`schedule.expression` is not a valid 5-field cron expression: expected 5 fields, got 6"
+        },
+        "request_id": "req_011CeULLu274wxDUQENLourP"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:40.065526+00:00",
+      "label": "cron.shortcut_daily.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "`schedule.expression` is not a valid 5-field cron expression: predefined shortcuts (@daily, @hourly, ...) are not supported"
+        },
+        "request_id": "req_011CeULLuyQf38xwBd6NUczD"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:40.430784+00:00",
+      "label": "cron.last_day_of_month.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "`schedule.expression` is not a valid 5-field cron expression: special character \"L\" is not supported (5-field POSIX cron only)"
+        },
+        "request_id": "req_011CeULLvyBaRmPhbZN2j7Yi"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:40.685053+00:00",
+      "label": "cron.question_mark_dow.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "`schedule.expression` is not a valid 5-field cron expression: special character \"?\" is not supported (5-field POSIX cron only)"
+        },
+        "request_id": "req_011CeULLxVDRWGwfbXNnmzGE"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:40.942011+00:00",
+      "label": "cron.nth_weekday.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "`schedule.expression` is not a valid 5-field cron expression: special character \"#\" is not supported (5-field POSIX cron only)"
+        },
+        "request_id": "req_011CeULLyZxJhUTKQdKMX8ac"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:41.228657+00:00",
+      "label": "cron.bad_timezone.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "`schedule.timezone` \"Mars/Olympus\" is not a valid IANA timezone"
+        },
+        "request_id": "req_011CeULLzifUPQa33mwTUxoJ"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:41.389807+00:00",
+      "label": "cron.missing_timezone.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "schedule.timezone: Field required"
+        },
+        "request_id": "req_011CeULM1yZQtXd4HQZ8HcPr"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:41.682638+00:00",
+      "label": "cron.dow_seven.accepted",
+      "result": {
+        "id": "depl_01PBa6VMWTdcqtupGqZPQJwt",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:41.679702Z",
+        "description": null,
+        "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021041Z-55cc12-h1",
+        "paused_reason": null,
+        "resources": [],
+        "schedule": {
+          "expression": "0 0 * * 7",
+          "timezone": "UTC",
+          "type": "cron",
+          "last_run_at": null,
+          "upcoming_runs_at": [
+            "2026-08-30T00:00:00Z",
+            "2026-09-06T00:00:00Z",
+            "2026-09-13T00:00:00Z",
+            "2026-09-20T00:00:00Z",
+            "2026-09-27T00:00:00Z"
+          ]
+        },
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:41.679702Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:42.309078+00:00",
+      "label": "deployment.no_schedule.accepted",
+      "result": {
+        "id": "depl_01TZrtzHN4QJvaquEmuoSKHq",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:42.307717Z",
+        "description": null,
+        "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021041Z-022725-h1",
+        "paused_reason": null,
+        "resources": [],
+        "schedule": null,
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:42.307717Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:42.627203+00:00",
+      "label": "deployment.self_hosted_with_memory_store.accepted",
+      "result": {
+        "id": "depl_01JrB5LWLYQw7DQurd36bJsi",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:42.620514Z",
+        "description": null,
+        "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021042Z-c61c5e-h1",
+        "paused_reason": null,
+        "resources": [
+          {
+            "memory_store_id": "memstore_01JCboyFNzqNzucVq3xFpnYZ",
+            "type": "memory_store",
+            "access": "read_write",
+            "instructions": null
+          }
+        ],
+        "schedule": null,
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:42.620514Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:43.316093+00:00",
+      "label": "deployment.self_hosted_no_resources.accepted",
+      "result": {
+        "id": "depl_01QGYEsyD1dPwZGjti9jRQsh",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:43.339028Z",
+        "description": null,
+        "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021042Z-ed6cda-h1",
+        "paused_reason": null,
+        "resources": [],
+        "schedule": null,
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:43.339028Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:43.649348+00:00",
+      "label": "initial_events.empty.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "initial_events: must contain at least 1 item"
+        },
+        "request_id": "req_011CeULMBkgLLh1tgsDELfpQ"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:43.782234+00:00",
+      "label": "initial_events.51.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "initial_events: must contain no more than 50 item(s)"
+        },
+        "request_id": "req_011CeULMCHgP2Umr6urgRVN2"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:43.968127+00:00",
+      "label": "initial_events.system_then_user.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "invalid deployment: `initial_events`: a `system.message` event must be the last event in the list"
+        },
+        "request_id": "req_011CeULMCrApPZh8BvbhNShG"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:43.968200+00:00",
+      "label": "pin.at_create",
+      "deployment_agent": {
+        "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+        "type": "agent",
+        "version": 1
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:44.596214+00:00",
+      "label": "agent.new_version",
+      "agent_id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+      "version": 2
+    },
+    {
+      "at": "2026-08-28T02:10:44.756959+00:00",
+      "label": "pin.after_new_agent_version",
+      "deployment_agent": {
+        "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+        "type": "agent",
+        "version": 1
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:44.981734+00:00",
+      "label": "pin.repinned_by_id",
+      "deployment_agent": {
+        "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+        "type": "agent",
+        "version": 2
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:45.200378+00:00",
+      "label": "pin.explicit_old_version",
+      "deployment_agent": {
+        "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+        "type": "agent",
+        "version": 1
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:45.436788+00:00",
+      "label": "pin.nonexistent_version.rejected",
+      "status": 404,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "not_found_error",
+          "message": "Referenced agent not found or not accessible."
+        },
+        "request_id": "req_011CeULMK4yH37Y1DC2Fe9b1"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:46.229045+00:00",
+      "label": "run.manual",
+      "run": {
+        "id": "drun_01F5asj3WVErUijpVK8TtgQM",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "created_at": "2026-08-28T02:10:46.279097Z",
+        "deployment_id": "depl_01TZrtzHN4QJvaquEmuoSKHq",
+        "error": null,
+        "session_id": "sesn_01R29p3cvhbZuD3TniYyvuHj",
+        "trigger_context": {
+          "type": "manual"
+        },
+        "type": "deployment_run"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:46.376402+00:00",
+      "label": "runs.after_manual",
+      "count": 1,
+      "runs": [
+        {
+          "id": "drun_01F5asj3WVErUijpVK8TtgQM",
+          "agent": {
+            "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+            "type": "agent",
+            "version": 1
+          },
+          "created_at": "2026-08-28T02:10:46.279097Z",
+          "deployment_id": "depl_01TZrtzHN4QJvaquEmuoSKHq",
+          "error": null,
+          "session_id": "sesn_01R29p3cvhbZuD3TniYyvuHj",
+          "trigger_context": {
+            "type": "manual"
+          },
+          "type": "deployment_run"
+        }
+      ]
+    },
+    {
+      "at": "2026-08-28T02:10:46.653467+00:00",
+      "label": "runs.filter_manual",
+      "count": 1
+    },
+    {
+      "at": "2026-08-28T02:10:46.799362+00:00",
+      "label": "runs.filter_has_error",
+      "count": 0
+    },
+    {
+      "at": "2026-08-28T02:10:47.186303+00:00",
+      "label": "sessions.filter_by_deployment",
+      "count": 1,
+      "statuses": [
+        "running"
+      ]
+    },
+    {
+      "at": "2026-08-28T02:10:47.350045+00:00",
+      "label": "session.from_manual_run",
+      "session_id": "sesn_01R29p3cvhbZuD3TniYyvuHj",
+      "status": "running",
+      "agent": {
+        "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+        "description": "Temporary workstream H probe agent.",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-haiku-4-5",
+          "effort": null,
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": null,
+        "name": "clevin-swarm-H-20260828T021036Z-f35123-h1",
+        "skills": [],
+        "system": "You are a temporary probe agent for a deployments experiment. Do nothing except reply with the single word ACK.\n\nThe current date and time is Friday, August 28, 2026 at 2:10 AM UTC (UTC). The Unix timestamp for this same instant is 1787883045 (seconds since 1970-01-01T00:00:00 UTC).",
+        "tools": [],
+        "type": "agent",
+        "version": 1
+      },
+      "resources": [],
+      "budget": {
+        "max_list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "type": "limit"
+      },
+      "metadata": {
+        "experiment": "clevin-swarm-H"
+      },
+      "title": "clevin-swarm-H-20260828T021041Z-022725-h1"
+    },
+    {
+      "at": "2026-08-28T02:10:47.571483+00:00",
+      "label": "deployment.paused",
+      "status": "paused",
+      "paused_reason": {
+        "type": "manual"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:48.560901+00:00",
+      "label": "run.while_paused.accepted",
+      "result": {
+        "id": "drun_01PxhXWSKBx2dbLNTbzN9Gw3",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "created_at": "2026-08-28T02:10:48.600319Z",
+        "deployment_id": "depl_01TZrtzHN4QJvaquEmuoSKHq",
+        "error": null,
+        "session_id": "sesn_01Ci6aYP4vLjsEsxQqPX4zVB",
+        "trigger_context": {
+          "type": "manual"
+        },
+        "type": "deployment_run"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:48.718107+00:00",
+      "label": "pause.idempotent.accepted",
+      "result": {
+        "id": "depl_01TZrtzHN4QJvaquEmuoSKHq",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:42.307717Z",
+        "description": null,
+        "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021041Z-022725-h1",
+        "paused_reason": {
+          "type": "manual"
+        },
+        "resources": [],
+        "schedule": null,
+        "status": "paused",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:47.607497Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:48.932224+00:00",
+      "label": "deployment.unpaused",
+      "status": "active",
+      "paused_reason": null
+    },
+    {
+      "at": "2026-08-28T02:10:49.347730+00:00",
+      "label": "unpause.idempotent.accepted",
+      "result": {
+        "id": "depl_01TZrtzHN4QJvaquEmuoSKHq",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:42.307717Z",
+        "description": null,
+        "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021041Z-022725-h1",
+        "paused_reason": null,
+        "resources": [],
+        "schedule": null,
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:48.985562Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:49.672915+00:00",
+      "label": "deployment.for_archive.accepted",
+      "result": {
+        "id": "depl_01S3evAXA6ak5Xq1eiX5nDKz",
+        "agent": {
+          "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+          "type": "agent",
+          "version": 2
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:10:49.677298Z",
+        "description": null,
+        "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+        "initial_events": [
+          {
+            "content": [
+              {
+                "text": "CLEVIN_SMOKE_TEST reply ACK and stop.",
+                "type": "text"
+              }
+            ],
+            "type": "user.message"
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021049Z-3a2dea-h1",
+        "paused_reason": null,
+        "resources": [],
+        "schedule": {
+          "expression": "0 4 1 1 *",
+          "timezone": "UTC",
+          "type": "cron",
+          "last_run_at": null,
+          "upcoming_runs_at": [
+            "2027-01-01T04:00:00Z",
+            "2028-01-01T04:00:00Z",
+            "2029-01-01T04:00:00Z",
+            "2030-01-01T04:00:00Z",
+            "2031-01-01T04:00:00Z"
+          ]
+        },
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:10:49.677298Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "1",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:49.673896+00:00",
+      "label": "archive.before",
+      "schedule": {
+        "expression": "0 4 1 1 *",
+        "timezone": "UTC",
+        "type": "cron",
+        "last_run_at": null,
+        "upcoming_runs_at": [
+          "2027-01-01T04:00:00Z",
+          "2028-01-01T04:00:00Z",
+          "2029-01-01T04:00:00Z",
+          "2030-01-01T04:00:00Z",
+          "2031-01-01T04:00:00Z"
+        ]
+      },
+      "status": "active"
+    },
+    {
+      "at": "2026-08-28T02:10:49.860616+00:00",
+      "label": "archive.after",
+      "status": "active",
+      "archived_at": "2026-08-28 02:10:49.898901+00:00",
+      "schedule": {
+        "expression": "0 4 1 1 *",
+        "timezone": "UTC",
+        "type": "cron",
+        "last_run_at": null,
+        "upcoming_runs_at": []
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:50.000154+00:00",
+      "label": "archive.run_after_archive.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "Cannot modify archived deployment"
+        },
+        "request_id": "req_011CeULMepN2FWTL5GBvFHtL"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:50.191101+00:00",
+      "label": "archive.update_after_archive.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "Cannot modify archived deployment"
+        },
+        "request_id": "req_011CeULMfQqe5Sn9tijXdFV2"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:50.369207+00:00",
+      "label": "archive.unpause_after_archive.rejected",
+      "status": 400,
+      "body": {
+        "type": "error",
+        "error": {
+          "type": "invalid_request_error",
+          "message": "Cannot modify archived deployment"
+        },
+        "request_id": "req_011CeULMgET78Psy8sSpTpa3"
+      }
+    },
+    {
+      "at": "2026-08-28T02:10:50.530221+00:00",
+      "label": "archive.excluded_from_list",
+      "present": false
+    },
+    {
+      "at": "2026-08-28T02:10:50.666773+00:00",
+      "label": "archive.present_with_include_archived",
+      "present": true
+    }
+  ],
+  "cleanup": [
+    {
+      "at": "2026-08-28T02:10:38.158456+00:00",
+      "kind": "deployment",
+      "id": "depl_01HGp591NsttKcPXhb4ZfrsV",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:38.883117+00:00",
+      "kind": "deployment",
+      "id": "depl_01MiSERB9hcbYv5dS8W1A1ko",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:39.595197+00:00",
+      "kind": "deployment",
+      "id": "depl_01NfKYKQbwrAVF3hDVbPrny4",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:41.920540+00:00",
+      "kind": "deployment",
+      "id": "depl_01PBa6VMWTdcqtupGqZPQJwt",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:42.978085+00:00",
+      "kind": "deployment",
+      "id": "depl_01JrB5LWLYQw7DQurd36bJsi",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:43.530085+00:00",
+      "kind": "deployment",
+      "id": "depl_01QGYEsyD1dPwZGjti9jRQsh",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:51.420572+00:00",
+      "kind": "session",
+      "id": "sesn_01Ci6aYP4vLjsEsxQqPX4zVB",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:51.795438+00:00",
+      "kind": "session",
+      "id": "sesn_01R29p3cvhbZuD3TniYyvuHj",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:52.007368+00:00",
+      "kind": "deployment",
+      "id": "depl_01TZrtzHN4QJvaquEmuoSKHq",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:52.608245+00:00",
+      "kind": "deployment",
+      "id": "depl_01S3evAXA6ak5Xq1eiX5nDKz",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:10:52.859197+00:00",
+      "kind": "agent",
+      "id": "agent_01Md7QJimSHNQr1BvC9gpHdG",
+      "action": "archive",
+      "result": "archived"
+    }
+  ]
+}
