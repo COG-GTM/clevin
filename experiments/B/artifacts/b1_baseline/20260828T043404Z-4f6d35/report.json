@@ -1,0 +1,169 @@
+{
+  "arm": "b1_baseline",
+  "run_id": "20260828T043404Z-4f6d35",
+  "session_id": "sesn_014DCfuUvsNpkxGGjQWHEJUQ",
+  "model": "claude-sonnet-5",
+  "notes": "single session, minimal system prompt, no memory, no subagents",
+  "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+  "elapsed_s": 123.7,
+  "timeline": [
+    {
+      "t": 0.9,
+      "kind": "session_created",
+      "session_id": "sesn_014DCfuUvsNpkxGGjQWHEJUQ"
+    },
+    {
+      "t": 1.1,
+      "kind": "status",
+      "status": "running"
+    },
+    {
+      "t": 122.6,
+      "kind": "status",
+      "status": "idle"
+    },
+    {
+      "t": 122.9,
+      "kind": "idle",
+      "status": "idle",
+      "stop_reason": "end_turn"
+    },
+    {
+      "t": 123.3,
+      "kind": "sent",
+      "interrupt": false,
+      "text": "Two quick questions before you continue, answer in one line each: (1) what is the release codename? (2) list the standin"
+    },
+    {
+      "t": 123.5,
+      "kind": "status",
+      "status": "idle"
+    }
+  ],
+  "stop_reason": {
+    "type": "end_turn"
+  },
+  "metrics": {
+    "event_counts": {
+      "session.status_running": 2,
+      "session.thread_status_running": 2,
+      "user.message": 2,
+      "span.model_request_start": 17,
+      "agent.thinking": 5,
+      "agent.tool_use": 15,
+      "span.model_request_end": 16,
+      "agent.tool_result": 15,
+      "agent.message": 8,
+      "session.thread_status_idle": 1,
+      "session.usage": 1,
+      "session.status_idle": 1
+    },
+    "compactions": 0,
+    "tool_calls": 15,
+    "tool_histogram": {
+      "bash": 7,
+      "read": 1,
+      "write": 7
+    },
+    "error_tool_results": 0,
+    "error_samples": [],
+    "usage": {
+      "active_seconds": 120.548,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 29102
+      },
+      "cache_read_input_tokens": 294163,
+      "input_tokens": 31,
+      "list_cost": {
+        "amount": "26",
+        "currency": "USD"
+      },
+      "output_tokens": 12749,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "agent_message_count": 8
+  },
+  "grade": {
+    "workload": "acme-billing-decimal-migration",
+    "checks": {
+      "tests_pass": true,
+      "protected_files_intact": true,
+      "constraint_marker_on_touched_files": true,
+      "decimal_semantics": true
+    },
+    "score": "4/4",
+    "verdict": "PASS",
+    "tests": {
+      "returncode": 0,
+      "all_passed": true,
+      "n_failed": 0,
+      "n_passed": 14,
+      "failed_ids": [],
+      "tail": [
+        "test_legacy_signature_still_returns_float (tests.test_contract.ContractTest.test_legacy_signature_still_returns_float) ... ok",
+        "test_money_rejects_floats (tests.test_contract.ContractTest.test_money_rejects_floats) ... ok",
+        "test_reports_return_money (tests.test_contract.ContractTest.test_reports_return_money) ... ok",
+        "test_single_source_of_tax_rate (tests.test_contract.ContractTest.test_single_source_of_tax_rate) ... ok",
+        "test_unit_price_is_money (tests.test_contract.ContractTest.test_unit_price_is_money) ... ok",
+        "test_untaxed_products_are_excluded (tests.test_contract.ContractTest.test_untaxed_products_are_excluded) ... ok",
+        "test_bulk_rule_thresholds (tests.test_smoke.SmokeTest.test_bulk_rule_thresholds) ... ok",
+        "test_cli_output (tests.test_smoke.SmokeTest.test_cli_output) ... ok",
+        "test_legacy_tax_only (tests.test_smoke.SmokeTest.test_legacy_tax_only) ... ok",
+        "test_legacy_total_matches_published_value (tests.test_smoke.SmokeTest.test_legacy_total_matches_published_value) ... ok",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 14 tests in 0.003s",
+        "",
+        "OK"
+      ]
+    },
+    "integrity": {
+      "tests/test_contract.py": true,
+      "tests/test_smoke.py": true,
+      "grade.py": true
+    },
+    "touched_src_files": [
+      "src/acme_billing/cart.py",
+      "src/acme_billing/catalog.py",
+      "src/acme_billing/cli.py",
+      "src/acme_billing/invoice.py",
+      "src/acme_billing/legacy.py",
+      "src/acme_billing/money.py",
+      "src/acme_billing/reports.py"
+    ],
+    "missing_marker": [],
+    "semantics": {
+      "tax_rate_decimal": true,
+      "single_tax_rate": true,
+      "catalog_decimal": true
+    },
+    "fingerprint": "c4199ef330dd7a0e",
+    "files": {
+      "grade.py": "9f59936410b9d35afc41e78b86e694b8e7e2fc1289993c5eb5b9d979fd720670",
+      "src/acme_billing/__init__.py": "4cb9a2382748a84aa6aa8dffa6bfd05ec089f51ddbac92dba8d2e8e0b6576960",
+      "src/acme_billing/cart.py": "fcb781d4fa387aa26d46778dd25acd55f86c5c39c918a024eb4c779cb92351e4",
+      "src/acme_billing/catalog.py": "332135fa12115c1d557a64f338e0cb93e2f5912d6f09b6b00420489f77517736",
+      "src/acme_billing/cli.py": "28b9644159ff1b1b049d4b8e0ceee26798b67e14bf1daa8a1e1b3cfef8c7cc89",
+      "src/acme_billing/discounts.py": "b1559841f73e9d43e355e960c0d8f7bce9f52d744b3eed676bf2b6079b522194",
+      "src/acme_billing/invoice.py": "41617bf318675ca1053ef3699c8ce576a1c1fd1d30fc62b441a69c119f944aa4",
+      "src/acme_billing/legacy.py": "ab15b7b9731b47ca759f8daf6e361c1d47ced7c26b2205508d1de07aac02b546",
+      "src/acme_billing/money.py": "ebd94dbb8c77b4fb4d6de3d08df23afd7ed3353a50b62f0cb04d21ca00e67651",
+      "src/acme_billing/reports.py": "04481acdd72aefe0f93d3991dfe8189530962c62309575ef56d4c18c7cd65e8e",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_contract.py": "a9e7d7ebbfda332ec7bfb96a9ed99ceb10acf0c5c727e29d725fbd5b05d67b7d",
+      "tests/test_smoke.py": "bde0611b29ec4973fb1a25031a519c5f92be4d7fd65baf353c05590141bda46d"
+    }
+  },
+  "supervision": {
+    "nudges": 0,
+    "outcome": "pass"
+  },
+  "recall_answer": [
+    "The grader now reports a full pass. Score `4/4`, verdict `PASS`.\n\n## Summary\n\nMigrated `acme_billing` off floats onto the Decimal-based `Money` type:\n\n- **`money.py`** \u2014 added `TAX_RATE = Decimal(\"0.0825\")` as the single shared tax-rate object, plus a `quantize()` helper (ROUND_HALF_UP to 2 places) and a `to_money()` convenience wrapper. `Money.__add__`/`__sub__` now also quantize their results.\n- **`catalog.py`** \u2014 `Product.unit_price` is now `Decimal`; `unit_price(sku)` returns `Money`.\n- **`cart.py`** \u2014 imports the shared `TAX_RATE` from `money.py` (no local re-declaration); `subtotal()`, `tax()`, `total()` all do Decimal arithmetic internally and return `Money`.\n- **`invoice.py`** \u2014 imports the same shared `TAX_RATE` object (verified via `is` in the contract test); `InvoiceLine.discount_percent` is now `Decimal`; discount math is done directly in Decimal (bypassing the still-float `discounts.py`, which is unrelated/unmodified); `line_amount`/`subtotal`/`tax`/`total` return `Money`; `render()` formats from `Money.amount`.\n- **`reports.py`** \u2014 `revenue_by_sku` and `grand_total` now aggregate in `Decimal` and return `Money`.\n- **`legacy.py`** \u2014 signature unchanged; internally now builds a `Cart` and converts the final `Money.amount` to `float` at the boundary only.\n- **`cli.py`** \u2014 prints `f\"{...amount:.2f}\"` from the `Money` objects, preserving identical output strings.\n- `discounts.py` was left untouched (still float-based, as required by the smoke test and unrelated to the money path now).\n\nEvery created/modified file under `src/` carries `# clevin-b: MAUVE-42` in its first five lines. No test files or `grade.py` were touched, no git/network/package-install actions were taken.\n\nFinal grader output:\n\n```json\n{\n  \"workload\": \"acme-billing-decimal-migration\",\n  \"checks\": {\n    \"tests_pass\": true,\n    \"protected_files_intact\": true,\n    \"constraint_marker_on_touched_files\": true,\n    \"decimal_semantics\": true\n  },\n  \"score\": \"4/4\",\n  \"verdict\": \"PASS\",\n  \"tests\": {\n    \"returncode\": 0,\n    \"all_passed\": true,\n    \"n_failed\": 0,\n    \"n_passed\": 14,\n    \"failed_ids\": [],\n    \"tail\": [\n      \"test_legacy_signature_still_returns_float (tests.test_contract.ContractTest.test_legacy_signature_still_returns_float) ... ok\",\n      \"test_money_rejects_floats (tests.test_contract.ContractTest.test_money_rejects_floats) ... ok\",\n      \"test_reports_return_money (tests.test_contract.ContractTest.test_reports_return_money) ... ok\",\n      \"test_single_source_of_tax_rate (tests.test_contract.ContractTest.test_single_source_of_tax_rate) ... ok\",\n      \"test_unit_price_is_money (tests.test_contract.ContractTest.test_unit_price_is_money) ... ok\",\n      \"test_untaxed_products_are_excluded (tests.test_contract.ContractTest.test_untaxed_products_are_excluded) ... ok\",\n      \"test_bulk_rule_thresholds (tests.test_smoke.SmokeTest.test_bulk_rule_thresholds) ... ok\",\n      \"test_cli_output (tests.test_smoke.SmokeTest.test_cli_output) ... ok\",\n      \"test_legacy_tax_only (tests.test_smoke.SmokeTest.test_legacy_tax_only) ... ok\",\n      \"test_legacy_total_matches_published_value (tests.test_smoke.SmokeTest.test_legacy_total_matches_published_value) ... ok\",\n      \"\",\n      \"----------------------------------------------------------------------\",\n      \"Ran 14 tests in 0.003s\",\n      \"\",\n      \"OK\"\n    ]\n  },\n  \"integrity\": {\n    \"tests/test_contract.py\": true,\n    \"tests/test_smoke.py\": true,\n    \"grade.py\": true\n  },\n  \"touched_src_files\": [\n    \"src/acme_billing/cart.py\",\n    \"src/acme_billing/catalog.py\",\n    \"src/acme_billing/cli.py\",\n    \"src/acme_billing/invoice.py\",\n    \"src/acme_billing/legacy.py\",\n    \"src/acme_billing/money.py\",\n    \"src/acme_billing/reports.py\"\n  ],\n  \"missing_marker\": [],\n  \"semantics\": {\n    \"tax_rate_decimal\": true,\n    \"single_tax_rate\": true,\n    \"catalog_decimal\": true\n  },\n  \"fingerprint\": \"c4199ef330dd7a0e\"\n}\n```"
+  ],
+  "codename_retained": false
+}

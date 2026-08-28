@@ -1,0 +1,16 @@
+| arm            | workload | session                       | outcome           | score | nudges | tool_calls | compactions | tool_errors | elapsed_s | list_cost | output_tokens | cache_read | codename |
+|----------------|----------|-------------------------------|-------------------|-------|--------|------------|-------------|-------------|-----------|-----------|---------------|------------|----------|
+| b1_baseline    | core     | sesn_014DCfuUvsNpkxGGjQWHEJUQ | pass              | 4/4   | 0      | 15         | 0           | 0           | 123.7     | 26        | 12749         | 294163     | False    |
+| b1_baseline    | wide     | sesn_01UE36DCGwwQtwTrxCGtyfdw | pass              | 4/4   | 0      | 34         | 0           | 0           | 354.8     | 56        | 22813         | 1051638    | True     |
+| b1_repeat      | core     | sesn_011Kqdd2zcwVzwdMMcDYTXbX | pass              | 4/4   | 0      | 18         | 0           | 0           | 154.1     | 32        | 15344         | 405458     | False    |
+| b1_repeat      | wide     | sesn_01Ti1qMo3nuztoxfx6cYY6bb | pass              | 4/4   | 0      | 34         | 0           | 1           | 278.8     | 41        | 13302         | 893587     | True     |
+| b2_planned     | core     | sesn_015FewBkngdUWXbEJ6A27EZ6 | pass              | 4/4   | 0      | 15         | 0           | 0           | 139.0     | 28        | 13916         | 304740     | False    |
+| b2_planned     | wide     | sesn_011fwZNLZZPBzoGauFzdWQer | pass              | 4/4   | 0      | 25         | 0           | 0           | 294.0     | 43        | 15488         | 814560     | True     |
+| b3_subagents   | wide     | sesn_01GaubMzQNcR9AfkigieR2X8 | pass              | 4/4   | 0      | 26         | 0           | 1           | 340.3     | 50        | 17940         | 925841     | True     |
+| b4_memory      | core     | sesn_017GjF4Zxx8KP2mkfq7PxbEG | pass              | 4/4   | 0      | 23         | 0           | 0           | 169.4     | 36        | 15390         | 534352     | False    |
+| b4_memory_wide | wide     | sesn_0173N5Tn7J7Tmau5H1ktx3Th | budget_reached    | 4/4   | None   | 40         | 0           | 1           | None      | 61        | 17283         | 1480597    | False    |
+| b5_resume      | wide     | sesn_012LhdngwoQCEWot586kMghx | retries_exhausted | 4/4   | None   | 28         | 0           | 1           | None      | 48        | 18823         | 905312     | False    |
+| b6_changing    | wide     | sesn_01JZyfBFEttydpgbyDQVctBc | pass              | 4/4   | 0      | 31         | 0           | 1           | 366.6     | 55        | 20424         | 1144737    | True     |
+| b7_interrupt   | wide     | sesn_015eCLRAcPtEFt8DKaHaZTTZ | budget_reached    | 3/4   | None   | 32         | 0           | 1           | None      | 61        | 23140         | 1193380    | False    |
+| b8_compaction  | wide     | sesn_01WxxX6jTBjEHKjWBPu2XK1x | pass              | 4/4   | 0      | 36         | 0           | 0           | 370.1     | 61        | 23622         | 1179042    | True     |
+| b9_toolfail    | wide     | sesn_01MfEiwmPsGrHvyLGncqRHPa | pass              | 4/4   | 0      | 32         | 0           | 5           | 389.6     | 62        | 21984         | 1191887    | False    |
