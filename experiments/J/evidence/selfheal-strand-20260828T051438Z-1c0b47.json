@@ -1,0 +1,457 @@
+{
+  "probe": "strand",
+  "run_id": "20260828T051438Z-1c0b47",
+  "started_at": "2026-08-28T05:14:38.251423+00:00",
+  "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+  "timeline": [
+    {
+      "at": "2026-08-28T05:14:39.397296+00:00",
+      "elapsed_s": 1.1,
+      "event": "session_created",
+      "session_id": "sesn_01Xu42fdAkc7a22gCAjmXJxY"
+    },
+    {
+      "at": "2026-08-28T05:14:52.946451+00:00",
+      "elapsed_s": 14.7,
+      "event": "work_active",
+      "item": {
+        "id": "sesn_01Xu42fdAkc7a22gCAjmXJxY",
+        "acknowledged_at": "2026-08-28T05:14:44.244905Z",
+        "created_at": "2026-08-28T05:14:38.917520Z",
+        "data": {
+          "id": "sesn_01Xu42fdAkc7a22gCAjmXJxY",
+          "type": "session"
+        },
+        "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+        "latest_heartbeat_at": "2026-08-28T05:14:46.958088Z",
+        "metadata": {},
+        "secret": null,
+        "started_at": "2026-08-28T05:14:39.063283Z",
+        "state": "active",
+        "stop_requested_at": null,
+        "stopped_at": null,
+        "type": "work",
+        "actor": null
+      },
+      "modal": {
+        "sandbox_id": "sb-qceniP3y4OnuMNtV9R1WyW",
+        "status": "running",
+        "volume_path": "clevin-sessions/sessions/sesn_01Xu42fdAkc7a22gCAjmXJxY",
+        "volume_entries": []
+      }
+    },
+    {
+      "at": "2026-08-28T05:14:53.180073+00:00",
+      "elapsed_s": 14.9,
+      "event": "tool_in_flight",
+      "pending": {
+        "id": "sevt_01HgtCBHJJdVPxUdYLNJNaxn",
+        "input": {
+          "command": "bash -lc 'echo J2-STRAND-START; sleep 420; echo J2-STRAND-END'"
+        },
+        "name": "bash",
+        "processed_at": "2026-08-28T05:14:41.899288Z",
+        "type": "agent.tool_use",
+        "evaluated_permission": "allow",
+        "session_thread_id": null
+      }
+    },
+    {
+      "at": "2026-08-28T05:14:53.396242+00:00",
+      "elapsed_s": 15.1,
+      "event": "sandbox_killed",
+      "killed": {
+        "app_id": "ap-rntdxyiE8GU1aYtc3PwBiN",
+        "terminated": []
+      }
+    },
+    {
+      "at": "2026-08-28T05:14:54.764480+00:00",
+      "elapsed_s": 16.5,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:14:46.958088Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": true,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 1
+      }
+    },
+    {
+      "at": "2026-08-28T05:15:16.111736+00:00",
+      "elapsed_s": 37.9,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:14:46.958088Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": true,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 0
+      }
+    },
+    {
+      "at": "2026-08-28T05:15:37.526464+00:00",
+      "elapsed_s": 59.3,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:15:17.237011Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": true,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 1
+      }
+    },
+    {
+      "at": "2026-08-28T05:15:58.879514+00:00",
+      "elapsed_s": 80.6,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:15:47.476548Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": true,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 0
+      }
+    },
+    {
+      "at": "2026-08-28T05:16:20.170389+00:00",
+      "elapsed_s": 101.9,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:16:17.758853Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": true,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 0
+      }
+    },
+    {
+      "at": "2026-08-28T05:16:41.641991+00:00",
+      "elapsed_s": 123.4,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:16:17.758853Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": true,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 0
+      }
+    },
+    {
+      "at": "2026-08-28T05:17:02.999684+00:00",
+      "elapsed_s": 144.7,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:16:48.065565Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": false,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 1
+      }
+    },
+    {
+      "at": "2026-08-28T05:17:24.371641+00:00",
+      "elapsed_s": 166.1,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:17:18.485844Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": false,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 1
+      }
+    },
+    {
+      "at": "2026-08-28T05:17:45.670755+00:00",
+      "elapsed_s": 187.4,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:17:18.485844Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": false,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 1
+      }
+    },
+    {
+      "at": "2026-08-28T05:18:07.023364+00:00",
+      "elapsed_s": 208.8,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:17:48.734474Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": false,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 0
+      }
+    },
+    {
+      "at": "2026-08-28T05:18:28.458428+00:00",
+      "elapsed_s": 230.2,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:18:19.017050Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": false,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 0
+      }
+    },
+    {
+      "at": "2026-08-28T05:18:49.759493+00:00",
+      "elapsed_s": 251.5,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:18:19.017050Z",
+      "stopped_at": null,
+      "session_status": "idle",
+      "pending": false,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 0
+      }
+    },
+    {
+      "at": "2026-08-28T05:19:11.328990+00:00",
+      "elapsed_s": 273.1,
+      "event": "work_state",
+      "state": "stopped",
+      "latest_heartbeat_at": "2026-08-28T05:18:49.302059Z",
+      "stopped_at": "2026-08-28T05:18:49.692176Z",
+      "session_status": "idle",
+      "pending": false,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 1
+      }
+    },
+    {
+      "at": "2026-08-28T05:19:11.329064+00:00",
+      "elapsed_s": 273.1,
+      "event": "detection",
+      "detected": true,
+      "seconds_from_kill_to_stopped": 257.9,
+      "stop_after_last_heartbeat_s": 0.4
+    },
+    {
+      "at": "2026-08-28T05:23:13.028349+00:00",
+      "elapsed_s": 514.8,
+      "event": "reclaim",
+      "reclaim_older_than_ms": 1000,
+      "seconds_polled": 241.7,
+      "offers": [],
+      "own_item_reoffered": false
+    },
+    {
+      "at": "2026-08-28T05:23:18.796384+00:00",
+      "elapsed_s": 520.5,
+      "event": "webhook_replay",
+      "status": 200,
+      "body": "{\"status\":\"ok\",\"event_type\":\"session.status_run_started\",\"spawned\":[]}"
+    },
+    {
+      "at": "2026-08-28T05:26:20.628285+00:00",
+      "elapsed_s": 702.4,
+      "event": "webhook_replay_result",
+      "response": {
+        "status": 200,
+        "body": "{\"status\":\"ok\",\"event_type\":\"session.status_run_started\",\"spawned\":[]}"
+      },
+      "events_before": 19,
+      "events_after": 19,
+      "still_pending": false,
+      "session_status": "idle",
+      "modal": {
+        "sandbox_id": null,
+        "status": "stopped",
+        "volume_path": "clevin-sessions/sessions/sesn_01Xu42fdAkc7a22gCAjmXJxY",
+        "volume_entries": []
+      }
+    },
+    {
+      "at": "2026-08-28T05:26:21.312341+00:00",
+      "elapsed_s": 703.1,
+      "event": "conclusion",
+      "platform_detects_dead_worker": true,
+      "platform_reoffers_work": false,
+      "webhook_replay_redispatches": false,
+      "session_still_stranded": false,
+      "last_idle_stop": {
+        "type": "end_turn"
+      },
+      "final_status": "idle",
+      "final_usage": {
+        "amount": "1",
+        "currency": "USD"
+      }
+    }
+  ],
+  "session_id": "sesn_01Xu42fdAkc7a22gCAjmXJxY",
+  "killed": {
+    "app_id": "ap-rntdxyiE8GU1aYtc3PwBiN",
+    "terminated": []
+  },
+  "detection": {
+    "detected": true,
+    "seconds_from_kill_to_stopped": 257.9,
+    "stop_after_last_heartbeat_s": 0.4,
+    "item": {
+      "id": "sesn_01Xu42fdAkc7a22gCAjmXJxY",
+      "acknowledged_at": "2026-08-28T05:14:44.244905Z",
+      "created_at": "2026-08-28T05:14:38.917520Z",
+      "data": {
+        "id": "sesn_01Xu42fdAkc7a22gCAjmXJxY",
+        "type": "session"
+      },
+      "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+      "latest_heartbeat_at": "2026-08-28T05:18:49.302059Z",
+      "metadata": {},
+      "secret": null,
+      "started_at": "2026-08-28T05:14:39.063283Z",
+      "state": "stopped",
+      "stop_requested_at": "2026-08-28T05:18:49.692176Z",
+      "stopped_at": "2026-08-28T05:18:49.692176Z",
+      "type": "work",
+      "actor": null
+    }
+  },
+  "reclaim": {
+    "reclaim_older_than_ms": 1000,
+    "seconds_polled": 241.7,
+    "offers": [],
+    "own_item_reoffered": false
+  },
+  "webhook_replay": {
+    "response": {
+      "status": 200,
+      "body": "{\"status\":\"ok\",\"event_type\":\"session.status_run_started\",\"spawned\":[]}"
+    },
+    "events_before": 19,
+    "events_after": 19,
+    "still_pending": false,
+    "session_status": "idle",
+    "work_item": {
+      "id": "sesn_01Xu42fdAkc7a22gCAjmXJxY",
+      "acknowledged_at": "2026-08-28T05:14:44.244905Z",
+      "created_at": "2026-08-28T05:14:38.917520Z",
+      "data": {
+        "id": "sesn_01Xu42fdAkc7a22gCAjmXJxY",
+        "type": "session"
+      },
+      "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+      "latest_heartbeat_at": "2026-08-28T05:18:49.302059Z",
+      "metadata": {},
+      "secret": null,
+      "started_at": "2026-08-28T05:14:39.063283Z",
+      "state": "stopped",
+      "stop_requested_at": "2026-08-28T05:18:49.692176Z",
+      "stopped_at": "2026-08-28T05:18:49.692176Z",
+      "type": "work",
+      "actor": null
+    },
+    "modal": {
+      "sandbox_id": null,
+      "status": "stopped",
+      "volume_path": "clevin-sessions/sessions/sesn_01Xu42fdAkc7a22gCAjmXJxY",
+      "volume_entries": []
+    }
+  },
+  "conclusion": {
+    "platform_detects_dead_worker": true,
+    "platform_reoffers_work": false,
+    "webhook_replay_redispatches": false,
+    "session_still_stranded": false,
+    "last_idle_stop": {
+      "type": "end_turn"
+    },
+    "final_status": "idle",
+    "final_usage": {
+      "amount": "1",
+      "currency": "USD"
+    }
+  },
+  "final_modal_state": {
+    "sandbox_id": null,
+    "status": "stopped",
+    "volume_path": "clevin-sessions/sessions/sesn_01Xu42fdAkc7a22gCAjmXJxY",
+    "volume_entries": []
+  },
+  "cleanup_ledger": [
+    {
+      "kind": "agent",
+      "id": "agent_015m7MhdV2VEZU3sYUFar2ww",
+      "name": "clevin-swarm-J2-strand-20260828T051438Z-1c0b47",
+      "created_at": "2026-08-28T05:14:38.525970+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "session",
+      "id": "sesn_01Xu42fdAkc7a22gCAjmXJxY",
+      "name": "J2/strand",
+      "created_at": "2026-08-28T05:14:39.397285+00:00",
+      "cleanup": "retained as evidence (stranded, no live compute)"
+    }
+  ],
+  "finished_at": "2026-08-28T05:26:21.864781+00:00"
+}

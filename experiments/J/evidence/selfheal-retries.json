@@ -1,0 +1,34 @@
+{
+  "at": "2026-08-28T05:13:59.160010+00:00",
+  "sessions": [
+    {
+      "session_id": "sesn_01EGsNu8uYt4SnS36Bk1JKvN",
+      "status": "idle",
+      "events": 666,
+      "last_event": {
+        "type": "agent.thread_message_received",
+        "processed_at": "2026-08-28T04:46:19.512000Z"
+      },
+      "seconds_since_last_event": 1659.6,
+      "last_idle_stop": {
+        "type": "retries_exhausted"
+      },
+      "error_events": [
+        {
+          "processed_at": "2026-08-28T04:46:20.257698Z",
+          "type": "session.error",
+          "excerpt": "{\"id\": \"sevt_01TEXQwgJmy74ZfghmhxAEZx\", \"error\": {\"message\": \"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\", \"retry_status\": {\"type\": \"exhausted\"}, \"type\": \"billing_error\"}, \"processed_at\": \"2026-08-28T04:46:20.257698Z\", \"type\": \"session.error\"}"
+        },
+        {
+          "processed_at": "2026-08-28T04:46:22.281708Z",
+          "type": "session.error",
+          "excerpt": "{\"id\": \"sevt_01BtbuntW8QYQqgyLAqJKYbn\", \"error\": {\"message\": \"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\", \"retry_status\": {\"type\": \"exhausted\"}, \"type\": \"billing_error\"}, \"processed_at\": \"2026-08-28T04:46:22.281708Z\", \"type\": \"session.error\"}"
+        }
+      ],
+      "usage": {
+        "amount": "716",
+        "currency": "USD"
+      }
+    }
+  ]
+}
