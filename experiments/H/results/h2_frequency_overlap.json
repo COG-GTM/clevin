@@ -1,0 +1,657 @@
+{
+  "experiment": "h2_frequency_overlap",
+  "started_at": "2026-08-28T02:11:45.916241+00:00",
+  "finished_at": "2026-08-28T02:20:02.287281+00:00",
+  "observations": [
+    {
+      "at": "2026-08-28T02:11:46.161567+00:00",
+      "label": "agent.created",
+      "agent_id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+      "version": 1,
+      "name": "clevin-swarm-H-20260828T021145Z-94ddc5-h2"
+    },
+    {
+      "at": "2026-08-28T02:11:46.508482+00:00",
+      "label": "deployment.created",
+      "deployment_id": "depl_01JzCQVG6imi1tmpPAo2yvJJ",
+      "schedule": {
+        "expression": "* * * * *",
+        "timezone": "UTC",
+        "type": "cron",
+        "last_run_at": null,
+        "upcoming_runs_at": [
+          "2026-08-28T02:12:00Z",
+          "2026-08-28T02:13:00Z",
+          "2026-08-28T02:14:00Z",
+          "2026-08-28T02:15:00Z",
+          "2026-08-28T02:16:00Z"
+        ]
+      },
+      "upcoming": [
+        "2026-08-28 02:12:00+00:00",
+        "2026-08-28 02:13:00+00:00",
+        "2026-08-28 02:14:00+00:00",
+        "2026-08-28 02:15:00+00:00",
+        "2026-08-28 02:16:00+00:00"
+      ]
+    },
+    {
+      "at": "2026-08-28T02:11:46.823957+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 0,
+      "running": 0,
+      "idle": 0,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 0
+    },
+    {
+      "at": "2026-08-28T02:12:06.977545+00:00",
+      "label": "run.observed",
+      "run_id": "drun_01SAi3xBhczGpsyzEwgfHpBm",
+      "scheduled_at": "2026-08-28 02:12:00+00:00",
+      "created_at": "2026-08-28 02:12:01.484245+00:00",
+      "fire_delay_s": 1.484245,
+      "session_id": "sesn_01HxTqcWhcnopDBNTQo1rnEP",
+      "error": null,
+      "agent_version": 1
+    },
+    {
+      "at": "2026-08-28T02:12:07.342631+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 1,
+      "running": 1,
+      "idle": 0,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 1
+    },
+    {
+      "at": "2026-08-28T02:12:27.857840+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 1,
+      "running": 1,
+      "idle": 0,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 1
+    },
+    {
+      "at": "2026-08-28T02:12:48.304440+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 1,
+      "running": 1,
+      "idle": 0,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 1
+    },
+    {
+      "at": "2026-08-28T02:13:08.469716+00:00",
+      "label": "run.observed",
+      "run_id": "drun_01VqdDLbxD2rwHzUfPNasNhB",
+      "scheduled_at": "2026-08-28 02:13:00+00:00",
+      "created_at": "2026-08-28 02:13:07.088001+00:00",
+      "fire_delay_s": 7.088001,
+      "session_id": "sesn_011fE8R5jmbxfm2VH1chDaLu",
+      "error": null,
+      "agent_version": 1
+    },
+    {
+      "at": "2026-08-28T02:13:08.755155+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 2,
+      "running": 2,
+      "idle": 0,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 2
+    },
+    {
+      "at": "2026-08-28T02:13:29.276796+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 2,
+      "running": 2,
+      "idle": 0,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 2
+    },
+    {
+      "at": "2026-08-28T02:13:49.806782+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 2,
+      "running": 2,
+      "idle": 0,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 2
+    },
+    {
+      "at": "2026-08-28T02:14:10.006113+00:00",
+      "label": "run.observed",
+      "run_id": "drun_01JiiE5nr5P12ZAbGDzYDudi",
+      "scheduled_at": "2026-08-28 02:14:00+00:00",
+      "created_at": "2026-08-28 02:14:05.885876+00:00",
+      "fire_delay_s": 5.885876,
+      "session_id": "sesn_01N2eNRQwaejShHqxQFvxWqh",
+      "error": null,
+      "agent_version": 1
+    },
+    {
+      "at": "2026-08-28T02:14:10.306621+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 3,
+      "running": 3,
+      "idle": 0,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 3
+    },
+    {
+      "at": "2026-08-28T02:14:30.689121+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 3,
+      "running": 3,
+      "idle": 0,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 3
+    },
+    {
+      "at": "2026-08-28T02:14:51.038305+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 3,
+      "running": 2,
+      "idle": 1,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 3
+    },
+    {
+      "at": "2026-08-28T02:15:11.258814+00:00",
+      "label": "run.observed",
+      "run_id": "drun_014b5Q1aumwXXhTHU1T2xMFM",
+      "scheduled_at": "2026-08-28 02:15:00+00:00",
+      "created_at": "2026-08-28 02:15:03.715654+00:00",
+      "fire_delay_s": 3.715654,
+      "session_id": "sesn_01KNySPP8qDHNxmYWDDBDJ3m",
+      "error": null,
+      "agent_version": 1
+    },
+    {
+      "at": "2026-08-28T02:15:11.516231+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 4,
+      "running": 3,
+      "idle": 1,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 4
+    },
+    {
+      "at": "2026-08-28T02:15:32.028189+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 4,
+      "running": 3,
+      "idle": 1,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 4
+    },
+    {
+      "at": "2026-08-28T02:15:52.490699+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 4,
+      "running": 2,
+      "idle": 2,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 4
+    },
+    {
+      "at": "2026-08-28T02:16:12.665503+00:00",
+      "label": "run.observed",
+      "run_id": "drun_01EQR7qPyeDy5Q6un6EgtqbP",
+      "scheduled_at": "2026-08-28 02:16:00+00:00",
+      "created_at": "2026-08-28 02:16:03.286177+00:00",
+      "fire_delay_s": 3.286177,
+      "session_id": "sesn_012bcoSTqZJF1NAB5X2cnoQF",
+      "error": null,
+      "agent_version": 1
+    },
+    {
+      "at": "2026-08-28T02:16:12.965071+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 5,
+      "running": 3,
+      "idle": 2,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 5
+    },
+    {
+      "at": "2026-08-28T02:16:33.358395+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 5,
+      "running": 3,
+      "idle": 2,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 5
+    },
+    {
+      "at": "2026-08-28T02:16:53.690547+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 5,
+      "running": 2,
+      "idle": 3,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 5
+    },
+    {
+      "at": "2026-08-28T02:17:13.861721+00:00",
+      "label": "run.observed",
+      "run_id": "drun_01QJYJtv38smz5Vx9W6xuRoN",
+      "scheduled_at": "2026-08-28 02:17:00+00:00",
+      "created_at": "2026-08-28 02:17:09.635680+00:00",
+      "fire_delay_s": 9.63568,
+      "session_id": "sesn_015iNjNebjUMTaKB2PrkPC1E",
+      "error": null,
+      "agent_version": 1
+    },
+    {
+      "at": "2026-08-28T02:17:14.198018+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 6,
+      "running": 3,
+      "idle": 3,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 6
+    },
+    {
+      "at": "2026-08-28T02:17:34.764639+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 6,
+      "running": 3,
+      "idle": 3,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 6
+    },
+    {
+      "at": "2026-08-28T02:17:55.210980+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 6,
+      "running": 2,
+      "idle": 4,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 6
+    },
+    {
+      "at": "2026-08-28T02:18:15.386804+00:00",
+      "label": "run.observed",
+      "run_id": "drun_01UXgDt1d3ocWd7PeZyHgc1V",
+      "scheduled_at": "2026-08-28 02:18:00+00:00",
+      "created_at": "2026-08-28 02:18:05.771189+00:00",
+      "fire_delay_s": 5.771189,
+      "session_id": "sesn_01QRm23P968eA61GpGsnwp1C",
+      "error": null,
+      "agent_version": 1
+    },
+    {
+      "at": "2026-08-28T02:18:15.704389+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 7,
+      "running": 3,
+      "idle": 4,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 7
+    },
+    {
+      "at": "2026-08-28T02:18:36.058513+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 7,
+      "running": 3,
+      "idle": 4,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 7
+    },
+    {
+      "at": "2026-08-28T02:18:56.470063+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 7,
+      "running": 2,
+      "idle": 5,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 7
+    },
+    {
+      "at": "2026-08-28T02:19:16.660429+00:00",
+      "label": "run.observed",
+      "run_id": "drun_01BDMTSprUeR5sz2rZ4MSJTt",
+      "scheduled_at": "2026-08-28 02:19:00+00:00",
+      "created_at": "2026-08-28 02:19:06.240075+00:00",
+      "fire_delay_s": 6.240075,
+      "session_id": "sesn_01XtNTuxBGZuwwC1bY4szHLr",
+      "error": null,
+      "agent_version": 1
+    },
+    {
+      "at": "2026-08-28T02:19:16.850806+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 8,
+      "running": 3,
+      "idle": 5,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 8
+    },
+    {
+      "at": "2026-08-28T02:19:37.242120+00:00",
+      "label": "concurrency.poll",
+      "total_sessions": 8,
+      "running": 3,
+      "idle": 5,
+      "terminated": 0,
+      "rescheduling": 0,
+      "runs": 8
+    },
+    {
+      "at": "2026-08-28T02:19:57.419394+00:00",
+      "label": "deployment.after_window",
+      "status": "active",
+      "paused_reason": null,
+      "schedule": {
+        "expression": "* * * * *",
+        "timezone": "UTC",
+        "type": "cron",
+        "last_run_at": "2026-08-28T02:19:05.460166Z",
+        "upcoming_runs_at": [
+          "2026-08-28T02:20:00Z",
+          "2026-08-28T02:21:00Z",
+          "2026-08-28T02:22:00Z",
+          "2026-08-28T02:23:00Z",
+          "2026-08-28T02:24:00Z"
+        ]
+      }
+    },
+    {
+      "at": "2026-08-28T02:19:57.733820+00:00",
+      "label": "sessions.final",
+      "count": 8,
+      "detail": [
+        {
+          "id": "sesn_01XtNTuxBGZuwwC1bY4szHLr",
+          "status": "running",
+          "created_at": "2026-08-28 02:19:05.917226+00:00",
+          "usage": {
+            "active_seconds": 51.52,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_read_input_tokens": 0,
+            "input_tokens": 0,
+            "list_cost": {
+              "amount": "0",
+              "currency": "USD"
+            },
+            "output_tokens": 0,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          }
+        },
+        {
+          "id": "sesn_01QRm23P968eA61GpGsnwp1C",
+          "status": "running",
+          "created_at": "2026-08-28 02:18:05.440550+00:00",
+          "usage": {
+            "active_seconds": 111.993,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 5517
+            },
+            "cache_read_input_tokens": 0,
+            "input_tokens": 10,
+            "list_cost": {
+              "amount": "1",
+              "currency": "USD"
+            },
+            "output_tokens": 274,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          }
+        },
+        {
+          "id": "sesn_015iNjNebjUMTaKB2PrkPC1E",
+          "status": "idle",
+          "created_at": "2026-08-28 02:17:09.309354+00:00",
+          "usage": {
+            "active_seconds": 158.75,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 5945
+            },
+            "cache_read_input_tokens": 5517,
+            "input_tokens": 16,
+            "list_cost": {
+              "amount": "1",
+              "currency": "USD"
+            },
+            "output_tokens": 485,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          }
+        },
+        {
+          "id": "sesn_012bcoSTqZJF1NAB5X2cnoQF",
+          "status": "idle",
+          "created_at": "2026-08-28 02:16:02.838657+00:00",
+          "usage": {
+            "active_seconds": 156.874,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 5517
+            },
+            "cache_read_input_tokens": 0,
+            "input_tokens": 10,
+            "list_cost": {
+              "amount": "1",
+              "currency": "USD"
+            },
+            "output_tokens": 547,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          }
+        },
+        {
+          "id": "sesn_01KNySPP8qDHNxmYWDDBDJ3m",
+          "status": "idle",
+          "created_at": "2026-08-28 02:15:03.377554+00:00",
+          "usage": {
+            "active_seconds": 157.275,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 5517
+            },
+            "cache_read_input_tokens": 0,
+            "input_tokens": 10,
+            "list_cost": {
+              "amount": "1",
+              "currency": "USD"
+            },
+            "output_tokens": 505,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          }
+        },
+        {
+          "id": "sesn_01N2eNRQwaejShHqxQFvxWqh",
+          "status": "idle",
+          "created_at": "2026-08-28 02:14:05.585228+00:00",
+          "usage": {
+            "active_seconds": 161.91,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 5517
+            },
+            "cache_read_input_tokens": 0,
+            "input_tokens": 10,
+            "list_cost": {
+              "amount": "2",
+              "currency": "USD"
+            },
+            "output_tokens": 978,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          }
+        },
+        {
+          "id": "sesn_011fE8R5jmbxfm2VH1chDaLu",
+          "status": "idle",
+          "created_at": "2026-08-28 02:13:06.742485+00:00",
+          "usage": {
+            "active_seconds": 155.685,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 5517
+            },
+            "cache_read_input_tokens": 0,
+            "input_tokens": 10,
+            "list_cost": {
+              "amount": "1",
+              "currency": "USD"
+            },
+            "output_tokens": 334,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          }
+        },
+        {
+          "id": "sesn_01HxTqcWhcnopDBNTQo1rnEP",
+          "status": "idle",
+          "created_at": "2026-08-28 02:12:01.171648+00:00",
+          "usage": {
+            "active_seconds": 157.511,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 5517
+            },
+            "cache_read_input_tokens": 0,
+            "input_tokens": 10,
+            "list_cost": {
+              "amount": "1",
+              "currency": "USD"
+            },
+            "output_tokens": 524,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "at": "2026-08-28T02:19:57.944046+00:00",
+      "label": "session.sample_text",
+      "session_id": "sesn_01XtNTuxBGZuwwC1bY4szHLr",
+      "text": [
+        "user.message: Record the wall-clock time with `date -u`, then occupy this session by running `sleep 150` with an explicit bash timeout_ms of 210000. Then run `date -u` again and report both timestamps in one short message. Do nothing else."
+      ]
+    }
+  ],
+  "cleanup": [
+    {
+      "at": "2026-08-28T02:19:58.193551+00:00",
+      "kind": "deployment",
+      "id": "depl_01JzCQVG6imi1tmpPAo2yvJJ",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:19:58.994339+00:00",
+      "kind": "session",
+      "id": "sesn_01XtNTuxBGZuwwC1bY4szHLr",
+      "action": "interrupt+archive",
+      "result": "failed: BadRequestError"
+    },
+    {
+      "at": "2026-08-28T02:19:59.581946+00:00",
+      "kind": "session",
+      "id": "sesn_01QRm23P968eA61GpGsnwp1C",
+      "action": "interrupt+archive",
+      "result": "failed: BadRequestError"
+    },
+    {
+      "at": "2026-08-28T02:19:59.942925+00:00",
+      "kind": "session",
+      "id": "sesn_015iNjNebjUMTaKB2PrkPC1E",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:20:00.384314+00:00",
+      "kind": "session",
+      "id": "sesn_012bcoSTqZJF1NAB5X2cnoQF",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:20:00.810200+00:00",
+      "kind": "session",
+      "id": "sesn_01KNySPP8qDHNxmYWDDBDJ3m",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:20:01.206922+00:00",
+      "kind": "session",
+      "id": "sesn_01N2eNRQwaejShHqxQFvxWqh",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:20:01.624353+00:00",
+      "kind": "session",
+      "id": "sesn_011fE8R5jmbxfm2VH1chDaLu",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:20:02.021266+00:00",
+      "kind": "session",
+      "id": "sesn_01HxTqcWhcnopDBNTQo1rnEP",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:20:02.287166+00:00",
+      "kind": "agent",
+      "id": "agent_012V2z1B3A9GAj6hzZff4Bqy",
+      "action": "archive",
+      "result": "archived"
+    }
+  ]
+}
