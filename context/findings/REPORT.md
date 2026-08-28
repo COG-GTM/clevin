@@ -423,3 +423,122 @@ Managed Agents paradigms is a **credible attended coding agent with best-in-clas
 an unattended-operation gap that no amount of configuration closes** — every path to closing it
 runs through building the supervisor, ingress, routing, and knowledge layers that are themselves
 the product.
+
+---
+
+## Appendix: Core findings by workstream
+
+The 3–4 findings from each experiment that matter most for understanding the platform's
+capabilities and limits. Full detail is in each workstream's findings file (§7).
+
+### A — Control plane & session semantics
+1. **Sessions are frozen config snapshots.** An agent version is immutable; a session pins one at
+   creation and nothing mid-run can change model or prompt (only tools/MCPs). Rollback is
+   roll-forward to a new version.
+2. **The event log is the source of truth and exactly replayable** (40/40 events byte-identical on
+   re-list) — but SSE is live-only: a late subscriber sees nothing, so any monitor must pair SSE
+   with `events.list`.
+3. **Interrupts cleanly cancel generation, but tool cancellation is not transactional** — an
+   in-flight tool call on the worker keeps running; the loop and the sandbox have no atomic join.
+4. **Compaction is real but model-dependent:** Opus compacted twice (867 K→41 K tokens, 95.3%
+   reduction, exact constraint recall afterward); Haiku never compacted and died at its 200 K
+   prompt limit.
+
+### B — Long-horizon quality
+1. **Long-horizon autonomy is natively excellent:** 12/13 graded 27-file migration runs scored
+   4/4 with zero human nudges, and 13/13 left the SHA-protected contract tests untouched — the
+   model never cheated the grader.
+2. **Cost is honest but noisy:** $41–62 per wide migration with ±25% runtime/cost variance across
+   identical runs.
+3. **Budgets are a guillotine, not a governor:** a budget stop lands mid-edit with no wind-down
+   turn, leaving the workspace in whatever state the last tool call produced.
+4. **Quality interventions bought nothing:** plan-prompting, a subagent roster, and memory priming
+   produced no measurable quality gain over the plain baseline on this workload.
+
+### C — Runtime reliability & tool surface
+1. **There is no server-side tool deadline:** a tool call the worker never answers leaves the
+   session in `requires_action` forever — the loop waits indefinitely by design.
+2. **A dead worker strands the session permanently** — nothing native detects or re-dispatches it;
+   the one native recovery path is a bare `SessionToolRunner` re-attach needing only the
+   environment key.
+3. **The work queue has zero routing:** any worker on the environment can claim any session's work
+   item (one run accidentally claimed 4 sibling sessions); leases are properly fenced, so
+   split-brain is prevented, but affinity is your problem.
+4. **The tool surface has hard edges:** ~100 KiB bash output cap, 120 s default timeout, gVisor
+   kernel, and bash runs unconfined inside the sandbox — isolation comes from the sandbox
+   boundary, not the tool.
+
+### D — Agent-as-code
+1. **The entire agent is nine code-expressible fields** — model, prompt, tools, MCPs, Skills,
+   roster, memory, metadata, name — with immutable versions and 409 concurrency guards; this is
+   arguably better than Devin's config story.
+2. **Rollback is byte-exact roll-forward:** re-submitting an old version's config produces an
+   identical new version; canary = pointing a fraction of sessions at it.
+3. **There is no server-side desired state:** the API returns live objects with 5–6 server-added
+   fields per agent, so naive diffing always reports drift — client-side normalization
+   (`drift.ts`) is mandatory.
+4. **No release layer:** no aliases, channels, labels, or deletion — "prod" vs "staging" is a
+   convention you maintain in your own manifest.
+
+### E — Native Memory Store
+1. **Storage is enterprise-grade:** 260 memories from 12 concurrent writers in 4.7 s with zero
+   failures; CAS works exactly (1 winner, 5 HTTP 409s of 6 racers); provenance and redaction are
+   native.
+2. **Retrieval does not exist:** nothing is injected into context — a 200-entry store and a
+   2-entry store cost the same because the model must actively grep the `/mnt/memory` mount.
+3. **Cross-session learning is real when the model looks:** a primed memory cut a repeat task from
+   ~$17/69 s to ~$12/45 s.
+4. **Memory is a permanent injection surface:** entries can be redacted but never deleted, so a
+   poisoned memory is a standing prompt-injection risk that only curation mitigates.
+
+### F — Built-in subagents
+1. **Delegation is real parallelism with hard static guarantees:** 7 concurrent children observed;
+   depth 1 is doubly enforced; tool grants and version pins are enforced at the platform layer.
+2. **There is zero runtime control:** no cancel, timeout, or heartbeat for a running child — once
+   spawned, you wait.
+3. **Large child replies vanish silently:** a ~533 KB response produced no text in the parent 3/3
+   times, with no error event.
+4. **Cost 3–4× for no measured quality gain** on the tested tasks; concurrent children editing the
+   same file resolve by silent last-writer-wins.
+
+### H — Deployments & automation
+1. **Cron is punctual and complete:** 8/8 fires in 8 minutes, 1.5–9.6 s jitter (median 5.9 s),
+   zero skips.
+2. **Every fire is a cold new session** with no dedupe or concurrency control — a 150 s body on a
+   1-minute cron produced 3 concurrent sessions; a minute-poller costs ~1,440 sessions/day.
+3. **Dependency failures fail quietly:** one archived Memory Store auto-paused the deployment
+   (typed, recoverable); an archived agent killed it with *zero* run-log evidence.
+4. **This is the only native wake mechanism** — ≥1-minute polling is the floor for reacting to
+   external events (Linear issue detected in ~61 s).
+
+### I — Observability & economics
+1. **Forensics are superb:** 9 ms median SSE latency, per-thread cost reconciles to the cent, and
+   a 164-session/$104 fleet rollup took 2 API calls and 0.96 s.
+2. **There is no operations layer:** event history and webhooks are disjoint surfaces (35 vs 44
+   event types); a stranded session is detectable from three fields but announced by nothing.
+3. **Budgets overshoot:** a $0.05 single-turn budget spent $0.11 (2.2×) — enforcement is
+   per-turn-boundary, not per-token.
+4. **Attribution requires discipline you supply:** 50 sessions worth $15.79 had no metadata and
+   were unattributable; there is no native tool-call→sandbox or changed-files join.
+
+### J — Integrated gauntlet & self-healing
+1. **The composed ceiling is a real ticket→PR agent:** ambiguous Linear ticket → CI-green PR on
+   the first attempt (666 events, 3 threads, one justified human question, self-corrected a
+   poisoned memory) — at ~$716 list cost.
+2. **The loop is self-diagnosing, never self-healing:** lease expiry natively detects an abandoned
+   work item 360.7 s after the last heartbeat, and narrow transient errors retry.
+3. **Re-dispatch structurally does not exist:** `work_id == session_id`, reclaiming polls re-offer
+   nothing, webhook replay spawns nothing — an abandoned run needs an operator.
+4. **Billing death is permanently inert:** a session killed by credit exhaustion never resumed
+   after credits were restored.
+
+### K — Devin-parity interaction
+1. **Steering is at parity:** `user.interrupt` accepted in ~0.5 s with genuine re-planning; a
+   direct message during an outstanding tool call is rejected — interrupt-first is mandatory.
+2. **Ask-and-block is nearly free:** a 75-minute human wait resumed in 0.2 s; the parked session
+   cost ~$18 for 945 s wall / ~20 s active.
+3. **The PR loop works natively:** red CI → green PR while replying to review comments, via 10
+   GitHub MCP calls, ~91 active seconds, ~$58.
+4. **Skills are invisible and forking is absent:** an attached Skill goes unused unless the system
+   prompt says where it lives; every fork/checkpoint/clone endpoint 404s; only the volume outlives
+   the sandbox's ~1 h life.
