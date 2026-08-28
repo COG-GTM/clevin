@@ -28,7 +28,7 @@ rerunnable drivers in `experiments/H/`. All IDs are real; all temporary resource
 | H-3 | High-frequency (`* * * * *`) schedule sustained, no skipped fires | **A** | `h2_frequency_overlap.json` — 8 fires in 8 min |
 | H-4 | Recurring maintenance that reads and writes a Memory Store | **A** | `h4_memory_continuity.json` |
 | H-5 | Deployment run that delegates to built-in subagents | **A** | `h5…json` `subagents.*` |
-| H-6 | Deployment run graded by a native outcome rubric (`user.define_outcome`) | **A** | `h5…json` `outcome.*`, `h5b_outcome_iterations.json` |
+| H-6 | Deployment run graded by a native outcome rubric (`user.define_outcome`) | **A** | `h5…json` `outcome.*`; `h5b` run `drun_01YR8JsoXVJNWBjo43j23tAg` |
 | H-7 | Deployment run executing in the self-hosted Modal `EnvironmentWorker` | **A** | `h5…json` `selfhosted.*` + Modal logs |
 | H-8 | Polling external systems (Linear MCP) instead of receiving a webhook | **A** | `h6_polling_wake.json` — 61.0 s detection |
 | H-9 | Auto-pause on dependency failure, with typed reason + operator recovery | **A** | `h3_failures_autopause.json` |
@@ -334,7 +334,8 @@ whether last night's maintenance actually worked you must join `sessions.list(de
   agent-as-code question — so it is documented as a class C gap and left unbuilt. Nothing in this
   workstream modifies `agent-definition.ts`.
 - **Outcome-evaluation loop to a `passed` verdict.** `h5b` observed `needs_revision` → revision →
-  iteration 1 evaluation `ongoing` for >7 minutes while five sibling swarm sessions saturated the
+  iteration 1 evaluation `ongoing` for >13 minutes (28 `span.outcome_evaluation_ongoing` events on
+  `sesn_01LwMuvVs3d5EkP4Hrsf7LvR`, no terminal span) while five sibling swarm sessions saturated the
   workspace, and the observation window closed first. The *mechanism* inside a deployment is proven;
   the end-to-end latency and terminal verdict of a graded deployment run are not. Rerun `h5b` on a
   quiet workspace with `H5B_TIMEOUT_SECONDS=2400`.
@@ -392,9 +393,9 @@ Aggregate:
 
 | Kind | Created | Cleanup action | Result |
 | --- | --- | --- | --- |
-| Probe agents | 14 | `agents.archive` | all archived |
-| Deployments | 17 | `deployments.archive` | all archived (2 already archived by agent-archive cascade — recorded, not hidden) |
-| Run sessions | 23 | `user.interrupt` if running, then `sessions.archive` | 21 archived by the driver; **2 failed** — see below — then archived manually |
+| Probe agents | 15 | `agents.archive` | all archived |
+| Deployments | 18 | `deployments.archive` | all archived (2 already archived by agent-archive cascade — recorded, not hidden) |
+| Run sessions | 24 | `user.interrupt` if running, then `sessions.archive` | 21 archived by the driver; **2 failed** — see below — then archived manually; 1 (`h5b`) archived manually |
 | Memory Stores | 3 | `memory_stores.archive` | all archived |
 | Linear issue `HUM-15` | 1 | `issueDelete` (Humza Sandbox workspace) | `{"issueDelete": {"success": true}}` |
 | Modal resources | 0 | — | read-only log inspection only |
@@ -404,7 +405,14 @@ Aggregate:
 `running` a 150 s `sleep`, and the harness archives immediately after sending `user.interrupt` rather
 than waiting for the interrupt to land, so the archive raced the still-running session. Both were
 verified `idle`/`archived_at: null` afterwards and archived by hand. The lesson for any rerun is that
-`user.interrupt` is asynchronous — poll to a non-`running` status before archiving.
+`user.interrupt` is asynchronous — poll to a non-`running` status before archiving; `h_common.stop_session`
+now does exactly that.
+
+`h5b` also exceeded its observation window and exited before its own cleanup phase, so it wrote no
+results JSON and left `depl_01LtbAcgnhGk5Q6J9oYUmmPP`, `agent_01QBLYa2kgEWdMQNt1p7yDRK` and
+`sesn_01LwMuvVs3d5EkP4Hrsf7LvR` live. All three were interrupted and archived by hand, and a final
+sweep of `deployments.list`, `agents.list`, `memory_stores.list` and `sessions.list` shows no
+remaining `clevin-swarm-H-*` resource.
 
 Production resources were not mutated: no new version of
 `agent_01Eef1xLtkWW2cDg1shFUpms` was published, `memstore_01JCboyFNzqNzucVq3xFpnYZ` was never
