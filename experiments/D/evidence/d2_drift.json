@@ -1,0 +1,98 @@
+{
+  "baseline": {
+    "agent_id": "agent_01MtQf1PxW2dm7VKVwDSXjEh",
+    "drift": [],
+    "server_added": [
+      "model.inference_geo",
+      "model.speed",
+      "tools[0].configs",
+      "tools[1].configs",
+      "tools[2].configs"
+    ],
+    "version": 1
+  },
+  "cleanup": [
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01MtQf1PxW2dm7VKVwDSXjEh",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021802Z-c3987a-drift"
+    }
+  ],
+  "dangling_reference_edit": {
+    "accepted": false,
+    "body": {
+      "error": {
+        "message": "Agent has invalid configuration: failed to update agent: mcp_toolset references [github linear] but no matching entry in mcp_servers",
+        "type": "invalid_request_error"
+      },
+      "request_id": "req_011CeULuat7tFp6b5dZVtHDt",
+      "type": "error"
+    },
+    "error_type": "BadRequestError",
+    "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Agent has invalid configuration: failed to update agent: mcp_toolset references [github linear] but no matching entry in mcp_servers'}, 'request_id': 'req_011CeULuat7tFp6b5dZVtHDt'}",
+    "status_code": 400
+  },
+  "detection": {
+    "drift_count": 4,
+    "drift_paths": [
+      "model.id",
+      "model.effort",
+      "system",
+      "metadata.source_of_truth"
+    ],
+    "server_added": [
+      "model.inference_geo",
+      "model.speed",
+      "metadata.edited_by",
+      "tools[0].configs",
+      "tools[1].configs",
+      "tools[2].configs"
+    ],
+    "version": 2
+  },
+  "experiment": "D2 drift detection and reconciliation",
+  "metadata_patch_semantics": {
+    "stray_key_removed_by_explicit_null": true,
+    "stray_key_survives_reapplied_definition": true,
+    "version_after_explicit_null": 4
+  },
+  "out_of_band": {
+    "new_version": 2
+  },
+  "out_of_band_version_still_retrievable": true,
+  "reconciliation": {
+    "clean": true,
+    "new_version": 3,
+    "residual_drift": [],
+    "server_added": [
+      "model.inference_geo",
+      "model.speed",
+      "metadata.edited_by",
+      "tools[0].configs",
+      "tools[1].configs",
+      "tools[2].configs"
+    ]
+  },
+  "stale_guard": {
+    "body": {
+      "error": {
+        "message": "Concurrent modification detected. Please fetch the latest version and retry.",
+        "type": "invalid_request_error"
+      },
+      "request_id": "req_011CeULujY2SBB3SgYaiVFRp",
+      "type": "error"
+    },
+    "error_type": "ConflictError",
+    "message": "Error code: 409 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Concurrent modification detected. Please fetch the latest version and retry.'}, 'request_id': 'req_011CeULujY2SBB3SgYaiVFRp'}",
+    "rejected": true,
+    "status_code": 409
+  },
+  "versions_after_reconcile": [
+    4,
+    3,
+    2,
+    1
+  ]
+}

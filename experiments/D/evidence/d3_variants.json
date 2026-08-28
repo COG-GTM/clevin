@@ -1,0 +1,333 @@
+{
+  "cleanup": [
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01VDZEoyxbGBppWk3TwaWEZA",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021806Z-6332d3-variant-dev"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01D85Tm6ntpiWRM2uQhPfXeZ",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021806Z-ee5611-variant-staging"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01XYmL1SCGyPnzbKyr6qDA2X",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021807Z-c7c0f3-variant-prod"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_019mKMzCB1jWJRvfSUqKjtHk",
+      "kind": "agent",
+      "note": "duplicate of clevin-swarm-D-20260828T021806Z-6332d3-variant-dev"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_011SsdDNEa6CpEx8YsSCyzSt",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021807Z-678bbf-fleet-00"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01FkvhM7sjLnAQUnU1ruzAQb",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021807Z-a42bd7-fleet-01"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01PE34nkRpQiJ6Sm8huUzkX8",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021808Z-7b33db-fleet-02"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01CSprigYuZhUw4T3JB3ZcDP",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021808Z-653794-fleet-03"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01KTUmfnGXL7J4GfjtEayy2E",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021808Z-5661b7-fleet-04"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01VxaMTafdthwiHbtUhD8bwN",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021808Z-6097be-fleet-05"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01SrpGZc8PPhGGoQQKdM5G9p",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021809Z-a7ae6f-fleet-06"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_012yotBqrGZCX2A6VJphdbpM",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021811Z-d8620b-fleet-07"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01FE29bN9Ep5C13HHmc4ra56",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021811Z-5e11cd-fleet-08"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01M1DhUNgC2dPx7EtH1fDrCU",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021811Z-e5e655-fleet-09"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_0128vZ5qNZ4Ybkbr9xZdufSq",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021812Z-706e1e-fleet-10"
+    },
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01SUH5okXxvFYL9YdgEjXSaW",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021812Z-b1fc1f-fleet-11"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_01XAdnSwjziiTv5A6puGc5or",
+      "kind": "session",
+      "note": "D3 override variant"
+    }
+  ],
+  "declarative_coverage": {
+    "agent_versions": {
+      "archive": false,
+      "create": false,
+      "delete": false,
+      "list": true,
+      "retrieve": false,
+      "update": false
+    },
+    "agents": {
+      "archive": true,
+      "create": true,
+      "delete": false,
+      "list": true,
+      "retrieve": true,
+      "update": true
+    },
+    "deployments": {
+      "archive": true,
+      "create": true,
+      "delete": false,
+      "list": true,
+      "retrieve": true,
+      "update": true
+    },
+    "environments": {
+      "archive": true,
+      "create": true,
+      "delete": true,
+      "list": true,
+      "retrieve": true,
+      "update": true
+    },
+    "files": {
+      "archive": false,
+      "create": false,
+      "delete": true,
+      "list": true,
+      "retrieve": false,
+      "update": false
+    },
+    "memory_stores": {
+      "archive": true,
+      "create": true,
+      "delete": true,
+      "list": true,
+      "retrieve": true,
+      "update": true
+    },
+    "sessions": {
+      "archive": true,
+      "create": true,
+      "delete": true,
+      "list": true,
+      "retrieve": true,
+      "update": true
+    },
+    "skills": {
+      "archive": false,
+      "create": true,
+      "delete": true,
+      "list": true,
+      "retrieve": true,
+      "update": false
+    },
+    "vault_credentials": {
+      "archive": true,
+      "create": true,
+      "delete": true,
+      "list": true,
+      "retrieve": true,
+      "update": true
+    },
+    "vaults": {
+      "archive": true,
+      "create": true,
+      "delete": true,
+      "list": true,
+      "retrieve": true,
+      "update": true
+    }
+  },
+  "duplicate_name": {
+    "accepted": true,
+    "agent_id": "agent_019mKMzCB1jWJRvfSUqKjtHk"
+  },
+  "experiment": "D3 variants and declarative coverage",
+  "fleet": {
+    "created": 12,
+    "elapsed_s": 4.8,
+    "errors": [],
+    "requested": 12
+  },
+  "list_api": {
+    "client_side_metadata_matches": 15,
+    "documented_list_filters": [
+      "created_at[gte]",
+      "created_at[lte]",
+      "include_archived",
+      "limit",
+      "page"
+    ],
+    "server_side_metadata_filter": false,
+    "total_listed_first_page": 42
+  },
+  "session_overrides": {
+    "agent_resource_unchanged": true,
+    "agent_version_after": 1,
+    "marker_honoured": true,
+    "outcome": {
+      "elapsed_s": 10.5,
+      "error_events": [],
+      "event_types": [
+        "session.status_running",
+        "session.thread_status_running",
+        "user.message",
+        "span.model_request_start",
+        "agent.thinking",
+        "agent.message",
+        "span.model_request_end",
+        "session.thread_status_idle",
+        "session.usage",
+        "session.status_idle"
+      ],
+      "final_text": "[[OVERRIDE-VARIANT]] ok",
+      "resolved_agent": {
+        "description": "workstream D dev variant",
+        "id": "agent_01VDZEoyxbGBppWk3TwaWEZA",
+        "mcp_servers": [],
+        "model": {
+          "effort": null,
+          "id": "claude-haiku-4-5-20251001",
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": null,
+        "name": "clevin-swarm-D-20260828T021806Z-6332d3-variant-dev",
+        "skills": [],
+        "system": "You are a variant defined entirely by session overrides. Begin your final message with the marker [[OVERRIDE-VARIANT]]. Be terse.",
+        "tools": [],
+        "type": "agent",
+        "version": 1
+      },
+      "session_id": "sesn_01XAdnSwjziiTv5A6puGc5or",
+      "status": "idle",
+      "usage": {
+        "active_seconds": 1.644,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 585,
+        "list_cost": {
+          "amount": "0",
+          "currency": "USD"
+        },
+        "output_tokens": 73,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    }
+  },
+  "shared_blocks_identical_across_variants": true,
+  "stage_variants": [
+    {
+      "agent_id": "agent_01VDZEoyxbGBppWk3TwaWEZA",
+      "drift": [],
+      "server_added": [
+        "model.effort",
+        "model.inference_geo",
+        "model.speed",
+        "tools[0].configs",
+        "tools[1].configs",
+        "tools[2].configs"
+      ],
+      "stage": "dev",
+      "version": 1
+    },
+    {
+      "agent_id": "agent_01D85Tm6ntpiWRM2uQhPfXeZ",
+      "drift": [],
+      "server_added": [
+        "model.effort",
+        "model.inference_geo",
+        "model.speed",
+        "tools[0].configs",
+        "tools[1].configs",
+        "tools[2].configs"
+      ],
+      "stage": "staging",
+      "version": 1
+    },
+    {
+      "agent_id": "agent_01XYmL1SCGyPnzbKyr6qDA2X",
+      "drift": [],
+      "server_added": [
+        "model.effort",
+        "model.inference_geo",
+        "model.speed",
+        "tools[0].configs",
+        "tools[1].configs",
+        "tools[2].configs"
+      ],
+      "stage": "prod",
+      "version": 1
+    }
+  ]
+}
