@@ -128,7 +128,37 @@ deployment create/pause/inspect/archive.
 - Runtime config now reads injected environment variables as well as a root `.env`, with the process
   environment taking precedence. No `.env` file is required.
 
-**Repo setup**: `pnpm install` and `uv sync --project runtime`. Verification, all of which must pass
+## 4b. Credentials, setup, and how to actually run things
+
+**Credentials.** Every value you need is already stored as a personal-scoped Devin secret and
+injected into your session's environment. Do not ask for credentials, do not create a `.env`, and
+never print or commit a value. The set is:
+
+| Secret | What it is |
+| --- | --- |
+| `ANTHROPIC_API_KEY` | Managed Agents API access (workspace-scoped; Admin API is *not* available) |
+| `ANTHROPIC_ENVIRONMENT_KEY` | Self-hosted environment worker key |
+| `ANTHROPIC_WEBHOOK_SECRET` | Verifies `session.status_run_started` webhook signatures |
+| `CLEVIN_AGENT_ID` | Production agent |
+| `CLEVIN_ENVIRONMENT_ID` | Self-hosted environment (also read as `ANTHROPIC_ENVIRONMENT_ID` in the Modal deployment) |
+| `CLEVIN_VAULT_ID`, `CLEVIN_GITHUB_CREDENTIAL_ID`, `CLEVIN_LINEAR_CREDENTIAL_ID` | Vault and its two credentials |
+| `CLEVIN_MEMORY_STORE_ID` | Memory Store mounted at `/mnt/memory` |
+| `SANDBOX_IMAGE_ID` | Prebuilt Modal sandbox image |
+| `MODAL_TOKEN_ID`, `MODAL_TOKEN_SECRET` | Modal CLI/SDK auth |
+| `GITHUB_TOKEN` | Verified valid, with push access to `COG-GTM/clevin` |
+| `LINEAR_API_KEY` | Linear access outside the agent's MCP path |
+
+`CLEVIN_AGENT_VERSION` is deliberately **unset** — the runtime resolves the agent's latest published
+version at session creation. Set it only when an experiment needs a specific pinned version.
+`ANTHROPIC_WORKSPACE_ID` is unset and not needed with the current key.
+
+Bind secrets explicitly when a command needs them rather than relying on ambient environment, e.g.
+`exec(command="uv run --project runtime clevin ABC-123", env={"ANTHROPIC_API_KEY":
+"secret:personal:ANTHROPIC_API_KEY", ...})`. If a secret you genuinely need is missing, that is a
+Slack escalation (§7), not a workaround.
+
+**Setup.** `pnpm install` and `uv sync --project runtime` (Node ≥22 via nvm, pnpm 11.23.0 via
+Corepack — the environment blueprint already does this). Repo verification, all of which must pass
 before you open a PR:
 
 ```bash
@@ -138,6 +168,39 @@ uv run --project runtime ruff check runtime
 uv run --project runtime mypy runtime/src
 uv run --project runtime pytest -c runtime/pyproject.toml
 ```
+
+**Running and testing the agent.** These are the real levers; there is no UI and no browser, so all
+verification is API-, CLI-, and log-driven.
+
+```bash
+uv run --project runtime clevin TICKET-ID          # start a ticket session
+uv run --project runtime clevin --resume SESSION-ID  # resume one
+uv run --project runtime modal app list -e clevin   # Modal control plane (always via uv)
+uv run --project runtime modal deploy runtime/src/clevin_runtime/modal_app.py --env clevin
+uv run --project runtime modal run runtime/src/clevin_runtime/sandbox_image.py  # rebuild the image
+pnpm --filter @clevin/provision provision           # reconcile Anthropic resources — mutates production, see below
+```
+
+Testing conventions you are expected to follow:
+
+- **Prefer the Anthropic SDK directly** (`anthropic.Anthropic().beta.agents|sessions|...`) for
+  experiments. The SDK is the source of truth for what exists — inspect it rather than guessing raw
+  REST paths; several dead ends this program already hit were wrong paths, not missing permissions.
+- **Do not run a real ticket workflow to test plumbing.** The agent's system prompt has a
+  `CLEVIN_SMOKE_TEST` exception: an initial user message beginning exactly with `CLEVIN_SMOKE_TEST`
+  suppresses the ticket workflow, Git, and all external state changes, and limits the agent to
+  harmless local checks. Use it for any connectivity or lifecycle probe.
+- **Do not run the provisioner just to check auth** — it mutates production resources and creates
+  agent versions. Read `packages/provision/src/resources.ts` first and use it deliberately.
+- **Budgets**: sessions carry a list-cost budget and will emit `budget_reached` and stop. Production
+  defaults to $500; set a small budget for throwaway probes, and expect `budget_reached` rather than
+  treating it as a failure.
+- **Evidence for every claim**: session IDs, event excerpts (`sessions.events.list` — note the
+  methods are `list`, `send`, `stream`; there is no `create`), usage/budget events, and Modal logs.
+  Sandbox and volume state is inspectable through the Modal SDK; hydrate a `modal.Volume` before
+  reading its object ID, and `modal.Sandbox.list(app_id=...)` does not accept `environment_name`.
+- **Python tests** you add go under `runtime/tests/`; experiment drivers go under
+  `experiments/<workstream>/` and must be rerunnable by another session.
 
 ## 5. Workstreams
 
