@@ -1,0 +1,12 @@
+{
+  "arm": "full",
+  "token": "529843",
+  "tag": "[J-GAUNTLET-529843]",
+  "branch": "clevin/j-full-529843",
+  "issue": {
+    "id": "50ead6e3-adf3-4683-9412-dda4eb2da6c9",
+    "identifier": "HUM-16",
+    "title": "Monthly revenue report cannot be trusted (full)",
+    "url": "https://linear.app/humza-sandbox/issue/HUM-16/monthly-revenue-report-cannot-be-trusted-full"
+  }
+}
