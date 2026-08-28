@@ -512,6 +512,10 @@ Do not work around subagent limitations by spawning custom top-level Managed Age
 
 ## G. Tools, MCPs, browser, and Computer Use
 
+**Cancelled.** `browser_toolset_20260801` and `computer_toolset_20260801` are rejected as invalid
+Managed Agents tool types, so browser and Computer Use are recorded as class D. The tool and MCP
+half of this workstream moved into workstream C. Retained below for the original questions only.
+
 ### Goal
 
 Determine how far native tools and configured integrations can reproduce the broad action surface of a cloud agent platform.
@@ -712,6 +716,9 @@ These are optional research perspectives, not a required launch order, staffing 
 ---
 
 # 8. Research charter prompt
+
+The operational launch prompt handed to each swarm session lives in `context/swarm-prompt.md`; it
+supersedes the charter below, which is kept for provenance.
 
 ```
 You are part of a long-running, highly autonomous investigation of Claude
