@@ -11,7 +11,7 @@ from anthropic.types.beta.sessions import (
     BetaManagedAgentsStreamSessionEvents,
 )
 
-from clevin_runtime.config import ClientSettings
+from clevin_runtime.config import ClientSettings, ConfigurationError
 from clevin_runtime.event_view import EventState, event_id, reduce_event
 
 EXPERIMENT_VERSION = "clevin-0.1.0"
@@ -51,6 +51,22 @@ class AgentRuntime:
     ) -> None:
         self.settings = settings
         self.client = client or anthropic.Anthropic(api_key=settings.api_key)
+        self._agent_version = settings.agent_version
+
+    def agent_version(self) -> int:
+        if self._agent_version is None:
+            versions = [
+                version.version
+                for version in self.client.beta.agents.versions.list(
+                    self.settings.agent_id
+                )
+            ]
+            if not versions:
+                raise ConfigurationError(
+                    f"agent {self.settings.agent_id} has no published versions"
+                )
+            self._agent_version = max(versions)
+        return self._agent_version
 
     def create_session(self, ticket_id: str) -> BetaManagedAgentsSession:
         ticket = validate_ticket_id(ticket_id)
@@ -58,7 +74,7 @@ class AgentRuntime:
             agent={
                 "type": "agent",
                 "id": self.settings.agent_id,
-                "version": self.settings.agent_version,
+                "version": self.agent_version(),
             },
             environment_id=self.settings.environment_id,
             vault_ids=[self.settings.vault_id],

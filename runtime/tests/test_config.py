@@ -24,6 +24,25 @@ def test_client_settings_are_typed(monkeypatch: pytest.MonkeyPatch) -> None:
     assert settings.workspace_id == "wrkspc_test"
 
 
+def test_agent_version_is_optional_and_validated(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    values = {
+        "ANTHROPIC_API_KEY": "secret",
+        "CLEVIN_AGENT_ID": "agent_test",
+        "CLEVIN_ENVIRONMENT_ID": "env_test",
+        "CLEVIN_VAULT_ID": "vlt_test",
+        "CLEVIN_MEMORY_STORE_ID": "memstore_test",
+    }
+    monkeypatch.setattr(config.dotenv, "dotenv_values", lambda _path: values)
+
+    assert config.ClientSettings.from_root_env().agent_version is None
+
+    values["CLEVIN_AGENT_VERSION"] = "0"
+    with pytest.raises(config.ConfigurationError):
+        config.ClientSettings.from_root_env()
+
+
 def test_local_deployment_can_precede_webhook_registration(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
