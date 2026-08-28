@@ -1,0 +1,22 @@
+2026-08-28 02:35:12,471 [INFO] chaos: scoped worker starting workdir=/tmp/chaos-workspace fault=kill-before allow=<any> worker_id=chaos-30ba47c9
+2026-08-28 02:35:12,779 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:13,205 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:13,748 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:14,245 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:14,772 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:15,278 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:15,562 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:15,932 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:16,508 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:17,304 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:35:17,305 [INFO] chaos: claimed work_id=sesn_01YDmDJtbTgYkhXRisHri7XZ type=session session=sesn_01YDmDJtbTgYkhXRisHri7XZ
+2026-08-28 02:35:17,494 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_01YDmDJtbTgYkhXRisHri7XZ?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:35:17,815 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_01YDmDJtbTgYkhXRisHri7XZ/ack?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:35:17,977 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_01YDmDJtbTgYkhXRisHri7XZ?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:35:17,987 [INFO] anthropic.lib.tools._beta_session_runner: session tool runner starting session_id=sesn_01YDmDJtbTgYkhXRisHri7XZ
+2026-08-28 02:35:18,136 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_01YDmDJtbTgYkhXRisHri7XZ/events/stream?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:35:18,169 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_01YDmDJtbTgYkhXRisHri7XZ/heartbeat?beta=true&expected_last_heartbeat=NO_HEARTBEAT "HTTP/1.1 200 OK"
+2026-08-28 02:35:18,288 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_01YDmDJtbTgYkhXRisHri7XZ/events?beta=true&limit=1000 "HTTP/1.1 200 OK"
+2026-08-28 02:35:19,252 [INFO] anthropic.lib.tools._beta_session_runner: executing tool tool=bash tool_use_id=sevt_0197CcGssxZMPjyPBCmrjKjC
+2026-08-28 02:35:19,252 [WARNING] chaos: FAULT mode=kill-before tool=bash input={"command": "echo CHAOS-kill-before"}
+2026-08-28 02:35:19,252 [WARNING] chaos: FAULT kill-before: exiting worker process
