@@ -9,12 +9,18 @@ production agent `agent_01Eef1xLtkWW2cDg1shFUpms` (version 7) and the self-hoste
 environment `env_0152FZKRpy9f8uVw38Guzosy`. Probes that did not need a ticket used
 the `CLEVIN_SMOKE_TEST` prefix.
 
+**Account state:** the prepaid Anthropic balance was exhausted at 2026-08-28
+03:45:13Z, observed as `session.error … {"type": "billing_error"}` /
+`stop_reason: retries_exhausted` in the last K2 run (see K2 below). Per §7 no
+credits were purchased and no further sessions were started. All classes below rest
+on evidence collected before that point.
+
 ## Classification summary
 
 | # | Capability | Class | One-line basis |
 | --- | --- | --- | --- |
 | K1 | Mid-run steering: user messages a live session and it re-plans | **A** | `user.interrupt` + `user.message` re-plans with full awareness of what it had completed; a bare `user.message` is *rejected* while a tool call is outstanding |
-| K2 | Ask-a-question-and-block, resume later with workspace intact | **B** | Custom tool → `requires_action` idle; answered after 15 min, workspace file intact with original mtime, resume in 0.2 s, $18 for a 945 s session |
+| K2 | Ask-a-question-and-block, resume later with workspace intact | **B** | Custom tool → `requires_action` idle; answered after 15 min and again after 75 min (sandbox torn down at 3600 s, volume file still present), resume in 0.2 s, $18 for a 945 s session |
 | K3 | Sleeps, then wakes on a new ticket or comment | **C** | Deployment cron floor is 1 minute, each run is a *new* session; cross-run continuity only via Memory Store. No GitHub/Linear → Anthropic event path exists |
 | K4 | Responds to PR review comments and fixes CI failures | **A** | One session took PR #6 from red to green, replied to the inline review comment, 10 GitHub MCP calls, 91 s active, $58 list cost |
 | K5 | Playbooks: reusable named procedures (Skills) | **C** | Skills are delivered only as `/workspace/skills/<name>/SKILL.md` files, with no prompt listing and no skill tool; unusable by name until the system prompt says where to look, then exact |
@@ -73,10 +79,30 @@ container identity; the durable thing is the volume.) Session
 `duration_seconds: 945.1`, `active_seconds: 20.3`, list cost **$18** — blocking is
 nearly free: you are billed for active work, not for waiting.
 
-`sesn_01Mo2kMJ2c6m1J7G1WVPkgy5` (75 min requested, i.e. beyond the 3600 s
-`APP_SANDBOX_TIMEOUT_SECONDS` and far beyond the 120 s worker `max_idle`) is the
-longer replication; see `k2-ask-and-block-4500s.json`. Note that the Modal volume
-samples in the 900 s file all carry
+`sesn_01Mo2kMJ2c6m1J7G1WVPkgy5` (75 min, `k2-ask-and-block-4500s.json`) replicates
+this past both the 120 s worker `max_idle` and the 3600 s
+`APP_SANDBOX_TIMEOUT_SECONDS`, and it is the run that separates the three layers.
+Eight Modal samples show sandbox `sb-38r2MLZqOEp5jhf1pfZVfn` `running` at 0/150/300/
+900/1800/2700 s and `stopped` with `sandbox_id: null` at 3600 s and 4500 s, while
+`sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt` is present in the
+`clevin-sessions` volume in **every** sample, including both post-teardown ones, and
+`session_status` is `idle` throughout. The session accepted
+`user.custom_tool_result` for `sevt_019JTHZQ12uBBLqn6ttefU2N` after
+`gap_seconds: 4501.1` and went `session.status_running` in **0.2 s** — so the
+`requires_action` park itself has no observed ceiling at 75 min, an hour after its
+sandbox was gone.
+
+What this run could not show is the post-teardown *work*: the resumed turn's first
+model request failed immediately with
+`session.error … {"type": "billing_error", "message": "Your credit balance is too
+low to access the Anthropic API…", "retry_status": {"type": "exhausted"}}`, and the
+session settled `idle` with `stop_reason: {"type": "retries_exhausted"}` (usage:
+`active_seconds: 8.9`, list cost $3). The prepaid Anthropic balance was exhausted at
+03:45:13Z; per §7 no credits were purchased and the run was not retried. The
+workspace-survival claim therefore rests on the 900 s run's read-back of the marker
+file plus this run's volume samples, not on a post-3600 s re-read by the agent.
+
+Note that the Modal volume samples in the 900 s file all carry
 `AttributeError: 'function' object has no attribute 'aio'` — the first version of
 the sampling helper called `modal.Volume.from_name.aio`, which does not exist. The
 helper now uses the synchronous `modal.Volume.from_name(..., version=2).listdir`,
@@ -314,6 +340,11 @@ two test cases.
 - **Long-block ceiling above 75 minutes** (multi-hour or multi-day resume) — the
   4500 s run is the longest measured; nothing observed suggests a limit, but hours
   were not tested.
+- **Post-teardown resumed work.** The 4500 s run proved the park and the 0.2 s
+  re-entry but not the agent's first post-3600 s tool call: the prepaid Anthropic
+  balance ran out mid-resume (`billing_error`, `retries_exhausted`, 03:45:13Z), and
+  §7 forbids buying credits. Re-running `experiments/K/k2_ask_and_block.py 4500`
+  once the balance is topped up is the one outstanding K experiment.
 - **Multi-round review loops:** K4 covered one review comment and one CI failure.
   A second round (new comment after the fix) was not run.
 - **Skill auto-selection quality across many skills:** one skill was tested. How

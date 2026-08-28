@@ -1,0 +1,455 @@
+{
+  "session_id": "sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+  "marker": "K2-MARKER-1787884188",
+  "requested_wait_seconds": 4500,
+  "samples": [
+    {
+      "elapsed_s": 0,
+      "modal": {
+        "sandbox_id": "sb-38r2MLZqOEp5jhf1pfZVfn",
+        "status": "running",
+        "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+        "volume_entries": [
+          "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+        ]
+      },
+      "session_status": "idle"
+    },
+    {
+      "elapsed_s": 150,
+      "modal": {
+        "sandbox_id": "sb-38r2MLZqOEp5jhf1pfZVfn",
+        "status": "running",
+        "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+        "volume_entries": [
+          "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+        ]
+      },
+      "session_status": "idle"
+    },
+    {
+      "elapsed_s": 300,
+      "modal": {
+        "sandbox_id": "sb-38r2MLZqOEp5jhf1pfZVfn",
+        "status": "running",
+        "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+        "volume_entries": [
+          "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+        ]
+      },
+      "session_status": "idle"
+    },
+    {
+      "elapsed_s": 900,
+      "modal": {
+        "sandbox_id": "sb-38r2MLZqOEp5jhf1pfZVfn",
+        "status": "running",
+        "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+        "volume_entries": [
+          "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+        ]
+      },
+      "session_status": "idle"
+    },
+    {
+      "elapsed_s": 1800,
+      "modal": {
+        "sandbox_id": "sb-38r2MLZqOEp5jhf1pfZVfn",
+        "status": "running",
+        "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+        "volume_entries": [
+          "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+        ]
+      },
+      "session_status": "idle"
+    },
+    {
+      "elapsed_s": 2700,
+      "modal": {
+        "sandbox_id": "sb-38r2MLZqOEp5jhf1pfZVfn",
+        "status": "running",
+        "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+        "volume_entries": [
+          "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+        ]
+      },
+      "session_status": "idle"
+    },
+    {
+      "elapsed_s": 3600,
+      "modal": {
+        "sandbox_id": null,
+        "status": "stopped",
+        "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+        "volume_entries": [
+          "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+        ]
+      },
+      "session_status": "idle"
+    },
+    {
+      "elapsed_s": 4500,
+      "modal": {
+        "sandbox_id": null,
+        "status": "stopped",
+        "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+        "volume_entries": [
+          "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+        ]
+      },
+      "session_status": "idle"
+    }
+  ],
+  "blocked": true,
+  "ask_event": {
+    "type": "agent.custom_tool_use",
+    "id": "sevt_019JTHZQ12uBBLqn6ttefU2N",
+    "at": "2026-08-28T02:30:08.372200Z",
+    "tool": "ask_human",
+    "input": "{\"options\": [\"alpha\", \"beta\"], \"question\": \"Which follow-up file should I create: alpha or beta?\"}"
+  },
+  "stop_reason_at_block": {
+    "event_ids": [
+      "sevt_019JTHZQ12uBBLqn6ttefU2N"
+    ],
+    "type": "requires_action"
+  },
+  "custom_tool_use_id": "sevt_019JTHZQ12uBBLqn6ttefU2N",
+  "gap_seconds": 4501.1,
+  "resumed": true,
+  "seconds_to_resume": 0.2,
+  "modal_after_resume": {
+    "sandbox_id": null,
+    "status": "stopped",
+    "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+    "volume_entries": [
+      "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+    ]
+  },
+  "settled": {
+    "status": "idle",
+    "stop_reason": {
+      "type": "retries_exhausted"
+    },
+    "timed_out": false
+  },
+  "final": {
+    "status": "idle",
+    "usage": {
+      "active_seconds": 8.938,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 793
+      },
+      "cache_read_input_tokens": 36807,
+      "input_tokens": 8,
+      "list_cost": {
+        "amount": "3",
+        "currency": "USD"
+      },
+      "output_tokens": 419,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "budget": {
+      "max_list_cost": {
+        "amount": "150",
+        "currency": "USD"
+      },
+      "type": "limit"
+    },
+    "stats": {
+      "active_seconds": 7.199,
+      "duration_seconds": 4525.425902932
+    }
+  },
+  "modal_final": {
+    "sandbox_id": null,
+    "status": "stopped",
+    "volume_path": "clevin-sessions/sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5",
+    "volume_entries": [
+      "sessions/sesn_01Mo2kMJ2c6m1J7G1WVPkgy5/k2-marker.txt"
+    ]
+  },
+  "events": [
+    {
+      "type": "session.status_running",
+      "id": "sevt_019kH5iTEpESpLvgGMNrJyMU",
+      "at": "2026-08-28T02:29:49.482154Z"
+    },
+    {
+      "type": "session.thread_status_running",
+      "id": "sevt_01RLo4BTAkJawpMVEHBtvfbb",
+      "at": "2026-08-28T02:29:49.702939Z"
+    },
+    {
+      "type": "user.message",
+      "id": "sevt_01Rzs4vNSrQNU6wPHJMJACmr",
+      "at": "2026-08-28T02:29:49.754063Z",
+      "text": "CLEVIN_SMOKE_TEST\nHarmless local workspace checks only. No Git, no MCP, no external state.\n\nStep 1: create /workspace/k2-marker.txt containing exactly the line K2-MARKER-1787884188.\nStep 2: run `hostname` and `date -u` and report both.\nStep 3: you must not guess the next step. Call the ask_human tool exactly once\nwith the question \"Which follow-up file should I create: alpha or beta?\" and the\noptions [\"alpha\", \"beta\"]. Then stop and wait for the answer.\nStep 4 (only after the answer arrives): re-read /workspace/k2-marker.txt, run\n`hostname`, `date -u`, and `ls -la /workspace`, then report: the marker line you\nread back, whether the marker survived, whether the hostname changed, and how\nlong the gap was. Finally create the file the human chose (/workspace/k2-<choice>.txt\ncontaining that choice) and stop.\n"
+    },
+    {
+      "type": "span.model_request_start",
+      "id": "sevt_01EPbg4xTSkxQ7srDd8Nr8A1",
+      "at": "2026-08-28T02:29:49.754064Z"
+    },
+    {
+      "type": "agent.message",
+      "id": "sevt_01XrwyZuy2TVXnrw9Eb47hyZ",
+      "at": "2026-08-28T02:29:51.440600Z",
+      "text": "I'll start with the workspace checks."
+    },
+    {
+      "type": "agent.tool_use",
+      "id": "sevt_0137EttAkjZARjcAVizZ7trZ",
+      "at": "2026-08-28T02:29:51.440601Z",
+      "tool": "bash",
+      "input": "{\"command\": \"ls -la /workspace\"}"
+    },
+    {
+      "type": "span.model_request_end",
+      "id": "sevt_01WPPPF3b8vAKkz5gtrL1LU9",
+      "at": "2026-08-28T02:29:51.440602Z"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "id": "sevt_01VSXK7zhdz3mZNMZC5XNWz3",
+      "at": "2026-08-28T02:29:51.546296Z"
+    },
+    {
+      "type": "session.usage",
+      "id": "sevt_01JUYzUgh8THwFCdZ5vJGJUL",
+      "at": "2026-08-28T02:29:51.546297Z"
+    },
+    {
+      "type": "session.status_idle",
+      "id": "sevt_017VVb4etQLuzYTwX63Xs8W9",
+      "at": "2026-08-28T02:29:51.546298Z",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_0137EttAkjZARjcAVizZ7trZ"
+        ],
+        "type": "requires_action"
+      }
+    },
+    {
+      "type": "user.tool_result",
+      "id": "sevt_011xfM3rCkkp7WJer24L21Rk",
+      "at": "2026-08-28T02:30:02.098447Z",
+      "result": "[{\"text\": \"lrwxrwxrwx 1 root root 42 Jan  1  1970 /workspace -> /__modal/volumes/vo-uj5BUIG4br5MnRYO6cyHbV\", \"type\": \"text\"}]",
+      "tool_use_id": "sevt_0137EttAkjZARjcAVizZ7trZ"
+    },
+    {
+      "type": "session.status_running",
+      "id": "sevt_017rDVS4EcqRhd4VHx4A7iZh",
+      "at": "2026-08-28T02:30:02.250149Z"
+    },
+    {
+      "type": "session.thread_status_running",
+      "id": "sevt_013HABF4HdS7r3ixxLah2CLe",
+      "at": "2026-08-28T02:30:02.250150Z"
+    },
+    {
+      "type": "span.model_request_start",
+      "id": "sevt_0198PTzMky4yuzbdb2S2yRYZ",
+      "at": "2026-08-28T02:30:02.334574Z"
+    },
+    {
+      "type": "agent.thinking",
+      "id": "sevt_01DMHQs9kknMEEkNWrefeqwq",
+      "at": "2026-08-28T02:30:03.723403Z",
+      "text": ""
+    },
+    {
+      "type": "agent.tool_use",
+      "id": "sevt_01QyVhw8PMzN49d8goqJrKR9",
+      "at": "2026-08-28T02:30:04.031039Z",
+      "tool": "write",
+      "input": "{\"content\": \"K2-MARKER-1787884188\\n\", \"file_path\": \"/workspace/k2-marker.txt\"}"
+    },
+    {
+      "type": "span.model_request_end",
+      "id": "sevt_01GVkYF5AVhVcGhVMYyMSPSZ",
+      "at": "2026-08-28T02:30:04.031040Z"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "id": "sevt_0129C8GA9f3STWZFxNrY6t43",
+      "at": "2026-08-28T02:30:04.127250Z"
+    },
+    {
+      "type": "session.usage",
+      "id": "sevt_01WDMjRhTNq85wzfMmQgjTVV",
+      "at": "2026-08-28T02:30:04.127251Z"
+    },
+    {
+      "type": "session.status_idle",
+      "id": "sevt_015Kk9pgSUqYd7mv7SNFRZsm",
+      "at": "2026-08-28T02:30:04.127252Z",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_01QyVhw8PMzN49d8goqJrKR9"
+        ],
+        "type": "requires_action"
+      }
+    },
+    {
+      "type": "user.tool_result",
+      "id": "sevt_01Wstd4dqrfKSgpMAHVjUPyE",
+      "at": "2026-08-28T02:30:04.287565Z",
+      "result": "[{\"text\": \"wrote 21 bytes to /workspace/k2-marker.txt\", \"type\": \"text\"}]",
+      "tool_use_id": "sevt_01QyVhw8PMzN49d8goqJrKR9"
+    },
+    {
+      "type": "session.status_running",
+      "id": "sevt_016D5JRExoxePp1GcF8oyZao",
+      "at": "2026-08-28T02:30:04.362648Z"
+    },
+    {
+      "type": "session.thread_status_running",
+      "id": "sevt_01Gwc9YoiYgbaj5PhdHCSzHf",
+      "at": "2026-08-28T02:30:04.362649Z"
+    },
+    {
+      "type": "span.model_request_start",
+      "id": "sevt_01JF1Ps3HNgTEwUq92s4xGfB",
+      "at": "2026-08-28T02:30:04.458049Z"
+    },
+    {
+      "type": "agent.tool_use",
+      "id": "sevt_01YD2fpDYNEKk7TY4ubPZfux",
+      "at": "2026-08-28T02:30:05.673565Z",
+      "tool": "bash",
+      "input": "{\"command\": \"hostname; date -u\"}"
+    },
+    {
+      "type": "span.model_request_end",
+      "id": "sevt_01984DcRSoEwiYfdcHQhw2N4",
+      "at": "2026-08-28T02:30:05.673566Z"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "id": "sevt_01BchQJD9vuT5ZstYEqpnpHD",
+      "at": "2026-08-28T02:30:05.763242Z"
+    },
+    {
+      "type": "session.usage",
+      "id": "sevt_011BVzPYzaxakDYNkLgzNFNG",
+      "at": "2026-08-28T02:30:05.763243Z"
+    },
+    {
+      "type": "session.status_idle",
+      "id": "sevt_015i4yEtoKXKGLpnph2Qu1Xj",
+      "at": "2026-08-28T02:30:05.763244Z",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_01YD2fpDYNEKk7TY4ubPZfux"
+        ],
+        "type": "requires_action"
+      }
+    },
+    {
+      "type": "user.tool_result",
+      "id": "sevt_01GmM8ncQWMYRzRQjX8Msq8k",
+      "at": "2026-08-28T02:30:05.962759Z",
+      "result": "[{\"text\": \"modal\\nFri Aug 28 02:30:05 UTC 2026\", \"type\": \"text\"}]",
+      "tool_use_id": "sevt_01YD2fpDYNEKk7TY4ubPZfux"
+    },
+    {
+      "type": "session.status_running",
+      "id": "sevt_014V6jfFthoiiwdKjU8ehXHz",
+      "at": "2026-08-28T02:30:06.034065Z"
+    },
+    {
+      "type": "session.thread_status_running",
+      "id": "sevt_01Ei3dfwKDBKrwFJXjt3hwVK",
+      "at": "2026-08-28T02:30:06.034066Z"
+    },
+    {
+      "type": "span.model_request_start",
+      "id": "sevt_01L1hLXM1up2NJAN5zoEGBuh",
+      "at": "2026-08-28T02:30:06.115805Z"
+    },
+    {
+      "type": "agent.message",
+      "id": "sevt_01BxHNwdS49eQxW1bpbXaQmT",
+      "at": "2026-08-28T02:30:08.372199Z",
+      "text": "Step 1\u20132 done:\n- Created `/workspace/k2-marker.txt` with the line `K2-MARKER-1787884188`.\n- `hostname` \u2192 `modal`\n- `date -u` \u2192 `Fri Aug 28 02:30:05 UTC 2026`"
+    },
+    {
+      "type": "agent.custom_tool_use",
+      "id": "sevt_019JTHZQ12uBBLqn6ttefU2N",
+      "at": "2026-08-28T02:30:08.372200Z",
+      "tool": "ask_human",
+      "input": "{\"options\": [\"alpha\", \"beta\"], \"question\": \"Which follow-up file should I create: alpha or beta?\"}"
+    },
+    {
+      "type": "span.model_request_end",
+      "id": "sevt_01DehEdseCHT3YqcSNwQznih",
+      "at": "2026-08-28T02:30:08.372201Z"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "id": "sevt_01Tq9ug3Tnv7A6kNw4CoV7KD",
+      "at": "2026-08-28T02:30:08.487169Z"
+    },
+    {
+      "type": "session.usage",
+      "id": "sevt_01Ag5eyaWYe784MrqAhTPAAq",
+      "at": "2026-08-28T02:30:08.487170Z"
+    },
+    {
+      "type": "session.status_idle",
+      "id": "sevt_01DVed6VicX5veqnc95YsAa9",
+      "at": "2026-08-28T02:30:08.487171Z",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_019JTHZQ12uBBLqn6ttefU2N"
+        ],
+        "type": "requires_action"
+      }
+    },
+    {
+      "type": "user.custom_tool_result",
+      "id": "sevt_01Xwmcw7EU47qSgGXtEVPxjg",
+      "at": "2026-08-28T03:45:13.334321Z",
+      "tool_use_id": "sevt_019JTHZQ12uBBLqn6ttefU2N"
+    },
+    {
+      "type": "session.status_running",
+      "id": "sevt_018qYppKY8n29BHmt78qS8rf",
+      "at": "2026-08-28T03:45:13.415196Z"
+    },
+    {
+      "type": "session.thread_status_running",
+      "id": "sevt_018Ge35SXu3SrbrQwBUuZrTv",
+      "at": "2026-08-28T03:45:13.415197Z"
+    },
+    {
+      "type": "span.model_request_start",
+      "id": "sevt_01C5tyTNaecv68XNhj95tBFZ",
+      "at": "2026-08-28T03:45:13.529616Z"
+    },
+    {
+      "type": "span.model_request_end",
+      "id": "sevt_012jThurrB9QPdNPy4Qz5zdB",
+      "at": "2026-08-28T03:45:13.559011Z"
+    },
+    {
+      "type": "session.error",
+      "id": "sevt_01V4JF1cfDdMWyfTPQ4xA32X",
+      "at": "2026-08-28T03:45:13.599213Z",
+      "error": "{\"message\": \"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\", \"retry_status\": {\"type\": \"exhausted\"}, \"type\": \"billing_error\"}"
+    },
+    {
+      "type": "session.status_idle",
+      "id": "sevt_01RwYcwvtMyiHe4WoxNAjPUx",
+      "at": "2026-08-28T03:45:13.721826Z",
+      "stop_reason": {
+        "type": "retries_exhausted"
+      }
+    }
+  ]
+}
