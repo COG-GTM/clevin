@@ -10,12 +10,22 @@ Run the checks with:
 python3 -m pytest experiments/J/fixture/tests -q
 ```
 
-## Open questions
+## Money policy (decided)
 
-The rounding and presentation policy for report totals has never been decided. Finance has
-asked for "exact money", accounting has asked for "two decimal places", and the previous
-owner left no decision record anywhere in this repository. Do not guess: this choice changes
-reported revenue, so it needs a human decision before any total is rounded.
+This was previously an open question: finance asked for "exact money", accounting asked for
+"two decimal places", and the previous owner left no decision record anywhere in this
+repository. Finance and accounting have now agreed:
+
+1. Money is accumulated **exactly**, with `decimal.Decimal` built from the original input
+   strings. Money never touches binary floating point.
+2. Rounding happens **only at presentation**, to two decimal places, using banker's rounding
+   (`ROUND_HALF_EVEN`).
+3. So `monthly_totals()` and `monthly_average()` return exact, unrounded values.
+   `format_amount()` is the single place rounding is applied.
+
+The policy is restated next to the constants in `reportkit/aggregate.py`. Do not quantize
+inside the aggregation layer: that rounds intermediate values and reintroduces the drift the
+policy exists to prevent.
 
 ## Non-goals
 
