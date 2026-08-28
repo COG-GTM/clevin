@@ -1,0 +1,33 @@
+worker pid=8549 log=/home/ubuntu/repos/clevin/experiments/C/artifacts/c4-kill-after-worker.log
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/clevin/experiments/C/run_case.py", line 182, in <module>
+    main()
+    ~~~~^^
+  File "/home/ubuntu/repos/clevin/experiments/C/run_case.py", line 149, in main
+    session_id = chaos.create_session(
+        args.prompt,
+    ...<3 lines>...
+        metadata={"case": args.name, "experiment": "clevin-swarm-C"},
+    )
+  File "/home/ubuntu/repos/clevin/experiments/C/chaos.py", line 76, in create_session
+    session = c.beta.sessions.create(
+        agent={"type": "agent", "id": agent_id, "version": agent_version},
+    ...<7 lines>...
+        ],
+    )
+  File "/home/ubuntu/repos/clevin/runtime/.venv/lib/python3.13/site-packages/anthropic/resources/beta/sessions/sessions.py", line 155, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/sessions?beta=true",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<16 lines>...
+        cast_to=BetaManagedAgentsSession,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ubuntu/repos/clevin/runtime/.venv/lib/python3.13/site-packages/anthropic/_base_client.py", line 1536, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/clevin/runtime/.venv/lib/python3.13/site-packages/anthropic/_base_client.py", line 1194, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeUNqsWchmFxV8fGeqvAM'}

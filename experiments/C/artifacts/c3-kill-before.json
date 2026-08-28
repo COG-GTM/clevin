@@ -1,0 +1,192 @@
+{
+  "session": {
+    "id": "sesn_01YDmDJtbTgYkhXRisHri7XZ",
+    "agent": {
+      "id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+      "description": "Temporary workstream C reliability/tool-surface harness agent.",
+      "mcp_servers": [],
+      "model": {
+        "id": "claude-haiku-4-5-20251001",
+        "effort": null,
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": null,
+      "name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "skills": [],
+      "system": "You are a reliability test harness agent. You run inside a self-hosted sandbox with native bash and filesystem tools.\n\nRules:\n- Do exactly what the user message asks, using the fewest tool calls possible.\n- Never use git, never touch anything outside /workspace, never inspect or print environment variables, and never modify external state.\n- When a tool call fails, report the failure verbatim in one short sentence, then decide: retry once only if the error looks transient, otherwise stop and explain.\n- Keep your prose replies to at most three short sentences.\n",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "version": 1
+    },
+    "archived_at": null,
+    "budget": {
+      "max_list_cost": {
+        "amount": "100",
+        "currency": "USD"
+      },
+      "type": "limit"
+    },
+    "created_at": "2026-08-28T02:35:16.863019Z",
+    "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+    "metadata": {
+      "case": "c3-kill-before",
+      "experiment": "clevin-swarm-C"
+    },
+    "outcome_evaluations": [],
+    "resources": [],
+    "stats": {
+      "active_seconds": 1.469,
+      "duration_seconds": 302.242887736
+    },
+    "status": "idle",
+    "title": "clevin-swarm-C c3-kill-before",
+    "type": "session",
+    "updated_at": "2026-08-28T02:35:19.523810Z",
+    "usage": {
+      "active_seconds": 1.981,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_read_input_tokens": 5364,
+      "input_tokens": 10,
+      "list_cost": {
+        "amount": "0",
+        "currency": "USD"
+      },
+      "output_tokens": 116,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "vault_ids": [],
+    "deployment_id": null
+  },
+  "events": [
+    {
+      "id": "sevt_013srUt9nUkoC36RS3dSYCCH",
+      "processed_at": "2026-08-28T02:35:17.402650Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_019N2bJVhqUVyZ9PZAbk59G6",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:35:17.813410Z",
+      "session_thread_id": "sthr_01Sx2iwDTaX6UYqzCczaxy6i",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01NpTToHvzkVyCjn5rdqXsKP",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST c3: run exactly one bash command `echo CHAOS-kill-before`, then report its exact output and whether anything unusual happened, then stop.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T02:35:17.885707Z"
+    },
+    {
+      "id": "sevt_01YDih7MffF1yEG7nJW7uihM",
+      "processed_at": "2026-08-28T02:35:17.885708Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_019aEFdEBiCPFAk97fLAQSnB",
+      "processed_at": "2026-08-28T02:35:18.964937Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_0197CcGssxZMPjyPBCmrjKjC",
+      "input": {
+        "command": "echo CHAOS-kill-before"
+      },
+      "name": "bash",
+      "processed_at": "2026-08-28T02:35:19.271682Z",
+      "type": "agent.tool_use",
+      "evaluated_permission": "allow",
+      "session_thread_id": null
+    },
+    {
+      "id": "sevt_018kBP545C4qxxG4SidHFhd8",
+      "is_error": false,
+      "model_request_start_id": "sevt_01YDih7MffF1yEG7nJW7uihM",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5364,
+        "input_tokens": 10,
+        "output_tokens": 116,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:35:19.271683Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01VB3ykL5U99b11UBZyjMrsY",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:35:19.420167Z",
+      "session_thread_id": "sthr_01Sx2iwDTaX6UYqzCczaxy6i",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_0197CcGssxZMPjyPBCmrjKjC"
+        ],
+        "type": "requires_action"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_011NkfsEfvhovUN1zozTjbra",
+      "processed_at": "2026-08-28T02:35:19.420168Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 1.825,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_read_input_tokens": 5364,
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "0",
+          "currency": "USD"
+        },
+        "output_tokens": 116,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "100",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01H9hz4tqBr2VmPXjTmM8e48",
+      "processed_at": "2026-08-28T02:35:19.420169Z",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_0197CcGssxZMPjyPBCmrjKjC"
+        ],
+        "type": "requires_action"
+      },
+      "type": "session.status_idle"
+    }
+  ]
+}

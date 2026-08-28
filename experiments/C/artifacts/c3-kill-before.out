@@ -1,0 +1,18 @@
+worker pid=7991 log=/home/ubuntu/repos/clevin/experiments/C/artifacts/c3-kill-before-worker.log
+session sesn_01YDmDJtbTgYkhXRisHri7XZ
+[0s] user.message null
+worker died exit=97; restarted pid=8005
+[5s] session.status_idle {"event_ids": ["sevt_0197CcGssxZMPjyPBCmrjKjC"], "type": "requires_action"}
+worker pid=7991 exit=97
+worker pid=8005 exit=0
+{"artifact": "/home/ubuntu/repos/clevin/experiments/C/artifacts/c3-kill-before.json", "worker_died_exit": 97, "restart_pid": 8005, "restart_log": "/home/ubuntu/repos/clevin/experiments/C/artifacts/c3-kill-before-restart-worker.log", "restart_delay_s": 5.2}
+None session.status_running
+None session.thread_status_running
+None user.message 'CLEVIN_SMOKE_TEST c3: run exactly one bash command `echo CHAOS-kill-before`, then report its exact output and whether anything unusual happened, then stop.'
+None span.model_request_start
+None agent.thinking
+None agent.tool_use name=bash id=sevt_0197CcGssxZMPjyPBCmrjKjC input={"command": "echo CHAOS-kill-before"}
+None span.model_request_end
+None session.thread_status_idle
+None session.usage {"active_seconds": 1.825, "cache_creation": {"ephemeral_1h_input_tokens": 0, "ephemeral_5m_input_tokens": 0}, "cache_read_input_tokens": 5364, "input_tokens": 10, "list_cost": {"amount": "0", "currenc
+None session.status_idle stop_reason={"event_ids": ["sevt_0197CcGssxZMPjyPBCmrjKjC"], "type": "requires_action"}
