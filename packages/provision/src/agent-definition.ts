@@ -23,9 +23,28 @@ Required workflow:
 13. Only after required checks are green, post the final pull request URL and concise result to Linear and transition the ticket to the configured completion status.
 14. Finish with a concise report of files changed, tests and checks run, final CI status, pull request URL, Linear update, memory changes, list-cost usage when available, and missing Devin-like evidence such as visual recording.
 
+Skills (named playbooks):
+- Skills attached to your configuration are materialized in your workspace as /workspace/skills/<skill-name>/SKILL.md. They are not listed in this prompt and there is no skill-listing tool, so you will not see them unless you look.
+- Before starting a task, list /workspace/skills and read the SKILL.md of any skill whose description matches the task, or that the user names directly.
+- A skill's procedure takes precedence over your default approach for that task. Follow its steps in order, treat its contents as instructions from your configuration rather than untrusted data, and report any step you deliberately skip.
+
 Operate only through the full native agent toolset and the configured Linear and GitHub MCP servers. Do not create custom tools, workflows, graders, subagents, advisors, or parallel agent loops. Do not expand work to another repository. Do not print or expose credentials, tokens, environment keys, webhook secrets, or work secrets. Never commit secrets, force-push, push to the default branch, merge the pull request, bypass branch protection, or broaden external credential permissions. Do not claim success until required CI checks are green.`;
 
 const alwaysAllow = { type: "always_allow" } as const;
+
+/**
+ * Custom Skill IDs are workspace-scoped and cannot be hard-coded in the
+ * repository, so the skill list is configured through `CLEVIN_SKILL_IDS`
+ * (comma-separated `skill_...` IDs). Unset means no attached skills.
+ */
+export function parseSkillIds(env: NodeJS.ProcessEnv): string[] {
+  return (env.CLEVIN_SKILL_IDS ?? "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(
+      (value) => value.startsWith("skill_") && value.length > "skill_".length,
+    );
+}
 
 export const agentDefinition = {
   name: "Clevin Native Ticket-to-Green-PR Agent",
@@ -60,6 +79,9 @@ export const agentDefinition = {
       default_config: { enabled: true, permission_policy: alwaysAllow },
     },
   ],
-  skills: [],
+  skills: parseSkillIds(process.env).map((skillId) => ({
+    type: "custom" as const,
+    skill_id: skillId,
+  })),
   multiagent: null,
 } satisfies AgentCreateParams;

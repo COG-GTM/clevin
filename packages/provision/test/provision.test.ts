@@ -24,6 +24,7 @@ import {
   CLEVIN_SYSTEM_PROMPT,
   GITHUB_MCP_URL,
   LINEAR_MCP_URL,
+  parseSkillIds,
 } from "../src/agent-definition.js";
 import {
   ConfigurationError,
@@ -184,6 +185,18 @@ describe("agent definition", () => {
     expect(CLEVIN_SYSTEM_PROMPT).toContain(
       "Do not claim success until required CI checks are green",
     );
+    expect(CLEVIN_SYSTEM_PROMPT).toContain(
+      "/workspace/skills/<skill-name>/SKILL.md",
+    );
+  });
+
+  it("attaches only well-formed skill IDs from the environment", () => {
+    expect(parseSkillIds({})).toEqual([]);
+    expect(parseSkillIds({ CLEVIN_SKILL_IDS: "" })).toEqual([]);
+    expect(parseSkillIds({ CLEVIN_SKILL_IDS: "skill_, nonsense" })).toEqual([]);
+    expect(
+      parseSkillIds({ CLEVIN_SKILL_IDS: " skill_abc , skill_def " }),
+    ).toEqual(["skill_abc", "skill_def"]);
   });
 });
 
