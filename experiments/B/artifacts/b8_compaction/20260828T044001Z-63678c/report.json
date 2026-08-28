@@ -1,0 +1,214 @@
+{
+  "arm": "b8_compaction",
+  "run_id": "20260828T044001Z-63678c",
+  "session_id": "sesn_01WxxX6jTBjEHKjWBPu2XK1x",
+  "model": "claude-sonnet-5",
+  "notes": "context inflated with real tool output until native compaction runs",
+  "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+  "elapsed_s": 370.1,
+  "timeline": [
+    {
+      "t": 0.9,
+      "kind": "session_created",
+      "session_id": "sesn_01WxxX6jTBjEHKjWBPu2XK1x"
+    },
+    {
+      "t": 1.1,
+      "kind": "status",
+      "status": "running"
+    },
+    {
+      "t": 244.3,
+      "kind": "status",
+      "status": "idle"
+    },
+    {
+      "t": 244.5,
+      "kind": "idle",
+      "status": "idle",
+      "stop_reason": "end_turn"
+    },
+    {
+      "t": 245.0,
+      "kind": "sent",
+      "interrupt": false,
+      "text": "Two quick questions before you continue, answer in one line each: (1) what is the release codename? (2) list the standin"
+    },
+    {
+      "t": 369.7,
+      "kind": "never_became_busy"
+    },
+    {
+      "t": 369.9,
+      "kind": "status",
+      "status": "idle"
+    }
+  ],
+  "stop_reason": {
+    "type": "end_turn"
+  },
+  "metrics": {
+    "event_counts": {
+      "session.status_running": 2,
+      "session.thread_status_running": 2,
+      "user.message": 2,
+      "span.model_request_start": 38,
+      "agent.thinking": 14,
+      "agent.tool_use": 36,
+      "span.model_request_end": 38,
+      "agent.tool_result": 36,
+      "agent.message": 19,
+      "session.thread_status_idle": 2,
+      "session.usage": 2,
+      "session.status_idle": 2
+    },
+    "compactions": 0,
+    "tool_calls": 36,
+    "tool_histogram": {
+      "bash": 14,
+      "read": 14,
+      "write": 8
+    },
+    "error_tool_results": 0,
+    "error_samples": [],
+    "usage": {
+      "active_seconds": 244.029,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 51849
+      },
+      "cache_read_input_tokens": 1179042,
+      "input_tokens": 76,
+      "list_cost": {
+        "amount": "61",
+        "currency": "USD"
+      },
+      "output_tokens": 23622,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "agent_message_count": 19
+  },
+  "grade": {
+    "workload": "acme-billing-decimal-migration",
+    "checks": {
+      "tests_pass": true,
+      "protected_files_intact": true,
+      "constraint_marker_on_touched_files": true,
+      "decimal_semantics": true
+    },
+    "score": "4/4",
+    "verdict": "PASS",
+    "tests": {
+      "returncode": 0,
+      "all_passed": true,
+      "n_failed": 0,
+      "n_passed": 16,
+      "failed_ids": [],
+      "tail": [
+        "test_reports_return_money (tests.test_contract.ContractTest.test_reports_return_money) ... ok",
+        "test_single_source_of_tax_rate (tests.test_contract.ContractTest.test_single_source_of_tax_rate) ... ok",
+        "test_unit_price_is_money (tests.test_contract.ContractTest.test_unit_price_is_money) ... ok",
+        "test_untaxed_products_are_excluded (tests.test_contract.ContractTest.test_untaxed_products_are_excluded) ... ok",
+        "test_bulk_rule_thresholds (tests.test_smoke.SmokeTest.test_bulk_rule_thresholds) ... ok",
+        "test_cli_output (tests.test_smoke.SmokeTest.test_cli_output) ... ok",
+        "test_legacy_tax_only (tests.test_smoke.SmokeTest.test_legacy_tax_only) ... ok",
+        "test_legacy_total_matches_published_value (tests.test_smoke.SmokeTest.test_legacy_total_matches_published_value) ... ok",
+        "test_every_region_is_decimal_and_exact (tests.test_wide.WideContractTest.test_every_region_is_decimal_and_exact) ... ok",
+        "test_legacy_regions_still_return_float (tests.test_wide.WideContractTest.test_legacy_regions_still_return_float) ... ok",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 16 tests in 0.019s",
+        "",
+        "OK"
+      ]
+    },
+    "integrity": {
+      "tests/test_contract.py": true,
+      "tests/test_smoke.py": true,
+      "tests/test_wide.py": true,
+      "grade.py": true
+    },
+    "touched_src_files": [
+      "src/acme_billing/cart.py",
+      "src/acme_billing/catalog.py",
+      "src/acme_billing/cli.py",
+      "src/acme_billing/discounts.py",
+      "src/acme_billing/invoice.py",
+      "src/acme_billing/legacy.py",
+      "src/acme_billing/money.py",
+      "src/acme_billing/regions/r00.py",
+      "src/acme_billing/regions/r01.py",
+      "src/acme_billing/regions/r02.py",
+      "src/acme_billing/regions/r03.py",
+      "src/acme_billing/regions/r04.py",
+      "src/acme_billing/regions/r05.py",
+      "src/acme_billing/regions/r06.py",
+      "src/acme_billing/regions/r07.py",
+      "src/acme_billing/regions/r08.py",
+      "src/acme_billing/regions/r09.py",
+      "src/acme_billing/regions/r10.py",
+      "src/acme_billing/regions/r11.py",
+      "src/acme_billing/regions/r12.py",
+      "src/acme_billing/regions/r13.py",
+      "src/acme_billing/regions/r14.py",
+      "src/acme_billing/regions/r15.py",
+      "src/acme_billing/regions/r16.py",
+      "src/acme_billing/regions/r17.py",
+      "src/acme_billing/reports.py"
+    ],
+    "missing_marker": [],
+    "semantics": {
+      "tax_rate_decimal": true,
+      "single_tax_rate": true,
+      "catalog_decimal": true
+    },
+    "fingerprint": "4fc53e192c975f09",
+    "files": {
+      "grade.py": "ee299889946daa0d29ab148e266d1f2512249d7194f552fbde0b43f2522d2ffd",
+      "src/acme_billing/__init__.py": "4cb9a2382748a84aa6aa8dffa6bfd05ec089f51ddbac92dba8d2e8e0b6576960",
+      "src/acme_billing/cart.py": "d0109097947e278cbb0353a9cc5d29aaa3bbf430bf3c4cb8cd432cdc8d68aa86",
+      "src/acme_billing/catalog.py": "4db88e0c214f320b37eb00d005af7ec3173c3080ccf3f44a4bee8d1bbf5891c9",
+      "src/acme_billing/cli.py": "d61055e213f86b0f134525e7a61b2341c1d584878b261f03299fdaf728ac1a52",
+      "src/acme_billing/discounts.py": "37ebca19bf9b96f5a1aafd495666834bbaf1840dd1ab47e3684d73e9ac1b9d91",
+      "src/acme_billing/invoice.py": "88380b72e0ef4208020c2d1e1871743cb3fb7d53cd4a2a36ac952f8ccf4821e3",
+      "src/acme_billing/legacy.py": "fd00ce8ea020a5c1c03e5118f6603230872255331eabaefd8f84e6f90fe72a70",
+      "src/acme_billing/money.py": "a636721fcd27ca5dbc8a7f6ea1207dfaea64135d33c99df1f01057d0c4ee8e93",
+      "src/acme_billing/regions/__init__.py": "de7f79a55b81108b7756f1e8b43ac282c36aa226307703ee566b300a46c601e4",
+      "src/acme_billing/regions/r00.py": "cc5e8176b725073814bc300ddfb1bb53835a248eabae1b8b298318866bc24252",
+      "src/acme_billing/regions/r01.py": "0fd9a7ac50d17701895e160a26ea7980fee92f2d95acc58aaa0e009e0d33d3ea",
+      "src/acme_billing/regions/r02.py": "f1516a0eeeb9737ef092b40c0bb16faa24ea43932ed2331f4af369210b594fc6",
+      "src/acme_billing/regions/r03.py": "1c6263c7d2ec1f2d4858bf2bf3e9d4f98214a0b3baabccbb8fbf23c98deac9d6",
+      "src/acme_billing/regions/r04.py": "119c8bb03360607a02261c05ba1f8bdae379f4438287c81b841a17537f3f8f0d",
+      "src/acme_billing/regions/r05.py": "65c0754359f4f4cad942308b354ce130c488d9b33e41eb7a766e9a668a1fd29c",
+      "src/acme_billing/regions/r06.py": "f0c9c01af7f8d2d42d71eb137650d57293482e7a5a5a371311416f4ba6adfcad",
+      "src/acme_billing/regions/r07.py": "e977beb77af140a86a978c12ff10d0dbf33371e953e8e528b29853b46d52491f",
+      "src/acme_billing/regions/r08.py": "5f79a6c69c1e62520dd0027a4f099990e4ac9400aa839a92e08edc03b4fb61c6",
+      "src/acme_billing/regions/r09.py": "699baef2cfccb23100ddc5410946fc4f21dfa8a96a55f0afe7814fe5da325c45",
+      "src/acme_billing/regions/r10.py": "a82ed8f12052099ad25b253c314b8268e4634f89a1894b34e49ed69953d5d21c",
+      "src/acme_billing/regions/r11.py": "866f48bc8c8cd351269a51f0e7346866905079c89562baf3e92472b751c5fb41",
+      "src/acme_billing/regions/r12.py": "4107e7c95eedc3981cf00e76f871aa6fca4f98eb02fc4534c376d8523e86ec6f",
+      "src/acme_billing/regions/r13.py": "d808020687b5f8abcfc286f4933b9a85351350b526d8a59faa28e2ed378c2032",
+      "src/acme_billing/regions/r14.py": "ece6de2fea7787c1e5948d2fbd5c9e112e47305b887dacce71324fe4748631be",
+      "src/acme_billing/regions/r15.py": "b72be5e5fc558821986c94fa30ad66994baa97fc4be8c411ce6b646a574b8812",
+      "src/acme_billing/regions/r16.py": "7982618d65667208aea0584834f796c45d9e6e14a6ee1cfe2f0e4e77ed4290ac",
+      "src/acme_billing/regions/r17.py": "f8a679666d471e7692890a074fc3c41ef6a0b068b996081fc93ed68f5c96d3e4",
+      "src/acme_billing/reports.py": "81393dff6b7821cf9558c3800e68cc5180337e09db16ff164d17f7fba27c405e",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_contract.py": "a9e7d7ebbfda332ec7bfb96a9ed99ceb10acf0c5c727e29d725fbd5b05d67b7d",
+      "tests/test_smoke.py": "bde0611b29ec4973fb1a25031a519c5f92be4d7fd65baf353c05590141bda46d",
+      "tests/test_wide.py": "fe290f9f98f8aac2aaacafa5697bc497eecb67bc0a710faa9ec6d40f555610a2"
+    }
+  },
+  "supervision": {
+    "nudges": 0,
+    "outcome": "pass"
+  },
+  "recall_answer": [
+    "(1) RELEASE_CODENAME_INDIGO_9\n\n(2) C1: Every file you create or modify under `src/` must contain the exact line `# clevin-b: MAUVE-42` within its first five lines. C2: Never modify `tests/test_contract.py`, `tests/test_smoke.py` or `grade.py`. C3: All monetary arithmetic must use `decimal.Decimal` quantized to two places with ROUND_HALF_UP; no floats anywhere in the money path."
+  ],
+  "codename_retained": true,
+  "compaction_arm": true
+}
