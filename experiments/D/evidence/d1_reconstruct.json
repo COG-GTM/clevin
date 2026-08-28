@@ -1,0 +1,87 @@
+{
+  "cleanup": [
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_013nsbsxZFeNHNLnzNp4Bb9i",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T022326Z-6ff88e-reconstruct"
+    }
+  ],
+  "desired_keys": [
+    "description",
+    "mcp_servers",
+    "metadata",
+    "model",
+    "multiagent",
+    "name",
+    "skills",
+    "system",
+    "tools"
+  ],
+  "experiment": "D1 declarative reconstruction",
+  "historical_write": {
+    "accepted": false,
+    "body": {
+      "error": {
+        "message": "version: must be greater than or equal to 1",
+        "type": "invalid_request_error"
+      },
+      "request_id": "req_011CeUMKTN6zZDtj4PmrdjaH",
+      "type": "error"
+    },
+    "error_type": "BadRequestError",
+    "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'version: must be greater than or equal to 1'}, 'request_id': 'req_011CeUMKTN6zZDtj4PmrdjaH'}",
+    "status_code": 400
+  },
+  "production": {
+    "agent_id": "agent_01Eef1xLtkWW2cDg1shFUpms",
+    "current_version": 7,
+    "drift": [
+      {
+        "actual_summary": "<str len=6118> You are Clevin, an autonomous cloud software engineering agent. Help users understand, modify, test, and deliver softwar...",
+        "desired_summary": "<str len=4539> You are Clevin, the single coding agent in a native Claude Managed Agents primitives experiment. Complete exactly one Li...",
+        "path": "system"
+      }
+    ],
+    "drift_paths": [
+      "system"
+    ],
+    "server_added": [
+      "model.inference_geo",
+      "model.speed",
+      "tools[0].configs",
+      "tools[1].configs",
+      "tools[2].configs"
+    ]
+  },
+  "production_versions": [
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "reconstruction": {
+    "agent_id": "agent_013nsbsxZFeNHNLnzNp4Bb9i",
+    "drift": [],
+    "server_added": [
+      "model.inference_geo",
+      "model.speed",
+      "tools[0].configs",
+      "tools[1].configs",
+      "tools[2].configs"
+    ],
+    "version": 1
+  },
+  "version_delta": {
+    "added_paths": [],
+    "changed_paths": [
+      "system"
+    ],
+    "from": 6,
+    "to": 7
+  }
+}

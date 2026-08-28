@@ -1,0 +1,112 @@
+{
+  "experiment": "exp8_payload_ladder",
+  "run_id": "20260828T023550Z-01304e",
+  "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+  "started_at": "2026-08-28T02:35:50.763527+00:00",
+  "sessions": {
+    "ladder": {
+      "session_id": "sesn_01CQUg61Qfj2bsu7AJ7fmHva",
+      "agent_id": "agent_01LmcBtVuGbY15A5ZTkMeMio",
+      "prompt": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp8 payload ladder. No git, no MCP, local checks only.\n\nIn ONE turn, delegate to each of your four roster agents at once. Give each of them exactly the\ntask text \"Produce a payload of N=<size> characters.\" using these sizes, one per agent, in\nroster order: 2000, 16000, 64000, 256000.\n\nAs each reply arrives, write ONLY the payload body (between PAYLOAD_START= and =PAYLOAD_END) to\n/workspace/ladder_<size>.txt and run `wc -c` on it. Do not attempt to repair a payload.\n\nWhen all four have reported, finish with one fenced ```json block:\n{\"per_size\": [{\"size\": <int>, \"received_chars\": <int>, \"empty\": bool,\n  \"notice\": \"<verbatim or none>\"}], \"notes\": \"<what the platform did>\"}"
+    }
+  },
+  "observations": {
+    "digest": {
+      "session_id": "sesn_01CQUg61Qfj2bsu7AJ7fmHva",
+      "status": "idle",
+      "sizes": [
+        2000,
+        16000,
+        64000,
+        256000
+      ],
+      "delivered": [
+        {
+          "thread": "sthr_018XmcrFkcpCrYnEsBTSWdnE",
+          "agent": "clevin-swarm-F-ladder-2000-20260828T023550Z-01304e",
+          "received_event_chars": 2027,
+          "payload_chars": 2001,
+          "empty_placeholder": false,
+          "head": "PAYLOAD_START=kku2iygdBV4t76MOi1mpA6ayxCEkRZ771C6HG6f8HoGuMgiQ3PYmL3tsEVp7CBi9b3"
+        },
+        {
+          "thread": "sthr_015dQyEj7E7s9Me2nJtzkSi6",
+          "agent": "clevin-swarm-F-ladder-16000-20260828T023550Z-01304e",
+          "received_event_chars": 16047,
+          "payload_chars": 16000,
+          "empty_placeholder": false,
+          "head": "PAYLOAD_START=oJJOfWc9tC0L50kmPk/N/psDOq3hyKbmwvTDEQ8Io2CEEzTpFAYKxRij3tryJE46mc"
+        },
+        {
+          "thread": "sthr_017sTAvz16nPUNdq8mzqDL7n",
+          "agent": "clevin-swarm-F-ladder-64000-20260828T023550Z-01304e",
+          "received_event_chars": 166,
+          "payload_chars": 0,
+          "empty_placeholder": false,
+          "head": "[child sthr_017sTAvz16nPUNdq8mzqDL7n failed: Your credit balance is too low to a"
+        },
+        {
+          "thread": "sthr_019UhaSw1c7C6oHg1EDXCwcC",
+          "agent": "clevin-swarm-F-ladder-256000-20260828T023550Z-01304e",
+          "received_event_chars": 166,
+          "payload_chars": 0,
+          "empty_placeholder": false,
+          "head": "[child sthr_019UhaSw1c7C6oHg1EDXCwcC failed: Your credit balance is too low to a"
+        }
+      ],
+      "thread_output_tokens": {
+        "sthr_016qQNFfWjWLa1rPWWdTzVh5": 3087,
+        "sthr_018XmcrFkcpCrYnEsBTSWdnE": 2035,
+        "sthr_015dQyEj7E7s9Me2nJtzkSi6": 15649,
+        "sthr_017sTAvz16nPUNdq8mzqDL7n": 4091,
+        "sthr_019UhaSw1c7C6oHg1EDXCwcC": 8806
+      },
+      "parent_tail": "All four agents are spawned. Waiting for their replies."
+    }
+  },
+  "finished_at": "2026-08-28T02:42:44.402416+00:00",
+  "cleanup_ledger": [
+    {
+      "kind": "agent",
+      "id": "agent_01FGMijQGL2ZuPeAagqb4URA",
+      "name": "clevin-swarm-F-ladder-2000-20260828T023550Z-01304e",
+      "created_at": "2026-08-28T02:35:51.026078+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_015qDiGtHdLd4NX7LLxpRW5y",
+      "name": "clevin-swarm-F-ladder-16000-20260828T023550Z-01304e",
+      "created_at": "2026-08-28T02:35:51.234031+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01PtjQtut8XBPzKh4HHCuH6s",
+      "name": "clevin-swarm-F-ladder-64000-20260828T023550Z-01304e",
+      "created_at": "2026-08-28T02:35:51.456676+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01RQ8dunsnMs8k3wRUA8dzSP",
+      "name": "clevin-swarm-F-ladder-256000-20260828T023550Z-01304e",
+      "created_at": "2026-08-28T02:35:51.648995+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01LmcBtVuGbY15A5ZTkMeMio",
+      "name": "clevin-swarm-F-coordinator-ladder-20260828T023550Z-01304e",
+      "created_at": "2026-08-28T02:35:51.884877+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "session",
+      "id": "sesn_01CQUg61Qfj2bsu7AJ7fmHva",
+      "name": "exp8_payload_ladder/ladder",
+      "created_at": "2026-08-28T02:35:52.445544+00:00",
+      "cleanup": "retained as evidence (idle, no live resources)"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "agent_thread_context_compacted_count": 0,
+  "completed_filler_turns": 6,
+  "error_event_id": "sevt_014tBBjBuTqdE3zEDz9i2y2P",
+  "error_message": "prompt is too long: 237081 tokens > 200000 maximum",
+  "model": "claude-haiku-4-5",
+  "session_id": "sesn_013yxjUXrwvExMQRbCA2wt9u",
+  "status": "terminated",
+  "terminal_event_id": "sevt_01HjGGJDSc7nELtDJtn5jGgj"
+}

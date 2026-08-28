@@ -21,10 +21,15 @@ import type {
 import { describe, expect, it, vi } from "vitest";
 import {
   agentDefinition,
+  adversarialReviewerDefinition,
+  coordinatorRoster,
   CLEVIN_SYSTEM_PROMPT,
   GITHUB_MCP_URL,
   LINEAR_MCP_URL,
   parseSkillIds,
+  repositoryExplorerDefinition,
+  SUBAGENT_DEFINITIONS,
+  testDebuggerDefinition,
 } from "../src/agent-definition.js";
 import {
   ConfigurationError,
@@ -44,13 +49,24 @@ const secrets = {
 } satisfies ProvisionConfig;
 
 function mockClient(agentVersion = 4) {
+  const createdSubagentIds = [
+    "agent_explorer_created",
+    "agent_debugger_created",
+    "agent_reviewer_created",
+  ];
+  let subagentCreateIndex = 0;
   const client = {
     beta: {
       agents: {
-        create: vi.fn(async (_params: AgentCreateParams) => ({
-          id: "agent_created",
-          version: 1,
-        })),
+        create: vi.fn(async (params: AgentCreateParams) => {
+          if (params.name === agentDefinition.name) {
+            return { id: "agent_created", version: 1 };
+          }
+          return {
+            id: createdSubagentIds[subagentCreateIndex++] ?? "agent_extra",
+            version: 1,
+          };
+        }),
         retrieve: vi.fn(async (_id: string) => ({
           id: "agent_existing",
           version: agentVersion,
@@ -188,6 +204,24 @@ describe("agent definition", () => {
     expect(CLEVIN_SYSTEM_PROMPT).toContain(
       "/workspace/skills/<skill-name>/SKILL.md",
     );
+    expect(SUBAGENT_DEFINITIONS).toEqual([
+      repositoryExplorerDefinition,
+      testDebuggerDefinition,
+      adversarialReviewerDefinition,
+    ]);
+    expect(repositoryExplorerDefinition.tools[0]).toMatchObject({
+      configs: [
+        { type: "write", name: "write", enabled: false },
+        { type: "edit", name: "edit", enabled: false },
+      ],
+    });
+    expect(testDebuggerDefinition.tools[0]).not.toHaveProperty("configs");
+    expect(adversarialReviewerDefinition.tools[0]).toMatchObject({
+      configs: [
+        { type: "write", name: "write", enabled: false },
+        { type: "edit", name: "edit", enabled: false },
+      ],
+    });
   });
 
   it("attaches only well-formed skill IDs from the environment", () => {
@@ -209,6 +243,8 @@ describe("configuration", () => {
         LINEAR_API_KEY: secrets.linearApiKey,
         CLEVIN_AGENT_ID: "agent_existing",
         CLEVIN_AGENT_VERSION: "4",
+        CLEVIN_SUBAGENT_IDS:
+          " agent_explorer_existing,agent_debugger_existing, agent_reviewer_existing ",
         CLEVIN_ENVIRONMENT_ID: "env_existing",
         CLEVIN_VAULT_ID: "vlt_existing",
         CLEVIN_LINEAR_CREDENTIAL_ID: "vcrd_linear_existing",
@@ -219,12 +255,60 @@ describe("configuration", () => {
       ...secrets,
       agentId: "agent_existing",
       agentVersion: 4,
+      subagentIds: [
+        "agent_explorer_existing",
+        "agent_debugger_existing",
+        "agent_reviewer_existing",
+      ],
       environmentId: "env_existing",
       vaultId: "vlt_existing",
       linearCredentialId: "vcrd_linear_existing",
       githubCredentialId: "vcrd_github_existing",
       memoryStoreId: "memstore_existing",
     });
+  });
+
+  it("parses an empty subagent list as undefined", () => {
+    expect(
+      parseProvisionConfig({
+        ANTHROPIC_API_KEY: secrets.anthropicApiKey,
+        GITHUB_TOKEN: secrets.githubToken,
+        LINEAR_API_KEY: secrets.linearApiKey,
+        CLEVIN_SUBAGENT_IDS: "  ",
+      }),
+    ).toEqual(secrets);
+  });
+
+  it("rejects an invalid subagent list", () => {
+    expect(() =>
+      parseProvisionConfig({
+        ...secrets,
+        CLEVIN_SUBAGENT_IDS: "agent_one,agent_two",
+      }),
+    ).toThrow(
+      new ConfigurationError(
+        `CLEVIN_SUBAGENT_IDS must contain exactly ${SUBAGENT_DEFINITIONS.length} IDs`,
+      ),
+    );
+    expect(() =>
+      parseProvisionConfig({
+        ...secrets,
+        CLEVIN_SUBAGENT_IDS: "agent_one,not_an_agent,agent_three",
+      }),
+    ).toThrow(
+      new ConfigurationError(
+        "CLEVIN_SUBAGENT_IDS must be a valid agent_ resource ID",
+      ),
+    );
+  });
+
+  it("rejects invalid coordinator roster arguments", () => {
+    expect(() => coordinatorRoster(["agent_one"])).toThrow(
+      `Expected ${SUBAGENT_DEFINITIONS.length} agent_ subagent IDs`,
+    );
+    expect(() =>
+      coordinatorRoster(["agent_one", "not_an_agent", "agent_three"]),
+    ).toThrow(`Expected ${SUBAGENT_DEFINITIONS.length} agent_ subagent IDs`);
   });
 
   it("fails fast without exposing secret values", () => {
@@ -280,11 +364,39 @@ describe("resource reconciliation", () => {
         },
       }),
     );
-    expect(client.beta.agents.create).toHaveBeenCalledWith(agentDefinition);
+    expect(client.beta.agents.create).toHaveBeenCalledTimes(4);
+    expect(client.beta.agents.create).toHaveBeenNthCalledWith(
+      1,
+      repositoryExplorerDefinition,
+    );
+    expect(client.beta.agents.create).toHaveBeenNthCalledWith(
+      2,
+      testDebuggerDefinition,
+    );
+    expect(client.beta.agents.create).toHaveBeenNthCalledWith(
+      3,
+      adversarialReviewerDefinition,
+    );
+    expect(client.beta.agents.create).toHaveBeenNthCalledWith(
+      4,
+      expect.objectContaining({
+        ...agentDefinition,
+        multiagent: coordinatorRoster([
+          "agent_explorer_created",
+          "agent_debugger_created",
+          "agent_reviewer_created",
+        ]),
+      }),
+    );
     expect(client.beta.agents.update).not.toHaveBeenCalled();
     expect(manifest).toMatchObject({
       agent_id: "agent_created",
       agent_version: 1,
+      subagent_ids: [
+        "agent_explorer_created",
+        "agent_debugger_created",
+        "agent_reviewer_created",
+      ],
       environment_id: "env_created",
       memory_store_id: "memstore_created",
       vault_id: "vlt_created",
@@ -304,6 +416,11 @@ describe("resource reconciliation", () => {
       vaultId: "vlt_existing",
       linearCredentialId: "vcrd_linear_existing",
       githubCredentialId: "vcrd_github_existing",
+      subagentIds: [
+        "agent_explorer_existing",
+        "agent_debugger_existing",
+        "agent_reviewer_existing",
+      ],
     };
 
     const manifest = await provision(client, config);
@@ -341,16 +458,35 @@ describe("resource reconciliation", () => {
       }),
     );
     expect(client.beta.agents.retrieve).toHaveBeenCalledWith("agent_existing");
+    expect(client.beta.agents.retrieve).toHaveBeenCalledWith(
+      "agent_explorer_existing",
+    );
+    expect(client.beta.agents.retrieve).toHaveBeenCalledWith(
+      "agent_debugger_existing",
+    );
+    expect(client.beta.agents.retrieve).toHaveBeenCalledWith(
+      "agent_reviewer_existing",
+    );
     expect(client.beta.agents.update).toHaveBeenCalledWith(
       "agent_existing",
       expect.objectContaining({
         version: 4,
         model: { id: "claude-opus-5", effort: "medium" },
         skills: [],
-        multiagent: null,
+        multiagent: coordinatorRoster([
+          "agent_explorer_existing",
+          "agent_debugger_existing",
+          "agent_reviewer_existing",
+        ]),
       }),
     );
+    expect(client.beta.agents.update).toHaveBeenCalledTimes(4);
     expect(manifest.agent_version).toBe(5);
+    expect(manifest.subagent_ids).toEqual([
+      "agent_explorer_existing",
+      "agent_debugger_existing",
+      "agent_reviewer_existing",
+    ]);
     expect(client.beta.agents.create).not.toHaveBeenCalled();
     expect(client.beta.environments.create).not.toHaveBeenCalled();
     expect(client.beta.memoryStores.create).not.toHaveBeenCalled();
@@ -411,6 +547,7 @@ describe("resource reconciliation", () => {
         "manual_next_step",
         "memory_store_id",
         "schema_version",
+        "subagent_ids",
         "vault_id",
       ].sort(),
     );

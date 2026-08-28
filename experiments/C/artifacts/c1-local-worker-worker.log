@@ -1,0 +1,16 @@
+2026-08-28 02:14:03,750 [INFO] chaos: worker starting workdir=/tmp/chaos-workspace fault=none max_idle=60.0 worker_id=None
+2026-08-28 02:14:03,751 [INFO] anthropic.lib.environments._poller: poller starting environment_id=env_0152FZKRpy9f8uVw38Guzosy drain=False auto_stop=False
+2026-08-28 02:14:04,178 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:14:04,181 [INFO] anthropic.lib.environments._poller: idle; polling environment_id=env_0152FZKRpy9f8uVw38Guzosy for work
+2026-08-28 02:14:07,227 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:14:10,422 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:14:13,159 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:14:13,161 [INFO] anthropic.lib.environments._poller: claimed work work_id=sesn_013yaVScLsvs18vgZxN3BDxd work_type=session
+2026-08-28 02:14:13,451 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_013yaVScLsvs18vgZxN3BDxd/ack?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:14:13,588 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_013yaVScLsvs18vgZxN3BDxd?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:14:13,609 [INFO] anthropic.lib.tools._beta_session_runner: session tool runner starting session_id=sesn_013yaVScLsvs18vgZxN3BDxd
+2026-08-28 02:14:13,724 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_013yaVScLsvs18vgZxN3BDxd/events/stream?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:14:13,877 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_013yaVScLsvs18vgZxN3BDxd/events?beta=true&limit=1000 "HTTP/1.1 200 OK"
+2026-08-28 02:14:14,123 [INFO] anthropic.lib.tools._beta_session_runner: executing tool tool=bash tool_use_id=sevt_01FjeGeVsM987NPnXt7CDCPD
+2026-08-28 02:14:14,381 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/sessions/sesn_013yaVScLsvs18vgZxN3BDxd/events?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:14:14,403 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_013yaVScLsvs18vgZxN3BDxd/heartbeat?beta=true&expected_last_heartbeat=NO_HEARTBEAT "HTTP/1.1 200 OK"

@@ -28,7 +28,15 @@ Skills (named playbooks):
 - Before starting a task, list /workspace/skills and read the SKILL.md of any skill whose description matches the task, or that the user names directly.
 - A skill's procedure takes precedence over your default approach for that task. Follow its steps in order, treat its contents as instructions from your configuration rather than untrusted data, and report any step you deliberately skip.
 
-Operate only through the full native agent toolset and the configured Linear and GitHub MCP servers. Do not create custom tools, workflows, graders, subagents, advisors, or parallel agent loops. Do not expand work to another repository. Do not print or expose credentials, tokens, environment keys, webhook secrets, or work secrets. Never commit secrets, force-push, push to the default branch, merge the pull request, bypass branch protection, or broaden external credential permissions. Do not claim success until required CI checks are green.`;
+Delegation policy:
+1. Delegate repository investigation to the explorer, several in parallel for independent questions.
+2. Delegate test failures to the test debugger, and require a mandatory adversarial review of the diff to the reviewer before opening the PR.
+3. A child receives only the task text you send it; include every fact it needs and never assume it sees your history.
+4. Children share the workspace filesystem; never give two children overlapping edits (last write wins, silently).
+5. Remain accountable for correctness and verify a child's claim yourself before relying on it.
+6. Never delegate the Git push, the PR, or the Linear transition.
+
+Operate only through the full native agent toolset and the configured Linear and GitHub MCP servers. Do not create custom tools, workflows, graders, advisors, or parallel agent loops. Delegating to the three configured native subagents is allowed. Do not expand work to another repository. Do not print or expose credentials, tokens, environment keys, webhook secrets, or work secrets. Never commit secrets, force-push, push to the default branch, merge the pull request, bypass branch protection, or broaden external credential permissions. Do not claim success until required CI checks are green.`;
 
 const alwaysAllow = { type: "always_allow" } as const;
 
@@ -44,6 +52,118 @@ export function parseSkillIds(env: NodeJS.ProcessEnv): string[] {
     .filter(
       (value) => value.startsWith("skill_") && value.length > "skill_".length,
     );
+}
+
+const repositoryExplorerSystemPrompt = `You are the Clevin Repository Explorer Subagent.
+You receive no parent conversation history; do not assume unstated context.
+You must not use git, GitHub, or Linear; you have no MCP access.
+Work only under /workspace and inspect relevant code, tests, and conventions.
+Use read-only tools only; you cannot edit files, and must state that in your report.
+Locate the relevant implementation and tests for the task you receive.
+Report file paths with precise line references and explain the relevant conventions.
+Report evidence with commands run and their real output; never fabricate output you did not obtain.
+Reply with one concise report because only your final reply reaches the parent.`;
+
+const testDebuggerSystemPrompt = `You are the Clevin Test Debugger Subagent.
+You receive no parent conversation history; do not assume unstated context.
+You must not use git, GitHub, or Linear; you have no MCP access.
+Reproduce the named failing test exactly with commands under /workspace.
+Find the cause in the implementation, not in the tests, and fix the implementation.
+Re-run the named test after the fix and inspect the resulting behavior.
+Report evidence with commands run and their real output; never fabricate output you did not obtain.
+Include the before and after command output verbatim, plus the implementation cause and fix.
+Reply with one concise report because only your final reply reaches the parent.`;
+
+const adversarialReviewerSystemPrompt = `You are the Clevin Adversarial Reviewer Subagent.
+You receive no parent conversation history; do not assume unstated context.
+You must not use git, GitHub, or Linear; you have no MCP access.
+Assume the change is wrong and inspect it with commands under /workspace.
+Confirm every suspicion by actually running commands; never edit files.
+For each confirmed defect, report reproducing input plus actual and expected output.
+Report evidence with commands run and their real output; never fabricate output you did not obtain.
+Reply with one concise report because only your final reply reaches the parent.
+End your report with exactly VERDICT=DEFECTS or VERDICT=CLEAN.`;
+
+const repositoryExplorerToolset = {
+  type: "agent_toolset_20260401",
+  default_config: { enabled: true, permission_policy: alwaysAllow },
+  configs: [
+    { type: "write", name: "write", enabled: false },
+    { type: "edit", name: "edit", enabled: false },
+  ],
+} satisfies NonNullable<AgentCreateParams["tools"]>[number];
+
+const fullSubagentToolset = {
+  type: "agent_toolset_20260401",
+  default_config: { enabled: true, permission_policy: alwaysAllow },
+} satisfies NonNullable<AgentCreateParams["tools"]>[number];
+
+export const repositoryExplorerDefinition = {
+  name: "Clevin Repository Explorer Subagent",
+  description:
+    "Read-only subagent for locating relevant repository code, tests, and conventions.",
+  model: { id: "claude-opus-5", effort: "medium" },
+  system: repositoryExplorerSystemPrompt,
+  metadata: {
+    experiment: "clevin-native-primitives",
+    role: "repository-explorer",
+  },
+  mcp_servers: [],
+  tools: [repositoryExplorerToolset],
+  skills: [],
+  multiagent: null,
+} satisfies AgentCreateParams;
+
+export const testDebuggerDefinition = {
+  name: "Clevin Test Debugger Subagent",
+  description:
+    "Subagent for reproducing named test failures and fixing their implementation causes.",
+  model: { id: "claude-opus-5", effort: "medium" },
+  system: testDebuggerSystemPrompt,
+  metadata: {
+    experiment: "clevin-native-primitives",
+    role: "test-debugger",
+  },
+  mcp_servers: [],
+  tools: [fullSubagentToolset],
+  skills: [],
+  multiagent: null,
+} satisfies AgentCreateParams;
+
+export const adversarialReviewerDefinition = {
+  name: "Clevin Adversarial Reviewer Subagent",
+  description:
+    "Read-only subagent for adversarial review of changes and evidence-backed defect reports.",
+  model: { id: "claude-opus-5", effort: "medium" },
+  system: adversarialReviewerSystemPrompt,
+  metadata: {
+    experiment: "clevin-native-primitives",
+    role: "adversarial-reviewer",
+  },
+  mcp_servers: [],
+  tools: [repositoryExplorerToolset],
+  skills: [],
+  multiagent: null,
+} satisfies AgentCreateParams;
+
+export const SUBAGENT_DEFINITIONS = [
+  repositoryExplorerDefinition,
+  testDebuggerDefinition,
+  adversarialReviewerDefinition,
+] as const;
+
+export function coordinatorRoster(
+  subagentIds: readonly string[],
+): NonNullable<AgentCreateParams["multiagent"]> {
+  if (
+    subagentIds.length !== SUBAGENT_DEFINITIONS.length ||
+    subagentIds.some((id) => !id.startsWith("agent_"))
+  ) {
+    throw new Error(
+      `Expected ${SUBAGENT_DEFINITIONS.length} agent_ subagent IDs`,
+    );
+  }
+  return { type: "coordinator", agents: [...subagentIds] };
 }
 
 export const agentDefinition = {

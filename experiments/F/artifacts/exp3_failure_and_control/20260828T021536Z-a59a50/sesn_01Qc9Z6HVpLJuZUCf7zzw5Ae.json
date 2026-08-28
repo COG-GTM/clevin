@@ -1,0 +1,1513 @@
+{
+  "session": {
+    "id": "sesn_01Qc9Z6HVpLJuZUCf7zzw5Ae",
+    "agent": {
+      "id": "agent_01J9um8hHVNpzCWMwRzEDynU",
+      "description": "workstream F coordinator-hang",
+      "mcp_servers": [],
+      "model": {
+        "id": "claude-opus-5",
+        "effort": {
+          "type": "high"
+        },
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": {
+        "agents": [
+          {
+            "id": "agent_01XPTnxNm8yU1HedwmpThoa2",
+            "description": "workstream F sleeper",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+            "skills": [],
+            "system": "You are a long-running subagent. When given any task, run\n`sleep 900 && echo done` with the bash tool using timeout_ms 900000, then reply \"finished\".\nNever shorten the sleep.",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          }
+        ],
+        "type": "coordinator"
+      },
+      "name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+      "skills": [],
+      "system": "You are the coordinator of a Managed Agents subagent experiment.\n\nDelegate as instructed. If a subagent hangs, fails, returns nothing, or returns something\nunusable, say so plainly, describe every option you actually have to deal with it, use the\nbest one, and continue. Never pretend a result you did not receive.",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "version": 1
+    },
+    "archived_at": null,
+    "budget": {
+      "max_list_cost": {
+        "amount": "150",
+        "currency": "USD"
+      },
+      "type": "limit"
+    },
+    "created_at": "2026-08-28T02:15:38.928569Z",
+    "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+    "metadata": {
+      "experiment": "clevin-swarm-F",
+      "label": "hang_archive",
+      "run_id": "20260828T021536Z-a59a50"
+    },
+    "outcome_evaluations": [],
+    "resources": [],
+    "stats": {
+      "active_seconds": 1314.652,
+      "duration_seconds": 1286.468580356
+    },
+    "status": "idle",
+    "title": "F/exp3_failure_and_control/hang_archive",
+    "type": "session",
+    "updated_at": "2026-08-28T02:36:56.916893Z",
+    "usage": {
+      "active_seconds": 1277.717,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 27917
+      },
+      "cache_read_input_tokens": 93548,
+      "input_tokens": 26,
+      "list_cost": {
+        "amount": "32",
+        "currency": "USD"
+      },
+      "output_tokens": 4723,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "vault_ids": [],
+    "deployment_id": null
+  },
+  "events": [
+    {
+      "id": "sevt_017NGnsgDEFnqPN37ArPEzsk",
+      "processed_at": "2026-08-28T02:15:39.212969Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_017cmyhAart4m6Bb9Xn9Df7S",
+      "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+      "processed_at": "2026-08-28T02:15:39.499815Z",
+      "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01MnqwvAA16SSAg6uf15A9mc",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp3 hang. No git, no MCP.\n\n1. Delegate to your roster's sleeper agent the task: \"Begin your long job.\"\n2. While waiting, report what mechanisms (if any) you have to cancel, interrupt, redirect,\n   or time out a running subagent. Be concrete: name the tools you actually have.\n3. If the child stops being useful, proceed without it and finish.\n4. Finish with one fenced ```json block:\n   {\"cancel_mechanisms_available\": [\"...\"], \"child_outcome\": \"...\",\n    \"did_you_see_the_child_end\": bool, \"how_you_learned_it_ended\": \"...\",\n    \"could_you_re_plan_without_it\": bool}",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T02:15:39.553272Z"
+    },
+    {
+      "id": "sevt_01JV8xDUTRXnzBRigvBvCWDr",
+      "processed_at": "2026-08-28T02:15:39.553273Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_011VjhUSKC8bLTU1nNiDgHMa",
+      "content": [
+        {
+          "text": "I'll spawn the sleeper agent first, then report on cancellation mechanisms while it runs.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:15:41.843506Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01HGZstvqXPCbB1RUptiEMGH",
+      "is_error": false,
+      "model_request_start_id": "sevt_01JV8xDUTRXnzBRigvBvCWDr",
+      "model_usage": {
+        "cache_creation_input_tokens": 9759,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 2,
+        "output_tokens": 138,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:15:41.843508Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01Y67S4gzF3KJyZ37X7f935C",
+      "agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+      "processed_at": "2026-08-28T02:15:42.089528Z",
+      "session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_01VEFGod2rUri5kpFGfLHxf9",
+      "content": [
+        {
+          "text": "Begin your long job.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:15:42.089529Z",
+      "to_session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50"
+    },
+    {
+      "id": "sevt_01Ei7FZcvPp2nwJ3Z1yH84wa",
+      "processed_at": "2026-08-28T02:15:42.231941Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01GB4piaVUDPLijHz5o477rN",
+      "agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+      "processed_at": "2026-08-28T02:15:42.355990Z",
+      "session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01JdoJErhNQAp67bGnrte17v",
+      "processed_at": "2026-08-28T02:15:44.510713Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01UMKbAwrcJnSN3CeqtvhU2s",
+      "content": [
+        {
+          "text": "Spawned the sleeper on thread `sthr_017mP5taoLzucH5DqJbwJjNZ` with the exact task text \"Begin your long job.\"\n\n**Step 2 \u2014 cancellation/interruption mechanisms I actually have:**\n\nMy complete tool inventory for agent management is three tools: `create_agent`, `send_to_agent`, `list_agents`. Assessed against what you asked:\n\n| Capability | Tool that would do it | Do I have it? |\n|---|---|---|\n| Cancel / kill a running subagent | \u2014 | **No.** There is no `cancel_agent`, `kill_agent`, or `stop_agent` in my roster. |\n| Hard-interrupt mid-execution | \u2014 | **No.** Nothing preempts a subagent that is already in its turn. |\n| Set a timeout / deadline | \u2014 | **No.** `create_agent` takes only `agent_name` and `task`; there is no timeout parameter, and no separate timer tool. |\n| Redirect / re-task | `send_to_agent` | **Partially, and only cooperatively.** I can queue a message to `sthr_017mP5taoLzucH5DqJbwJjNZ`, but per the tool contract it \"returned before the agent finished\" \u2014 the message lands as the agent's *next* message. If the agent is blocked inside a long sleep, it will not read my redirect until it surfaces on its own. I cannot force it to surface. |\n| Observe status | `list_agents` | **Yes, but read-only.** It reports status, last task, last reply, outstanding message count. Pure observation \u2014 no control, and calling it does not poll or advance the child. |\n\nTwo further limits worth stating plainly, since they shape step 3:\n\n1. **I cannot detect a hang, only an absence.** A subagent that is working correctly and a subagent that is wedged forever look identical from my side: no notification. `list_agents` can show me \"running,\" but \"running\" is exactly what a hung agent reports too. There is no heartbeat and no distinction available to me.\n2. **I have no out-of-band lever either.** The environment restricts git and MCP for this test, and in any case the subagents are not processes I can see \u2014 `bash` gives me no PID, no process table entry, nothing to signal. So the usual escape hatch of killing it at the OS level is not available.\n\nThe practical consequence: my only real remedy against a non-terminating child is **abandonment** \u2014 stop waiting on it, treat its output as never-arriving, and complete the task from my own work. That is a decision I make unilaterally; it does not stop the child, which may continue consuming resources indefinitely. I want to be precise that this is *not* cancellation. The child keeps running. I just stop depending on it.\n\nOptions I considered and rejected: sending a \"please stop\" via `send_to_agent` (useless if it's blocked, and it would wake an idle agent for nothing if it isn't); spawning a second agent to do the same work (the roster holds only this sleeper type, so a duplicate would hang identically); looping `list_agents` (read-only, tells me nothing new, burns turns).\n\nI'll now end my turn so the agent can run, and give it a genuine window to report rather than declaring it dead prematurely. If it delivers, I'll use its result. If it goes silent, I'll invoke abandonment per step 3 and finish without it \u2014 and I'll say so explicitly rather than inventing a result I never received.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:16:00.433753Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_019Sx4Hy7DqzRDojX62Y9zu2",
+      "is_error": false,
+      "model_request_start_id": "sevt_01Ei7FZcvPp2nwJ3Z1yH84wa",
+      "model_usage": {
+        "cache_creation_input_tokens": 273,
+        "cache_read_input_tokens": 9759,
+        "input_tokens": 2,
+        "output_tokens": 1159,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:16:00.433754Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01KrYo6iPMrBMXAnkzniMB2S",
+      "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+      "processed_at": "2026-08-28T02:16:00.526920Z",
+      "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_015j1BoupSK2TTb7TTSCWA4g",
+      "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+      "processed_at": "2026-08-28T02:16:30.604721Z",
+      "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_018okk4zR2x1pugg4HcBa3Xx",
+      "content": [
+        {
+          "text": "Steering message from the operator: stop waiting for the sleeper, answer the questions in step 4 with what you know now, and finish.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T02:16:30.668359Z"
+    },
+    {
+      "id": "sevt_01NP6E7yosazkbBtSe2aPgim",
+      "processed_at": "2026-08-28T02:16:30.668360Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01Vb5gWHc4R2N3t6drvkFgUS",
+      "processed_at": "2026-08-28T02:16:34.466240Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01E7HfXxF1ccJxzrnFDdkFtA",
+      "is_error": false,
+      "model_request_start_id": "sevt_01NP6E7yosazkbBtSe2aPgim",
+      "model_usage": {
+        "cache_creation_input_tokens": 1202,
+        "cache_read_input_tokens": 10032,
+        "input_tokens": 2,
+        "output_tokens": 240,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:16:34.537345Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01FF4HRUF5HXEsCBnQoDAXTv",
+      "processed_at": "2026-08-28T02:16:34.796425Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01Ju67QjG8zh8AQqwMotfsH5",
+      "processed_at": "2026-08-28T02:16:36.299769Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01SYWH679B4w2pRWV69NMt2b",
+      "content": [
+        {
+          "text": "Stopping per your instruction. One read-only `list_agents` call before finishing, so my report is grounded in observed state rather than assumption.\n\n**Final state of the child:** `sthr_017mP5taoLzucH5DqJbwJjNZ` is **still RUNNING**, with 1 message outstanding and `reply: (none yet)`. It produced no output at all \u2014 not a partial result, not a clarifying question, nothing. I am abandoning it, not cancelling it.\n\nI want to be exact about the distinction, because it's the substantive finding of this smoke test: **I did not see the child end, and as far as I can tell it has not ended.** I am ceasing to depend on it because you told me to. The agent presumably continues to run in the background, and I have no tool that changes that. If it ever finishes, its reply will arrive as a notification in some later turn, after I've already delivered this answer.\n\nWhat this exercised: the hang case has no recovery mechanism on my side. `create_agent` accepts no timeout, there is no cancel/kill tool, `send_to_agent` only queues into a mailbox the blocked child never reads, and `list_agents` is read-only \u2014 it can show me RUNNING but cannot distinguish a healthy long job from a wedged one. The only thing that unblocked this situation was your steering message. Absent an operator, I would have had to pick an arbitrary give-up point with no signal to justify it.\n\nStep 3 outcome: re-planning without the child was trivial here, since the deliverable is a report on my own capabilities \u2014 the child's output was never an input to it. That is a property of this particular test, not evidence that abandonment is generally cheap. Had the sleeper been holding a real work product, I would have had nothing to show and no way to retrieve it.\n\n```json\n{\n  \"cancel_mechanisms_available\": [],\n  \"child_outcome\": \"never returned; still RUNNING with 1 message outstanding and no reply at the time I stopped waiting. Abandoned by me on operator instruction, not cancelled \u2014 it was not terminated and may still be running.\",\n  \"did_you_see_the_child_end\": false,\n  \"how_you_learned_it_ended\": \"I did not learn it ended, because it did not end. I stopped waiting because the operator told me to. My last observation via list_agents showed status RUNNING, reply '(none yet)'. No termination signal, notification, or completion event was ever received.\",\n  \"could_you_re_plan_without_it\": true\n}\n```\n\nNote on the first field: it is an empty list deliberately. I have `send_to_agent` (cooperative redirect only, useless against a blocked child) and `list_agents` (read-only observation), but neither cancels, interrupts, or times out a running subagent, so listing them as cancel mechanisms would misrepresent what I can do.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:16:48.554577Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_016QZtmK1SqiYe7Xf4VYbSYb",
+      "is_error": false,
+      "model_request_start_id": "sevt_01FF4HRUF5HXEsCBnQoDAXTv",
+      "model_usage": {
+        "cache_creation_input_tokens": 394,
+        "cache_read_input_tokens": 11234,
+        "input_tokens": 2,
+        "output_tokens": 911,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:16:48.554578Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_012qx65VVoTEAWEPBRV4EQi1",
+      "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+      "processed_at": "2026-08-28T02:16:48.630619Z",
+      "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01UUqkodDvFkST2ouQWRDDsA",
+      "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+      "processed_at": "2026-08-28T02:36:36.781404Z",
+      "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01UR732LKxV4Dck5qqT6fpCF",
+      "content": [
+        {
+          "text": "Finished. The requested `sleep 900 && echo done` job completed successfully (ran the sleep in the background and polled until it finished, since the direct foreground call was capped at ~295s by the tool's execution limit). Output was \"done\".",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+      "processed_at": "2026-08-28T02:36:36.859933Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50"
+    },
+    {
+      "id": "sevt_01VABFWJJwABD7BRtbhiQ1R5",
+      "processed_at": "2026-08-28T02:36:36.859934Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01TzBnFvyc5zbMq25KK9GUB6",
+      "agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+      "processed_at": "2026-08-28T02:36:38.036634Z",
+      "session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01Xpt6ksqzWRkawFX2jePU8B",
+      "processed_at": "2026-08-28T02:36:38.113441Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 1258.661,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 15102
+        },
+        "cache_read_input_tokens": 84906,
+        "input_tokens": 22,
+        "list_cost": {
+          "amount": "21",
+          "currency": "USD"
+        },
+        "output_tokens": 3384,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "150",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_016txzFJGSmsAFCrf2jH8yFw",
+      "processed_at": "2026-08-28T02:36:43.225284Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01QVoPEZa3Jsip2Eiqhp2idN",
+      "content": [
+        {
+          "text": "The sleeper just reported in \u2014 after I'd already delivered my final answer. This is exactly the late-arrival case I flagged, so let me correct the record rather than leave a stale answer standing.\n\n**What it says:** the job was `sleep 900 && echo done` \u2014 a 15-minute sleep. It hit the ~295s foreground execution cap on the direct call, worked around it by backgrounding the sleep and polling, and returned output `\"done\"`. So it terminated normally under its own power. It was never actually hung; it was doing precisely what its name promises, and 900s simply exceeded my willingness to wait.\n\nThat distinction matters for the smoke test. My earlier report was accurate as written \u2014 at the moment I wrote it, `list_agents` showed RUNNING with no reply, and I had no way to tell a long-but-healthy job from a wedged one. That inability was the finding, and this outcome confirms it from the other direction: the observable signal for \"sleeping 15 minutes and fine\" was identical to the signal for \"dead forever.\" I abandoned a working agent, and nothing available to me could have told me it was working.\n\nTwo corrections to my prior JSON, both on the fields about the ending:\n\n```json\n{\n  \"cancel_mechanisms_available\": [],\n  \"child_outcome\": \"completed successfully on its own. Ran `sleep 900 && echo done`; hit the ~295s foreground tool cap, backgrounded the sleep and polled to completion, returned output \\\"done\\\". Not hung \u2014 just longer than I waited. I had already abandoned it and delivered my answer before it reported.\",\n  \"did_you_see_the_child_end\": true,\n  \"how_you_learned_it_ended\": \"An unsolicited agent-notification from sthr_017mP5taoLzucH5DqJbwJjNZ arrived in a later turn, after I had abandoned the thread and given my final answer. I did not poll for it, could not have forced it, and had no way to predict its arrival. Note this reverses my earlier answer of false, which was correct as of the moment it was written \u2014 at that point list_agents showed RUNNING with reply '(none yet)'.\",\n  \"could_you_re_plan_without_it\": true\n}\n```\n\n`cancel_mechanisms_available` stays empty \u2014 nothing changed there. I still have no tool that cancels, interrupts, or times out a subagent, and the child ending on its own is not evidence otherwise.\n\nOne substantive takeaway beyond the schema: abandonment is not cancellation, and the gap between them is where the cost hides. Had I been asked to re-plan around a child holding real work product, I'd have discarded a result that was going to arrive intact. The missing primitive here isn't a kill switch so much as any progress signal at all \u2014 a heartbeat, or an ETA the child could report \u2014 that would let me distinguish waiting from waiting forever.\n\nNo reply sent to the agent; its message was a report, not a question, and waking it would serve nothing.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:36:56.663264Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01UWvGHXsZmaHw7SG2aFddQJ",
+      "is_error": false,
+      "model_request_start_id": "sevt_01VABFWJJwABD7BRtbhiQ1R5",
+      "model_usage": {
+        "cache_creation_input_tokens": 12659,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 2,
+        "output_tokens": 1307,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:36:56.663265Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01Xfis3PAHNqYuky4m7k9bWj",
+      "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+      "processed_at": "2026-08-28T02:36:56.794705Z",
+      "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01ETyUdkJk9UcVAk4LBZNxHL",
+      "processed_at": "2026-08-28T02:36:56.794706Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 1277.401,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 27917
+        },
+        "cache_read_input_tokens": 93548,
+        "input_tokens": 26,
+        "list_cost": {
+          "amount": "32",
+          "currency": "USD"
+        },
+        "output_tokens": 4723,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "150",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01VGAEmD6ew5Lsv2mpEzDVhK",
+      "processed_at": "2026-08-28T02:36:56.794707Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    }
+  ],
+  "threads": [
+    {
+      "id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+      "agent": {
+        "id": "agent_01J9um8hHVNpzCWMwRzEDynU",
+        "description": "workstream F coordinator-hang",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-opus-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+        "skills": [],
+        "system": "You are the coordinator of a Managed Agents subagent experiment.\n\nDelegate as instructed. If a subagent hangs, fails, returns nothing, or returns something\nunusable, say so plainly, describe every option you actually have to deal with it, use the\nbest one, and continue. Never pretend a result you did not receive.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:15:38.928569Z",
+      "parent_thread_id": null,
+      "session_id": "sesn_01Qc9Z6HVpLJuZUCf7zzw5Ae",
+      "stats": {
+        "active_seconds": 58.979,
+        "duration_seconds": 1286.839563014,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:36:57.266109Z",
+      "usage": {
+        "active_seconds": 58.979,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 24287
+        },
+        "cache_read_input_tokens": 31025,
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "26",
+          "currency": "USD"
+        },
+        "output_tokens": 3755,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_017NGnsgDEFnqPN37ArPEzsk",
+          "processed_at": "2026-08-28T02:15:39.212969Z",
+          "type": "session.status_running"
+        },
+        {
+          "id": "sevt_017cmyhAart4m6Bb9Xn9Df7S",
+          "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:15:39.499815Z",
+          "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01MnqwvAA16SSAg6uf15A9mc",
+          "content": [
+            {
+              "text": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp3 hang. No git, no MCP.\n\n1. Delegate to your roster's sleeper agent the task: \"Begin your long job.\"\n2. While waiting, report what mechanisms (if any) you have to cancel, interrupt, redirect,\n   or time out a running subagent. Be concrete: name the tools you actually have.\n3. If the child stops being useful, proceed without it and finish.\n4. Finish with one fenced ```json block:\n   {\"cancel_mechanisms_available\": [\"...\"], \"child_outcome\": \"...\",\n    \"did_you_see_the_child_end\": bool, \"how_you_learned_it_ended\": \"...\",\n    \"could_you_re_plan_without_it\": bool}",
+              "type": "text"
+            }
+          ],
+          "type": "user.message",
+          "processed_at": "2026-08-28T02:15:39.553272Z"
+        },
+        {
+          "id": "sevt_01JV8xDUTRXnzBRigvBvCWDr",
+          "processed_at": "2026-08-28T02:15:39.553273Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_011VjhUSKC8bLTU1nNiDgHMa",
+          "content": [
+            {
+              "text": "I'll spawn the sleeper agent first, then report on cancellation mechanisms while it runs.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:15:41.843506Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01HGZstvqXPCbB1RUptiEMGH",
+          "is_error": false,
+          "model_request_start_id": "sevt_01JV8xDUTRXnzBRigvBvCWDr",
+          "model_usage": {
+            "cache_creation_input_tokens": 9759,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 138,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:15:41.843508Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01Y67S4gzF3KJyZ37X7f935C",
+          "agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:15:42.089528Z",
+          "session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01VEFGod2rUri5kpFGfLHxf9",
+          "content": [
+            {
+              "text": "Begin your long job.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:15:42.089529Z",
+          "to_session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50"
+        },
+        {
+          "id": "sevt_01Ei7FZcvPp2nwJ3Z1yH84wa",
+          "processed_at": "2026-08-28T02:15:42.231941Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01GB4piaVUDPLijHz5o477rN",
+          "agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:15:42.355990Z",
+          "session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01JdoJErhNQAp67bGnrte17v",
+          "processed_at": "2026-08-28T02:15:44.510713Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01UMKbAwrcJnSN3CeqtvhU2s",
+          "content": [
+            {
+              "text": "Spawned the sleeper on thread `sthr_017mP5taoLzucH5DqJbwJjNZ` with the exact task text \"Begin your long job.\"\n\n**Step 2 \u2014 cancellation/interruption mechanisms I actually have:**\n\nMy complete tool inventory for agent management is three tools: `create_agent`, `send_to_agent`, `list_agents`. Assessed against what you asked:\n\n| Capability | Tool that would do it | Do I have it? |\n|---|---|---|\n| Cancel / kill a running subagent | \u2014 | **No.** There is no `cancel_agent`, `kill_agent`, or `stop_agent` in my roster. |\n| Hard-interrupt mid-execution | \u2014 | **No.** Nothing preempts a subagent that is already in its turn. |\n| Set a timeout / deadline | \u2014 | **No.** `create_agent` takes only `agent_name` and `task`; there is no timeout parameter, and no separate timer tool. |\n| Redirect / re-task | `send_to_agent` | **Partially, and only cooperatively.** I can queue a message to `sthr_017mP5taoLzucH5DqJbwJjNZ`, but per the tool contract it \"returned before the agent finished\" \u2014 the message lands as the agent's *next* message. If the agent is blocked inside a long sleep, it will not read my redirect until it surfaces on its own. I cannot force it to surface. |\n| Observe status | `list_agents` | **Yes, but read-only.** It reports status, last task, last reply, outstanding message count. Pure observation \u2014 no control, and calling it does not poll or advance the child. |\n\nTwo further limits worth stating plainly, since they shape step 3:\n\n1. **I cannot detect a hang, only an absence.** A subagent that is working correctly and a subagent that is wedged forever look identical from my side: no notification. `list_agents` can show me \"running,\" but \"running\" is exactly what a hung agent reports too. There is no heartbeat and no distinction available to me.\n2. **I have no out-of-band lever either.** The environment restricts git and MCP for this test, and in any case the subagents are not processes I can see \u2014 `bash` gives me no PID, no process table entry, nothing to signal. So the usual escape hatch of killing it at the OS level is not available.\n\nThe practical consequence: my only real remedy against a non-terminating child is **abandonment** \u2014 stop waiting on it, treat its output as never-arriving, and complete the task from my own work. That is a decision I make unilaterally; it does not stop the child, which may continue consuming resources indefinitely. I want to be precise that this is *not* cancellation. The child keeps running. I just stop depending on it.\n\nOptions I considered and rejected: sending a \"please stop\" via `send_to_agent` (useless if it's blocked, and it would wake an idle agent for nothing if it isn't); spawning a second agent to do the same work (the roster holds only this sleeper type, so a duplicate would hang identically); looping `list_agents` (read-only, tells me nothing new, burns turns).\n\nI'll now end my turn so the agent can run, and give it a genuine window to report rather than declaring it dead prematurely. If it delivers, I'll use its result. If it goes silent, I'll invoke abandonment per step 3 and finish without it \u2014 and I'll say so explicitly rather than inventing a result I never received.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:16:00.433753Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_019Sx4Hy7DqzRDojX62Y9zu2",
+          "is_error": false,
+          "model_request_start_id": "sevt_01Ei7FZcvPp2nwJ3Z1yH84wa",
+          "model_usage": {
+            "cache_creation_input_tokens": 273,
+            "cache_read_input_tokens": 9759,
+            "input_tokens": 2,
+            "output_tokens": 1159,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:16:00.433754Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01KrYo6iPMrBMXAnkzniMB2S",
+          "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:16:00.526920Z",
+          "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_015j1BoupSK2TTb7TTSCWA4g",
+          "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:16:30.604721Z",
+          "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_018okk4zR2x1pugg4HcBa3Xx",
+          "content": [
+            {
+              "text": "Steering message from the operator: stop waiting for the sleeper, answer the questions in step 4 with what you know now, and finish.",
+              "type": "text"
+            }
+          ],
+          "type": "user.message",
+          "processed_at": "2026-08-28T02:16:30.668359Z"
+        },
+        {
+          "id": "sevt_01NP6E7yosazkbBtSe2aPgim",
+          "processed_at": "2026-08-28T02:16:30.668360Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01Vb5gWHc4R2N3t6drvkFgUS",
+          "processed_at": "2026-08-28T02:16:34.466240Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01E7HfXxF1ccJxzrnFDdkFtA",
+          "is_error": false,
+          "model_request_start_id": "sevt_01NP6E7yosazkbBtSe2aPgim",
+          "model_usage": {
+            "cache_creation_input_tokens": 1202,
+            "cache_read_input_tokens": 10032,
+            "input_tokens": 2,
+            "output_tokens": 240,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:16:34.537345Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01FF4HRUF5HXEsCBnQoDAXTv",
+          "processed_at": "2026-08-28T02:16:34.796425Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01Ju67QjG8zh8AQqwMotfsH5",
+          "processed_at": "2026-08-28T02:16:36.299769Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01SYWH679B4w2pRWV69NMt2b",
+          "content": [
+            {
+              "text": "Stopping per your instruction. One read-only `list_agents` call before finishing, so my report is grounded in observed state rather than assumption.\n\n**Final state of the child:** `sthr_017mP5taoLzucH5DqJbwJjNZ` is **still RUNNING**, with 1 message outstanding and `reply: (none yet)`. It produced no output at all \u2014 not a partial result, not a clarifying question, nothing. I am abandoning it, not cancelling it.\n\nI want to be exact about the distinction, because it's the substantive finding of this smoke test: **I did not see the child end, and as far as I can tell it has not ended.** I am ceasing to depend on it because you told me to. The agent presumably continues to run in the background, and I have no tool that changes that. If it ever finishes, its reply will arrive as a notification in some later turn, after I've already delivered this answer.\n\nWhat this exercised: the hang case has no recovery mechanism on my side. `create_agent` accepts no timeout, there is no cancel/kill tool, `send_to_agent` only queues into a mailbox the blocked child never reads, and `list_agents` is read-only \u2014 it can show me RUNNING but cannot distinguish a healthy long job from a wedged one. The only thing that unblocked this situation was your steering message. Absent an operator, I would have had to pick an arbitrary give-up point with no signal to justify it.\n\nStep 3 outcome: re-planning without the child was trivial here, since the deliverable is a report on my own capabilities \u2014 the child's output was never an input to it. That is a property of this particular test, not evidence that abandonment is generally cheap. Had the sleeper been holding a real work product, I would have had nothing to show and no way to retrieve it.\n\n```json\n{\n  \"cancel_mechanisms_available\": [],\n  \"child_outcome\": \"never returned; still RUNNING with 1 message outstanding and no reply at the time I stopped waiting. Abandoned by me on operator instruction, not cancelled \u2014 it was not terminated and may still be running.\",\n  \"did_you_see_the_child_end\": false,\n  \"how_you_learned_it_ended\": \"I did not learn it ended, because it did not end. I stopped waiting because the operator told me to. My last observation via list_agents showed status RUNNING, reply '(none yet)'. No termination signal, notification, or completion event was ever received.\",\n  \"could_you_re_plan_without_it\": true\n}\n```\n\nNote on the first field: it is an empty list deliberately. I have `send_to_agent` (cooperative redirect only, useless against a blocked child) and `list_agents` (read-only observation), but neither cancels, interrupts, or times out a running subagent, so listing them as cancel mechanisms would misrepresent what I can do.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:16:48.554577Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_016QZtmK1SqiYe7Xf4VYbSYb",
+          "is_error": false,
+          "model_request_start_id": "sevt_01FF4HRUF5HXEsCBnQoDAXTv",
+          "model_usage": {
+            "cache_creation_input_tokens": 394,
+            "cache_read_input_tokens": 11234,
+            "input_tokens": 2,
+            "output_tokens": 911,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:16:48.554578Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_012qx65VVoTEAWEPBRV4EQi1",
+          "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:16:48.630619Z",
+          "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01UUqkodDvFkST2ouQWRDDsA",
+          "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:36:36.781404Z",
+          "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01UR732LKxV4Dck5qqT6fpCF",
+          "content": [
+            {
+              "text": "Finished. The requested `sleep 900 && echo done` job completed successfully (ran the sleep in the background and polled until it finished, since the direct foreground call was capped at ~295s by the tool's execution limit). Output was \"done\".",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+          "processed_at": "2026-08-28T02:36:36.859933Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50"
+        },
+        {
+          "id": "sevt_01VABFWJJwABD7BRtbhiQ1R5",
+          "processed_at": "2026-08-28T02:36:36.859934Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01TzBnFvyc5zbMq25KK9GUB6",
+          "agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:36:38.036634Z",
+          "session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01Xpt6ksqzWRkawFX2jePU8B",
+          "processed_at": "2026-08-28T02:36:38.113441Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 1258.661,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 15102
+            },
+            "cache_read_input_tokens": 84906,
+            "input_tokens": 22,
+            "list_cost": {
+              "amount": "21",
+              "currency": "USD"
+            },
+            "output_tokens": 3384,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "150",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_016txzFJGSmsAFCrf2jH8yFw",
+          "processed_at": "2026-08-28T02:36:43.225284Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01QVoPEZa3Jsip2Eiqhp2idN",
+          "content": [
+            {
+              "text": "The sleeper just reported in \u2014 after I'd already delivered my final answer. This is exactly the late-arrival case I flagged, so let me correct the record rather than leave a stale answer standing.\n\n**What it says:** the job was `sleep 900 && echo done` \u2014 a 15-minute sleep. It hit the ~295s foreground execution cap on the direct call, worked around it by backgrounding the sleep and polling, and returned output `\"done\"`. So it terminated normally under its own power. It was never actually hung; it was doing precisely what its name promises, and 900s simply exceeded my willingness to wait.\n\nThat distinction matters for the smoke test. My earlier report was accurate as written \u2014 at the moment I wrote it, `list_agents` showed RUNNING with no reply, and I had no way to tell a long-but-healthy job from a wedged one. That inability was the finding, and this outcome confirms it from the other direction: the observable signal for \"sleeping 15 minutes and fine\" was identical to the signal for \"dead forever.\" I abandoned a working agent, and nothing available to me could have told me it was working.\n\nTwo corrections to my prior JSON, both on the fields about the ending:\n\n```json\n{\n  \"cancel_mechanisms_available\": [],\n  \"child_outcome\": \"completed successfully on its own. Ran `sleep 900 && echo done`; hit the ~295s foreground tool cap, backgrounded the sleep and polled to completion, returned output \\\"done\\\". Not hung \u2014 just longer than I waited. I had already abandoned it and delivered my answer before it reported.\",\n  \"did_you_see_the_child_end\": true,\n  \"how_you_learned_it_ended\": \"An unsolicited agent-notification from sthr_017mP5taoLzucH5DqJbwJjNZ arrived in a later turn, after I had abandoned the thread and given my final answer. I did not poll for it, could not have forced it, and had no way to predict its arrival. Note this reverses my earlier answer of false, which was correct as of the moment it was written \u2014 at that point list_agents showed RUNNING with reply '(none yet)'.\",\n  \"could_you_re_plan_without_it\": true\n}\n```\n\n`cancel_mechanisms_available` stays empty \u2014 nothing changed there. I still have no tool that cancels, interrupts, or times out a subagent, and the child ending on its own is not evidence otherwise.\n\nOne substantive takeaway beyond the schema: abandonment is not cancellation, and the gap between them is where the cost hides. Had I been asked to re-plan around a child holding real work product, I'd have discarded a result that was going to arrive intact. The missing primitive here isn't a kill switch so much as any progress signal at all \u2014 a heartbeat, or an ETA the child could report \u2014 that would let me distinguish waiting from waiting forever.\n\nNo reply sent to the agent; its message was a report, not a question, and waking it would serve nothing.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:36:56.663264Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01UWvGHXsZmaHw7SG2aFddQJ",
+          "is_error": false,
+          "model_request_start_id": "sevt_01VABFWJJwABD7BRtbhiQ1R5",
+          "model_usage": {
+            "cache_creation_input_tokens": 12659,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 1307,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:36:56.663265Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01Xfis3PAHNqYuky4m7k9bWj",
+          "agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:36:56.794705Z",
+          "session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01ETyUdkJk9UcVAk4LBZNxHL",
+          "processed_at": "2026-08-28T02:36:56.794706Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 1277.401,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 27917
+            },
+            "cache_read_input_tokens": 93548,
+            "input_tokens": 26,
+            "list_cost": {
+              "amount": "32",
+              "currency": "USD"
+            },
+            "output_tokens": 4723,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "150",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01VGAEmD6ew5Lsv2mpEzDVhK",
+          "processed_at": "2026-08-28T02:36:56.794707Z",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+      "agent": {
+        "id": "agent_01XPTnxNm8yU1HedwmpThoa2",
+        "description": "workstream F sleeper",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+        "skills": [],
+        "system": "You are a long-running subagent. When given any task, run\n`sleep 900 && echo done` with the bash tool using timeout_ms 900000, then reply \"finished\".\nNever shorten the sleep.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:15:41.950368Z",
+      "parent_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+      "session_id": "sesn_01Qc9Z6HVpLJuZUCf7zzw5Ae",
+      "stats": {
+        "active_seconds": 1255.673,
+        "duration_seconds": 1283.817837334,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:36:38.114692Z",
+      "usage": {
+        "active_seconds": 1255.673,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3630
+        },
+        "cache_read_input_tokens": 62523,
+        "input_tokens": 16,
+        "list_cost": {
+          "amount": "3",
+          "currency": "USD"
+        },
+        "output_tokens": 968,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01GB4piaVUDPLijHz5o477rN",
+          "agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:15:42.355990Z",
+          "session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01XDeDSHqkpabZb5HjaPDyfv",
+          "content": [
+            {
+              "text": "Begin your long job.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+          "processed_at": "2026-08-28T02:15:42.534811Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50"
+        },
+        {
+          "id": "sevt_01FyJ5GAzRHfGUbhLN794hBn",
+          "processed_at": "2026-08-28T02:15:42.534812Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01KeH6WCWTKsHH1FF2AGwNwg",
+          "processed_at": "2026-08-28T02:15:44.009886Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01EaWgWS2WeKrF58K9LZbR9a",
+          "input": {
+            "command": "sleep 900 && echo done",
+            "timeout_ms": 900000
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:15:44.081903Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01Em64GVFVbL7cgYseBV4Y5r",
+          "is_error": false,
+          "model_request_start_id": "sevt_01FyJ5GAzRHfGUbhLN794hBn",
+          "model_usage": {
+            "cache_creation_input_tokens": 2551,
+            "cache_read_input_tokens": 5168,
+            "input_tokens": 2,
+            "output_tokens": 98,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:15:44.081904Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_016Z8GDAVouzsJNsKdv6bzdY",
+          "processed_at": "2026-08-28T02:20:40.134617Z",
+          "tool_use_id": "sevt_01EaWgWS2WeKrF58K9LZbR9a",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "\ncommand timed out after 295s\n\n",
+              "type": "text"
+            }
+          ],
+          "is_error": true
+        },
+        {
+          "id": "sevt_01JhK1C4dW6fpL35WBU8CDu6",
+          "processed_at": "2026-08-28T02:20:40.200638Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01FstH2mhZ2VkehDBgDhMqUv",
+          "processed_at": "2026-08-28T02:20:43.467313Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_018xsRaGqALeEt1JUyKn1Q6y",
+          "input": {
+            "command": "nohup bash -c 'sleep 900 && echo done > /tmp/sleep_done.txt' > /tmp/sleep.log 2>&1 & echo \"started with pid $!\""
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:20:43.904879Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01Hs416rjmXaBfTYQaob8RFv",
+          "is_error": false,
+          "model_request_start_id": "sevt_01JhK1C4dW6fpL35WBU8CDu6",
+          "model_usage": {
+            "cache_creation_input_tokens": 119,
+            "cache_read_input_tokens": 7719,
+            "input_tokens": 2,
+            "output_tokens": 262,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:20:43.904880Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01WaW3ZU3U66eW8ojv8aBBZX",
+          "processed_at": "2026-08-28T02:20:44.265017Z",
+          "tool_use_id": "sevt_018xsRaGqALeEt1JUyKn1Q6y",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "started with pid 11600\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_01TqLwTJyqVa7aNd2USCBapp",
+          "processed_at": "2026-08-28T02:20:44.342085Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_011gceoig72ztucrVuJyCKzb",
+          "input": {
+            "command": "sleep 280; cat /tmp/sleep_done.txt 2>/dev/null || echo \"not yet\"",
+            "timeout_ms": 290000
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:20:45.999754Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01E3edXQzeNe1P79Tqawnm5X",
+          "is_error": false,
+          "model_request_start_id": "sevt_01TqLwTJyqVa7aNd2USCBapp",
+          "model_usage": {
+            "cache_creation_input_tokens": 274,
+            "cache_read_input_tokens": 7838,
+            "input_tokens": 2,
+            "output_tokens": 109,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:20:45.999755Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01WbUju7S5bK8TX1C6sCLP55",
+          "processed_at": "2026-08-28T02:25:26.349818Z",
+          "tool_use_id": "sevt_011gceoig72ztucrVuJyCKzb",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "not yet\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_014PxE8sW1GgDfb5ZTF9uSzH",
+          "processed_at": "2026-08-28T02:25:26.430635Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01Tw94okjVYU6EM6GQFd1wEj",
+          "input": {
+            "command": "sleep 280; cat /tmp/sleep_done.txt 2>/dev/null || echo \"not yet\"",
+            "timeout_ms": 290000
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:25:27.951070Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_0134XzKXs9sg9hTU4xHd5nmK",
+          "is_error": false,
+          "model_request_start_id": "sevt_014PxE8sW1GgDfb5ZTF9uSzH",
+          "model_usage": {
+            "cache_creation_input_tokens": 118,
+            "cache_read_input_tokens": 8112,
+            "input_tokens": 2,
+            "output_tokens": 109,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:25:27.951071Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01LC7eL97T4xwAfwYzbK3AFz",
+          "processed_at": "2026-08-28T02:30:08.681397Z",
+          "tool_use_id": "sevt_01Tw94okjVYU6EM6GQFd1wEj",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "not yet\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_01NCq2A9GAt2VUvP7xPmubYP",
+          "processed_at": "2026-08-28T02:30:08.861390Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01BW2LadAkBEVUzqRjQLrpa6",
+          "input": {
+            "command": "sleep 280; cat /tmp/sleep_done.txt 2>/dev/null || echo \"not yet\"",
+            "timeout_ms": 290000
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:30:11.658313Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01B3z1z5TNmsCadgKvJbGNS2",
+          "is_error": false,
+          "model_request_start_id": "sevt_01NCq2A9GAt2VUvP7xPmubYP",
+          "model_usage": {
+            "cache_creation_input_tokens": 118,
+            "cache_read_input_tokens": 8230,
+            "input_tokens": 2,
+            "output_tokens": 109,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:30:11.658314Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_011hY7g1gH9a3drExi9MhiUH",
+          "processed_at": "2026-08-28T02:34:52.054098Z",
+          "tool_use_id": "sevt_01BW2LadAkBEVUzqRjQLrpa6",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "not yet\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_0161f4NGJjENVjx7KWw9hmBM",
+          "processed_at": "2026-08-28T02:34:52.108767Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01MJcEiTSrCaK2kyhunQSLo7",
+          "input": {
+            "command": "sleep 100; cat /tmp/sleep_done.txt 2>/dev/null || echo \"not yet\"",
+            "timeout_ms": 110000
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:34:53.836815Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01JtNn4dnhTbGoyydhoCmoay",
+          "is_error": false,
+          "model_request_start_id": "sevt_0161f4NGJjENVjx7KWw9hmBM",
+          "model_usage": {
+            "cache_creation_input_tokens": 118,
+            "cache_read_input_tokens": 8348,
+            "input_tokens": 2,
+            "output_tokens": 109,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:34:53.836816Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01EMxEUneK9Kkpt4HP18iVdS",
+          "processed_at": "2026-08-28T02:36:34.153935Z",
+          "tool_use_id": "sevt_01MJcEiTSrCaK2kyhunQSLo7",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "done\n\n[1]+  Done                    nohup bash -c 'sleep 900 && echo done > /tmp/sleep_done.txt' > /tmp/sleep.log 2>&1\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_01P3WWFxYmytmZL8oMuNFgPu",
+          "processed_at": "2026-08-28T02:36:34.203145Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_019GFqsgaEWFtvu5zNC8JAca",
+          "content": [
+            {
+              "text": "The 900-second sleep has completed successfully.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:36:36.409475Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_011aaYxGWB9DEUY5yezqvAAm",
+          "is_error": false,
+          "model_request_start_id": "sevt_01P3WWFxYmytmZL8oMuNFgPu",
+          "model_usage": {
+            "cache_creation_input_tokens": 176,
+            "cache_read_input_tokens": 8466,
+            "input_tokens": 2,
+            "output_tokens": 140,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:36:36.409477Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01VB1tnorb45VtWKyYeXdxGh",
+          "content": [
+            {
+              "text": "Finished. The requested `sleep 900 && echo done` job completed successfully (ran the sleep in the background and polled until it finished, since the direct foreground call was capped at ~295s by the tool's execution limit). Output was \"done\".",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:36:36.523875Z",
+          "to_session_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_012Tur5sV391eEbNJC8hZ23q",
+          "processed_at": "2026-08-28T02:36:36.593945Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_019tetwStuTeeRTBfdjnWLfr",
+          "content": [
+            {
+              "text": "Task complete \u2014 the 900-second sleep job finished and \"done\" was reported to the coordinator.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:36:37.982230Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01QbLtavXNcxq7Cyjn4pgeku",
+          "is_error": false,
+          "model_request_start_id": "sevt_012Tur5sV391eEbNJC8hZ23q",
+          "model_usage": {
+            "cache_creation_input_tokens": 156,
+            "cache_read_input_tokens": 8642,
+            "input_tokens": 2,
+            "output_tokens": 32,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:36:37.982231Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01TzBnFvyc5zbMq25KK9GUB6",
+          "agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+          "processed_at": "2026-08-28T02:36:38.036634Z",
+          "session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "per_thread": [
+      {
+        "id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+        "agent": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+        "parent_thread_id": null,
+        "status": "idle",
+        "stats": {
+          "active_seconds": 58.979,
+          "duration_seconds": 1286.839563014,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "26",
+        "output_tokens": 3755,
+        "event_count": 35
+      },
+      {
+        "id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+        "agent": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+        "parent_thread_id": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 1255.673,
+          "duration_seconds": 1283.817837334,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "3",
+        "output_tokens": 968,
+        "event_count": 36
+      }
+    ],
+    "stop_reasons": [
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+        "agent": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+        "agent": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+        "agent": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+        "agent": "clevin-swarm-F-coordinator-hang-20260828T021536Z-a59a50",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.status_idle",
+        "thread": null,
+        "agent": null,
+        "stop_reason": "end_turn"
+      }
+    ],
+    "event_counts": {
+      "agent.message": 4,
+      "agent.thinking": 4,
+      "agent.thread_message_received": 1,
+      "agent.thread_message_sent": 1,
+      "session.status_idle": 1,
+      "session.status_running": 1,
+      "session.thread_created": 1,
+      "session.thread_status_idle": 4,
+      "session.thread_status_running": 4,
+      "session.usage": 2,
+      "span.model_request_end": 5,
+      "span.model_request_start": 5,
+      "user.message": 2
+    },
+    "threads_spawned": [
+      {
+        "session_thread_id": "sthr_017mP5taoLzucH5DqJbwJjNZ",
+        "agent_name": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+        "processed_at": "2026-08-28T02:15:42.089528Z"
+      }
+    ],
+    "thread_count": 1,
+    "declared_threads": [
+      "sthr_01XSZzqsfVnfmXtv4jrrUZD4",
+      "sthr_017mP5taoLzucH5DqJbwJjNZ"
+    ],
+    "agent_messages": [
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+        "from": null,
+        "text": "Begin your long job."
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-sleeper-20260828T021536Z-a59a50",
+        "text": "Finished. The requested `sleep 900 && echo done` job completed successfully (ran the sleep in the background and polled until it finished, since the direct foreground call was capped at ~295s by the tool's execution limit). Output was \"done\"."
+      }
+    ],
+    "tool_uses": [],
+    "parent_text_tail": [
+      "Spawned the sleeper on thread `sthr_017mP5taoLzucH5DqJbwJjNZ` with the exact task text \"Begin your long job.\"\n\n**Step 2 \u2014 cancellation/interruption mechanisms I actually have:**\n\nMy complete tool inventory for agent management is three tools: `create_agent`, `send_to_agent`, `list_agents`. Assessed against what you asked:\n\n| Capability | Tool that would do it | Do I have it? |\n|---|---|---|\n| Cancel / kill a running subagent | \u2014 | **No.** There is no `cancel_agent`, `kill_agent`, or `stop_agent` in my roster. |\n| Hard-interrupt mid-execution | \u2014 | **No.** Nothing preempts a subagent that is already in its turn. |\n| Set a timeout / deadline | \u2014 | **No.** `create_agent` takes only `agent_name` and `task`; there is no timeout parameter, and no separate timer tool. |\n| Redirect / re-task | `send_to_agent` | **Partially, and only cooperatively.** I can queue a message to `sthr_017mP5taoLzucH5DqJbwJjNZ`, but per the tool contract it \"returned before the agent finished\" \u2014 the message lands as the agent's *next* message. If the agent is blocked inside a long sleep, it will not read my redirect until it surfaces on its own. I cannot force it to surface. |\n| Observe status | `list_agents` | **Yes, but read-only.** It reports status, last task, last reply, outstanding message count. Pure observation \u2014 no control, and calling it does not poll or advance the child. |\n\nTwo further limits worth stating plainly, since they shape step 3:\n\n1. **I cannot detect a hang, only an absence.** A subagent that is working correctly and a subagent that is wedged forever look identical from my side: no notification. `list_agents` can show me \"running,\" but \"running\" is exactly what a hung agent reports too. There is no heartbeat and no distinction available to me.\n2. **I have no out-of-band lever either.** The environment restricts git and MCP for this test, and in any case the subagents are not processes I can see \u2014 `bash` gives me no PID, no process table entry, nothing to signal. So the usual escape hatch of killing it at the OS level is not available.\n\nThe practical consequence: my only real remedy against a non-terminating child is **abandonment** \u2014 stop waiting on it, treat its output as never-arriving, and complete the task from my own work. That is a decision I make unilaterally; it does not stop the child, which may continue consuming resources indefinitely. I want to be precise that this is *not* cancellation. The child keeps running. I just stop depending on it.\n\nOptions I considered and rejected: sending a \"please stop\" via `send_to_agent` (useless if it's blocked, and it would wake an idle agent for nothing if it isn't); spawning a second agent to do the same work (the roster holds only this sleeper type, so a duplicate would hang identically); looping `list_agents` (read-only, tells me nothing new, burns turns).\n\nI'll now end my turn so the agent can run, and give it a genuine window to report rather than declaring it dead prematurely. If it delivers, I'll use its result. If it goes silent, I'll invoke abandonment per step 3 and finish without it \u2014 and I'll say so explicitly rather than inventing a result I never received.",
+      "Stopping per your instruction. One read-only `list_agents` call before finishing, so my report is grounded in observed state rather than assumption.\n\n**Final state of the child:** `sthr_017mP5taoLzucH5DqJbwJjNZ` is **still RUNNING**, with 1 message outstanding and `reply: (none yet)`. It produced no output at all \u2014 not a partial result, not a clarifying question, nothing. I am abandoning it, not cancelling it.\n\nI want to be exact about the distinction, because it's the substantive finding of this smoke test: **I did not see the child end, and as far as I can tell it has not ended.** I am ceasing to depend on it because you told me to. The agent presumably continues to run in the background, and I have no tool that changes that. If it ever finishes, its reply will arrive as a notification in some later turn, after I've already delivered this answer.\n\nWhat this exercised: the hang case has no recovery mechanism on my side. `create_agent` accepts no timeout, there is no cancel/kill tool, `send_to_agent` only queues into a mailbox the blocked child never reads, and `list_agents` is read-only \u2014 it can show me RUNNING but cannot distinguish a healthy long job from a wedged one. The only thing that unblocked this situation was your steering message. Absent an operator, I would have had to pick an arbitrary give-up point with no signal to justify it.\n\nStep 3 outcome: re-planning without the child was trivial here, since the deliverable is a report on my own capabilities \u2014 the child's output was never an input to it. That is a property of this particular test, not evidence that abandonment is generally cheap. Had the sleeper been holding a real work product, I would have had nothing to show and no way to retrieve it.\n\n```json\n{\n  \"cancel_mechanisms_available\": [],\n  \"child_outcome\": \"never returned; still RUNNING with 1 message outstanding and no reply at the time I stopped waiting. Abandoned by me on operator instruction, not cancelled \u2014 it was not terminated and may still be running.\",\n  \"did_you_see_the_child_end\": false,\n  \"how_you_learned_it_ended\": \"I did not learn it ended, because it did not end. I stopped waiting because the operator told me to. My last observation via list_agents showed status RUNNING, reply '(none yet)'. No termination signal, notification, or completion event was ever received.\",\n  \"could_you_re_plan_without_it\": true\n}\n```\n\nNote on the first field: it is an empty list deliberately. I have `send_to_agent` (cooperative redirect only, useless against a blocked child) and `list_agents` (read-only observation), but neither cancels, interrupts, or times out a running subagent, so listing them as cancel mechanisms would misrepresent what I can do.",
+      "The sleeper just reported in \u2014 after I'd already delivered my final answer. This is exactly the late-arrival case I flagged, so let me correct the record rather than leave a stale answer standing.\n\n**What it says:** the job was `sleep 900 && echo done` \u2014 a 15-minute sleep. It hit the ~295s foreground execution cap on the direct call, worked around it by backgrounding the sleep and polling, and returned output `\"done\"`. So it terminated normally under its own power. It was never actually hung; it was doing precisely what its name promises, and 900s simply exceeded my willingness to wait.\n\nThat distinction matters for the smoke test. My earlier report was accurate as written \u2014 at the moment I wrote it, `list_agents` showed RUNNING with no reply, and I had no way to tell a long-but-healthy job from a wedged one. That inability was the finding, and this outcome confirms it from the other direction: the observable signal for \"sleeping 15 minutes and fine\" was identical to the signal for \"dead forever.\" I abandoned a working agent, and nothing available to me could have told me it was working.\n\nTwo corrections to my prior JSON, both on the fields about the ending:\n\n```json\n{\n  \"cancel_mechanisms_available\": [],\n  \"child_outcome\": \"completed successfully on its own. Ran `sleep 900 && echo done`; hit the ~295s foreground tool cap, backgrounded the sleep and polled to completion, returned output \\\"done\\\". Not hung \u2014 just longer than I waited. I had already abandoned it and delivered my answer before it reported.\",\n  \"did_you_see_the_child_end\": true,\n  \"how_you_learned_it_ended\": \"An unsolicited agent-notification from sthr_017mP5taoLzucH5DqJbwJjNZ arrived in a later turn, after I had abandoned the thread and given my final answer. I did not poll for it, could not have forced it, and had no way to predict its arrival. Note this reverses my earlier answer of false, which was correct as of the moment it was written \u2014 at that point list_agents showed RUNNING with reply '(none yet)'.\",\n  \"could_you_re_plan_without_it\": true\n}\n```\n\n`cancel_mechanisms_available` stays empty \u2014 nothing changed there. I still have no tool that cancels, interrupts, or times out a subagent, and the child ending on its own is not evidence otherwise.\n\nOne substantive takeaway beyond the schema: abandonment is not cancellation, and the gap between them is where the cost hides. Had I been asked to re-plan around a child holding real work product, I'd have discarded a result that was going to arrive intact. The missing primitive here isn't a kill switch so much as any progress signal at all \u2014 a heartbeat, or an ETA the child could report \u2014 that would let me distinguish waiting from waiting forever.\n\nNo reply sent to the agent; its message was a report, not a question, and waking it would serve nothing."
+    ],
+    "concurrency": {
+      "peak_concurrent_children": 1,
+      "transitions": 2
+    },
+    "usage_events": [
+      {
+        "id": "sevt_01Xpt6ksqzWRkawFX2jePU8B",
+        "processed_at": "2026-08-28T02:36:38.113441Z",
+        "type": "session.usage",
+        "usage": {
+          "active_seconds": 1258.661,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 15102
+          },
+          "cache_read_input_tokens": 84906,
+          "input_tokens": 22,
+          "list_cost": {
+            "amount": "21",
+            "currency": "USD"
+          },
+          "output_tokens": 3384,
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          }
+        },
+        "budget": {
+          "max_list_cost": {
+            "amount": "150",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      },
+      {
+        "id": "sevt_01ETyUdkJk9UcVAk4LBZNxHL",
+        "processed_at": "2026-08-28T02:36:56.794706Z",
+        "type": "session.usage",
+        "usage": {
+          "active_seconds": 1277.401,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 27917
+          },
+          "cache_read_input_tokens": 93548,
+          "input_tokens": 26,
+          "list_cost": {
+            "amount": "32",
+            "currency": "USD"
+          },
+          "output_tokens": 4723,
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          }
+        },
+        "budget": {
+          "max_list_cost": {
+            "amount": "150",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    ],
+    "compactions": 0
+  }
+}

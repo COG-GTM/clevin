@@ -1,0 +1,21 @@
+{
+  "cleanup": [
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_014BGhEfNQ8wVGdqpcVPfmvu",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021631Z-b02dec-drift"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_0193JPujX5W2ize8XJsaLfsU",
+      "kind": "session",
+      "note": "clevin-swarm-D-20260828T021145Z-e5bd03-probe"
+    }
+  ],
+  "experiment": "workstream D cleanup sweep",
+  "leaked_agents": 1,
+  "leaked_sessions": 1
+}

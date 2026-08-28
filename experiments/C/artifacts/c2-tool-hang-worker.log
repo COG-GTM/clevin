@@ -1,0 +1,33 @@
+2026-08-28 02:22:48,579 [INFO] chaos: scoped worker starting workdir=/tmp/chaos-workspace fault=hang allow=/home/ubuntu/repos/clevin/experiments/C/artifacts/c2-tool-hang-allow.txt worker_id=chaos-cf953500
+2026-08-28 02:22:48,887 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:49,515 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:50,083 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:50,663 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:51,086 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:51,630 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:52,242 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:52,787 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:53,361 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:53,934 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:54,435 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:54,744 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:55,119 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:55,773 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:56,157 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:56,600 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:56,988 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/poll?beta=true&block_ms=999 "HTTP/1.1 200 OK"
+2026-08-28 02:22:56,990 [INFO] chaos: claimed work_id=sesn_01LP1pjukhvc8V5FPw3QA44w type=session session=sesn_01LP1pjukhvc8V5FPw3QA44w
+2026-08-28 02:22:57,519 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_01LP1pjukhvc8V5FPw3QA44w/ack?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:22:57,657 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_01LP1pjukhvc8V5FPw3QA44w?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:22:57,675 [INFO] anthropic.lib.tools._beta_session_runner: session tool runner starting session_id=sesn_01LP1pjukhvc8V5FPw3QA44w
+2026-08-28 02:22:57,781 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_01LP1pjukhvc8V5FPw3QA44w/events/stream?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:22:57,863 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_01LP1pjukhvc8V5FPw3QA44w/heartbeat?beta=true&expected_last_heartbeat=NO_HEARTBEAT "HTTP/1.1 200 OK"
+2026-08-28 02:22:57,931 [INFO] httpx: HTTP Request: GET https://api.anthropic.com/v1/sessions/sesn_01LP1pjukhvc8V5FPw3QA44w/events?beta=true&limit=1000 "HTTP/1.1 200 OK"
+2026-08-28 02:22:59,190 [INFO] anthropic.lib.tools._beta_session_runner: executing tool tool=bash tool_use_id=sevt_01CeoNUUJzvnqp7JgTU5wLD1
+2026-08-28 02:22:59,190 [WARNING] chaos: FAULT mode=hang tool=bash input={"command": "echo CHAOS-hang"}
+2026-08-28 02:23:28,202 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_01LP1pjukhvc8V5FPw3QA44w/heartbeat?beta=true&expected_last_heartbeat=2026-08-28T02%3A22%3A57.762065Z "HTTP/1.1 200 OK"
+2026-08-28 02:23:58,580 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_01LP1pjukhvc8V5FPw3QA44w/heartbeat?beta=true&expected_last_heartbeat=2026-08-28T02%3A23%3A28.113512Z "HTTP/1.1 200 OK"
+2026-08-28 02:24:29,090 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_01LP1pjukhvc8V5FPw3QA44w/heartbeat?beta=true&expected_last_heartbeat=2026-08-28T02%3A23%3A58.443119Z "HTTP/1.1 200 OK"
+2026-08-28 02:24:59,461 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_01LP1pjukhvc8V5FPw3QA44w/heartbeat?beta=true&expected_last_heartbeat=2026-08-28T02%3A24%3A28.884869Z "HTTP/1.1 200 OK"
+2026-08-28 02:25:29,467 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/sessions/sesn_01LP1pjukhvc8V5FPw3QA44w/events?beta=true "HTTP/1.1 200 OK"
+2026-08-28 02:25:29,821 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/environments/env_0152FZKRpy9f8uVw38Guzosy/work/sesn_01LP1pjukhvc8V5FPw3QA44w/heartbeat?beta=true&expected_last_heartbeat=2026-08-28T02%3A24%3A59.380621Z "HTTP/1.1 200 OK"
