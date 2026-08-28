@@ -266,3 +266,48 @@ def test_month_of_rejects_malformed_dates() -> None:
     for bad in ("", "2026", "2026-13-01", "2026-00-01", "2026/01/04", "not-a-date"):
         with pytest.raises(ValueError, match="valid YYYY-MM"):
             month_of(Row(bad, "emea", "d", "1.00"))
+
+
+# ---------------------------------------------------------------------------
+# Real-world export quirks
+# ---------------------------------------------------------------------------
+
+BOM_CSV = "\ufeffdate,region,description,amount\n2026-01-04,emea,seat expansion,120.10\n"
+CRLF_CSV = "date,region,description,amount\r\n2026-01-04,emea,a,120.10\r\n"
+MULTILINE_CSV = 'date,region,description,amount\n2026-01-04,emea,"line one\nline two",120.10\n'
+
+
+def test_utf8_bom_does_not_turn_the_header_into_a_data_row() -> None:
+    # Spreadsheet exports routinely carry a BOM. Without stripping it the header
+    # failed to match, was parsed as data, and then blew up on the date.
+    rows = parse_rows(BOM_CSV)
+    assert len(rows) == 1
+    assert rows[0].date == "2026-01-04"
+    assert monthly_totals(rows) == {"2026-01": Decimal("120.10")}
+
+
+def test_crlf_line_endings() -> None:
+    rows = parse_rows(CRLF_CSV)
+    assert len(rows) == 1
+    assert rows[0].amount == "120.10"
+
+
+def test_newline_inside_a_quoted_description() -> None:
+    rows = parse_rows(MULTILINE_CSV)
+    assert len(rows) == 1
+    assert rows[0].description == "line one\nline two"
+    assert rows[0].amount == "120.10"
+
+
+def test_amount_grammar_is_narrower_than_decimal() -> None:
+    # Decimal() alone would accept all of these and produce a plausible number.
+    for bad in ("1_000", "１２", "NaN", "-NaN", "Infinity", "-Infinity", "0x10"):
+        with pytest.raises(ValueError, match="decimal number|finite"):
+            amount_of(Row("2026-01-04", "emea", "d", bad))
+
+
+def test_amount_grammar_accepts_ordinary_money() -> None:
+    assert amount_of(Row("2026-01-04", "e", "d", "-50.00")) == Decimal("-50.00")
+    assert amount_of(Row("2026-01-04", "e", "d", "+5.00")) == Decimal("5.00")
+    assert amount_of(Row("2026-01-04", "e", "d", "0")) == Decimal("0")
+    assert amount_of(Row("2026-01-04", "e", "d", ".50")) == Decimal("0.50")

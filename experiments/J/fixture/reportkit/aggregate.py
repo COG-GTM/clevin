@@ -43,6 +43,15 @@ ROUNDING: str = ROUND_HALF_EVEN
 #: ``2026-01-04`` both work, while ``2026-13-01`` and ``2026/01/04`` do not).
 _MONTH_RE = re.compile(r"^([0-9]{4}-(?:0[1-9]|1[0-2]))(?:-|$)")
 
+#: An amount is a plain ASCII decimal number, optionally signed, optionally with
+#: an exponent. Written out explicitly because ``Decimal`` on its own is more
+#: permissive than a money column should be: it accepts ``NaN``/``Infinity``,
+#: underscore grouping (``1_000`` -> 1000) and non-ASCII digits, each of which
+#: would silently turn corrupt input into a plausible-looking number.
+_AMOUNT_RE = re.compile(
+    r"[+-]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][+-]?[0-9]+)?"
+)
+
 
 def month_of(row: Row) -> str:
     """Return the ``YYYY-MM`` grouping key for ``row``.
@@ -63,15 +72,20 @@ def amount_of(row: Row) -> Decimal:
     """Return the exact :class:`~decimal.Decimal` amount for ``row``.
 
     Built from the original string so that ``120.10`` means exactly 120.10 and
-    not the nearest binary double. Raises :class:`ValueError` for values that
-    are not finite decimal numbers, including ``NaN`` and ``Infinity``, which
-    :class:`~decimal.Decimal` would otherwise accept and silently poison every
+    not the nearest binary double. The accepted grammar is deliberately narrower
+    than :class:`~decimal.Decimal`'s own (see :data:`_AMOUNT_RE`): ``NaN``,
+    ``Infinity``, ``1_000`` and non-ASCII digits are rejected rather than
+    silently turned into a plausible-looking number that would poison every
     total they touch.
     """
     raw = row.amount.strip()
+    if not _AMOUNT_RE.fullmatch(raw):
+        raise ValueError(
+            f"row {row!r}: amount must be a decimal number, got {row.amount!r}"
+        )
     try:
         value = Decimal(raw)
-    except (InvalidOperation, ValueError):
+    except InvalidOperation:
         raise ValueError(
             f"row {row!r}: amount must be a decimal number, got {row.amount!r}"
         ) from None

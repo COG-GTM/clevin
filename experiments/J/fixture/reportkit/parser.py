@@ -40,6 +40,9 @@ def parse_rows(text: str) -> list[Row]:
 
     Contract:
 
+    * A leading UTF-8 BOM is stripped. Spreadsheet exports routinely carry one,
+      and it would otherwise stop the header record from matching, so the header
+      would be treated as a data row.
     * A leading header record is skipped; blank records are ignored anywhere.
     * A record whose field count does not match :data:`HEADER` raises
       :class:`ValueError` naming the record number. Silently dropping such a row
@@ -50,6 +53,7 @@ def parse_rows(text: str) -> list[Row]:
     """
     rows: list[Row] = []
     seen_record = False
+    text = text.removeprefix("\ufeff")
     for number, record in enumerate(csv.reader(StringIO(text)), start=1):
         if _is_blank(record):
             continue
