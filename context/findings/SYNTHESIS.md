@@ -98,4 +98,39 @@ Unfilled rows are pending evidence — no class is assigned without it.
 
 ## Answer: the absolute ceiling of a cloud agent built purely on Managed Agents primitives
 
-Pending synthesis of child findings.
+*Draft — pending K's final report and the gated B/I/J workstreams (blocked on Anthropic balance).*
+
+**The ceiling is a competent single-shot task executor with strong fleet/config management and
+cost accounting, but without unattended durability, event-driven wakefulness, or native
+knowledge/skill surfacing.** Concretely:
+
+What reaches parity through pure configuration or native extension points (A/B):
+- Agent-as-code: immutable versions, canary/rollback, drift detection (D), roster version pinning
+  for subagents (F) — arguably *beyond* Devin's config ergonomics.
+- Parallel investigation with synthesis at depth 1, with per-role cost attribution (F).
+- Mid-run steering via `user.interrupt` (0.5 s to accept) and ask-and-block via a custom tool +
+  `requires_action`, both nearly free while blocked (K, A).
+- Scheduled runs, per-task cost accounting, persistent workspace volume (H, A).
+- Clean failed-tool semantics: timeouts and errors return reasoned, recoverable results (C).
+
+What caps the ceiling (irreducible D, or C with model-dependent behaviour):
+1. **Unattended durability is the hardest cap.** A dead worker strands a session in
+   `requires_action` forever; nothing native notices or re-dispatches (C-2). "Ticket in →
+   CI-green PR out, unattended" is therefore capped at C regardless of how well the happy path
+   works: any mid-run infrastructure failure silently kills the run.
+2. **No event ingress.** Wake-on-event is polling at ≥1-minute granularity with per-fire amnesia;
+   each deployment fire is a cold session that must re-derive its loop from external state (H).
+3. **No session continuity primitives.** No fork/clone/checkpoint (A, H, K), no atomic
+   history+filesystem snapshot, no session continuation across deployment fires, no mid-session
+   change of model/system/Skills/subagents (A).
+4. **Knowledge and skills are push-less.** Memory Store has no scoping/selection/ranking — the
+   model must choose to grep the mount (E). Attached Skills are invisible without a
+   system-prompt workaround (K). Both reach usable behaviour only through prompting, i.e. they
+   are model-dependent C, not platform A.
+5. **No browser/Computer Use** — the tool types are rejected outright (pre-verified D).
+
+Distance to Devin, in one sentence: Managed Agents can natively reproduce Devin's *execution*
+(sandboxed multi-hour coding with steering, delegation, scheduling, and accounting) but not
+Devin's *lifecycle* — the always-on, event-woken, crash-recovering, knowledge-primed loop around
+that execution is exactly the layer the platform does not provide and that the rules of this
+exercise correctly forbade rebuilding.
