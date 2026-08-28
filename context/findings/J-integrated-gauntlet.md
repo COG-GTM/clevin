@@ -16,6 +16,11 @@ before it could push, and needed a `sessions.update(budget=...)` plus a nudge to
 Anthropic **balance was then exhausted mid-review**, which is why only one arm ran — the reduced
 arms, compaction survival and the chaos arm are recorded as untested below, not as classes.
 
+**Follow-up:** a later ~$20 top-up funded one question only — is the managed loop self-healing? See
+`context/findings/J-self-healing.md`. Short answer: it is self-diagnosing, not self-healing (native
+lease expiry ~360 s after the last heartbeat, no re-dispatch ever). That file also corrects the chaos
+probe below: it reported `terminated: []` and never actually killed a live worker.
+
 - Agent: `agent_01Bj4NG7ZT2gkxvgzrcFY5r9` (temporary, archived) — coordinator over
   `agent_01DMSULxChYEMfSVjeVfhBQZ` (explorer), `agent_016nr9DwVkpvDBAESYJ56yjc` (test debugger),
   `agent_01DCXuCDuebYuVVexQcxwUYF` (reviewer)
