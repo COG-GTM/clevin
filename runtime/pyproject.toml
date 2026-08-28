@@ -27,6 +27,9 @@ packages = ["src/clevin_runtime"]
 addopts = "-q"
 asyncio_mode = "auto"
 testpaths = ["tests"]
+# The workstream fixtures under experiments/ are intentionally red until an
+# agent fixes them; they are run by their own CI check, not by this suite.
+norecursedirs = ["experiments"]
 
 [tool.ruff]
 line-length = 88

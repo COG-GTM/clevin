@@ -1,0 +1,23 @@
+name: j-gauntlet-fixture
+on:
+  # Only gauntlet PRs, i.e. those targeting the fixture base branch, are checked.
+  # The fixture is deliberately red until an agent fixes it, so running this on
+  # PRs into other branches (which carry the unfixed fixture) is meaningless.
+  pull_request:
+    branches:
+      - "swarm/j-gauntlet-base"
+    paths:
+      - "experiments/J/fixture/**"
+      - ".github/workflows/j-gauntlet-fixture.yml"
+jobs:
+  fixture-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: install pytest
+        run: python3 -m pip install --quiet pytest==8.4.1
+      - name: fixture checks
+        run: python3 -m pytest experiments/J/fixture/tests -q

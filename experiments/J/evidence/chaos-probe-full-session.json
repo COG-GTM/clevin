@@ -1,0 +1,28 @@
+{
+  "note": "chaos probe under exhausted Anthropic balance - confounded by billing_error",
+  "sandbox_before": {
+    "id": "sb-aMJS9gYX270pQQEsi22IVa",
+    "poll": null,
+    "workspace": "repos/, skills/revenue-report-hardening present; git HEAD 7e65674"
+  },
+  "events_before": 666,
+  "sandbox_after_kill": {
+    "live_sandboxes": [],
+    "poll": 137
+  },
+  "session_after_kill": {
+    "status": "idle",
+    "stop_reason": null
+  },
+  "webhook_replay_status": {
+    "status": 200,
+    "body": "{\"status\":\"ok\",\"event_type\":\"session.status_run_started\",\"spawned\":[]}"
+  },
+  "session_after_replay": {
+    "status": "idle",
+    "stop_reason": null
+  },
+  "events_after": 666,
+  "new_events": [],
+  "live_sandboxes_after_replay": []
+}
