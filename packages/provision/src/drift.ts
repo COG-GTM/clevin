@@ -5,7 +5,7 @@ import type {
   BetaManagedAgentsAgent,
 } from "@anthropic-ai/sdk/resources/beta/agents/agents";
 import { agentDefinition } from "./agent-definition.js";
-import { ConfigurationError, loadProvisionConfig } from "./config.js";
+import { ConfigurationError } from "./config.js";
 import { ResourceConfigurationError } from "./resources.js";
 
 const MANAGED_FIELDS = [
@@ -170,6 +170,27 @@ interface DriftClient {
   };
 }
 
+// Drift detection intentionally needs only the API key and agent ID, unlike the provisioner.
+export function requiredDriftEnv(
+  name: "ANTHROPIC_API_KEY" | "CLEVIN_AGENT_ID",
+  env: NodeJS.ProcessEnv = process.env,
+): string {
+  const rawValue = env[name];
+  if (rawValue === undefined || rawValue.trim() === "") {
+    throw new ConfigurationError(`${name} is required`);
+  }
+  const value = rawValue.trim();
+  if (
+    name === "CLEVIN_AGENT_ID" &&
+    (!value.startsWith("agent_") || value.length === "agent_".length)
+  ) {
+    throw new ConfigurationError(
+      "CLEVIN_AGENT_ID must be a valid agent_ resource ID",
+    );
+  }
+  return value;
+}
+
 function actualAgentState(
   agent: BetaManagedAgentsAgent,
 ): Record<string, unknown> {
@@ -203,33 +224,9 @@ function parseVersion(args: string[]): number | undefined {
   return version;
 }
 
-function loadDriftConfig() {
-  try {
-    return loadProvisionConfig();
-  } catch (error: unknown) {
-    if (
-      !(error instanceof ConfigurationError) ||
-      error.message !==
-        "CLEVIN_AGENT_ID and CLEVIN_AGENT_VERSION must be configured together" ||
-      process.env.CLEVIN_AGENT_VERSION !== undefined
-    ) {
-      throw error;
-    }
-    return loadProvisionConfig({
-      ...process.env,
-      CLEVIN_AGENT_VERSION: "1",
-    });
-  }
-}
-
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const version = parseVersion(args);
-  const config = loadDriftConfig();
-  if (config.agentId === undefined) {
-    throw new ConfigurationError("CLEVIN_AGENT_ID is required");
-  }
-
   if (args.includes("--desired-only")) {
     process.stdout.write(
       `${JSON.stringify({ desired: desiredAgentState() })}\n`,
@@ -237,11 +234,13 @@ async function main(): Promise<void> {
     return;
   }
 
+  const apiKey = requiredDriftEnv("ANTHROPIC_API_KEY");
+  const agentId = requiredDriftEnv("CLEVIN_AGENT_ID");
   const client: DriftClient = new Anthropic({
-    apiKey: config.anthropicApiKey,
+    apiKey,
   });
   const agent = await client.beta.agents.retrieve(
-    config.agentId,
+    agentId,
     version === undefined ? undefined : { version },
   );
   const report = diffAgentState(desiredAgentState(), actualAgentState(agent));

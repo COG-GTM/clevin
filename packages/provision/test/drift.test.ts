@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { agentDefinition } from "../src/agent-definition.js";
-import { desiredAgentState, diffAgentState } from "../src/drift.js";
+import {
+  desiredAgentState,
+  diffAgentState,
+  requiredDriftEnv,
+} from "../src/drift.js";
+import { ConfigurationError } from "../src/config.js";
 
 describe("diffAgentState", () => {
   it("reports no changes for identical states", () => {
@@ -144,5 +149,39 @@ describe("desiredAgentState", () => {
     expect(agentDefinition.metadata.source_of_truth).toBe("typescript");
     expect(agentDefinition.tools).toHaveLength(3);
     expect(agentDefinition.model.id).toBe("claude-opus-5");
+  });
+});
+
+describe("requiredDriftEnv", () => {
+  it("returns configured values and trims them", () => {
+    expect(
+      requiredDriftEnv("ANTHROPIC_API_KEY", {
+        ANTHROPIC_API_KEY: " api-key ",
+      }),
+    ).toBe("api-key");
+    expect(
+      requiredDriftEnv("CLEVIN_AGENT_ID", {
+        CLEVIN_AGENT_ID: " agent_existing ",
+      }),
+    ).toBe("agent_existing");
+  });
+
+  it("rejects missing or blank values", () => {
+    expect(() => requiredDriftEnv("ANTHROPIC_API_KEY", {})).toThrow(
+      new ConfigurationError("ANTHROPIC_API_KEY is required"),
+    );
+    expect(() =>
+      requiredDriftEnv("CLEVIN_AGENT_ID", { CLEVIN_AGENT_ID: "  " }),
+    ).toThrow(new ConfigurationError("CLEVIN_AGENT_ID is required"));
+  });
+
+  it("rejects invalid agent IDs", () => {
+    expect(() =>
+      requiredDriftEnv("CLEVIN_AGENT_ID", { CLEVIN_AGENT_ID: "agent" }),
+    ).toThrow(
+      new ConfigurationError(
+        "CLEVIN_AGENT_ID must be a valid agent_ resource ID",
+      ),
+    );
   });
 });
