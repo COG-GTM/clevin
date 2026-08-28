@@ -1,0 +1,13 @@
+name: k4-ci-fixture
+on:
+  pull_request:
+    paths:
+      - "experiments/K/fixture/**"
+      - ".github/workflows/k4-ci-fixture.yml"
+jobs:
+  fixture-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fixture check
+        run: python3 experiments/K/fixture/check.py
