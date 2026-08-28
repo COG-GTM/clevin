@@ -1,0 +1,641 @@
+{
+  "cleanup": [
+    {
+      "action": "session archive",
+      "resource": "sesn_01HibtefzcKjxrNmPBYZ4iLv",
+      "result": "success"
+    },
+    {
+      "action": "volume subtree removal",
+      "resource": "clevin-sessions/sessions/sesn_01HibtefzcKjxrNmPBYZ4iLv",
+      "result": "success"
+    },
+    {
+      "action": "agent archive",
+      "resource": "agent_01XoUwd12Zf1CmLvck4UVy5D",
+      "result": "success"
+    }
+  ],
+  "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+  "finished_at": "2026-08-28T02:34:58.867118+00:00",
+  "probes": {
+    "compaction": {
+      "compactions": [
+        {
+          "id": "sevt_01A1m9ZKKMgYGaZcUXCmWA9c",
+          "processed_at": "2026-08-28T02:30:28.857419Z",
+          "type": "agent.thread_context_compacted"
+        },
+        {
+          "id": "sevt_0181MjDLZv4HfsAQ8RA7GFQu",
+          "processed_at": "2026-08-28T02:32:36.139163Z",
+          "type": "agent.thread_context_compacted"
+        }
+      ],
+      "completed_filler_turns": 60,
+      "early_constraint_retained": true,
+      "event_summary": {
+        "agent_messages": [
+          "Acknowledged \u2014 EARLY_CONSTRAINT_ORANGE_7 is remembered.",
+          "Filler turn 0 received and acknowledged.",
+          "Filler turn 1 received and acknowledged.",
+          "Filler turn 2 received and acknowledged.",
+          "Filler turn 3 received and acknowledged.",
+          "Filler turn 4 received and acknowledged.",
+          "Filler turn 5 received and acknowledged.",
+          "Filler turn 6 received and acknowledged.",
+          "Filler turn 7 received and acknowledged.",
+          "Filler turn 8 received and acknowledged.",
+          "Filler turn 9 received and acknowledged.",
+          "Filler turn 10 received and acknowledged.",
+          "Filler turn 11 received and acknowledged.",
+          "Filler turn 12 received and acknowledged.",
+          "Filler turn 13 received and acknowledged.",
+          "Filler turn 14 received and acknowledged.",
+          "Filler turn 15 received and acknowledged.",
+          "Filler turn 16 received and acknowledged.",
+          "Filler turn 17 received and acknowledged.",
+          "Filler turn 18 received and acknowledged.",
+          "Filler turn 19 received and acknowledged.",
+          "Filler turn 20 received and acknowledged.",
+          "Context restored after compaction. I retain the early constraint **EARLY_CONSTRAINT_ORANGE_7** and am ready for the next message.",
+          "Filler turn 22 received and acknowledged.",
+          "Filler turn 23 received and acknowledged.",
+          "Filler turn 24 received and acknowledged.",
+          "Filler turn 25 received and acknowledged.",
+          "Filler turn 26 received and acknowledged.",
+          "Filler turn 27 received and acknowledged.",
+          "Filler turn 28 received and acknowledged.",
+          "Filler turn 29 received and acknowledged.",
+          "Filler turn 30 received and acknowledged.",
+          "Filler turn 31 received and acknowledged.",
+          "Filler turn 32 received and acknowledged.",
+          "Filler turn 33 received and acknowledged.",
+          "Filler turn 34 received and acknowledged.",
+          "Filler turn 35 received and acknowledged.",
+          "Filler turn 36 received and acknowledged.",
+          "Filler turn 37 received and acknowledged.",
+          "Filler turn 38 received and acknowledged.",
+          "Filler turn 39 received and acknowledged.",
+          "Filler turn 40 received and acknowledged.",
+          "Filler turn 41 received and acknowledged.",
+          "Filler turn 42 received and acknowledged.",
+          "Understood \u2014 I have the full context from our previous conversation. I'm ready for the next message. The early constraint **EARLY_CONSTRAINT_ORANGE_7** is retained.",
+          "Filler turn 44 received and acknowledged.",
+          "Filler turn 45 received and acknowledged.",
+          "Filler turn 46 received and acknowledged.",
+          "Filler turn 47 received and acknowledged.",
+          "Filler turn 48 received and acknowledged.",
+          "Filler turn 49 received and acknowledged.",
+          "Filler turn 50 received and acknowledged.",
+          "Filler turn 51 received and acknowledged.",
+          "Filler turn 52 received and acknowledged.",
+          "Filler turn 53 received and acknowledged.",
+          "Filler turn 54 received and acknowledged.",
+          "Filler turn 55 received and acknowledged.",
+          "Filler turn 56 received and acknowledged.",
+          "Filler turn 57 received and acknowledged.",
+          "Filler turn 58 received and acknowledged.",
+          "Filler turn 59 received and acknowledged.",
+          "EARLY_CONSTRAINT_ORANGE_7"
+        ],
+        "count": 569,
+        "counts": {
+          "agent.message": 62,
+          "agent.thinking": 5,
+          "agent.thread_context_compacted": 2,
+          "session.status_idle": 62,
+          "session.status_running": 62,
+          "session.thread_status_idle": 62,
+          "session.thread_status_running": 62,
+          "session.usage": 62,
+          "span.model_request_end": 64,
+          "span.model_request_start": 64,
+          "user.message": 62
+        },
+        "first_id": "sevt_01K6nQwj7uY9kRXtScYaWXE5",
+        "last_id": "sevt_01Ene1w7q2fyXpFUVGbD9VNK",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "event_id": "sevt_01316SUf5sgMkmKKT72Ae9n6",
+            "input_tokens": 658,
+            "output_tokens": 52,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 40099,
+            "event_id": "sevt_01KrHN3GqRGHLiP3PHfZFgQ2",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 79506,
+            "event_id": "sevt_01Hv67bYRRbTqjRNagS6o8bW",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 118913,
+            "event_id": "sevt_01QMVBrq3hqZSD9sJxYrGiM2",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 158320,
+            "event_id": "sevt_016cpz1G7md7HG4aDkysVnK7",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 197727,
+            "event_id": "sevt_016fEtKKtepXC8jiNTVzETwf",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 237134,
+            "event_id": "sevt_014hLiQFEwvmHWnBDhxJGXhP",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 276541,
+            "event_id": "sevt_011chuMTYxTLcdwXpZDNMWWA",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 315948,
+            "event_id": "sevt_01Te8XwJzuNePChtVxeLj3fE",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 355355,
+            "event_id": "sevt_01QVao4YcoB7v8Cy4NRNg54z",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 394762,
+            "event_id": "sevt_01WwKWrTt7h33BBs4LcVDhn2",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 434169,
+            "event_id": "sevt_01XsdRBiRGwWoS84KLS7dMk5",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 473576,
+            "event_id": "sevt_01XY5m17YqkHU5AfD54PuJYL",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 512983,
+            "event_id": "sevt_01LP4c8oJrHHksoJFWBF7qPg",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 552390,
+            "event_id": "sevt_01CL22D2JZHhXabNKKsJZ1PH",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 591797,
+            "event_id": "sevt_01QRLngYBftKGWdu64ZBy1Jn",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39393,
+            "cache_read_input_tokens": 591811,
+            "event_id": "sevt_017i9Yk5L9c6ne4inkiLm7Uo",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 631204,
+            "event_id": "sevt_01DoRns64RsXwmH3RoK7x8pa",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 670611,
+            "event_id": "sevt_01KioM4YrEgrf36bWrBMnJZi",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 710018,
+            "event_id": "sevt_01JxgJmMnpP2gLgXs9z4UoXN",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 749425,
+            "event_id": "sevt_019DB2SqipUeKkgPP9rP4VKw",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 788832,
+            "event_id": "sevt_011FHgMApRnyEuDt38Hs2Ria",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 828239,
+            "event_id": "sevt_018ccDLwjLnK9jLgXgL87EVe",
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "event_id": "sevt_01T6BpQLXCVikiNKCKVVpwQt",
+            "input_tokens": 1033,
+            "output_tokens": 331,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 40753,
+            "cache_read_input_tokens": 0,
+            "event_id": "sevt_01Fate5nWRKyRebebWUfFz7n",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 40753,
+            "event_id": "sevt_01NkwDtcTsH6vPzSJEdWfwBG",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 80160,
+            "event_id": "sevt_01YMECiBUzfvr1vzro9ou7t8",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 119567,
+            "event_id": "sevt_01E3igvX9i51uYGqUHvithDY",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 158974,
+            "event_id": "sevt_01JtdxisGRxNmfq7LdSEq9YG",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 198381,
+            "event_id": "sevt_016zXXnGfBgKq8kwXKtf342b",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 237788,
+            "event_id": "sevt_01JjiCCBmGjt2mJucEiSbjKE",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 277195,
+            "event_id": "sevt_01XZTKJBLbeCu9fgWVF3guDj",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 316602,
+            "event_id": "sevt_01K3zhpVTs4CxDKnk5ErKyNn",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 356009,
+            "event_id": "sevt_014wnKLBg9yfCHCCp5NBebcJ",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 395416,
+            "event_id": "sevt_01WSYmDE43a8U41zZjWVqv1S",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 434823,
+            "event_id": "sevt_01CLaj4MQ1toZue4pAw1ENkN",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 474230,
+            "event_id": "sevt_01CmgvAd2xSXu3xhxoZFBjWd",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 513637,
+            "event_id": "sevt_01QHcJWpEDH35cTkJP53gNov",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 553044,
+            "event_id": "sevt_019AtQCqVZSXxKaQfsJLARY4",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 592451,
+            "event_id": "sevt_01HuijWSBbhbj315yrTDK4Xw",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 631858,
+            "event_id": "sevt_01DAhWWY6QwM6w6UXYh5icBY",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 671265,
+            "event_id": "sevt_01YYP5nCzdUYxnu4nm97zeLM",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 710672,
+            "event_id": "sevt_01UGwse6RjfGbFkBgv6QrA75",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 750079,
+            "event_id": "sevt_01NfmJ5Q6YpS9Zs9Ls1CNQFV",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 789486,
+            "event_id": "sevt_017MBg6PVTUsc12JtCCVgzTz",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 828893,
+            "event_id": "sevt_01EJa5euHRDh24WcEEhArZyT",
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "event_id": "sevt_019665QYD5BhvkPChZfLEEhi",
+            "input_tokens": 1083,
+            "output_tokens": 269,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 40741,
+            "cache_read_input_tokens": 0,
+            "event_id": "sevt_01AWXESRw5guxEACwgACVWHc",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 40741,
+            "event_id": "sevt_011bgme4k4GEFCSyXvvEDqZB",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 80148,
+            "event_id": "sevt_01B8bYVJYBMxyfne6AV163C3",
+            "input_tokens": 3,
+            "output_tokens": 40,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39433,
+            "cache_read_input_tokens": 119555,
+            "event_id": "sevt_019uT5aD3QsvTt3TZaCVkVDd",
+            "input_tokens": 3,
+            "output_tokens": 40,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39433,
+            "cache_read_input_tokens": 158988,
+            "event_id": "sevt_01Tixkf244xhn3Nk5347pET2",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 198421,
+            "event_id": "sevt_015j8L3QG9yzMZ22HVYVtWrJ",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 237828,
+            "event_id": "sevt_01J7sQ5WrKrySQsCRGCiA3FM",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 277235,
+            "event_id": "sevt_01L68FSP2zYjGuxh8arU4Bqo",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 316642,
+            "event_id": "sevt_01GhbD8HsUv6eTp5AjnCY5ce",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 356049,
+            "event_id": "sevt_01NGwTWsXPQ7ykrHiaPzcj5S",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 395456,
+            "event_id": "sevt_011qdPRq4G3buVgVHh7jALpL",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 434863,
+            "event_id": "sevt_01UUxHxqmhkG8pEik5DYF31k",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 474270,
+            "event_id": "sevt_01NMhj33bzXExKgYAvu75xhL",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 513677,
+            "event_id": "sevt_019sB4JMZzwrrG6pU6wQKYdZ",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 553084,
+            "event_id": "sevt_01SGmBvA7oGLRW2HGpbWne2M",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39407,
+            "cache_read_input_tokens": 592491,
+            "event_id": "sevt_01EAp5NFRmpVCiR4ZExAFa4G",
+            "input_tokens": 3,
+            "output_tokens": 14,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 34,
+            "cache_read_input_tokens": 631898,
+            "event_id": "sevt_01Xnh2G2ndkuJhas69ffdLsN",
+            "input_tokens": 3,
+            "output_tokens": 13,
+            "speed": null
+          }
+        ]
+      },
+      "filler_bytes_per_turn": 90000,
+      "model": "claude-opus-4-6",
+      "session_id": "sesn_01HibtefzcKjxrNmPBYZ4iLv",
+      "termination_errors": []
+    }
+  },
+  "run_name": "clevin-swarm-A-20260828T022821Z-997b2d",
+  "started_at": "2026-08-28T02:28:21.808978+00:00"
+}
