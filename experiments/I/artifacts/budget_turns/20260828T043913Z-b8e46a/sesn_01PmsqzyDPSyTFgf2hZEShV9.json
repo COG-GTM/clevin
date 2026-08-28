@@ -1,0 +1,1339 @@
+{
+  "session_id": "sesn_01PmsqzyDPSyTFgf2hZEShV9",
+  "collected_at": "2026-08-28T04:39:46.094853+00:00",
+  "correlation_keys": {
+    "agent_id": "agent_01DxT5gsex9BziaE3oKmC8Nr",
+    "agent_version": 1,
+    "model": {
+      "id": "claude-haiku-4-5",
+      "effort": null,
+      "inference_geo": null,
+      "speed": "standard"
+    },
+    "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+    "deployment_id": null,
+    "metadata": {
+      "experiment": "clevin-swarm-I",
+      "label": "budget-turns",
+      "run_id": "20260828T043913Z-b8e46a"
+    },
+    "status": "idle",
+    "resources": []
+  },
+  "event_counts": {
+    "agent.message": 10,
+    "agent.thinking": 10,
+    "session.status_idle": 6,
+    "session.status_running": 6,
+    "session.thread_status_idle": 6,
+    "session.thread_status_running": 6,
+    "session.usage": 6,
+    "span.model_request_end": 10,
+    "span.model_request_start": 10,
+    "user.message": 11
+  },
+  "event_total": 81,
+  "status_transitions": [
+    {
+      "type": "session.status_running",
+      "at": "2026-08-28T04:39:14.584064Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.thread_status_running",
+      "at": "2026-08-28T04:39:14.805723Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "at": "2026-08-28T04:39:16.646632Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.status_idle",
+      "at": "2026-08-28T04:39:16.646634Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.status_running",
+      "at": "2026-08-28T04:39:19.146510Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.thread_status_running",
+      "at": "2026-08-28T04:39:19.146511Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "at": "2026-08-28T04:39:21.776770Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.status_idle",
+      "at": "2026-08-28T04:39:21.776772Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.status_running",
+      "at": "2026-08-28T04:39:24.343672Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.thread_status_running",
+      "at": "2026-08-28T04:39:24.343673Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "at": "2026-08-28T04:39:26.732568Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.status_idle",
+      "at": "2026-08-28T04:39:26.732570Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.status_running",
+      "at": "2026-08-28T04:39:29.567354Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.thread_status_running",
+      "at": "2026-08-28T04:39:29.567355Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "at": "2026-08-28T04:39:32.471608Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.status_idle",
+      "at": "2026-08-28T04:39:32.471610Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.status_running",
+      "at": "2026-08-28T04:39:34.789396Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.thread_status_running",
+      "at": "2026-08-28T04:39:34.789397Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "at": "2026-08-28T04:39:37.267572Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.status_idle",
+      "at": "2026-08-28T04:39:37.267574Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.status_running",
+      "at": "2026-08-28T04:39:39.979973Z",
+      "session_thread_id": null,
+      "agent_name": null
+    },
+    {
+      "type": "session.thread_status_running",
+      "at": "2026-08-28T04:39:39.979974Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.thread_status_idle",
+      "at": "2026-08-28T04:39:41.204859Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a"
+    },
+    {
+      "type": "session.status_idle",
+      "at": "2026-08-28T04:39:41.204861Z",
+      "session_thread_id": null,
+      "agent_name": null
+    }
+  ],
+  "model_spans": [
+    {
+      "start_event_id": "sevt_01P2B5Ddh12p5yZ9hTNWwBuk",
+      "end_event_id": "sevt_01Hq4SG6En2UWiFCvfhz1pHL",
+      "started_at": "2026-08-28T04:39:14.889795Z",
+      "ended_at": "2026-08-28T04:39:16.542340Z",
+      "latency_s": 1.6525449752807617,
+      "is_error": false,
+      "input_tokens": 568,
+      "output_tokens": 102,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_015Hd4fi8aVd3KYkMMWduP8N",
+      "end_event_id": "sevt_01No8RyFY9jf9TxZCWwuLokb",
+      "started_at": "2026-08-28T04:39:19.234569Z",
+      "ended_at": "2026-08-28T04:39:20.535656Z",
+      "latency_s": 1.3010869026184082,
+      "is_error": false,
+      "input_tokens": 598,
+      "output_tokens": 83,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_01JCq6jaSjdzB7rP8VKMabLZ",
+      "end_event_id": "sevt_01YWspYFUm8hNVDZ7hB41Bmf",
+      "started_at": "2026-08-28T04:39:20.670385Z",
+      "ended_at": "2026-08-28T04:39:21.683457Z",
+      "latency_s": 1.0130720138549805,
+      "is_error": false,
+      "input_tokens": 628,
+      "output_tokens": 77,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_01Y6scKkYCBUDFtasrpPqpm8",
+      "end_event_id": "sevt_013E9MHWuqjxujRTMwNHwBrr",
+      "started_at": "2026-08-28T04:39:24.440846Z",
+      "ended_at": "2026-08-28T04:39:25.339690Z",
+      "latency_s": 0.8988440036773682,
+      "is_error": false,
+      "input_tokens": 658,
+      "output_tokens": 50,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_01FPSJJN8nUrYDHZBEeLs2J7",
+      "end_event_id": "sevt_01QvJjsUdNKMSwfxVxiVY19U",
+      "started_at": "2026-08-28T04:39:25.459448Z",
+      "ended_at": "2026-08-28T04:39:26.615647Z",
+      "latency_s": 1.1561989784240723,
+      "is_error": false,
+      "input_tokens": 688,
+      "output_tokens": 67,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_01C19UubTvpSb5v7Mo4a42SY",
+      "end_event_id": "sevt_012wvLnqp4pDgt8ZXp7jKRDP",
+      "started_at": "2026-08-28T04:39:29.659182Z",
+      "ended_at": "2026-08-28T04:39:30.850597Z",
+      "latency_s": 1.1914148330688477,
+      "is_error": false,
+      "input_tokens": 718,
+      "output_tokens": 81,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_012YUKx7eZ2z7nDdrMnMV1AT",
+      "end_event_id": "sevt_01Rm3u34qTwviMUwwgrRMzWu",
+      "started_at": "2026-08-28T04:39:30.953927Z",
+      "ended_at": "2026-08-28T04:39:32.377820Z",
+      "latency_s": 1.4238929748535156,
+      "is_error": false,
+      "input_tokens": 748,
+      "output_tokens": 91,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_01RAXNhFn29iinx5xredvXi9",
+      "end_event_id": "sevt_01NfZ34mR4ZRRLmhrRbgrV8h",
+      "started_at": "2026-08-28T04:39:34.866802Z",
+      "ended_at": "2026-08-28T04:39:35.975952Z",
+      "latency_s": 1.1091499328613281,
+      "is_error": false,
+      "input_tokens": 778,
+      "output_tokens": 70,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_015BEubRdacjqrVY5BWaLxac",
+      "end_event_id": "sevt_01W4oZ6kd5fbhsBrYCqXZdpN",
+      "started_at": "2026-08-28T04:39:36.105155Z",
+      "ended_at": "2026-08-28T04:39:37.127761Z",
+      "latency_s": 1.0226058959960938,
+      "is_error": false,
+      "input_tokens": 808,
+      "output_tokens": 65,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    },
+    {
+      "start_event_id": "sevt_018NryL2HsBmc3SSRvaJW9W8",
+      "end_event_id": "sevt_01NPTo5wbxSVpLrgTYaBXKfW",
+      "started_at": "2026-08-28T04:39:40.068088Z",
+      "ended_at": "2026-08-28T04:39:41.007204Z",
+      "latency_s": 0.9391160011291504,
+      "is_error": false,
+      "input_tokens": 838,
+      "output_tokens": 67,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "speed": null,
+      "start_event_present": true
+    }
+  ],
+  "tool_calls": [],
+  "compactions": [],
+  "errors": [],
+  "threads": [
+    {
+      "id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "parent_thread_id": null,
+      "agent": {
+        "id": "agent_01DxT5gsex9BziaE3oKmC8Nr",
+        "description": "workstream I budget-enforcement probe",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-haiku-4-5",
+          "effort": null,
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+        "skills": [],
+        "system": "Answer in one short sentence. Never use tools.",
+        "tools": [],
+        "type": "agent",
+        "version": 1
+      },
+      "status": "idle",
+      "created_at": "2026-08-28T04:39:14.300176Z",
+      "stats": {
+        "active_seconds": 12.639000000000001,
+        "duration_seconds": 31.671698815,
+        "startup_seconds": 0.0
+      },
+      "list_cost_usd": 0.01,
+      "usage": {
+        "active_seconds": 12.639000000000001,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 7030,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 753,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "event_counts": {
+        "agent.message": 10,
+        "agent.thinking": 10,
+        "session.status_idle": 6,
+        "session.status_running": 6,
+        "session.thread_status_idle": 6,
+        "session.thread_status_running": 6,
+        "session.usage": 6,
+        "span.model_request_end": 10,
+        "span.model_request_start": 10,
+        "user.message": 11
+      },
+      "event_count": 81
+    }
+  ],
+  "usage_snapshots": [
+    {
+      "at": "2026-08-28T04:39:16.646633Z",
+      "list_cost_usd": 0.0,
+      "input_tokens": 568,
+      "output_tokens": 102,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "active_seconds": 1.842,
+      "budget_usd": 0.01
+    },
+    {
+      "at": "2026-08-28T04:39:21.776771Z",
+      "list_cost_usd": 0.0,
+      "input_tokens": 1794,
+      "output_tokens": 262,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "active_seconds": 4.691,
+      "budget_usd": 0.01
+    },
+    {
+      "at": "2026-08-28T04:39:26.732569Z",
+      "list_cost_usd": 0.01,
+      "input_tokens": 3140,
+      "output_tokens": 379,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "active_seconds": 7.304,
+      "budget_usd": 0.01
+    },
+    {
+      "at": "2026-08-28T04:39:32.471609Z",
+      "list_cost_usd": 0.01,
+      "input_tokens": 4606,
+      "output_tokens": 551,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "active_seconds": 10.414,
+      "budget_usd": 0.01
+    },
+    {
+      "at": "2026-08-28T04:39:37.267573Z",
+      "list_cost_usd": 0.01,
+      "input_tokens": 6192,
+      "output_tokens": 686,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "active_seconds": 13.067,
+      "budget_usd": 0.01
+    },
+    {
+      "at": "2026-08-28T04:39:41.204860Z",
+      "list_cost_usd": 0.01,
+      "input_tokens": 7030,
+      "output_tokens": 753,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "active_seconds": 14.493,
+      "budget_usd": 0.01
+    }
+  ],
+  "work_items": [],
+  "work_stats": {},
+  "sandbox": {},
+  "economics": {
+    "session_list_cost_usd": 0.01,
+    "thread_list_cost_usd": {
+      "sthr_011tuwnoAYtTtfs3JPAe41nq": 0.01
+    },
+    "thread_list_cost_sum_usd": 0.01,
+    "session_minus_thread_sum_usd": 0.0,
+    "session_usage_tokens": {
+      "input": 7030,
+      "output": 753,
+      "cache_read": 0,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      }
+    },
+    "span_token_sums": {
+      "input": 7030,
+      "output": 753,
+      "cache_read": 0,
+      "cache_creation": 0,
+      "spans": 10
+    },
+    "prompt_cache_read_fraction_of_input": 0.0,
+    "active_seconds": 14.733,
+    "stats": {
+      "active_seconds": 12.639000000000001,
+      "duration_seconds": 31.329924208
+    },
+    "budget_usd": 0.01,
+    "final_usage_snapshot_usd": 0.01,
+    "usage_snapshot_count": 6
+  },
+  "gaps": [],
+  "raw_events": [
+    {
+      "id": "sevt_01H9Vj5F3vAirNP4MBnj9EQa",
+      "processed_at": "2026-08-28T04:39:14.584064Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_01WMUw5xRSHyC3j9A2JFbT8S",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:14.805723Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01K98NAZsY34w1t3m4XyMHGa",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 0. Reply 'ok 0'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:14.889794Z"
+    },
+    {
+      "id": "sevt_01P2B5Ddh12p5yZ9hTNWwBuk",
+      "processed_at": "2026-08-28T04:39:14.889795Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01D4sbZSutWCvVJuFSUgAho6",
+      "processed_at": "2026-08-28T04:39:16.341438Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01PaRXdynaT9nU29EGrTteVF",
+      "content": [
+        {
+          "text": "ok 0",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:16.542339Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01Hq4SG6En2UWiFCvfhz1pHL",
+      "is_error": false,
+      "model_request_start_id": "sevt_01P2B5Ddh12p5yZ9hTNWwBuk",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 568,
+        "output_tokens": 102,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:16.542340Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01R4JiUDth5WwUtXmuNXw4vG",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:16.646632Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01WxaVfmBu5csMLn4KqAGEqT",
+      "processed_at": "2026-08-28T04:39:16.646633Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 1.842,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 568,
+        "list_cost": {
+          "amount": "0",
+          "currency": "USD"
+        },
+        "output_tokens": 102,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01QLKVnJvRqfjnEDt7aZ6HBd",
+      "processed_at": "2026-08-28T04:39:16.646634Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    },
+    {
+      "id": "sevt_01TL2SeSzG6NCXQrFexcppse",
+      "processed_at": "2026-08-28T04:39:19.146510Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_01Ev21oxXNBRR2FE7ReBRAnw",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:19.146511Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_014emX9YjgUW1sdAKDtZMVmS",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 2. Reply 'ok 2'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:19.234568Z"
+    },
+    {
+      "id": "sevt_015Hd4fi8aVd3KYkMMWduP8N",
+      "processed_at": "2026-08-28T04:39:19.234569Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_015f4AcYL4HUqNybUyX79aNu",
+      "processed_at": "2026-08-28T04:39:20.481583Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01STbPnkANzhBC8h1JTu1JoK",
+      "content": [
+        {
+          "text": "ok 2",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:20.535655Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01No8RyFY9jf9TxZCWwuLokb",
+      "is_error": false,
+      "model_request_start_id": "sevt_015Hd4fi8aVd3KYkMMWduP8N",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 598,
+        "output_tokens": 83,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:20.535656Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01PRgYFxCTrdGyqNs65jzGZh",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 3. Reply 'ok 3'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:20.670384Z"
+    },
+    {
+      "id": "sevt_01JCq6jaSjdzB7rP8VKMabLZ",
+      "processed_at": "2026-08-28T04:39:20.670385Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01M3BncBpe7irnYXzNHxUJTB",
+      "processed_at": "2026-08-28T04:39:21.611091Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_012PPHiTn7bL248aBtZRevHm",
+      "content": [
+        {
+          "text": "ok 3",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:21.683456Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01YWspYFUm8hNVDZ7hB41Bmf",
+      "is_error": false,
+      "model_request_start_id": "sevt_01JCq6jaSjdzB7rP8VKMabLZ",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 628,
+        "output_tokens": 77,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:21.683457Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01GiB6xNHGpKHaAdiRmjF6j7",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:21.776770Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01SF25hRNmGd31XFGsXeFuRK",
+      "processed_at": "2026-08-28T04:39:21.776771Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 4.691,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 1794,
+        "list_cost": {
+          "amount": "0",
+          "currency": "USD"
+        },
+        "output_tokens": 262,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01FtMiTHxvDk3EAYmmgJH3gT",
+      "processed_at": "2026-08-28T04:39:21.776772Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    },
+    {
+      "id": "sevt_01JEPuyBEvSoVLG5VhU3GdWw",
+      "processed_at": "2026-08-28T04:39:24.343672Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_01SUsu5sTkQAA4HSgka7sGcN",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:24.343673Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01PpkfzySPFwVdL1WjxiZMBR",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 4. Reply 'ok 4'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:24.440845Z"
+    },
+    {
+      "id": "sevt_01Y6scKkYCBUDFtasrpPqpm8",
+      "processed_at": "2026-08-28T04:39:24.440846Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01Jc1fjWjYUeAjVtCo1iuZUq",
+      "processed_at": "2026-08-28T04:39:25.279125Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01BohbNAvL9cTW3Xu2Gh127j",
+      "content": [
+        {
+          "text": "ok 4",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:25.339689Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_013E9MHWuqjxujRTMwNHwBrr",
+      "is_error": false,
+      "model_request_start_id": "sevt_01Y6scKkYCBUDFtasrpPqpm8",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 658,
+        "output_tokens": 50,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:25.339690Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01JoGHY7gbXTee6jr1914yZi",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 5. Reply 'ok 5'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:25.459447Z"
+    },
+    {
+      "id": "sevt_01FPSJJN8nUrYDHZBEeLs2J7",
+      "processed_at": "2026-08-28T04:39:25.459448Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01ConM5CCyb5mFtKU45MyZMX",
+      "processed_at": "2026-08-28T04:39:26.542988Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01NoGid7V6fcfknqccVFJEEF",
+      "content": [
+        {
+          "text": "ok 5",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:26.615646Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01QvJjsUdNKMSwfxVxiVY19U",
+      "is_error": false,
+      "model_request_start_id": "sevt_01FPSJJN8nUrYDHZBEeLs2J7",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 688,
+        "output_tokens": 67,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:26.615647Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01AAr4F4Yrz6VBsWfgmFAQAV",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:26.732568Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01K199MoQ28ciAueLCk152XH",
+      "processed_at": "2026-08-28T04:39:26.732569Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 7.304,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 3140,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 379,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_016QwC86nqN24P4eVpM9agYx",
+      "processed_at": "2026-08-28T04:39:26.732570Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    },
+    {
+      "id": "sevt_01XS2zxzqGbsPxC6arstgU7u",
+      "processed_at": "2026-08-28T04:39:29.567354Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_01WBNhjDmpN3uy3LHb9xQqX1",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:29.567355Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_0165Us3GgRYoBoTTLW31Gdub",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 6. Reply 'ok 6'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:29.659181Z"
+    },
+    {
+      "id": "sevt_01C19UubTvpSb5v7Mo4a42SY",
+      "processed_at": "2026-08-28T04:39:29.659182Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_0197sTosACi3W5rxjRp6jRqR",
+      "processed_at": "2026-08-28T04:39:30.792277Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01P2BU9jR2mU6dwUZk5etiNd",
+      "content": [
+        {
+          "text": "ok 6",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:30.850596Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_012wvLnqp4pDgt8ZXp7jKRDP",
+      "is_error": false,
+      "model_request_start_id": "sevt_01C19UubTvpSb5v7Mo4a42SY",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 718,
+        "output_tokens": 81,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:30.850597Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01QwkuWr5RdEGiSd4G5rnE86",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 7. Reply 'ok 7'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:30.953926Z"
+    },
+    {
+      "id": "sevt_012YUKx7eZ2z7nDdrMnMV1AT",
+      "processed_at": "2026-08-28T04:39:30.953927Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01NFas3BbyujzW9ucr386mR7",
+      "processed_at": "2026-08-28T04:39:32.317184Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01MLwkccLU3bqDdnhoN44juF",
+      "content": [
+        {
+          "text": "ok 7",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:32.377819Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01Rm3u34qTwviMUwwgrRMzWu",
+      "is_error": false,
+      "model_request_start_id": "sevt_012YUKx7eZ2z7nDdrMnMV1AT",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 748,
+        "output_tokens": 91,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:32.377820Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01VW4s2S5LgNkzvRC7KJskiX",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:32.471608Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01VxAYfXbouUpYhDxoxdBb4N",
+      "processed_at": "2026-08-28T04:39:32.471609Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 10.414,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 4606,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 551,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01XE5u4EfvUJMSSoAZ8gTzdp",
+      "processed_at": "2026-08-28T04:39:32.471610Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    },
+    {
+      "id": "sevt_01XjExXriKrXcZ6yEAx57u8q",
+      "processed_at": "2026-08-28T04:39:34.789396Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_01MZXE616vwbYgr1Fck4vKnJ",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:34.789397Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01DCXDwGhbEz1EtXQDkD58gq",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 8. Reply 'ok 8'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:34.866801Z"
+    },
+    {
+      "id": "sevt_01RAXNhFn29iinx5xredvXi9",
+      "processed_at": "2026-08-28T04:39:34.866802Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01RnrpHA4tD51L368bd1BN63",
+      "processed_at": "2026-08-28T04:39:35.917865Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01PDKMLhLouiyWVD7QCbWnQs",
+      "content": [
+        {
+          "text": "ok 8",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:35.975951Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01NfZ34mR4ZRRLmhrRbgrV8h",
+      "is_error": false,
+      "model_request_start_id": "sevt_01RAXNhFn29iinx5xredvXi9",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 778,
+        "output_tokens": 70,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:35.975952Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01LB6EFERuHtfXndMt9UoBqt",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 9. Reply 'ok 9'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:36.105154Z"
+    },
+    {
+      "id": "sevt_015BEubRdacjqrVY5BWaLxac",
+      "processed_at": "2026-08-28T04:39:36.105155Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01KezwyeeJuDdr4MfbJUjuTv",
+      "processed_at": "2026-08-28T04:39:37.073650Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01KmhT97bsH2eAoYMSJ8AUXP",
+      "content": [
+        {
+          "text": "ok 9",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:37.127760Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01W4oZ6kd5fbhsBrYCqXZdpN",
+      "is_error": false,
+      "model_request_start_id": "sevt_015BEubRdacjqrVY5BWaLxac",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 808,
+        "output_tokens": 65,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:37.127761Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01EKVY3k9ompCf2mL1YfvLyd",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:37.267572Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01CN6ndLSgn3JZcKfvW74Cuu",
+      "processed_at": "2026-08-28T04:39:37.267573Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 13.067,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 6192,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 686,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01HzMwvxMS9ibmBzUD24M6qo",
+      "processed_at": "2026-08-28T04:39:37.267574Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    },
+    {
+      "id": "sevt_01DeJs8AhNqVZtwwyT24A5xW",
+      "processed_at": "2026-08-28T04:39:39.979973Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_014G1M5D5WKEgFgSDJNdJXoX",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:39.979974Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01UKGNSxtKuwR1X1tcJZ1XR1",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 10. Reply 'ok 10'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:40.068087Z"
+    },
+    {
+      "id": "sevt_018NryL2HsBmc3SSRvaJW9W8",
+      "processed_at": "2026-08-28T04:39:40.068088Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01J96r5mrun2GATPfymPXPZy",
+      "processed_at": "2026-08-28T04:39:40.934092Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01LseTcq3aJEJ1VMiUHTNxFU",
+      "content": [
+        {
+          "text": "ok 10",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T04:39:41.007203Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01NPTo5wbxSVpLrgTYaBXKfW",
+      "is_error": false,
+      "model_request_start_id": "sevt_018NryL2HsBmc3SSRvaJW9W8",
+      "model_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 838,
+        "output_tokens": 67,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T04:39:41.007204Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_017KUuiyq2Mvwjf431jjvWSk",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST budget probe turn 11. Reply 'ok 11'.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T04:39:41.119608Z"
+    },
+    {
+      "id": "sevt_011hGxzB5EYAR9FZYgR3mg2n",
+      "agent_name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "processed_at": "2026-08-28T04:39:41.204859Z",
+      "session_thread_id": "sthr_011tuwnoAYtTtfs3JPAe41nq",
+      "stop_reason": {
+        "type": "budget_reached"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01P4sKSaw8AxF5pSoWcEZBjs",
+      "processed_at": "2026-08-28T04:39:41.204860Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 14.493,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 7030,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 753,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_0128gJ7LQ58Cf7qoGWzmgpnx",
+      "processed_at": "2026-08-28T04:39:41.204861Z",
+      "stop_reason": {
+        "type": "budget_reached"
+      },
+      "type": "session.status_idle"
+    }
+  ]
+}
