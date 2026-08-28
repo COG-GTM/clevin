@@ -16,7 +16,7 @@ dispatched 2026-08-28; B, I, J gated.
 | F | Built-in subagents | **merged** (PR #13) | `F-builtin-subagents.md` |
 | H | Deployments & automation | **merged** (PR #8) | `H-deployments-automation.md` |
 | I | Observability & economics | **merged** (PR #15) | `I-observability-and-economics.md` |
-| J | Integrated gauntlet | **merged** (PR #16; self-healing addendum in flight) | `J-integrated-gauntlet.md` |
+| J | Integrated gauntlet | **merged** (PR #16; self-healing addendum PR #18) | `J-integrated-gauntlet.md`, `J-self-healing.md` |
 | K | Devin-parity interaction model | **merged** (PR #10) | `K-parity-interaction.md` |
 
 ## Parity table (current classes)
@@ -31,7 +31,7 @@ Unfilled rows are pending evidence — no class is assigned without it.
 | Builds a plan, then revises it | System prompt + built-in subagents | **A** (behaviour) / no plan artefact | J §2: parent re-planned on a child's contradicting report and rejected its false premise; B: mid-run requirement change absorbed, 0 nudges. F §8: no measurable roster benefit; plan lives only in the transcript |
 | Parallel investigation, then synthesis | Built-in subagents | **A** | F §8: 7 concurrent children, conflicting results synthesised on evidence; depth capped at 1 (sub-subagents D); concurrent-edit conflicts D (last write wins) |
 | Learns across tasks | Memory Store | **C** (session half); **A** (deployment half: recurring runs read/write store) | E §3; H §8. Storage/provenance A; nothing *pulls* knowledge — retrieval is the model grepping the mount |
-| Recovers from crashed sandbox / failed tool | EnvironmentWorker + session APIs + webhooks | **A** (failed tool) / **D** (dead worker, unattended) | C §1–2: tool timeout yields a clean is_error result (A); a killed worker strands the session forever — nothing native notices or re-dispatches (D); manual `SessionToolRunner` re-attach recovers (C-3, class C) |
+| Recovers from crashed sandbox / failed tool | EnvironmentWorker + session APIs + webhooks | **A** (failed tool) / **D** (dead worker, unattended) | C §1–2: tool timeout yields a clean is_error result (A); a killed worker strands the session forever — detection is native (J2: lease expiry ~360 s, `actor: null`; narrow `retry_status: retrying` errors retried) but nothing re-dispatches (D); manual `SessionToolRunner` re-attach recovers (C-3, class C) |
 | Asks for help only when genuinely blocked | System prompt + tool design | **A** (behaviour) / **B** (mechanism) | J §2: exactly 1 ask_human in 666 events, raised only after proving no policy existed; B: 0 nudges in all 10 completed runs. Mechanism needs a declared custom tool + operator loop (B) |
 | Mid-run steering | Session events (user.interrupt, message injection) | **A** (session) / **B** (per-child) | K1: user.interrupt + user.message re-plans with full awareness; bare user.message rejected mid-tool-call. A: interrupt stops generation cleanly. Per-child interrupt named by platform, unexecuted (balance; F §9) |
 | Ask-and-block, resume with workspace intact | Session idle state + worker lease/idle timeout | **B** | K2: answered after 15 and 75 min (sandbox torn down at 3600 s, volume file intact), resume 0.2 s, $18/945 s; waiting-on-human only detectable by matching stop_reason.event_ids to agent.custom_tool_use |
@@ -71,8 +71,12 @@ Unfilled rows are pending evidence — no class is assigned without it.
   no per-path ACL, no subagent attribution (E).
 - Deployments: no concurrency control, no run retry/backoff, no session continuation across fires,
   no external event ingress, no sub-minute schedules (H-10–14).
-- Dead-worker detection/re-dispatch: none — a session whose worker dies mid-tool-call sits in
-  `requires_action` forever; recovery requires an external re-attach (C-2/C-3).
+- Dead-worker recovery: the loop is self-diagnosing, not self-healing (J2). Detection is native
+  (lease expiry ~360 s after last heartbeat, `actor: null`) and narrow transient errors are
+  retried (`retry_status: retrying`), but nothing re-dispatches — reclaiming polls re-offer
+  nothing, webhook replay spawns nothing, and a `billing_error`-exhausted session stays inert
+  after the balance returns. The session sits in `requires_action` forever; recovery requires an
+  external re-attach (C-2/C-3, J2-3/J2-4).
 - Exactly-once tool side effects across a worker crash: at-least-once only (C-5).
 - Mid-session update surface is tools/MCPs only; model/system/Skills/subagents are immutable
   mid-session (A).
@@ -117,7 +121,8 @@ What reaches parity through pure configuration or native extension points (A/B):
 
 What caps the ceiling (irreducible D, or C with model-dependent behaviour):
 1. **Unattended durability is the hardest cap.** A dead worker strands a session in
-   `requires_action` forever; nothing native notices or re-dispatches (C-2). "Ticket in →
+   `requires_action` forever; detection is native (~360 s lease expiry) but nothing re-dispatches
+   (C-2, J2). "Ticket in →
    CI-green PR out, unattended" is therefore capped at C regardless of how well the happy path
    works: any mid-run infrastructure failure silently kills the run.
 2. **No event ingress.** Wake-on-event is polling at ≥1-minute granularity with per-fire amnesia;
