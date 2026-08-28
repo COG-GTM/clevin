@@ -1,0 +1,40 @@
+{
+ "final_cleanup": [
+  {
+   "resource": "memstore_01Q8reagRpo6tGSoAp3KnWmG",
+   "name": "clevin-swarm-E-20260828T021157Z-bce810-smoke",
+   "action": "memory_stores.delete",
+   "result": "deleted"
+  },
+  {
+   "resource": "agent_01JG15oTwARP4rLDaW3yk2sg",
+   "name": "clevin-swarm-E-20260828T022353Z-11f44b-versioned",
+   "action": "agents.archive",
+   "result": "archived"
+  },
+  {
+   "resource": "agent_01G3BGBVRyf5aNCRAEy89fvu",
+   "name": "clevin-swarm-E-20260828T022255Z-402003-coordinator",
+   "action": "agents.archive",
+   "result": "archived"
+  },
+  {
+   "resource": "agent_01CdwiChaRXqu61HMNwjJjh4",
+   "name": "clevin-swarm-E-20260828T022255Z-c239d0-writer-2",
+   "action": "agents.archive",
+   "result": "archived"
+  },
+  {
+   "resource": "agent_018hjT1gQawt61G2Yhx5wAEt",
+   "name": "clevin-swarm-E-20260828T022255Z-5a7c0e-writer-1",
+   "action": "agents.archive",
+   "result": "archived"
+  },
+  {
+   "resource": "agent_01QuMHurRb3193oeRYFYaYLi",
+   "name": "clevin-swarm-E-20260828T021145Z-a61976-probe-agent",
+   "action": "agents.archive",
+   "result": "archived"
+  }
+ ]
+}

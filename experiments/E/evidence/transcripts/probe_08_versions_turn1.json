@@ -1,0 +1,81 @@
+{
+  "label": "probe_08_versions_turn1",
+  "session_id": "sesn_011BjJkiV67A5az7yyVVZy1c",
+  "saved_at": "2026-08-28T02:28:52.202828+00:00",
+  "events": [
+    {
+      "id": "sevt_019m49zpELKPeo8cNVUxH12A",
+      "type": "session.status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_01PCi3oXAbvWtuFP35pfi4fF",
+      "type": "user.message",
+      "text": "CLEVIN_SMOKE_TEST Run no tools. Quote verbatim the block of your\nsystem prompt that lists the attached memory stores and any per-store instructions.\n"
+    },
+    {
+      "id": "sevt_01VqdV8JpyAju6ox4FhLGr4M",
+      "type": "session.thread_status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_014Qqf9SeR2ZWTpoaaJzFTj8",
+      "type": "span.model_request_start",
+      "text": ""
+    },
+    {
+      "id": "sevt_01CsVVoQDAD2nU2Wmx4eNwqd",
+      "type": "agent.thinking",
+      "text": ""
+    },
+    {
+      "id": "sevt_01TrrqjtK2GMfneLze6Joxrg",
+      "type": "agent.message",
+      "text": "Here is that block, quoted verbatim:\n\n```\nAvailable stores (write only inside the directories listed below):\n - \"clevin-swarm-E-20260828T022834Z-53577a-versions\" \u2192 /mnt/memory/clevin-swarm-e-20260828t022834z-53577a-versions/ (read-write): Store shared by two agent versions (probe 08).\n   VERSION-A instructions: file facts under repos/&lt;repo-name&gt;/.\n```"
+    },
+    {
+      "id": "sevt_014xADdzmVow26mCh5YcgCPN",
+      "type": "span.model_request_end",
+      "text": "",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01MzgcfK35kF8UcjD2z7ugZ8",
+      "type": "session.thread_status_idle",
+      "text": ""
+    },
+    {
+      "id": "sevt_01VXy2rBWkz45yxLWkn59yRg",
+      "type": "session.usage",
+      "text": "",
+      "usage": {
+        "active_seconds": 3.452,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3993
+        },
+        "cache_read_input_tokens": 4613,
+        "input_tokens": 1,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 210,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "id": "sevt_01S3Y4TwBCD9XaFzj1o9vnbp",
+      "type": "session.status_idle",
+      "text": ""
+    },
+    {
+      "id": null,
+      "type": "session.idle",
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "label": "probe_08_versions_pinned_v1",
+  "session_id": "sesn_01TkUCM7ZQ6Qte5ZWum1qYFz",
+  "saved_at": "2026-08-28T02:29:25.197640+00:00",
+  "events": [
+    {
+      "id": "sevt_017Ej9qYfjh8UCQfXwkGg9q1",
+      "type": "session.status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_01WfJAYyPtnWiHu6g12tWz45",
+      "type": "user.message",
+      "text": "CLEVIN_SMOKE_TEST Run no tools. Quote verbatim the block of your\nsystem prompt that lists the attached memory stores and any per-store instructions.\n"
+    },
+    {
+      "id": "sevt_01K3N18XAE15JYXT1w23CXRm",
+      "type": "session.thread_status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_01Y6Qk4DYAvufLPRWwmFPvb3",
+      "type": "span.model_request_start",
+      "text": ""
+    },
+    {
+      "id": "sevt_018Vxo9yeDBCSFFkzfsftgnd",
+      "type": "agent.thinking",
+      "text": ""
+    },
+    {
+      "id": "sevt_01QP6D5S6nnckg37YAtiuP6z",
+      "type": "agent.message",
+      "text": "Available stores (write only inside the directories listed below):\n - \"clevin-swarm-E-20260828T022834Z-53577a-versions\" \u2192 /mnt/memory/clevin-swarm-e-20260828t022834z-53577a-versions/ (read-only): Store shared by two agent versions (probe 08).\n   VERSION-B instructions: this attachment is read-only."
+    },
+    {
+      "id": "sevt_01SiZtF1Ts4wegFhvLQuypjw",
+      "type": "span.model_request_end",
+      "text": "",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01JR2FDXbrcJdxkMiKokqPyZ",
+      "type": "session.thread_status_idle",
+      "text": ""
+    },
+    {
+      "id": "sevt_01Qvdo4x8he7m3QVBQdjVPmv",
+      "type": "session.usage",
+      "text": "",
+      "usage": {
+        "active_seconds": 3.4,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3981
+        },
+        "cache_read_input_tokens": 4613,
+        "input_tokens": 1,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 174,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "id": "sevt_016nd56YhF3kgnFAHY9cgqdU",
+      "type": "session.status_idle",
+      "text": ""
+    },
+    {
+      "id": null,
+      "type": "session.idle",
+      "text": ""
+    }
+  ]
+}

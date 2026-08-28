@@ -1,0 +1,310 @@
+{
+  "probe": "probe_03_provenance",
+  "started_at": "2026-08-28T02:16:07.581340+00:00",
+  "finished_at": "2026-08-28T02:16:34.655787+00:00",
+  "observations": [
+    {
+      "label": "store_created",
+      "at": "2026-08-28T02:16:07.827108+00:00",
+      "id": "memstore_01AAtMLBgf4MpepYUNDJH6NN",
+      "name": "clevin-swarm-E-20260828T021607Z-dcfee9-provenance"
+    },
+    {
+      "label": "api_key_write",
+      "at": "2026-08-28T02:16:08.059732+00:00",
+      "memory_id": "mem_01HZ7hGpDsdKmJ1RdiEPUpgT",
+      "memory_version_id": "memver_01LMjkSsTfu4awFycX1njK6H"
+    },
+    {
+      "label": "agent_write_session",
+      "at": "2026-08-28T02:16:30.855703+00:00",
+      "session_id": "sesn_01PVJpjhZFN9p76YYGx7vJrR",
+      "event_types": [
+        "session.status_running",
+        "user.message",
+        "session.thread_status_running",
+        "span.model_request_start",
+        "agent.thinking",
+        "agent.tool_use",
+        "span.model_request_end",
+        "agent.tool_result",
+        "span.model_request_start",
+        "agent.tool_use",
+        "span.model_request_end",
+        "agent.tool_result",
+        "span.model_request_start",
+        "agent.tool_use",
+        "span.model_request_end",
+        "agent.tool_result",
+        "span.model_request_start",
+        "agent.message",
+        "span.model_request_end",
+        "session.thread_status_idle",
+        "session.usage",
+        "session.status_idle",
+        "session.idle"
+      ],
+      "tool_calls": [
+        {
+          "content": "verified: pnpm verify\nsource: probe_03 agent write PROV-AGENT-5581\n",
+          "file_path": "/mnt/memory/clevin-swarm-e-20260828t021607z-dcfee9-provenance/repos/COG-GTM/clevin/verified-commands.md"
+        },
+        {
+          "command": "ls -la /mnt/memory/clevin-swarm-e-20260828t021607z-dcfee9-provenance/repos/COG-GTM/clevin/verified-commands.md"
+        },
+        {
+          "file_path": "/mnt/memory/clevin-swarm-e-20260828t021607z-dcfee9-provenance/repos/COG-GTM/clevin/verified-commands.md"
+        }
+      ],
+      "assistant_tail": "I wrote the memory file at the absolute path:\n\n**`/mnt/memory/clevin-swarm-e-20260828t021607z-dcfee9-provenance/repos/COG-GTM/clevin/verified-commands.md`**\n\nConfirmation:\n- `ls -la` on that path shows the file exists (67 bytes, created Aug 28 02:16).\n- Reading the file back verbatim returns exactly:\n```\nverified: pnpm verify\nsource: probe_03 agent write PROV-AGENT-5581\n```\n\nThis matches the requested content exactly (two lines, no extra content added). No git, network, or other external-state operations were used \u2014 only the local file write/read tools against the mounted memory store.",
+      "usage": {
+        "session_id": "sesn_01PVJpjhZFN9p76YYGx7vJrR",
+        "status": "idle",
+        "usage": {
+          "active_seconds": 10.644,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 4948
+          },
+          "cache_read_input_tokens": 32093,
+          "input_tokens": 7,
+          "list_cost": {
+            "amount": "3",
+            "currency": "USD"
+          },
+          "output_tokens": 745,
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "post_session_store_listing",
+      "at": "2026-08-28T02:16:31.066439+00:00",
+      "attempt": 0,
+      "paths": [
+        "/repos/COG-GTM/clevin/verified-commands.md",
+        "/operating/api-key-write.md"
+      ]
+    },
+    {
+      "label": "agent_write_visible_via_api",
+      "at": "2026-08-28T02:16:31.066483+00:00",
+      "found": true,
+      "path": "/repos/COG-GTM/clevin/verified-commands.md",
+      "memory_id": "mem_01VVMEmmZkqEgMTzy2jwDzt4",
+      "sha256": "883937fa0a7a920ae94b5fde242b31cc723a3a75812cd930a29f2e14a8f814f2"
+    },
+    {
+      "label": "version_history_full",
+      "at": "2026-08-28T02:16:31.276582+00:00",
+      "versions": [
+        {
+          "id": "memver_01MvQKQY59VDHi1WQ5n38FPL",
+          "created_at": "2026-08-28 02:16:12.408701+00:00",
+          "memory_id": "mem_01VVMEmmZkqEgMTzy2jwDzt4",
+          "operation": "created",
+          "content_sha256": "883937fa0a7a920ae94b5fde242b31cc723a3a75812cd930a29f2e14a8f814f2",
+          "content_size_bytes": 67,
+          "created_by": {
+            "session_id": "sesn_01PVJpjhZFN9p76YYGx7vJrR",
+            "type": "session_actor"
+          },
+          "path": "/repos/COG-GTM/clevin/verified-commands.md",
+          "redacted_at": null,
+          "redacted_by": null
+        },
+        {
+          "id": "memver_01LMjkSsTfu4awFycX1njK6H",
+          "created_at": "2026-08-28 02:16:08.082010+00:00",
+          "memory_id": "mem_01HZ7hGpDsdKmJ1RdiEPUpgT",
+          "operation": "created",
+          "content_sha256": "8e3e23f1e495c4f0c17ce6a6fdb31bf6001164929ea3eeaf6d61c1101b7bd646",
+          "content_size_bytes": 48,
+          "created_by": {
+            "api_key_id": "apikey_01QhJP9ynAowbSVooudArdRd",
+            "type": "api_actor"
+          },
+          "path": "/operating/api-key-write.md",
+          "redacted_at": null,
+          "redacted_by": null
+        }
+      ]
+    },
+    {
+      "label": "version_history_field_names",
+      "at": "2026-08-28T02:16:31.276640+00:00",
+      "fields": [
+        "content",
+        "content_sha256",
+        "content_size_bytes",
+        "created_at",
+        "created_by",
+        "id",
+        "memory_id",
+        "memory_store_id",
+        "operation",
+        "path",
+        "redacted_at",
+        "redacted_by",
+        "type"
+      ]
+    },
+    {
+      "label": "filter_by_session_id",
+      "at": "2026-08-28T02:16:31.463456+00:00",
+      "outcome": "ok",
+      "count": 1,
+      "paths": [
+        "/repos/COG-GTM/clevin/verified-commands.md"
+      ],
+      "created_by": [
+        "BetaManagedAgentsSessionActor(session_id='sesn_01PVJpjhZFN9p76YYGx7vJrR', type='session_actor')"
+      ]
+    },
+    {
+      "label": "filter_by_bogus_session_id",
+      "at": "2026-08-28T02:16:31.684722+00:00",
+      "outcome": "ok",
+      "count": 0,
+      "paths": [],
+      "created_by": []
+    },
+    {
+      "label": "filter_by_operation_created",
+      "at": "2026-08-28T02:16:31.881473+00:00",
+      "outcome": "ok",
+      "count": 2,
+      "paths": [
+        "/repos/COG-GTM/clevin/verified-commands.md",
+        "/operating/api-key-write.md"
+      ],
+      "created_by": [
+        "BetaManagedAgentsSessionActor(session_id='sesn_01PVJpjhZFN9p76YYGx7vJrR', type='session_actor')",
+        "BetaManagedAgentsAPIActor(api_key_id='apikey_01QhJP9ynAowbSVooudArdRd', type='api_actor')"
+      ]
+    },
+    {
+      "label": "filter_by_operation_deleted",
+      "at": "2026-08-28T02:16:32.080341+00:00",
+      "outcome": "ok",
+      "count": 0,
+      "paths": [],
+      "created_by": []
+    },
+    {
+      "label": "filter_by_operation_create_wrong_enum",
+      "at": "2026-08-28T02:16:32.238843+00:00",
+      "outcome": "error",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Failed to parse request: operation: \"create\" is not a valid value; expected one of created, deleted, modified'}, 'request_id': 'req_011CeULnsvcC7RBKGVbfSYha'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "Failed to parse request: operation: \"create\" is not a valid value; expected one of created, deleted, modified"
+    },
+    {
+      "label": "agent_written_content",
+      "at": "2026-08-28T02:16:32.399203+00:00",
+      "content": "verified: pnpm verify\nsource: probe_03 agent write PROV-AGENT-5581\n",
+      "local_sha256": "883937fa0a7a920ae94b5fde242b31cc723a3a75812cd930a29f2e14a8f814f2",
+      "reported_sha256": "883937fa0a7a920ae94b5fde242b31cc723a3a75812cd930a29f2e14a8f814f2"
+    },
+    {
+      "label": "agent_memory_deleted",
+      "at": "2026-08-28T02:16:32.877930+00:00",
+      "memory_id": "mem_01VVMEmmZkqEgMTzy2jwDzt4"
+    },
+    {
+      "label": "lineage_after_delete",
+      "at": "2026-08-28T02:16:33.046996+00:00",
+      "versions": [
+        {
+          "id": "memver_01F1fHP6LY82i146W8fULMzB",
+          "operation": "deleted",
+          "created_by": "BetaManagedAgentsAPIActor(api_key_id='apikey_01QhJP9ynAowbSVooudArdRd', type='api_actor')",
+          "content": null
+        },
+        {
+          "id": "memver_015yMVnwU5n8h4bgr16hMDXA",
+          "operation": "modified",
+          "created_by": "BetaManagedAgentsAPIActor(api_key_id='apikey_01QhJP9ynAowbSVooudArdRd', type='api_actor')",
+          "content": "verified: pnpm verify --frozen-lockfile\nsource: probe_03 operator correction\n"
+        },
+        {
+          "id": "memver_01MvQKQY59VDHi1WQ5n38FPL",
+          "operation": "created",
+          "created_by": "BetaManagedAgentsSessionActor(session_id='sesn_01PVJpjhZFN9p76YYGx7vJrR', type='session_actor')",
+          "content": "verified: pnpm verify\nsource: probe_03 agent write PROV-AGENT-5581\n"
+        }
+      ]
+    },
+    {
+      "label": "retrieve_deleted_memory_current",
+      "at": "2026-08-28T02:16:33.241265+00:00",
+      "outcome": "error",
+      "error_class": "NotFoundError",
+      "message": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'memory `mem_01VVMEmmZkqEgMTzy2jwDzt4` not found'}, 'request_id': 'req_011CeULnx3Q3NU61yXbYXkHU'}",
+      "status_code": 404,
+      "api_error_type": "not_found_error",
+      "api_error_message": "memory `mem_01VVMEmmZkqEgMTzy2jwDzt4` not found"
+    },
+    {
+      "label": "retrieve_historical_version_content",
+      "at": "2026-08-28T02:16:33.485548+00:00",
+      "outcome": "ok"
+    },
+    {
+      "label": "redact_a_historical_version",
+      "at": "2026-08-28T02:16:34.163065+00:00",
+      "outcome": "ok"
+    },
+    {
+      "label": "lineage_after_redaction",
+      "at": "2026-08-28T02:16:34.397868+00:00",
+      "versions": [
+        {
+          "id": "memver_01F1fHP6LY82i146W8fULMzB",
+          "operation": "deleted",
+          "content": null,
+          "redacted_at": null,
+          "redacted_by": null
+        },
+        {
+          "id": "memver_015yMVnwU5n8h4bgr16hMDXA",
+          "operation": "modified",
+          "content": "verified: pnpm verify --frozen-lockfile\nsource: probe_03 operator correction\n",
+          "redacted_at": null,
+          "redacted_by": null
+        },
+        {
+          "id": "memver_01MvQKQY59VDHi1WQ5n38FPL",
+          "operation": "created",
+          "content": null,
+          "redacted_at": "2026-08-28 02:16:34.145260+00:00",
+          "redacted_by": "BetaManagedAgentsAPIActor(api_key_id='apikey_01QhJP9ynAowbSVooudArdRd', type='api_actor')"
+        }
+      ]
+    },
+    {
+      "label": "session_ids",
+      "at": "2026-08-28T02:16:34.397944+00:00",
+      "agent_write": "sesn_01PVJpjhZFN9p76YYGx7vJrR"
+    }
+  ],
+  "cleanup": [
+    {
+      "resource": "memory_store memstore_01AAtMLBgf4MpepYUNDJH6NN",
+      "action": "memory_stores.delete",
+      "result": "deleted",
+      "at": "2026-08-28T02:16:34.655711+00:00"
+    },
+    {
+      "resource": "session sesn_01PVJpjhZFN9p76YYGx7vJrR",
+      "action": "left in place (sessions are immutable history; no delete API)",
+      "result": "retained as evidence",
+      "at": "2026-08-28T02:16:34.655726+00:00"
+    }
+  ]
+}

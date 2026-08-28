@@ -1,0 +1,74 @@
+{
+  "probe": "probe_08_compaction_and_versions",
+  "started_at": "2026-08-28T02:28:34.345059+00:00",
+  "finished_at": "2026-08-28T02:29:25.676852+00:00",
+  "observations": [
+    {
+      "label": "versioned_agent_created",
+      "at": "2026-08-28T02:28:35.052688+00:00",
+      "id": "agent_01YFyrU3fDGToypHKMM8VQDF",
+      "version": 1,
+      "store": "memstore_01RhoZiNs8WVu5tyPUmkhBNF"
+    },
+    {
+      "label": "agent_version_published",
+      "at": "2026-08-28T02:28:52.490139+00:00",
+      "id": "agent_01YFyrU3fDGToypHKMM8VQDF",
+      "version": 2
+    },
+    {
+      "label": "live_session_after_version_bump",
+      "at": "2026-08-28T02:29:08.067793+00:00",
+      "session_id": "sesn_011BjJkiV67A5az7yyVVZy1c",
+      "turn1_quoted_version_a": true,
+      "turn2_quoted_version_a": true,
+      "turn2_text": "Here is that block, quoted verbatim:\n\n```\nAvailable stores (write only inside the directories listed below):\n - \"clevin-swarm-E-20260828T022834Z-53577a-versions\" \u2192 /mnt/memory/clevin-swarm-e-20260828t022834z-53577a-versions/ (read-write): Store shared by two agent versions (probe 08).\n   VERSION-A instructions: file facts under repos/&lt;repo-name&gt;/.\n```\n\nI am version one (VERSION-A) of this probe agent.",
+      "usage": {
+        "active_seconds": 7.499,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4253
+        },
+        "cache_read_input_tokens": 13219,
+        "input_tokens": 3,
+        "list_cost": {
+          "amount": "2",
+          "currency": "USD"
+        },
+        "output_tokens": 386,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "label": "attachment_is_session_scoped_not_version_scoped",
+      "at": "2026-08-28T02:29:25.197857+00:00",
+      "session_id": "sesn_01TkUCM7ZQ6Qte5ZWum1qYFz",
+      "quoted_version_b": true,
+      "text": "Available stores (write only inside the directories listed below):\n - \"clevin-swarm-E-20260828T022834Z-53577a-versions\" \u2192 /mnt/memory/clevin-swarm-e-20260828t022834z-53577a-versions/ (read-only): Store shared by two agent versions (probe 08).\n   VERSION-B instructions: this attachment is read-only.",
+      "note": "agents.create/update accept no `resources` parameter, so a store cannot be bound to an agent version; every session must re-declare the attachment."
+    }
+  ],
+  "cleanup": [
+    {
+      "resource": "memstore_01RhoZiNs8WVu5tyPUmkhBNF",
+      "action": "delete",
+      "result": "deleted",
+      "at": "2026-08-28T02:29:25.444956+00:00"
+    },
+    {
+      "resource": "agent_01YFyrU3fDGToypHKMM8VQDF",
+      "action": "delete",
+      "result": "deleted",
+      "at": "2026-08-28T02:29:25.676730+00:00"
+    },
+    {
+      "resource": "probe_08 sessions",
+      "action": "left in place (no session delete API)",
+      "result": "retained",
+      "at": "2026-08-28T02:29:25.676787+00:00"
+    }
+  ]
+}

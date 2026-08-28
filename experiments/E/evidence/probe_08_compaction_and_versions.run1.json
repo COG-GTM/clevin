@@ -1,0 +1,129 @@
+{
+  "probe": "probe_08_compaction_and_versions",
+  "started_at": "2026-08-28T02:22:59.269440+00:00",
+  "finished_at": "2026-08-28T02:24:44.086936+00:00",
+  "observations": [
+    {
+      "label": "compaction_store_created",
+      "at": "2026-08-28T02:22:59.748946+00:00",
+      "id": "memstore_01DGTvbf9ZotZbTwBk6pAoFn",
+      "name": "clevin-swarm-E-20260828T022259Z-5f6cb7-compaction"
+    },
+    {
+      "label": "compaction_run",
+      "at": "2026-08-28T02:23:52.488060+00:00",
+      "session_id": "sesn_01NMjpF23dC3bToSshyTpLaL",
+      "compaction_event_types": [],
+      "event_type_counts": {
+        "agent.message": 8,
+        "agent.thinking": 1,
+        "agent.tool_result": 10,
+        "agent.tool_use": 10,
+        "session.idle": 1,
+        "session.status_idle": 1,
+        "session.status_running": 1,
+        "session.thread_status_idle": 1,
+        "session.thread_status_running": 1,
+        "session.usage": 1,
+        "span.model_request_end": 10,
+        "span.model_request_start": 10,
+        "user.message": 1
+      },
+      "tool_call_count": 10,
+      "canary_recalled": true,
+      "reread_mount_after_fill": 0,
+      "usage": {
+        "active_seconds": 37.188,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 206059
+        },
+        "cache_read_input_tokens": 692067,
+        "input_tokens": 19,
+        "list_cost": {
+          "amount": "67",
+          "currency": "USD"
+        },
+        "output_tokens": 1337,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "assistant_tail": "**Step 1 result:**\n\nI read every file in the attached memory store mount. There was exactly one file: `/mnt/memory/clevin-swarm-e-20260828t022259z-5f6cb7-compaction/repos/clevin-fixture/deploy.md`, containing the verbatim text:\n\n```\n# clevin-fixture deploy note (verified 2026-08-20)\nThe release gate token is COMPACT-CANARY-6620 and it is only recorded here.\n```\n\nThe release gate token is: **COMPACT-CANARY-6620**\n\nNow proceeding to Step 2 \u2014 running the context-filling command 12 times, one per turn.\n\nFirst 40 chars of iteration 1 output: `dnJvYSwDj0emDb5mV+FDcnP6OWVLFQmeQfRSSK69`\n\nFirst 40 chars of iteration 2 output: `aUJfTbTjEYlrfVmODMRyvCdjy3FWpQab/UZT/j+6`\n\nFirst 40 chars of iteration 3 output: `LWc3tz+5RuPMO8sIG776Bq3mRdcuK5rmQZgHaHb4`\n\nFirst 40 chars of iteration 4 output: `YdDNNLgTrrT1Q8ehTRU70kbLbDYt/dDPKHggh8IG`\n\nFirst 40 chars of iteration 5 output: `8IXmPlAZqr8tqYw2QaFp/8nbadqjQHlHUocjp08/`\n\nFirst 40 chars of iteration 6 output: `S5HQ8FuDh/2LJOZAs3YcorqIM24qUHargDMcuBzA`\n\nFirst 40 chars of iteration 7 output: `GlupfKW555unUsYzchrSg825NC+vzbSZ13tC+/Lf`"
+    },
+    {
+      "label": "versioned_agent_created",
+      "at": "2026-08-28T02:23:53.586986+00:00",
+      "id": "agent_01JG15oTwARP4rLDaW3yk2sg",
+      "version": 1,
+      "store": "memstore_01CwyuVckcmgQgqpEtoH32SG"
+    },
+    {
+      "label": "agent_version_published",
+      "at": "2026-08-28T02:24:10.864975+00:00",
+      "id": "agent_01JG15oTwARP4rLDaW3yk2sg",
+      "version": 2
+    },
+    {
+      "label": "live_session_after_version_bump",
+      "at": "2026-08-28T02:24:26.530838+00:00",
+      "session_id": "sesn_01XcUXuueWTC3ouiwVx31Qgr",
+      "turn1_quoted_version_a": true,
+      "turn2_quoted_version_a": true,
+      "turn2_text": "Available stores (write only inside the directories listed below):\n - \"clevin-swarm-E-20260828T022352Z-368434-versions\" \u2192 /mnt/memory/clevin-swarm-e-20260828t022352z-368434-versions/ (read-write): Store shared by two agent versions (probe 08).\n   VERSION-A instructions: file facts under repos/&lt;repo-name&gt;/.\n\nAvailable stores (write only inside the directories listed below):\n - \"clevin-swarm-E-20260828T022352Z-368434-versions\" \u2192 /mnt/memory/clevin-swarm-e-20260828t022352z-368434-versions/ (read-write): Store shared by two agent versions (probe 08).\n   VERSION-A instructions: file facts under repos/&lt;repo-name&gt;/.\n\nI am version one (VERSION-A) of the probe agent.",
+      "usage": {
+        "active_seconds": 5.348,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4223
+        },
+        "cache_read_input_tokens": 13217,
+        "input_tokens": 3,
+        "list_cost": {
+          "amount": "2",
+          "currency": "USD"
+        },
+        "output_tokens": 337,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "label": "attachment_is_session_scoped_not_version_scoped",
+      "at": "2026-08-28T02:24:43.813746+00:00",
+      "session_id": "sesn_018vc8k6kxfYnG8Jr9zZxSnQ",
+      "quoted_version_b": true,
+      "text": "Available stores (write only inside the directories listed below):\n - \"clevin-swarm-E-20260828T022352Z-368434-versions\" \u2192 /mnt/memory/clevin-swarm-e-20260828t022352z-368434-versions/ (read-only): Store shared by two agent versions (probe 08).\n   VERSION-B instructions: this attachment is read-only.",
+      "note": "agents.create/update accept no `resources` parameter, so a store cannot be bound to an agent version; every session must re-declare the attachment."
+    }
+  ],
+  "cleanup": [
+    {
+      "resource": "memory_store memstore_01DGTvbf9ZotZbTwBk6pAoFn",
+      "action": "memory_stores.delete",
+      "result": "deleted",
+      "at": "2026-08-28T02:23:52.765434+00:00"
+    },
+    {
+      "resource": "memstore_01CwyuVckcmgQgqpEtoH32SG",
+      "action": "delete",
+      "result": "deleted",
+      "at": "2026-08-28T02:24:44.086797+00:00"
+    },
+    {
+      "resource": "agent_01JG15oTwARP4rLDaW3yk2sg",
+      "action": "delete",
+      "result": "FAILED: 'Agents' object has no attribute 'delete'",
+      "at": "2026-08-28T02:24:44.086821+00:00"
+    },
+    {
+      "resource": "probe_08 sessions",
+      "action": "left in place (no session delete API)",
+      "result": "retained",
+      "at": "2026-08-28T02:24:44.086875+00:00"
+    }
+  ]
+}

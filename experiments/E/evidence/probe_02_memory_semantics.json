@@ -1,0 +1,440 @@
+{
+  "probe": "probe_02_memory_semantics",
+  "started_at": "2026-08-28T02:08:55.932214+00:00",
+  "finished_at": "2026-08-28T02:10:12.418364+00:00",
+  "observations": [
+    {
+      "label": "store_created",
+      "at": "2026-08-28T02:08:56.191028+00:00",
+      "store_id": "memstore_01LS6j9ztW2dHXaaofLofmLw",
+      "name": "clevin-swarm-E-20260828T020855Z-163e77-semantics"
+    },
+    {
+      "label": "accept_path /repos/COG-GTM/clevin/setup.md",
+      "at": "2026-08-28T02:08:56.423148+00:00",
+      "outcome": "ok",
+      "path": "/repos/COG-GTM/clevin/setup.md"
+    },
+    {
+      "label": "accept_path /repos/COG-GTM/clevin/tests.md",
+      "at": "2026-08-28T02:08:56.636371+00:00",
+      "outcome": "ok",
+      "path": "/repos/COG-GTM/clevin/tests.md"
+    },
+    {
+      "label": "accept_path /repos/COG-GTM/clevin/failures/mypy.md",
+      "at": "2026-08-28T02:08:56.857005+00:00",
+      "outcome": "ok",
+      "path": "/repos/COG-GTM/clevin/failures/mypy.md"
+    },
+    {
+      "label": "accept_path /repos/COG-GTM/other-repo/setup.md",
+      "at": "2026-08-28T02:08:57.101361+00:00",
+      "outcome": "ok",
+      "path": "/repos/COG-GTM/other-repo/setup.md"
+    },
+    {
+      "label": "accept_path /global/conventions.md",
+      "at": "2026-08-28T02:08:57.295178+00:00",
+      "outcome": "ok",
+      "path": "/global/conventions.md"
+    },
+    {
+      "label": "accept_path /Repos/CASE-Sensitive.md",
+      "at": "2026-08-28T02:08:57.513656+00:00",
+      "outcome": "ok",
+      "path": "/Repos/CASE-Sensitive.md"
+    },
+    {
+      "label": "accept_path /no-extension",
+      "at": "2026-08-28T02:08:57.713910+00:00",
+      "outcome": "ok",
+      "path": "/no-extension"
+    },
+    {
+      "label": "accept_path /a",
+      "at": "2026-08-28T02:08:57.937919+00:00",
+      "outcome": "ok",
+      "path": "/a"
+    },
+    {
+      "label": "path_rejected? relative",
+      "at": "2026-08-28T02:08:58.078956+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path: does not match regex pattern `^(/[^/\\x00]+)+$`'}, 'request_id': 'req_011CeULDQCpW9YQrVSADdoyG'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path: does not match regex pattern `^(/[^/\u0000]+)+$`",
+      "path": "repos/clevin/setup.md"
+    },
+    {
+      "label": "path_rejected? empty_segment",
+      "at": "2026-08-28T02:08:58.213679+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path: does not match regex pattern `^(/[^/\\x00]+)+$`'}, 'request_id': 'req_011CeULDQmYPEREBVWx3AEn2'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path: does not match regex pattern `^(/[^/\u0000]+)+$`",
+      "path": "/repos//setup.md"
+    },
+    {
+      "label": "path_rejected? dot_segment",
+      "at": "2026-08-28T02:08:58.365423+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path must not contain . or .. segments'}, 'request_id': 'req_011CeULDRMmWuCYsGJiKCjEN'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path must not contain . or .. segments",
+      "path": "/repos/./setup.md"
+    },
+    {
+      "label": "path_rejected? dotdot_segment",
+      "at": "2026-08-28T02:08:58.542568+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path must not contain . or .. segments'}, 'request_id': 'req_011CeULDS5gN2LJezjyCNSVs'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path must not contain . or .. segments",
+      "path": "/repos/../setup.md"
+    },
+    {
+      "label": "path_rejected? trailing_slash",
+      "at": "2026-08-28T02:08:58.680530+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path: does not match regex pattern `^(/[^/\\x00]+)+$`'}, 'request_id': 'req_011CeULDSm6w5KWHkzLKqamJ'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path: does not match regex pattern `^(/[^/\u0000]+)+$`",
+      "path": "/repos/clevin/"
+    },
+    {
+      "label": "path_rejected? control_char",
+      "at": "2026-08-28T02:08:58.836335+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path must not contain control or format characters'}, 'request_id': 'req_011CeULDTLaR7GvHxtJA2F5c'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path must not contain control or format characters",
+      "path": "/repos/clev\u0001in.md"
+    },
+    {
+      "label": "path_rejected? non_nfc",
+      "at": "2026-08-28T02:08:59.003400+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path must be NFC-normalized'}, 'request_id': 'req_011CeULDU6TockcMz9fepBhx'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path must be NFC-normalized",
+      "path": "/repos/cafe\u0301.md"
+    },
+    {
+      "label": "path_rejected? too_long",
+      "at": "2026-08-28T02:08:59.135090+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path: maximum string length is 1024'}, 'request_id': 'req_011CeULDUiRtd9buHtJnfB5r'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path: maximum string length is 1024",
+      "path": "/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+      "label": "path_rejected? root",
+      "at": "2026-08-28T02:08:59.276673+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path: minimum string length is 2'}, 'request_id': 'req_011CeULDVKdvznPtUY4P2VuG'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path: minimum string length is 2",
+      "path": "/"
+    },
+    {
+      "label": "duplicate_path_create",
+      "at": "2026-08-28T02:08:59.532857+00:00",
+      "outcome": "rejected",
+      "error_class": "ConflictError",
+      "message": "Error code: 409 - {'type': 'error', 'error': {'type': 'memory_path_conflict_error', 'message': 'path `/global/conventions.md` is already used by `mem_017aNkvUdNZkchrbbfJ2TfM4`; use update to modify it', 'conflicting_path': '/global/conventions.md', 'conflicting_memory_id': 'mem_017aNkvUdNZkchrbbfJ2TfM4'}, 'request_id': 'req_011CeULDW5HLPfPmtq4akvT8'}",
+      "status_code": 409,
+      "api_error_type": "memory_path_conflict_error",
+      "api_error_message": "path `/global/conventions.md` is already used by `mem_017aNkvUdNZkchrbbfJ2TfM4`; use update to modify it"
+    },
+    {
+      "label": "list_basic",
+      "at": "2026-08-28T02:08:59.708465+00:00",
+      "item_types": [
+        "memory"
+      ],
+      "content_is_none": true,
+      "count": 8
+    },
+    {
+      "label": "list_full",
+      "at": "2026-08-28T02:08:59.877652+00:00",
+      "returned": 8,
+      "limit_capped_at_20": true,
+      "content_populated": true
+    },
+    {
+      "label": "list_depth1_root",
+      "at": "2026-08-28T02:09:00.046123+00:00",
+      "entries": [
+        {
+          "type": "memory_prefix",
+          "path": "/Repos/"
+        },
+        {
+          "type": "memory",
+          "path": "/no-extension"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/repos/"
+        },
+        {
+          "type": "memory",
+          "path": "/a"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/global/"
+        }
+      ],
+      "note": "depth=1 behaves like ls: deeper entries roll up as memory_prefix items."
+    },
+    {
+      "label": "list_prefix_depth1",
+      "at": "2026-08-28T02:09:00.250479+00:00",
+      "entries": [
+        {
+          "type": "memory_prefix",
+          "path": "/repos/COG-GTM/clevin/failures/"
+        },
+        {
+          "type": "memory",
+          "path": "/repos/COG-GTM/clevin/setup.md"
+        },
+        {
+          "type": "memory",
+          "path": "/repos/COG-GTM/clevin/tests.md"
+        }
+      ]
+    },
+    {
+      "label": "prefix_without_trailing_slash",
+      "at": "2026-08-28T02:09:00.409041+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'path_prefix: does not match regex pattern `^(/([^/\\x00]+/)*)?$`'}, 'request_id': 'req_011CeULDa6dPatRKkMfoyF1M'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "path_prefix: does not match regex pattern `^(/([^/\u0000]+/)*)?$`"
+    },
+    {
+      "label": "case_sensitivity",
+      "at": "2026-08-28T02:09:00.581445+00:00",
+      "distinct_paths_coexist": [
+        "/Repos/CASE-Sensitive.md"
+      ]
+    },
+    {
+      "label": "rename_preserves_id",
+      "at": "2026-08-28T02:09:01.133192+00:00",
+      "same_id": true,
+      "new_path": "/repos/COG-GTM/clevin/setup-v2.md",
+      "content_unchanged": true,
+      "new_version_id_differs": true
+    },
+    {
+      "label": "precondition_match_applies",
+      "at": "2026-08-28T02:09:01.354125+00:00",
+      "new_sha": "3c683fc747bdebf4dcd22cfe2cca08517cf55665201485b07e1400b31e18e044"
+    },
+    {
+      "label": "precondition_stale_rejected",
+      "at": "2026-08-28T02:09:01.506643+00:00",
+      "outcome": "rejected",
+      "error_class": "ConflictError",
+      "message": "Error code: 409 - {'type': 'error', 'error': {'type': 'memory_precondition_failed_error', 'message': 'precondition content_sha256 failed: content has changed'}, 'request_id': 'req_011CeULDemB1GDmPBzWjvHj1'}",
+      "status_code": 409,
+      "api_error_type": "memory_precondition_failed_error",
+      "api_error_message": "precondition content_sha256 failed: content has changed"
+    },
+    {
+      "label": "precondition_stale_but_state_already_matches",
+      "at": "2026-08-28T02:09:01.710675+00:00",
+      "outcome": "ok",
+      "note": "Docs claim 200 rather than 409 when the requested state already equals stored state."
+    },
+    {
+      "label": "preconditioned_race",
+      "at": "2026-08-28T02:09:02.157052+00:00",
+      "outcomes": [
+        "applied",
+        "rejected:ConflictError",
+        "rejected:ConflictError",
+        "rejected:ConflictError",
+        "rejected:ConflictError",
+        "rejected:ConflictError"
+      ],
+      "applied": 1,
+      "note": "Exactly one write should apply if the precondition is a real CAS."
+    },
+    {
+      "label": "unconditional_race",
+      "at": "2026-08-28T02:09:02.513768+00:00",
+      "applied": 6,
+      "note": "Last writer wins; silent lost updates."
+    },
+    {
+      "label": "delete_with_wrong_expected_sha",
+      "at": "2026-08-28T02:09:02.935070+00:00",
+      "outcome": "rejected",
+      "error_class": "ConflictError",
+      "message": "Error code: 409 - {'type': 'error', 'error': {'type': 'memory_precondition_failed_error', 'message': 'precondition content_sha256 failed: content has changed'}, 'request_id': 'req_011CeULDkg7qaXUzQmQ4E8XR'}",
+      "status_code": 409,
+      "api_error_type": "memory_precondition_failed_error",
+      "api_error_message": "precondition content_sha256 failed: content has changed"
+    },
+    {
+      "label": "delete_with_correct_expected_sha",
+      "at": "2026-08-28T02:09:03.152827+00:00",
+      "outcome": "ok"
+    },
+    {
+      "label": "retrieve_after_delete",
+      "at": "2026-08-28T02:09:03.332656+00:00",
+      "outcome": "rejected",
+      "error_class": "NotFoundError",
+      "message": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'memory `mem_018QL1eiArBd4XKb3i61PGL9` not found'}, 'request_id': 'req_011CeULDnZyLNCwx6p2XFK5p'}",
+      "status_code": 404,
+      "api_error_type": "not_found_error",
+      "api_error_message": "memory `mem_018QL1eiArBd4XKb3i61PGL9` not found"
+    },
+    {
+      "label": "recreate_deleted_path",
+      "at": "2026-08-28T02:09:03.565005+00:00",
+      "outcome": "ok"
+    },
+    {
+      "label": "content_100kb_exact",
+      "at": "2026-08-28T02:09:03.828017+00:00",
+      "outcome": "ok"
+    },
+    {
+      "label": "content_over_100kb",
+      "at": "2026-08-28T02:09:03.987010+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'content must be at most 102400 bytes'}, 'request_id': 'req_011CeULDqQsh6hogTLQAjWvw'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "content must be at most 102400 bytes"
+    },
+    {
+      "label": "empty_content_allowed",
+      "at": "2026-08-28T02:09:04.199136+00:00",
+      "outcome": "ok"
+    },
+    {
+      "label": "null_content_rejected",
+      "at": "2026-08-28T02:09:04.332449+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'content: value is required'}, 'request_id': 'req_011CeULDrwQUKD9tXR3drjqU'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "content: value is required"
+    },
+    {
+      "label": "bulk_write",
+      "at": "2026-08-28T02:09:09.528993+00:00",
+      "attempted": 260,
+      "failures": [],
+      "failure_count": 0,
+      "elapsed_seconds": 4.7,
+      "writes_per_second": 54.95,
+      "total_memories_in_store": 271
+    },
+    {
+      "label": "pagination_walks_full_store",
+      "at": "2026-08-28T02:09:09.984407+00:00",
+      "auto_paginated_items": 271,
+      "pages_hint": 0
+    },
+    {
+      "label": "bulk_rollup_depth1",
+      "at": "2026-08-28T02:09:10.293286+00:00",
+      "entries": [
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard4/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard11/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard5/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard12/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard6/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard9/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard3/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard10/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard1/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard0/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard7/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard8/"
+        },
+        {
+          "type": "memory_prefix",
+          "path": "/bulk/shard2/"
+        }
+      ],
+      "note": "Structural scoping depends on these prefix rollups being cheap to enumerate."
+    }
+  ],
+  "cleanup": [
+    {
+      "resource": "memory_store memstore_01LS6j9ztW2dHXaaofLofmLw (clevin-swarm-E-20260828T020855Z-163e77-semantics)",
+      "action": "purge memories + archive + delete",
+      "result": "deleted (after purging 271 memories)",
+      "at": "2026-08-28T02:10:12.418281+00:00"
+    }
+  ]
+}

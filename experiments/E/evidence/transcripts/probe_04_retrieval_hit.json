@@ -1,0 +1,151 @@
+{
+  "label": "probe_04_retrieval_hit",
+  "session_id": "sesn_013jG4z88P3oApsZy2Ut5TUy",
+  "saved_at": "2026-08-28T02:17:58.754043+00:00",
+  "events": [
+    {
+      "id": "sevt_01Dtx1w8xLGaXaLsQYvqGusc",
+      "type": "session.status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_01JwZMcBHygznMuJM44m1ijF",
+      "type": "session.thread_status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_01AMcr7TnoKbPAzgjp5gyH1K",
+      "type": "user.message",
+      "text": "CLEVIN_SMOKE_TEST What is the verified install command for the COG-GTM/clevin\nrepository, and what is its canary token? Answer in one line. Do not touch git or the network.\n"
+    },
+    {
+      "id": "sevt_018h38tLTpRWhxPKknub3Z9v",
+      "type": "span.model_request_start",
+      "text": ""
+    },
+    {
+      "id": "sevt_018awhr6YqXAyfLACai3UJFk",
+      "type": "agent.thinking",
+      "text": ""
+    },
+    {
+      "id": "sevt_01TDPzdwwp7Fu3YnqcBMxQgn",
+      "type": "agent.tool_use",
+      "text": "",
+      "name": "bash",
+      "input": {
+        "command": "rg -i 'clevin|canary' /mnt/memory/ -l 2>&1; echo \"---\"; rg --files /mnt/memory/ 2>&1"
+      }
+    },
+    {
+      "id": "sevt_01R8jDC9jXMvp1nY8c4r6UB3",
+      "type": "span.model_request_end",
+      "text": "",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01JWPoodDMhzBhNpzkssXpzE",
+      "type": "agent.tool_result",
+      "text": "/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/repos/COG-GTM/clevin/tests.md\n/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/preferences/user.md\n/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/repos/COG-GTM/clevin/setup.md\n---\n/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/preferences/user.md\n/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/repos/COG-GTM/clevin/setup.md\n/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/repos/COG-GTM/clevin/tests.md\n",
+      "tool_use_id": "sevt_01TDPzdwwp7Fu3YnqcBMxQgn",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01Psxhgmd3iQuCyam8Ua8iyG",
+      "type": "span.model_request_start",
+      "text": ""
+    },
+    {
+      "id": "sevt_01Xwfuj731mhedLCUwG62rQE",
+      "type": "agent.tool_use",
+      "text": "",
+      "name": "read",
+      "input": {
+        "file_path": "/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/repos/COG-GTM/clevin/setup.md"
+      }
+    },
+    {
+      "id": "sevt_01A1XJpZ2vLDtFiZN6K9fWNr",
+      "type": "agent.tool_use",
+      "text": "",
+      "name": "read",
+      "input": {
+        "file_path": "/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/repos/COG-GTM/clevin/tests.md"
+      }
+    },
+    {
+      "id": "sevt_0121C1Ckd6tejSbnnt8iTdvU",
+      "type": "span.model_request_end",
+      "text": "",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01GkPzjnr7HcpexkWF2H3Ed6",
+      "type": "agent.tool_result",
+      "text": "1\t# clevin setup (verified 2026-08-20)\n2\tInstall: `pnpm install --frozen-lockfile` then `uv sync --project runtime`.\n3\tCanary: MOUNT-CANARY-3312\n",
+      "tool_use_id": "sevt_01Xwfuj731mhedLCUwG62rQE",
+      "is_error": false
+    },
+    {
+      "id": "sevt_0177tq1Gbv2KSWqBzBvvmBQ1",
+      "type": "agent.tool_result",
+      "text": "1\t# clevin tests (verified 2026-08-20)\n2\tFull gate: `pnpm verify` then `uv run --project runtime pytest -c runtime/pyproject.toml`.\n3\tCanary: TEST-CANARY-9041\n",
+      "tool_use_id": "sevt_01A1XJpZ2vLDtFiZN6K9fWNr",
+      "is_error": false
+    },
+    {
+      "id": "sevt_014tTNctEnYZDxCFnafgUNR6",
+      "type": "span.model_request_start",
+      "text": ""
+    },
+    {
+      "id": "sevt_01G1C1Tqom9pkqtjGogfiLNu",
+      "type": "agent.message",
+      "text": "The verified install command is `pnpm install --frozen-lockfile` then `uv sync --project runtime`, and its canary token is **MOUNT-CANARY-3312** (from `/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/repos/COG-GTM/clevin/setup.md`, \"verified 2026-08-20\")."
+    },
+    {
+      "id": "sevt_01GGw7MbzxwAoRpuCDFMxCdy",
+      "type": "span.model_request_end",
+      "text": "",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01LojryTct7SGJMCsfLbRi9C",
+      "type": "session.thread_status_idle",
+      "text": ""
+    },
+    {
+      "id": "sevt_01Pqq4qR2FFGpanE6MxFkVVY",
+      "type": "session.usage",
+      "text": "",
+      "usage": {
+        "active_seconds": 10.742,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1038
+        },
+        "cache_read_input_tokens": 26596,
+        "input_tokens": 5,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 461,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "id": "sevt_01M81t3r5iUkKZEa7a8PeQQt",
+      "type": "session.status_idle",
+      "text": ""
+    },
+    {
+      "id": null,
+      "type": "session.idle",
+      "text": ""
+    }
+  ]
+}
