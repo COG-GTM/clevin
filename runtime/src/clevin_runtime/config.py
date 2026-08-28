@@ -35,6 +35,22 @@ def _required(
     return {name: str(source[name]) for name in names}
 
 
+def _optional_version(raw: str | None) -> int | None:
+    if raw is None or not raw.strip():
+        return None
+    try:
+        version = int(raw)
+    except ValueError:
+        raise ConfigurationError(
+            "CLEVIN_AGENT_VERSION must be a positive integer when set"
+        ) from None
+    if version < 1:
+        raise ConfigurationError(
+            "CLEVIN_AGENT_VERSION must be a positive integer when set"
+        )
+    return version
+
+
 @dataclass(frozen=True, slots=True)
 class LocalSettings:
     environment_id: str
@@ -80,7 +96,7 @@ class LocalSettings:
 class ClientSettings:
     api_key: str
     agent_id: str
-    agent_version: int
+    agent_version: int | None
     environment_id: str
     vault_id: str
     memory_store_id: str
@@ -94,20 +110,12 @@ class ClientSettings:
             (
                 "ANTHROPIC_API_KEY",
                 "CLEVIN_AGENT_ID",
-                "CLEVIN_AGENT_VERSION",
                 "CLEVIN_ENVIRONMENT_ID",
                 "CLEVIN_VAULT_ID",
                 "CLEVIN_MEMORY_STORE_ID",
             ),
         )
-        try:
-            agent_version = int(required["CLEVIN_AGENT_VERSION"])
-        except ValueError:
-            raise ConfigurationError(
-                "CLEVIN_AGENT_VERSION must be a positive integer"
-            ) from None
-        if agent_version < 1:
-            raise ConfigurationError("CLEVIN_AGENT_VERSION must be a positive integer")
+        agent_version = _optional_version(values.get("CLEVIN_AGENT_VERSION"))
         workspace_id = values.get("ANTHROPIC_WORKSPACE_ID")
         return cls(
             api_key=required["ANTHROPIC_API_KEY"],

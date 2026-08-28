@@ -65,6 +65,37 @@ def test_create_session_pins_resources_budget_metadata_and_initial_event() -> No
     )
 
 
+def test_unpinned_agent_version_resolves_latest_once() -> None:
+    client = cast(anthropic.Anthropic, MagicMock())
+    client.beta.agents.versions.list.return_value = [
+        MagicMock(version=5),
+        MagicMock(version=7),
+        MagicMock(version=6),
+    ]
+    unpinned = ClientSettings(
+        api_key="test-api-key",
+        agent_id="agent_test",
+        agent_version=None,
+        environment_id="env_test",
+        vault_id="vlt_test",
+        memory_store_id="memstore_test",
+        workspace_id="wrkspc_test",
+    )
+    runtime = AgentRuntime(unpinned, client)
+
+    assert runtime.agent_version() == 7
+    assert runtime.agent_version() == 7
+    client.beta.agents.versions.list.assert_called_once_with("agent_test")
+
+
+def test_pinned_agent_version_never_calls_the_api() -> None:
+    client = cast(anthropic.Anthropic, MagicMock())
+
+    assert AgentRuntime(settings(), client).agent_version() == 7
+
+    client.beta.agents.versions.list.assert_not_called()
+
+
 def test_replay_seeds_seen_ids_and_reduces_status() -> None:
     client = cast(anthropic.Anthropic, MagicMock())
     session = cast(BetaManagedAgentsSession, MagicMock(id="session_test"))

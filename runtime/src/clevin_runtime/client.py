@@ -46,7 +46,7 @@ def show_resources(runtime: AgentRuntime, session: BetaManagedAgentsSession) -> 
     table.add_row(
         "Agent",
         _resource_value(
-            f"{settings.agent_id} v{settings.agent_version}",
+            f"{settings.agent_id} v{runtime.agent_version()}",
             runtime.platform_url("agents", settings.agent_id),
         ),
     )
