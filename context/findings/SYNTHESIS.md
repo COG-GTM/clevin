@@ -9,14 +9,14 @@ dispatched 2026-08-28; B, I, J gated.
 | WS | Topic | Status | Findings |
 | --- | --- | --- | --- |
 | A | Control plane & session semantics | **merged** (PR #12) | `A-control-plane.md` |
-| B | Long-horizon agent quality | gated on A | — |
+| B | Long-horizon agent quality | **merged** (PR #17) | `B-long-horizon-quality.md` |
 | C | Runtime reliability, recovery, tool surface | **merged** (PR #11) | `C-runtime-reliability-and-tool-surface.md` |
 | D | Agent-as-code & configuration lifecycle | **merged** (PR #7) | `D-agent-as-code.md` |
 | E | Native Memory Store | **merged** (PR #9) | `E-native-memory-store.md` |
 | F | Built-in subagents | **merged** (PR #13) | `F-builtin-subagents.md` |
 | H | Deployments & automation | **merged** (PR #8) | `H-deployments-automation.md` |
-| I | Observability & economics | gated on A | — |
-| J | Integrated gauntlet | gated on A, C, E, F, K | — |
+| I | Observability & economics | **merged** (PR #15) | `I-observability-and-economics.md` |
+| J | Integrated gauntlet | **merged** (PR #16; self-healing addendum in flight) | `J-integrated-gauntlet.md` |
 | K | Devin-parity interaction model | **merged** (PR #10) | `K-parity-interaction.md` |
 
 ## Parity table (current classes)
@@ -26,13 +26,13 @@ Unfilled rows are pending evidence — no class is assigned without it.
 
 | Devin-like capability | Primitive | Class | Evidence / owner |
 | --- | --- | --- | --- |
-| Ticket in → CI-green PR out, unattended | Session + EnvironmentWorker + GitHub/Linear MCP | **C** (capped by C-2) | C §6: worker death mid-run silently parks the session (`requires_action` forever, no re-dispatch); native recovery mechanism exists (C-3) but no native trigger. J to demo the happy path |
-| Long-horizon work across hours and compactions | Session state + compaction + Memory Store | **C** | A: Opus preserved an early constraint through two native compactions; Haiku terminated at 200k without compacting — model-dependent, no inspectable/restorable checkpoint. B (gated) owns quality over hours |
-| Builds a plan, then revises it | System prompt + built-in subagents | **C** | F §8: planning is prompt-driven and works; roster added no measured quality (grader saturated); no plan artefact primitive |
+| Ticket in → CI-green PR out, unattended | Session + EnvironmentWorker + GitHub/Linear MCP | **C** | J §2: ambiguous ticket → CI-green PR #14 with 2 human touches (`ask_human` by design; `budget_reached` raise+nudge not). C §6: dead worker strands the run (D). B: 27-file migration, 12/13 runs 4/4, 0 nudges |
+| Long-horizon work across hours and compactions | Session state + compaction + Memory Store | **C** | A: Opus preserved an early constraint through two compactions. B §3: hours-in-one-stretch yes (unattended, graded); across idle gaps no — 900 s gap ended retries_exhausted; compaction never triggered at 59k peak context |
+| Builds a plan, then revises it | System prompt + built-in subagents | **A** (behaviour) / no plan artefact | J §2: parent re-planned on a child's contradicting report and rejected its false premise; B: mid-run requirement change absorbed, 0 nudges. F §8: no measurable roster benefit; plan lives only in the transcript |
 | Parallel investigation, then synthesis | Built-in subagents | **A** | F §8: 7 concurrent children, conflicting results synthesised on evidence; depth capped at 1 (sub-subagents D); concurrent-edit conflicts D (last write wins) |
 | Learns across tasks | Memory Store | **C** (session half); **A** (deployment half: recurring runs read/write store) | E §3; H §8. Storage/provenance A; nothing *pulls* knowledge — retrieval is the model grepping the mount |
 | Recovers from crashed sandbox / failed tool | EnvironmentWorker + session APIs + webhooks | **A** (failed tool) / **D** (dead worker, unattended) | C §1–2: tool timeout yields a clean is_error result (A); a killed worker strands the session forever — nothing native notices or re-dispatches (D); manual `SessionToolRunner` re-attach recovers (C-3, class C) |
-| Asks for help only when genuinely blocked | System prompt + tool design | **B** (mechanism, via K's ask-and-block) | Behavioural quality untested (balance); B gated |
+| Asks for help only when genuinely blocked | System prompt + tool design | **A** (behaviour) / **B** (mechanism) | J §2: exactly 1 ask_human in 666 events, raised only after proving no policy existed; B: 0 nudges in all 10 completed runs. Mechanism needs a declared custom tool + operator loop (B) |
 | Mid-run steering | Session events (user.interrupt, message injection) | **A** (session) / **B** (per-child) | K1: user.interrupt + user.message re-plans with full awareness; bare user.message rejected mid-tool-call. A: interrupt stops generation cleanly. Per-child interrupt named by platform, unexecuted (balance; F §9) |
 | Ask-and-block, resume with workspace intact | Session idle state + worker lease/idle timeout | **B** | K2: answered after 15 and 75 min (sandbox torn down at 3600 s, volume file intact), resume 0.2 s, $18/945 s; waiting-on-human only detectable by matching stop_reason.event_ids to agent.custom_tool_use |
 | Sleeps, wakes on new ticket/comment | Deployments (polling) + lifecycle webhooks | **C** | H §8 + K3: 1-minute cron floor honoured; every fire is a brand-new session; continuity only via Memory Store; no GitHub/Linear→Anthropic event path; /mnt/memory root read-only |
@@ -44,8 +44,8 @@ Unfilled rows are pending evidence — no class is assigned without it.
 | Session forking from a checkpoint | No known primitive | **D** (confirmed on all three sides) | H §8 (deployment); A (no clone/fork/checkpoint in session API); K PR #10 (K7 confirmed D, not built) |
 | Attachments / multimodal input | Session message content | — (untested; balance exhausted before K reached it) | K §untested |
 | Runs on a schedule | Deployments | **A** | H §8: POSIX cron + timezone + version pinning; ≥1-minute granularity; no concurrency control, retry, or session continuation (all D) |
-| Observable, attributable run history | SSE + usage events + Console | **C** | A: version/session/model/tool/usage/compaction events attributable; sandbox process & filesystem transitions absent from Anthropic history. C §6: lease/heartbeat traffic detects strands externally. I (gated) owns depth |
-| Per-task cost accounting | session.usage + budget events | **A** | A: per-request cache/token fields + cumulative usage, no Admin API needed; F: per-thread list_cost gives per-role attribution; H §8 |
+| Observable, attributable run history | SSE + usage events + Console | **A** (attribution) / **C–D** (alerting) | I: full chain reconstructed from events.list alone; SSE median lag 9 ms; session cost == sum of thread costs. But no native alerting, no tool-call→sandbox join (D), no files-changed event (D), budget exhaustion only a webhook |
+| Per-task cost accounting | session.usage + budget events | **A** | I: session cost == Σ thread costs; fleet roll-up of 164 sessions in 2 API calls. Cost-per-*successful*-task is D as configured. Absolute cost is the practical ceiling: J's one 15-min ticket on Opus + 3-agent roster = $716 list |
 | Fleet of agent variants managed as code | Agent versions + provisioner | **A** (essentially at parity; memory & deployment dimensions C) | D §3–4: reconstructible, drift detectable (B), canary/rollback A; no version aliases/channels/deletion (D); pinning ≠ behavioural reproducibility (C) |
 | Browser / Computer Use | (rejected tool types) | **D** | Pre-verified (§4 of swarm prompt); workstream cancelled |
 
@@ -86,7 +86,8 @@ Unfilled rows are pending evidence — no class is assigned without it.
 - F: 5th grader arm, per-child `user.interrupt`, 64–256 KB payload rungs, parent compaction
   under children, hours-long repeated delegation.
 - K: 4500 s ask-and-block replication (post-sandbox-teardown resumed work) caught mid-resume by billing_error; attachments/multimodal row never reached.
-- B, I, J live experiments — gated workstreams cannot run until balance is restored.
+- Second exhaustion (04:46 UTC) after top-up: B's compaction/idle-gap-resume and interrupt arms; J's no-memory/no-subagents/chaos and compaction/steering arms (~$500 est.); I's remaining probes.
+- New from the gated wave: `budget_reached` is recoverable natively (raise budget + one user.message resumes the same session/history/workspace — J #11, class A); subagent internal reasoning invisible from the parent stream (I-11, C); a child's write can poison the shared Memory Store, with parent-side adjudication the only native defence (J).
 
 ## Open handoffs between workstreams
 
