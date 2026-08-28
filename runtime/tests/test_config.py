@@ -3,17 +3,37 @@ import pytest
 from clevin_runtime import config
 
 
+def sources(
+    monkeypatch: pytest.MonkeyPatch,
+    *,
+    env_file: dict[str, str] | None = None,
+    environ: dict[str, str] | None = None,
+) -> None:
+    monkeypatch.setattr(config.dotenv, "dotenv_values", lambda _path: env_file or {})
+    monkeypatch.setattr(config.os, "environ", environ or {})
+
+
+CLIENT_VALUES = {
+    "ANTHROPIC_API_KEY": "secret",
+    "CLEVIN_AGENT_ID": "agent_test",
+    "CLEVIN_ENVIRONMENT_ID": "env_test",
+    "CLEVIN_VAULT_ID": "vlt_test",
+    "CLEVIN_MEMORY_STORE_ID": "memstore_test",
+}
+LOCAL_VALUES = {
+    "CLEVIN_ENVIRONMENT_ID": "env_test",
+    "ANTHROPIC_ENVIRONMENT_KEY": "environment-secret",
+    "SANDBOX_IMAGE_ID": "im_test",
+    "GITHUB_TOKEN": "github-secret",
+}
+
+
 def test_client_settings_are_typed(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(
-        config.dotenv,
-        "dotenv_values",
-        lambda _path: {
-            "ANTHROPIC_API_KEY": "secret",
-            "CLEVIN_AGENT_ID": "agent_test",
+    sources(
+        monkeypatch,
+        env_file={
+            **CLIENT_VALUES,
             "CLEVIN_AGENT_VERSION": "7",
-            "CLEVIN_ENVIRONMENT_ID": "env_test",
-            "CLEVIN_VAULT_ID": "vlt_test",
-            "CLEVIN_MEMORY_STORE_ID": "memstore_test",
             "ANTHROPIC_WORKSPACE_ID": "wrkspc_test",
         },
     )
@@ -27,35 +47,39 @@ def test_client_settings_are_typed(monkeypatch: pytest.MonkeyPatch) -> None:
 def test_agent_version_is_optional_and_validated(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    values = {
-        "ANTHROPIC_API_KEY": "secret",
-        "CLEVIN_AGENT_ID": "agent_test",
-        "CLEVIN_ENVIRONMENT_ID": "env_test",
-        "CLEVIN_VAULT_ID": "vlt_test",
-        "CLEVIN_MEMORY_STORE_ID": "memstore_test",
-    }
-    monkeypatch.setattr(config.dotenv, "dotenv_values", lambda _path: values)
+    sources(monkeypatch, env_file=CLIENT_VALUES)
 
     assert config.ClientSettings.from_root_env().agent_version is None
 
-    values["CLEVIN_AGENT_VERSION"] = "0"
+    sources(monkeypatch, env_file={**CLIENT_VALUES, "CLEVIN_AGENT_VERSION": "0"})
     with pytest.raises(config.ConfigurationError):
         config.ClientSettings.from_root_env()
+
+
+def test_settings_load_from_the_environment_without_an_env_file(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    sources(monkeypatch, environ={**CLIENT_VALUES, **LOCAL_VALUES})
+
+    assert config.ClientSettings.from_root_env().agent_id == "agent_test"
+    assert config.LocalSettings.from_root_env().sandbox_image_id == "im_test"
+
+
+def test_environment_overrides_the_env_file(monkeypatch: pytest.MonkeyPatch) -> None:
+    sources(
+        monkeypatch,
+        env_file={**CLIENT_VALUES, **LOCAL_VALUES, "SANDBOX_IMAGE_ID": "im_stale"},
+        environ={"CLEVIN_AGENT_ID": "agent_injected", "SANDBOX_IMAGE_ID": "im_fresh"},
+    )
+
+    assert config.ClientSettings.from_root_env().agent_id == "agent_injected"
+    assert config.LocalSettings.from_root_env().sandbox_image_id == "im_fresh"
 
 
 def test_local_deployment_can_precede_webhook_registration(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    monkeypatch.setattr(
-        config.dotenv,
-        "dotenv_values",
-        lambda _path: {
-            "CLEVIN_ENVIRONMENT_ID": "env_test",
-            "ANTHROPIC_ENVIRONMENT_KEY": "environment-secret",
-            "SANDBOX_IMAGE_ID": "im_test",
-            "GITHUB_TOKEN": "github-secret",
-        },
-    )
+    sources(monkeypatch, env_file=LOCAL_VALUES)
 
     values = config.LocalSettings.from_root_env().deployment_environment()
 
@@ -66,14 +90,15 @@ def test_local_deployment_can_precede_webhook_registration(
 def test_configuration_errors_never_include_values(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    monkeypatch.setattr(
-        config.dotenv,
-        "dotenv_values",
-        lambda _path: {"ANTHROPIC_API_KEY": "must-not-appear"},
-    )
+    sources(monkeypatch, environ={"ANTHROPIC_API_KEY": "must-not-appear"})
 
     with pytest.raises(config.ConfigurationError) as error:
         config.ClientSettings.from_root_env()
 
     assert "must-not-appear" not in str(error.value)
     assert "CLEVIN_AGENT_ID" in str(error.value)
+
+    with pytest.raises(config.ConfigurationError) as local_error:
+        config.LocalSettings.from_root_env()
+
+    assert "GITHUB_TOKEN" in str(local_error.value)

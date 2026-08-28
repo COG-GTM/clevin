@@ -58,5 +58,6 @@ app = modal.App(MODAL_APP_NAME)
 @app.local_entrypoint()
 def main() -> None:
     image_id = sandbox_image.build(app).object_id
-    dotenv.set_key(ROOT_ENV_PATH, "SANDBOX_IMAGE_ID", image_id, quote_mode="never")
+    if ROOT_ENV_PATH.exists():
+        dotenv.set_key(ROOT_ENV_PATH, "SANDBOX_IMAGE_ID", image_id, quote_mode="never")
     print(f"SANDBOX_IMAGE_ID={image_id}")

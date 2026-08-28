@@ -35,6 +35,10 @@ def _required(
     return {name: str(source[name]) for name in names}
 
 
+def _sources() -> Mapping[str, str | None]:
+    return {**dotenv.dotenv_values(ROOT_ENV_PATH), **os.environ}
+
+
 def _optional_version(raw: str | None) -> int | None:
     if raw is None or not raw.strip():
         return None
@@ -61,7 +65,7 @@ class LocalSettings:
 
     @classmethod
     def from_root_env(cls) -> LocalSettings:
-        values = dotenv.dotenv_values(ROOT_ENV_PATH)
+        values = _sources()
         required = _required(
             values,
             (
@@ -104,7 +108,7 @@ class ClientSettings:
 
     @classmethod
     def from_root_env(cls) -> ClientSettings:
-        values = dotenv.dotenv_values(ROOT_ENV_PATH)
+        values = _sources()
         required = _required(
             values,
             (
