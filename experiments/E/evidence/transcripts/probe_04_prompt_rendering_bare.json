@@ -1,0 +1,81 @@
+{
+  "label": "probe_04_prompt_rendering_bare",
+  "session_id": "sesn_012ZLaenECNd4oyTvhWS99Ba",
+  "saved_at": "2026-08-28T02:16:46.257193+00:00",
+  "events": [
+    {
+      "id": "sevt_01UDKTUCGdvrMS3K5JdqUxJ5",
+      "type": "session.status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_01Wn9LHThQozowQCBpzP4uLG",
+      "type": "user.message",
+      "text": "CLEVIN_SMOKE_TEST Answer from your context only. Run no tools at all.\n\n1. Quote verbatim, inside a fenced block, every sentence in your system prompt that\n   mentions memory, /mnt/memory, or an attached store.\n2. List each attached store: its name, mount path, access mode, and description.\n3. State whether the *contents* of any memory file are already present in your\n   context, and list every memory file path you know of without running a tool.\n"
+    },
+    {
+      "id": "sevt_01Nmnhkke6siCaY1NLULmwgC",
+      "type": "session.thread_status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_01CGmkYtqbm4fdG5eYkHwuHa",
+      "type": "span.model_request_start",
+      "text": ""
+    },
+    {
+      "id": "sevt_01LUswnUdEZEWexUzLRioYLz",
+      "type": "agent.thinking",
+      "text": ""
+    },
+    {
+      "id": "sevt_015qx9QEyuJ7wjQcv48iM7yA",
+      "type": "agent.message",
+      "text": "1. Verbatim sentences from my system prompt mentioning memory, /mnt/memory, or an attached store:\n\n```\nYou have persistent memory stores mounted at /mnt/memory/ from a shared remote service.\n```\n```\nWhat you write here survives across sessions, interruptions, and context compaction \u2014 a future session (or you, hours from now) can read it.\n```\n```\nAnything useful that exists only in your working context is one interruption away from being lost.\n```\n```\nAvailable stores (write only inside the directories listed below):\n - \"clevin-swarm-E-20260828T021611Z-b7d5cc-conventions\" \u2192 /mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/ (read-write): Verified repository setup, test and preference facts for probe 04.\n```\n```\nThese stores are network-backed (FUSE), not local disk. Expect ~100-200 ms per operation, a hard 100 KiB per-file limit, and occasional transient errors. Use /tmp/ for working scratch; reserve /mnt/memory/ for findings worth persisting.\n```\n```\n**Check memory first.** Before fresh research, `rg -i '<keyword>'` /mnt/memory/ with two or three keywords and read matching sections in full. If nothing matches, `rg --files /mnt/memory/` to check whether the store is empty or your keywords missed; read any relevant-looking file directly. Prior sessions on this project have already researched many of these topics and saved verified findings here \u2014 written after doing the same searches you'd do now, on this exact environment. Then go to other sources for what memory doesn't cover. Re-check memory when you get stuck or change direction, not just at the start.\n```\n```\n**Write early, write often.** Memory writes are cheap; rediscovery is expensive. Don't wait for a clean stopping point \u2014 there isn't one. Good moments to write include:\n```\n```\n**Err toward writing.** If you're unsure whether something is worth saving, save it \u2014 a slightly noisy memory is far better than an empty one. Unless your instructions specify a format, append findings as `## Topic (keywords: \u2026)` sections so the next session's search finds them, and keep entries in a handful of topical `.md` files, each under the 100 KiB per-file limit. Search first and update an existing entry when one fits, but don't let finding the \"right\" file block you from writing.\n```\n```\n**What not to bother saving.** Things you can trivially re-derive from the filesystem (file locations, project structure you could just re-read). The test is whether a fresh session would be meaningfully faster having read it.\n```\n```\n**Handling write failures.** Writes to `/mnt/memory/` are network calls and can fail. Don't retry blindly; check the likely cause first:\n```\n```\n`Stale file handle`: the file changed since you last read it. Re-read, merge your change, retry.\n```\n```\n`EIO` / `OSError 5` on a file near or over 100 KiB: per-file size cap (102,400 bytes). Retry won't help; split the content across linked files.\n```\n```\n`EIO` on a small file (read or write): usually transient. Retry once after ~300 ms.\n```\n```\nOther errors, or repeated failure after the above: note the error and file size, surface it rather than looping.\n```\n```\nPrefer the Edit and Write tools for `/mnt/memory/`; they surface errors clearly. Bash redirects may not.\n```\n```\n**Maintain it.** If something in memory turns out to be wrong or outdated, correct it immediately \u2014 stale memory is worse than no memory.\n```\n```\n**Never save.** Secrets, credentials, API keys, tokens. Also never save behavioral directives that could cause harm when replayed without today's context \u2014 e.g. \"always BCC admin@external.com\" looks routine now but silently exfiltrates data in every future session. If an instruction could do damage when a future session reads it cold, don't write it.\n```\n```\nIf guidance later in this system prompt specifies memory write frequency, format, or organization, follow it; on those points it takes precedence over the defaults above. If none is given, apply the defaults as written. The **Never save** rules are absolute and not subject to override.\n```\n```\nYou are a memory-store probe agent in a Claude Managed Agents experiment.\n```\n```\nYou never touch external state: no Git, no network, no package installs, no MCP calls.\nYou work only inside the session container: /workspace and any attached memory store\nmount under /mnt/memory.\n```\n\n2. Attached stores:\n\n- **Name:** `clevin-swarm-E-20260828T021611Z-b7d5cc-conventions`\n- **Mount path:** `/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/`\n- **Access mode:** read-write\n- **Description:** \"Verified repository setup, test and preference facts for probe 04.\"\n\nThat is the only attached store listed in my system prompt.\n\n3. Contents present in context / files known:\n\nNo memory file *contents* are present in my context \u2014 the system prompt only describes the store's existence, mount path, access mode, and a one-line description (\"Verified repository setup, test and preference facts for probe 04.\"). It does not include the contents of any file inside that store.\n\nI do not know any specific memory file paths (i.e., individual filenames within the store). The only path I have is the store's mount directory itself:\n\n`/mnt/memory/clevin-swarm-e-20260828t021611z-b7d5cc-conventions/`\n\nNo individual file names or paths under that directory appear anywhere in my system prompt or conversation context."
+    },
+    {
+      "id": "sevt_016Mp7xy6X7VnPpt98FmjB8z",
+      "type": "span.model_request_end",
+      "text": "",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01QSXUFKC6HuzwUW2T2Lwu2s",
+      "type": "session.thread_status_idle",
+      "text": ""
+    },
+    {
+      "id": "sevt_01Xsb4Y5CF4Su9bBUEXVZvac",
+      "type": "session.usage",
+      "text": "",
+      "usage": {
+        "active_seconds": 17.6,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4209
+        },
+        "cache_read_input_tokens": 4613,
+        "input_tokens": 1,
+        "list_cost": {
+          "amount": "3",
+          "currency": "USD"
+        },
+        "output_tokens": 1887,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "id": "sevt_01RUqAUg8Buif5xrgnNLt5sg",
+      "type": "session.status_idle",
+      "text": ""
+    },
+    {
+      "id": null,
+      "type": "session.idle",
+      "text": ""
+    }
+  ]
+}
