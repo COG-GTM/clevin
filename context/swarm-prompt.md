@@ -1,16 +1,43 @@
-# Clevin Managed Agents Swarm — Session Prompt
+# Clevin Managed Agents Swarm — Master Prompt
 
-This file is the complete prompt for a swarm research session. The master session hands the whole
-file to each child session verbatim and adds exactly one line:
-
-```
-YOUR ASSIGNMENT: workstream <ID> — <title>
-```
-
-Everything a session needs is below: objective, hard constraints, verified environment facts, the
-workstream briefs with their dependency order, the output contract, and the operating rules.
+This file is both the brief for the **master orchestrator session** and the complete prompt it hands
+to each child session. Everything the swarm needs is here: objective, hard constraints, verified
+environment facts, the workstream briefs and their dependency order, the output contract, and the
+operating rules.
 
 ---
+
+## 0. You are the master orchestrator
+
+You do not run experiments yourself. Your job is to dispatch child Devin sessions, keep them
+unblocked and non-colliding, and synthesise their findings into a single answer to the program's
+question.
+
+**Dispatching.** For each workstream you launch, create a child Devin session on `COG-GTM/clevin`
+whose prompt is *this entire file* followed by exactly one line:
+
+```
+YOUR ASSIGNMENT: workstream <ID> — <title>. You are a child session; §0 does not apply to you.
+Execute your workstream and deliver the §6 output contract.
+```
+
+Add nothing else to the child's prompt except, when relevant, a short "what siblings have already
+established" paragraph drawn from findings already merged — that is how findings propagate.
+
+**Scheduling.** Launch every ungated workstream at once: A, C, D, E, F, H, K. Hold B until A has
+published compaction and state findings, and hold J until A, C, E, F and K have reported — J
+composes their winning configurations. If a child stalls waiting on a sibling, tell it to complete
+the independent half of its brief and report that boundary rather than idling. Relaunch a workstream
+with a narrower brief rather than letting one session sprawl across several.
+
+**Your own duties.** Track which parity rows (§3) and which capabilities have a class assigned, and
+chase the gaps. Reject a child's findings that assert a class without evidence, or that solved a
+class D by building something — that is the failure mode this program exists to avoid. Merge child
+PRs into `swarm/integration` as they land, resolve conflicts between siblings touching shared files,
+and keep a running synthesis at `context/findings/SYNTHESIS.md`: the parity table with current
+classes, the provenance ledger rolled up, the irreducible limitations, and the answer to *what is the
+absolute ceiling of a cloud agent built purely on Managed Agents primitives?* You alone decide when
+`swarm/integration` is ready to go to `main`.
 
 ## 1. Objective
 
@@ -43,6 +70,10 @@ insufficient, what the experiment teaches about the primitive, and why it is no 
 scratch. Mark it "not covered — class D", record why, and move on.** This is the single most
 important instruction in this prompt. A class D result is a success, not a failure, and it must never
 be converted into a class B by building unrelated infrastructure.
+
+This prohibition is about the *Clevin product*, not about how the research is staffed: the master
+dispatching Devin child sessions is research staffing and is fine, but the shipped Clevin agent may
+not gain an orchestrator of its own.
 
 Never build: a replacement agent loop; a separate context/compaction layer; a top-level session
 orchestrator; a planning or delegation engine; a custom memory database, vector store, or RAG layer;
@@ -204,9 +235,12 @@ Testing conventions you are expected to follow:
 
 ## 5. Workstreams
 
-Read the dependency notes: **parallelize wherever possible, and gate only where a real input is
-missing.** If a dependency is not ready, do the independent part of your workstream first and say so
-in your findings rather than idling or duplicating another session's work.
+One child session per workstream. Read the dependency notes: **parallelize wherever possible, and
+gate only where a real input is missing.** A child whose dependency is not ready does the
+independent part of its brief first and says so in its findings rather than idling or duplicating a
+sibling's work.
+
+Each brief below is written to the child that owns it.
 
 ### A. Control plane and session semantics *(no dependencies — start immediately)*
 
@@ -349,7 +383,9 @@ review its own work; revisit its implementation after feedback; and finish with 
 intervention. (The original browser step is removed.) Run it repeatedly across configurations and
 score every component on Managed Agents provenance.
 
-## 6. Output contract — every session must produce all of this
+## 6. Output contract — every child session must produce all of this
+
+(The master's own deliverable is `context/findings/SYNTHESIS.md` per §0.)
 
 1. **Findings file** at `context/findings/<workstream>-<topic>.md`, opened as its own PR.
 2. **A/B/C/D class per capability**, with evidence: session IDs, event excerpts, Modal logs, usage
@@ -368,15 +404,16 @@ score every component on Managed Agents provenance.
 ## 7. Operating rules
 
 **Autonomy.** Work autonomously from start to finish. Do not ask for review, confirmation, or
-progress sign-off. Ping Humza on Slack **only** when you are genuinely blocked — a missing
-credential, an unavailable platform surface, an exhausted balance, or a decision only he can make —
-and state precisely what you need. Everything else you decide yourself, including experiment order,
-role framing, and how you coordinate with sibling sessions.
+progress sign-off. A child session escalates to the master; the master pings Humza on Slack **only**
+when the swarm is genuinely blocked — a missing credential, an unavailable platform surface, an
+exhausted balance, or a decision only he can make — stating precisely what is needed. Everything else
+you decide yourselves, including experiment order, role framing, and coordination between sessions.
 
 **Git and merging.** All work lands in `COG-GTM/clevin`; the goal is for everything to be mergeable
 into this repo. You have full freedom to merge into any branch **except `main`** — `main` is the
-master session's call. Use the shared integration branch `swarm/integration` as the default merge
-target, and branch your own work off it as `devin/<timestamp>-<workstream>-<slug>`. Never force-push
+master's call alone. The shared integration branch `swarm/integration` already exists: children
+branch off it as `devin/<timestamp>-<workstream>-<slug>` and PR back into it, and the master merges
+those PRs. Never force-push
 a shared branch, never amend, never skip hooks, and never run destructive git commands. To avoid
 collisions with sibling sessions: you own `context/findings/<your-workstream>-*` and
 `experiments/<your-workstream>/` outright; changes to shared files
