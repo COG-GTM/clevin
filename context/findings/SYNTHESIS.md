@@ -17,7 +17,7 @@ dispatched 2026-08-28; B, I, J gated.
 | H | Deployments & automation | **merged** (PR #8) | `H-deployments-automation.md` |
 | I | Observability & economics | gated on A | — |
 | J | Integrated gauntlet | gated on A, C, E, F, K | — |
-| K | Devin-parity interaction model | PR #10 open (session finishing) | — |
+| K | Devin-parity interaction model | **merged** (PR #10) | `K-parity-interaction.md` |
 
 ## Parity table (current classes)
 
@@ -33,16 +33,16 @@ Unfilled rows are pending evidence — no class is assigned without it.
 | Learns across tasks | Memory Store | **C** (session half); **A** (deployment half: recurring runs read/write store) | E §3; H §8. Storage/provenance A; nothing *pulls* knowledge — retrieval is the model grepping the mount |
 | Recovers from crashed sandbox / failed tool | EnvironmentWorker + session APIs + webhooks | **A** (failed tool) / **D** (dead worker, unattended) | C §1–2: tool timeout yields a clean is_error result (A); a killed worker strands the session forever — nothing native notices or re-dispatches (D); manual `SessionToolRunner` re-attach recovers (C-3, class C) |
 | Asks for help only when genuinely blocked | System prompt + tool design | **B** (mechanism, via K's ask-and-block) | Behavioural quality untested (balance); B gated |
-| Mid-run steering | Session events (user.interrupt, message injection) | **A** (session) / **B** (per-child) | K PR #10: bare user.message rejected mid-tool-call; user.interrupt accepted in 0.5 s and agent genuinely re-plans. A: interrupt stops generation cleanly. Per-child interrupt named by platform, unexecuted (balance) |
-| Ask-and-block, resume with workspace intact | Session idle state + worker lease/idle timeout | **B** | K PR #10: custom tool + requires_action blocks nearly free ($18/945 s, 20 s active); volume survives, container does not; waiting-on-human only detectable by matching stop_reason.event_ids to agent.custom_tool_use |
-| Sleeps, wakes on new ticket/comment | Deployments (polling) + lifecycle webhooks | **A** (mechanism) / **C** (behaviour) | H §8: polling detects change in ~61 s; event ingress is D; per-fire amnesia |
-| Responds to PR review comments, fixes CI | GitHub MCP + Deployment-driven polling | **C** (deployment half; K/J to demo end-to-end) | H §8: each fire is a cold session; loop re-derived from GitHub state |
+| Mid-run steering | Session events (user.interrupt, message injection) | **A** (session) / **B** (per-child) | K1: user.interrupt + user.message re-plans with full awareness; bare user.message rejected mid-tool-call. A: interrupt stops generation cleanly. Per-child interrupt named by platform, unexecuted (balance; F §9) |
+| Ask-and-block, resume with workspace intact | Session idle state + worker lease/idle timeout | **B** | K2: answered after 15 and 75 min (sandbox torn down at 3600 s, volume file intact), resume 0.2 s, $18/945 s; waiting-on-human only detectable by matching stop_reason.event_ids to agent.custom_tool_use |
+| Sleeps, wakes on new ticket/comment | Deployments (polling) + lifecycle webhooks | **C** | H §8 + K3: 1-minute cron floor honoured; every fire is a brand-new session; continuity only via Memory Store; no GitHub/Linear→Anthropic event path; /mnt/memory root read-only |
+| Responds to PR review comments, fixes CI | GitHub MCP + Deployment-driven polling | **A** (in-session loop) / **C** (unattended trigger) | K4: one session took PR #6 red→green, replied to the inline review comment (10 MCP calls, 91 s active, $58 list). H §8: the unattended trigger is a cold polled session |
 | Playbooks: reusable named procedures | Skills | **C** | K PR #10: attached Skill is invisible to the model (volume files only, no listing tool, no prompt injection); one system-prompt paragraph pointing at /workspace/skills makes it usable |
 | Knowledge auto-selected by repo/task scope | Memory Store (scoping weak point) | **D** (auto-selection) / **C** (in practice) | E §3: no scope field/selection/ranking; path hierarchy + one store per scope reaches the outcome at 200-entry scale |
 | Warm environment (blueprint/snapshot) | Sandbox image + clevin-sessions volume | **B** | A: sandbox image + session volume are native environment extension points, but separate from the Anthropic session snapshot — no atomic history+filesystem checkpoint (D) |
-| Self-improvement: writes back learnings | Memory Store writes + Skill upload | **C** (memory half) | E §3: clean write-back and self-correction when asked; no quarantine/deletion of superseded entries. K owns the Skill half |
+| Self-improvement: writes back learnings | Memory Store writes + Skill upload | **C** (memory yes, Skills no) | E §3 + K6: memory write-back measurably helps the next session (1 attempt/45 s/$12 vs 3/69 s/$17); Skill write-back has no agent-side primitive (D) |
 | Session forking from a checkpoint | No known primitive | **D** (confirmed on all three sides) | H §8 (deployment); A (no clone/fork/checkpoint in session API); K PR #10 (K7 confirmed D, not built) |
-| Attachments / multimodal input | Session message content | — (K final report pending) | K |
+| Attachments / multimodal input | Session message content | — (untested; balance exhausted before K reached it) | K §untested |
 | Runs on a schedule | Deployments | **A** | H §8: POSIX cron + timezone + version pinning; ≥1-minute granularity; no concurrency control, retry, or session continuation (all D) |
 | Observable, attributable run history | SSE + usage events + Console | **C** | A: version/session/model/tool/usage/compaction events attributable; sandbox process & filesystem transitions absent from Anthropic history. C §6: lease/heartbeat traffic detects strands externally. I (gated) owns depth |
 | Per-task cost accounting | session.usage + budget events | **A** | A: per-request cache/token fields + cumulative usage, no Admin API needed; F: per-thread list_cost gives per-role attribution; H §8 |
@@ -57,7 +57,7 @@ Unfilled rows are pending evidence — no class is assigned without it.
 - **A**: probe `experiments/A/managed_agents_probe.py` + results JSONs. See A §Reproduction.
 - **C**: drivers `experiments/C/*` (timeout, worker-kill, recovery, lease fencing, routing, concurrency); no product code. See C §3.
 - **F**: `experiments/F/*` (harness, surface/delegation/fan-out/failure probes, report); roster version pinning landed in `packages/provision`. See F §12.
-- **K** (PR open): `experiments/K/*`, `context/findings/K-parity-interaction.md`; `packages/provision` gains `parseSkillIds` (CLEVIN_SKILL_IDS) + one system-prompt paragraph for skill discovery — default behaviour unchanged.
+- **K**: `experiments/K/*` drivers + evidence; `packages/provision` gains `parseSkillIds` (CLEVIN_SKILL_IDS) + one system-prompt paragraph for skill discovery — default behaviour unchanged, no production version mutated. See K §Provenance.
 
 ## Irreducible limitations (class D register)
 
@@ -85,7 +85,7 @@ Unfilled rows are pending evidence — no class is assigned without it.
 - C-10 malformed/oversized/duplicate tool_result injection (driver written, unrun).
 - F: 5th grader arm, per-child `user.interrupt`, 64–256 KB payload rungs, parent compaction
   under children, hours-long repeated delegation.
-- K: longer ask-and-block replication was still parked at report time.
+- K: 4500 s ask-and-block replication (post-sandbox-teardown resumed work) caught mid-resume by billing_error; attachments/multimodal row never reached.
 - B, I, J live experiments — gated workstreams cannot run until balance is restored.
 
 ## Open handoffs between workstreams
@@ -98,7 +98,8 @@ Unfilled rows are pending evidence — no class is assigned without it.
 
 ## Answer: the absolute ceiling of a cloud agent built purely on Managed Agents primitives
 
-*Draft — pending K's final report and the gated B/I/J workstreams (blocked on Anthropic balance).*
+*Based on A, C, D, E, F, H, K. Gated workstreams B, I, J are blocked on the exhausted Anthropic
+balance; their results could refine (not likely overturn) the classes below.*
 
 **The ceiling is a competent single-shot task executor with strong fleet/config management and
 cost accounting, but without unattended durability, event-driven wakefulness, or native
