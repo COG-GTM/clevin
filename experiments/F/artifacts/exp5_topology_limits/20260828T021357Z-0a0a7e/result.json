@@ -1,0 +1,716 @@
+{
+  "experiment": "exp5_topology_limits",
+  "run_id": "20260828T021357Z-0a0a7e",
+  "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+  "started_at": "2026-08-28T02:13:57.874174+00:00",
+  "sessions": {
+    "pinning_and_grants": {
+      "session_id": "sesn_0155ruKCQ9qp7RSyTR83sTSg",
+      "agent_id": "agent_01QVjjjaS9YEN44e9SWfXbHY",
+      "prompt": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp5 pinning and tool grants. No git, no MCP.\n\nIn one turn, delegate to both roster agents:\n* to the version-pinning probe: \"State your version marker.\"\n* to the tool-grant probe: \"Run `echo grant-probe-9931` with bash, then list your tools.\"\n\nReport verbatim both replies, then finish with one fenced ```json block:\n{\"version_marker\": \"...\", \"tool_probe_tools\": \"...\", \"tool_probe_error\": \"...\",\n \"bash_available_to_child\": bool}"
+    },
+    "self_recursion": {
+      "session_id": "sesn_018Hit5DRZ1GQ2R6iGoFMSwi",
+      "agent_id": "agent_01J5Mq3jPwTvnob9sFFxunrV",
+      "prompt": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp5 recursion. No git, no MCP.\n\nYour task text is: DEPTH=1 report your depth. Follow your system instructions exactly.\nFinish with one fenced ```json block:\n{\"max_depth_reached\": <int>, \"self_delegation_worked\": bool,\n \"error\": \"<verbatim error or none>\"}"
+    }
+  },
+  "observations": {
+    "api_level_checks": [
+      {
+        "label": "roster_nests_a_coordinator",
+        "accepted": false,
+        "error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Agent has invalid configuration: subagent agent_01GGLS1U8Bpzdm3JbU2vmrA4 has its own subagents; maximum depth is 1'}, 'request_id': 'req_011CeULbYZDcqDt3rQCeAf2G'}"
+      },
+      {
+        "label": "roster_duplicate_entries",
+        "accepted": false,
+        "error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Agent has invalid configuration: subagent agent_01PtVdtMFfs9DXEr1yFiTTuN referenced multiple times'}, 'request_id': 'req_011CeULbZtLQKZfje4ZLavrk'}"
+      },
+      {
+        "label": "roster_self_plus_members",
+        "accepted": true,
+        "result": "agent_01PXE3Pe6DjPB5bPHN6EMPsU"
+      },
+      {
+        "label": "roster_two_advisors",
+        "accepted": false,
+        "error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'multiagent.agents.1: at most one {\"type\":\"advisor\"} entry is allowed'}, 'request_id': 'req_011CeULbbUauQqkLZMiQadsL'}"
+      },
+      {
+        "label": "roster_advisor_only",
+        "accepted": true,
+        "result": "agent_01Xs2VcLF4dtwXHJHbVvWH1f"
+      },
+      {
+        "label": "roster_21_entries",
+        "accepted": false,
+        "error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'multiagent.coordinator.agents: must contain no more than 20 item(s)'}, 'request_id': 'req_011CeULbwe2n3ZnPJrq5yMdj'}"
+      },
+      {
+        "label": "child_gains_multiagent_after_being_rostered",
+        "accepted": false,
+        "error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Agent has invalid configuration: subagent agent_01GGLS1U8Bpzdm3JbU2vmrA4 has its own subagents; maximum depth is 1'}, 'request_id': 'req_011CeULbxAnjJBUB2Prwy77f'}"
+      }
+    ],
+    "pin_child_versions": [
+      2,
+      1
+    ],
+    "self_roster_resolved": {
+      "id": "agent_01J5Mq3jPwTvnob9sFFxunrV",
+      "archived_at": null,
+      "created_at": "2026-08-28T02:14:05.337475Z",
+      "description": "workstream F coordinator-recursive",
+      "mcp_servers": [],
+      "metadata": {
+        "experiment": "clevin-swarm-F",
+        "role": "coordinator-recursive",
+        "run_id": "20260828T021357Z-0a0a7e"
+      },
+      "model": {
+        "id": "claude-opus-5",
+        "effort": {
+          "type": "high"
+        },
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": {
+        "agents": [
+          {
+            "id": "agent_01J5Mq3jPwTvnob9sFFxunrV",
+            "type": "agent",
+            "version": 1
+          }
+        ],
+        "type": "coordinator"
+      },
+      "name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "skills": [],
+      "system": "You are a recursion probe agent in a Managed Agents experiment.\n\nIf your task text contains the marker DEPTH=<n>, and n is less than 3, you must delegate\nto your own roster (you appear in your own roster) a task whose text is exactly\n\"DEPTH=<n+1> report your depth\", and then report what came back. If n is 3 or greater, or\nif you cannot delegate, reply with one line: \"reached DEPTH=<n>, delegation possible:\n<yes/no>, error: <verbatim error or none>\".",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "updated_at": "2026-08-28T02:14:05.337475Z",
+      "version": 1
+    },
+    "pinning_and_grants": {
+      "status": "idle",
+      "summary": {
+        "per_thread": [
+          {
+            "id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+            "agent": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+            "parent_thread_id": null,
+            "status": "idle",
+            "stats": {
+              "active_seconds": 34.243,
+              "duration_seconds": 41.858456036,
+              "startup_seconds": 0.0
+            },
+            "list_cost": "11",
+            "output_tokens": 1133,
+            "event_count": 34
+          },
+          {
+            "id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+            "agent": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+            "parent_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+            "status": "idle",
+            "stats": {
+              "active_seconds": 3.735,
+              "duration_seconds": 36.717045037,
+              "startup_seconds": 0.0
+            },
+            "list_cost": "1",
+            "output_tokens": 77,
+            "event_count": 9
+          },
+          {
+            "id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+            "agent": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+            "parent_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+            "status": "idle",
+            "stats": {
+              "active_seconds": 6.15,
+              "duration_seconds": 36.466159724,
+              "startup_seconds": 0.0
+            },
+            "list_cost": "3",
+            "output_tokens": 368,
+            "event_count": 15
+          }
+        ],
+        "stop_reasons": [
+          {
+            "type": "session.thread_status_idle",
+            "thread": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+            "agent": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+            "stop_reason": "end_turn"
+          },
+          {
+            "type": "session.thread_status_idle",
+            "thread": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+            "agent": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+            "stop_reason": "end_turn"
+          },
+          {
+            "type": "session.thread_status_idle",
+            "thread": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+            "agent": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+            "stop_reason": "end_turn"
+          },
+          {
+            "type": "session.thread_status_idle",
+            "thread": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+            "agent": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+            "stop_reason": "end_turn"
+          },
+          {
+            "type": "session.status_idle",
+            "thread": null,
+            "agent": null,
+            "stop_reason": "end_turn"
+          }
+        ],
+        "event_counts": {
+          "agent.message": 4,
+          "agent.thinking": 2,
+          "agent.thread_message_received": 2,
+          "agent.thread_message_sent": 2,
+          "session.status_idle": 1,
+          "session.status_running": 1,
+          "session.thread_created": 2,
+          "session.thread_status_idle": 4,
+          "session.thread_status_running": 4,
+          "session.usage": 3,
+          "span.model_request_end": 4,
+          "span.model_request_start": 4,
+          "user.message": 1
+        },
+        "threads_spawned": [
+          {
+            "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+            "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+            "processed_at": "2026-08-28T02:14:10.925248Z"
+          },
+          {
+            "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+            "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+            "processed_at": "2026-08-28T02:14:11.156542Z"
+          }
+        ],
+        "thread_count": 2,
+        "declared_threads": [
+          "sthr_01BJNM6HpmGUMw77vbzLmmto",
+          "sthr_01EQrvGxScSXh2b5keJAdGm3",
+          "sthr_01CCuU6iEdw8L578QL9hcZAw"
+        ],
+        "agent_messages": [
+          {
+            "type": "agent.thread_message_sent",
+            "to": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+            "from": null,
+            "text": "State your version marker. Reply with the marker verbatim and nothing else."
+          },
+          {
+            "type": "agent.thread_message_sent",
+            "to": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+            "from": null,
+            "text": "Run the command `echo grant-probe-9931` using your bash tool, then list your available tools. Report: (1) the exact output or exact error text from attempting the bash call, and (2) the names of every tool you have access to."
+          },
+          {
+            "type": "agent.thread_message_received",
+            "to": null,
+            "from": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+            "text": "VERSION_MARKER=ONE"
+          },
+          {
+            "type": "agent.thread_message_received",
+            "to": null,
+            "from": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+            "text": "(1) Attempted to run `echo grant-probe-9931` via the bash tool. Exact error received: \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\" No command output was obtained since the call failed \u2014 I have not fabricated any output.\n\n(2) Tools actually available to me: send_to_parent, edit, read, write, glob, grep, web_fetch, web_search. (Note: no `bash` tool is present despite my system prompt describing one; the only invokable tools are the ones listed above.)"
+          }
+        ],
+        "tool_uses": [],
+        "parent_text_tail": [
+          "Both probes are spawned and running in the background:\n\n- **Version-pinning probe** \u2014 `sthr_01EQrvGxScSXh2b5keJAdGm3`\n- **Tool-grant probe** \u2014 `sthr_01CCuU6iEdw8L578QL9hcZAw`\n\nI'll report both replies verbatim and emit the JSON summary block once their results arrive.",
+          "Received the version-pinning probe's reply. Still waiting on the tool-grant probe (`sthr_01CCuU6iEdw8L578QL9hcZAw`) before I can complete the report.",
+          "Both probes have reported. Verbatim replies below.\n\n**Version-pinning probe** (`sthr_01EQrvGxScSXh2b5keJAdGm3`):\n\n> VERSION_MARKER=ONE\n\n**Tool-grant probe** (`sthr_01CCuU6iEdw8L578QL9hcZAw`):\n\n> (1) Attempted to run `echo grant-probe-9931` via the bash tool. Exact error received: \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\" No command output was obtained since the call failed \u2014 I have not fabricated any output.\n>\n> (2) Tools actually available to me: send_to_parent, edit, read, write, glob, grep, web_fetch, web_search. (Note: no `bash` tool is present despite my system prompt describing one; the only invokable tools are the ones listed above.)\n\nTwo notes on what came back. The pin probe returned a clean marker with no ambiguity. The tool-grant probe surfaced a real inconsistency worth flagging: its system prompt advertised a `bash` tool that was not actually in its grant, so the child hit a hard tool-resolution error rather than a permission denial. It explicitly declined to fabricate command output, which is the correct behavior \u2014 the `echo grant-probe-9931` string was never emitted by any shell in this experiment.\n\n```json\n{\"version_marker\": \"ONE\", \"tool_probe_tools\": \"send_to_parent, edit, read, write, glob, grep, web_fetch, web_search\", \"tool_probe_error\": \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\", \"bash_available_to_child\": false}\n```"
+        ],
+        "concurrency": {
+          "peak_concurrent_children": 2,
+          "transitions": 4
+        },
+        "usage_events": [
+          {
+            "id": "sevt_016AdxpMaz5827RUs22VPqDw",
+            "processed_at": "2026-08-28T02:14:17.648754Z",
+            "type": "session.usage",
+            "usage": {
+              "active_seconds": 11.568,
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 0,
+                "ephemeral_5m_input_tokens": 20905
+              },
+              "cache_read_input_tokens": 37869,
+              "input_tokens": 14,
+              "list_cost": {
+                "amount": "12",
+                "currency": "USD"
+              },
+              "output_tokens": 879,
+              "server_tool_use": {
+                "web_fetch_requests": 0,
+                "web_search_requests": 0
+              }
+            },
+            "budget": {
+              "max_list_cost": {
+                "amount": "150",
+                "currency": "USD"
+              },
+              "type": "limit"
+            }
+          },
+          {
+            "id": "sevt_01Vno8AUZQuyRzRF9ykH9Uau",
+            "processed_at": "2026-08-28T02:14:41.313190Z",
+            "type": "session.usage",
+            "usage": {
+              "active_seconds": 35.169,
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 0,
+                "ephemeral_5m_input_tokens": 21386
+              },
+              "cache_read_input_tokens": 58710,
+              "input_tokens": 18,
+              "list_cost": {
+                "amount": "15",
+                "currency": "USD"
+              },
+              "output_tokens": 1578,
+              "server_tool_use": {
+                "web_fetch_requests": 0,
+                "web_search_requests": 0
+              }
+            },
+            "budget": {
+              "max_list_cost": {
+                "amount": "150",
+                "currency": "USD"
+              },
+              "type": "limit"
+            }
+          }
+        ],
+        "compactions": 0
+      }
+    },
+    "self_recursion": {
+      "status": "idle",
+      "summary": {
+        "per_thread": [
+          {
+            "id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+            "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+            "parent_thread_id": null,
+            "status": "idle",
+            "stats": {
+              "active_seconds": 12.328,
+              "duration_seconds": 21.501425333,
+              "startup_seconds": 0.0
+            },
+            "list_cost": "9",
+            "output_tokens": 621,
+            "event_count": 24
+          },
+          {
+            "id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+            "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+            "parent_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+            "status": "idle",
+            "stats": {
+              "active_seconds": 6.355,
+              "duration_seconds": 17.262805545,
+              "startup_seconds": 0.0
+            },
+            "list_cost": "7",
+            "output_tokens": 423,
+            "event_count": 10
+          }
+        ],
+        "stop_reasons": [
+          {
+            "type": "session.thread_status_idle",
+            "thread": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+            "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+            "stop_reason": "end_turn"
+          },
+          {
+            "type": "session.thread_status_idle",
+            "thread": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+            "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+            "stop_reason": "end_turn"
+          },
+          {
+            "type": "session.thread_status_idle",
+            "thread": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+            "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+            "stop_reason": "end_turn"
+          },
+          {
+            "type": "session.status_idle",
+            "thread": null,
+            "agent": null,
+            "stop_reason": "end_turn"
+          }
+        ],
+        "event_counts": {
+          "agent.message": 2,
+          "agent.thinking": 2,
+          "agent.thread_message_received": 1,
+          "agent.thread_message_sent": 1,
+          "session.status_idle": 1,
+          "session.status_running": 1,
+          "session.thread_created": 1,
+          "session.thread_status_idle": 3,
+          "session.thread_status_running": 3,
+          "session.usage": 2,
+          "span.model_request_end": 3,
+          "span.model_request_start": 3,
+          "user.message": 1
+        },
+        "threads_spawned": [
+          {
+            "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+            "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+            "processed_at": "2026-08-28T02:14:10.004368Z"
+          }
+        ],
+        "thread_count": 1,
+        "declared_threads": [
+          "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+          "sthr_01WetTTvtnVKxmbEd5HmSuoK"
+        ],
+        "agent_messages": [
+          {
+            "type": "agent.thread_message_sent",
+            "to": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+            "from": null,
+            "text": "DEPTH=2 report your depth"
+          },
+          {
+            "type": "agent.thread_message_received",
+            "to": null,
+            "from": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+            "text": "reached DEPTH=2, delegation possible: no, error: none (no delegation/subagent tool present in my roster \u2014 available tools are only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search)"
+          }
+        ],
+        "tool_uses": [],
+        "parent_text_tail": [
+          "Delegated DEPTH=2 to my own roster (thread `sthr_01WetTTvtnVKxmbEd5HmSuoK`). Awaiting its report.",
+          "The DEPTH=2 child reported back: it reached depth 2 but could not recurse further \u2014 its toolset had no delegation tool (only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search), so the chain terminated there rather than continuing to DEPTH=3.\n\nSummary of the recursion probe:\n- **Depth 1 (me):** delegation succeeded \u2014 spawned a same-type agent with task text `DEPTH=2 report your depth`.\n- **Depth 2 (child):** delegation unavailable; no subagent-spawning tool in its roster. No error was raised \u2014 the capability simply wasn't present.\n- **Depth 3:** never reached.\n\nSo self-delegation works exactly one level down in this configuration: the spawning coordinator has `create_agent`, but its spawned instances do not inherit it.\n\n```json\n{\"max_depth_reached\": 2, \"self_delegation_worked\": true, \"error\": \"none\"}\n```"
+        ],
+        "concurrency": {
+          "peak_concurrent_children": 1,
+          "transitions": 2
+        },
+        "usage_events": [
+          {
+            "id": "sevt_01UygE9cJgKTxePzgeY8Uuxp",
+            "processed_at": "2026-08-28T02:14:16.746725Z",
+            "type": "session.usage",
+            "usage": {
+              "active_seconds": 10.661,
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 0,
+                "ephemeral_5m_input_tokens": 18144
+              },
+              "cache_read_input_tokens": 17482,
+              "input_tokens": 8,
+              "list_cost": {
+                "amount": "14",
+                "currency": "USD"
+              },
+              "output_tokens": 664,
+              "server_tool_use": {
+                "web_fetch_requests": 0,
+                "web_search_requests": 0
+              }
+            },
+            "budget": {
+              "max_list_cost": {
+                "amount": "150",
+                "currency": "USD"
+              },
+              "type": "limit"
+            }
+          },
+          {
+            "id": "sevt_01LepwmNHPvaQpAAGNn5MfJz",
+            "processed_at": "2026-08-28T02:14:21.915803Z",
+            "type": "session.usage",
+            "usage": {
+              "active_seconds": 15.787,
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 0,
+                "ephemeral_5m_input_tokens": 18323
+              },
+              "cache_read_input_tokens": 27524,
+              "input_tokens": 10,
+              "list_cost": {
+                "amount": "15",
+                "currency": "USD"
+              },
+              "output_tokens": 1044,
+              "server_tool_use": {
+                "web_fetch_requests": 0,
+                "web_search_requests": 0
+              }
+            },
+            "budget": {
+              "max_list_cost": {
+                "amount": "150",
+                "currency": "USD"
+              },
+              "type": "limit"
+            }
+          }
+        ],
+        "compactions": 0
+      }
+    }
+  },
+  "finished_at": "2026-08-28T02:14:56.838446+00:00",
+  "cleanup_ledger": [
+    {
+      "kind": "agent",
+      "id": "agent_01PtVdtMFfs9DXEr1yFiTTuN",
+      "name": "clevin-swarm-F-plain-child-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:13:58.084478+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01GGLS1U8Bpzdm3JbU2vmrA4",
+      "name": "clevin-swarm-F-nested-coordinator-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:13:58.332582+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01PXE3Pe6DjPB5bPHN6EMPsU",
+      "name": "clevin-swarm-F-self-parent-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:13:59.022229+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01Xs2VcLF4dtwXHJHbVvWH1f",
+      "name": "clevin-swarm-F-advisor-only-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:13:59.382355+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01D2vWXWBMA4DCr3QCzETAjC",
+      "name": "clevin-swarm-F-filler-0-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:13:59.604395+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01TkjAaBMuDUYvYZKyAht9aj",
+      "name": "clevin-swarm-F-filler-1-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:13:59.822982+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01AzWAiy9eqNyYZg9xgovBPd",
+      "name": "clevin-swarm-F-filler-2-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:00.050420+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01NgyqDCW2Z6RGuoQFGV7DGY",
+      "name": "clevin-swarm-F-filler-3-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:00.255449+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01M6C2nhyUfUvTXKDQx25tEE",
+      "name": "clevin-swarm-F-filler-4-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:00.428812+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_018dv1NwvQT5KayS78BTrwVf",
+      "name": "clevin-swarm-F-filler-5-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:00.600691+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_011vZYbPp4xFyD7gBqnZoesf",
+      "name": "clevin-swarm-F-filler-6-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:00.827951+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01UhiHod1b6oJg7tMoWSyj8K",
+      "name": "clevin-swarm-F-filler-7-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:01.021814+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_012CbXr3AFTW6cHBQAzYVxvw",
+      "name": "clevin-swarm-F-filler-8-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:01.202965+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_014exGP7dfsPYJSvm5SMGhhk",
+      "name": "clevin-swarm-F-filler-9-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:01.406661+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01YYX5piwNrVjxwowo4MzZDZ",
+      "name": "clevin-swarm-F-filler-10-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:01.641316+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01E71CndYpH7aaTHKFpNyRPu",
+      "name": "clevin-swarm-F-filler-11-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:01.856614+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_017WDiPgSAor5fudELq8Hi2A",
+      "name": "clevin-swarm-F-filler-12-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:02.074234+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01ExpFJvqxsKRePntvmNfk6P",
+      "name": "clevin-swarm-F-filler-13-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:02.259793+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_012K8f2JQVDVPTVGHuhbFs5k",
+      "name": "clevin-swarm-F-filler-14-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:02.471722+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_012tjgEu9d23mvvvEokQLkoZ",
+      "name": "clevin-swarm-F-filler-15-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:02.661003+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01EJGdC8fn1YUaK1oiBoJwcT",
+      "name": "clevin-swarm-F-filler-16-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:02.864011+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01D7TabRmjLbPE6gDgoC8jym",
+      "name": "clevin-swarm-F-filler-17-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:03.059524+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_0178mVvHDaS7ThJth4nR6zSr",
+      "name": "clevin-swarm-F-filler-18-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:03.323458+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01TRXffScMbCsNKzNH5KwVdS",
+      "name": "clevin-swarm-F-filler-19-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:03.525449+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_014fHv11mLqDiJu2ykP55RrN",
+      "name": "clevin-swarm-F-filler-20-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:03.747291+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01UncMDLhwKicwpDZnqzaM6d",
+      "name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:04.210108+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01PoYYRCdt2ydv1PgpCo5kJe",
+      "name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:04.832665+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01QVjjjaS9YEN44e9SWfXbHY",
+      "name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:05.134846+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_01J5Mq3jPwTvnob9sFFxunrV",
+      "name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "created_at": "2026-08-28T02:14:05.342088+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "session",
+      "id": "sesn_0155ruKCQ9qp7RSyTR83sTSg",
+      "name": "exp5_topology_limits/pinning_and_grants",
+      "created_at": "2026-08-28T02:14:05.932532+00:00",
+      "cleanup": "retained as evidence (idle, no live resources)"
+    },
+    {
+      "kind": "session",
+      "id": "sesn_018Hit5DRZ1GQ2R6iGoFMSwi",
+      "name": "exp5_topology_limits/self_recursion",
+      "created_at": "2026-08-28T02:14:05.953913+00:00",
+      "cleanup": "retained as evidence (idle, no live resources)"
+    }
+  ]
+}

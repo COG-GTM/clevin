@@ -1,5 +1,6 @@
 import { fileURLToPath } from "node:url";
 import { config as loadDotenv } from "dotenv";
+import { SUBAGENT_DEFINITIONS } from "./agent-definition.js";
 
 const REPOSITORY_ENV_PATH = fileURLToPath(
   new URL("../../../.env", import.meta.url),
@@ -11,6 +12,7 @@ export interface ProvisionConfig {
   linearApiKey: string;
   agentId?: string;
   agentVersion?: number;
+  subagentIds?: string[];
   environmentId?: string;
   vaultId?: string;
   linearCredentialId?: string;
@@ -65,12 +67,48 @@ function optionalAgentVersion(env: NodeJS.ProcessEnv): number | undefined {
   return value;
 }
 
+function optionalResourceIds(
+  env: NodeJS.ProcessEnv,
+  name: string,
+  prefix: string,
+): string[] | undefined {
+  const raw = env[name];
+  if (raw === undefined || raw.trim() === "") {
+    return undefined;
+  }
+  const values = raw
+    .split(",")
+    .map((value) => value.trim())
+    .filter((value) => value !== "");
+  if (values.length === 0) {
+    return undefined;
+  }
+  const parsed: string[] = [];
+  for (const value of values) {
+    const parsedValue = optionalResourceId({ [name]: value }, name, prefix);
+    if (parsedValue === undefined) {
+      throw new ConfigurationError(`${name} contains an empty resource ID`);
+    }
+    parsed.push(parsedValue);
+  }
+  return parsed;
+}
+
 export function parseProvisionConfig(env: NodeJS.ProcessEnv): ProvisionConfig {
   const agentId = optionalResourceId(env, "CLEVIN_AGENT_ID", "agent_");
   const agentVersion = optionalAgentVersion(env);
+  const subagentIds = optionalResourceIds(env, "CLEVIN_SUBAGENT_IDS", "agent_");
   if ((agentId === undefined) !== (agentVersion === undefined)) {
     throw new ConfigurationError(
       "CLEVIN_AGENT_ID and CLEVIN_AGENT_VERSION must be configured together",
+    );
+  }
+  if (
+    subagentIds !== undefined &&
+    subagentIds.length !== SUBAGENT_DEFINITIONS.length
+  ) {
+    throw new ConfigurationError(
+      `CLEVIN_SUBAGENT_IDS must contain exactly ${SUBAGENT_DEFINITIONS.length} IDs`,
     );
   }
 
@@ -80,6 +118,7 @@ export function parseProvisionConfig(env: NodeJS.ProcessEnv): ProvisionConfig {
     linearApiKey: requiredSecret(env, "LINEAR_API_KEY"),
     ...(agentId === undefined ? {} : { agentId }),
     ...(agentVersion === undefined ? {} : { agentVersion }),
+    ...(subagentIds === undefined ? {} : { subagentIds }),
     ...optionalProperty(
       "environmentId",
       optionalResourceId(env, "CLEVIN_ENVIRONMENT_ID", "env_"),

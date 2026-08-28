@@ -1,0 +1,1565 @@
+{
+  "session": {
+    "id": "sesn_0155ruKCQ9qp7RSyTR83sTSg",
+    "agent": {
+      "id": "agent_01QVjjjaS9YEN44e9SWfXbHY",
+      "description": "workstream F coordinator-pinning",
+      "mcp_servers": [],
+      "model": {
+        "id": "claude-opus-5",
+        "effort": {
+          "type": "high"
+        },
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": {
+        "agents": [
+          {
+            "id": "agent_01UncMDLhwKicwpDZnqzaM6d",
+            "description": "workstream F pin-child",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+            "skills": [],
+            "system": "You are a version-pinning probe subagent. Whatever you are asked, reply with\nexactly: VERSION_MARKER=ONE. Nothing else.",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          },
+          {
+            "id": "agent_01PoYYRCdt2ydv1PgpCo5kJe",
+            "description": "workstream F no-bash-child",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+            "skills": [],
+            "system": "You are a tool-grant probe subagent. When asked, attempt to run the\nrequested shell command with the bash tool. Then reply with one line listing the names of\nevery tool you actually have available, and one line stating verbatim any error or refusal\nyou hit. Do not simulate command output you did not obtain.",
+            "tools": [
+              {
+                "configs": [
+                  {
+                    "enabled": false,
+                    "name": "bash",
+                    "permission_policy": {
+                      "type": "always_allow"
+                    },
+                    "type": "bash"
+                  }
+                ],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          }
+        ],
+        "type": "coordinator"
+      },
+      "name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+      "skills": [],
+      "system": "You are the coordinator of a Managed Agents subagent experiment. Delegate\nexactly as instructed and report verbatim what comes back, including any errors.",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "version": 1
+    },
+    "archived_at": null,
+    "budget": {
+      "max_list_cost": {
+        "amount": "150",
+        "currency": "USD"
+      },
+      "type": "limit"
+    },
+    "created_at": "2026-08-28T02:14:05.630959Z",
+    "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+    "metadata": {
+      "experiment": "clevin-swarm-F",
+      "label": "pinning_and_grants",
+      "run_id": "20260828T021357Z-0a0a7e"
+    },
+    "outcome_evaluations": [],
+    "resources": [],
+    "stats": {
+      "active_seconds": 44.128,
+      "duration_seconds": 41.486684393
+    },
+    "status": "idle",
+    "title": "F/exp5_topology_limits/pinning_and_grants",
+    "type": "session",
+    "updated_at": "2026-08-28T02:14:41.409125Z",
+    "usage": {
+      "active_seconds": 35.494,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 21386
+      },
+      "cache_read_input_tokens": 58710,
+      "input_tokens": 18,
+      "list_cost": {
+        "amount": "15",
+        "currency": "USD"
+      },
+      "output_tokens": 1578,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "vault_ids": [],
+    "deployment_id": null
+  },
+  "events": [
+    {
+      "id": "sevt_01FxtobTNhXB71jjfwekiXzX",
+      "processed_at": "2026-08-28T02:14:05.885233Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_0112rneQcG4HMSuZXnnqYAD8",
+      "agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:06.252526Z",
+      "session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_019KWXarBarZerzsi6b6Panc",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp5 pinning and tool grants. No git, no MCP.\n\nIn one turn, delegate to both roster agents:\n* to the version-pinning probe: \"State your version marker.\"\n* to the tool-grant probe: \"Run `echo grant-probe-9931` with bash, then list your tools.\"\n\nReport verbatim both replies, then finish with one fenced ```json block:\n{\"version_marker\": \"...\", \"tool_probe_tools\": \"...\", \"tool_probe_error\": \"...\",\n \"bash_available_to_child\": bool}",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T02:14:06.316950Z"
+    },
+    {
+      "id": "sevt_015PSuqCg4FWghtY7MXqC386",
+      "processed_at": "2026-08-28T02:14:06.316951Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_012gyZCn6kAS2x5XNFzPjYp5",
+      "content": [
+        {
+          "text": "I'll delegate to both roster agents in parallel.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:10.677358Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_019saLLsLdU8Rt8M2ZqRY95h",
+      "is_error": false,
+      "model_request_start_id": "sevt_015PSuqCg4FWghtY7MXqC386",
+      "model_usage": {
+        "cache_creation_input_tokens": 9698,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 2,
+        "output_tokens": 309,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:10.677361Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_011gamT6BqJyxG3zBGCg81CF",
+      "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:10.925248Z",
+      "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_01HBZ7p1s1X9wnBX7McmFSQW",
+      "content": [
+        {
+          "text": "State your version marker. Reply with the marker verbatim and nothing else.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:10.925249Z",
+      "to_session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e"
+    },
+    {
+      "id": "sevt_01CMVDxkno6quefxcPr4R8NV",
+      "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:11.155327Z",
+      "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01Rz5udBu14LZ4iJhgSzwPsr",
+      "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:11.156542Z",
+      "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_01W14DtTfnT5RtU16QLHBfv6",
+      "content": [
+        {
+          "text": "Run the command `echo grant-probe-9931` using your bash tool, then list your available tools. Report: (1) the exact output or exact error text from attempting the bash call, and (2) the names of every tool you have access to.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:11.156543Z",
+      "to_session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e"
+    },
+    {
+      "id": "sevt_01Tn7YpVbkUWNPWa2Fcggjcy",
+      "processed_at": "2026-08-28T02:14:11.246366Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01Dy53ckzyfpLtXHpScEUJPg",
+      "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:11.421828Z",
+      "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_013VjZeKhs3nSHCHMBX3rCXt",
+      "content": [
+        {
+          "text": "Both probes are spawned and running in the background:\n\n- **Version-pinning probe** \u2014 `sthr_01EQrvGxScSXh2b5keJAdGm3`\n- **Tool-grant probe** \u2014 `sthr_01CCuU6iEdw8L578QL9hcZAw`\n\nI'll report both replies verbatim and emit the JSON summary block once their results arrive.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:13.078701Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01MRAXcDdHxAFVEnrFCPUrZw",
+      "is_error": false,
+      "model_request_start_id": "sevt_01Tn7YpVbkUWNPWa2Fcggjcy",
+      "model_usage": {
+        "cache_creation_input_tokens": 631,
+        "cache_read_input_tokens": 9698,
+        "input_tokens": 2,
+        "output_tokens": 125,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:13.078702Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01DpEQNZFyJfNSUe4JvdeRhW",
+      "agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:13.152174Z",
+      "session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01Bq6kUbC3UWeRZFLNza3hy1",
+      "agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:13.890028Z",
+      "session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01QBTmNMnMfrGYFqqoPvJyV3",
+      "content": [
+        {
+          "text": "VERSION_MARKER=ONE",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+      "processed_at": "2026-08-28T02:14:13.958998Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e"
+    },
+    {
+      "id": "sevt_016TEzXD4zVPV1QXxCmWRsQm",
+      "processed_at": "2026-08-28T02:14:13.958999Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01TfLE9uasVB7Ffabs3sHSfy",
+      "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:14.883104Z",
+      "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01MvyDYCJY113X7AnLE5DN9M",
+      "processed_at": "2026-08-28T02:14:14.968561Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 8.887,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 20469
+        },
+        "cache_read_input_tokens": 14866,
+        "input_tokens": 8,
+        "list_cost": {
+          "amount": "11",
+          "currency": "USD"
+        },
+        "output_tokens": 561,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "150",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01UM1MBLrju1AYUyeuaBYKRw",
+      "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:17.563953Z",
+      "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_016AdxpMaz5827RUs22VPqDw",
+      "processed_at": "2026-08-28T02:14:17.648754Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 11.568,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 20905
+        },
+        "cache_read_input_tokens": 37869,
+        "input_tokens": 14,
+        "list_cost": {
+          "amount": "12",
+          "currency": "USD"
+        },
+        "output_tokens": 879,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "150",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_011TwyUdb1E9zzGQVC2f2rsF",
+      "processed_at": "2026-08-28T02:14:33.464198Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01NnuFQ8LZsSiqEC4jeSNPwP",
+      "content": [
+        {
+          "text": "Received the version-pinning probe's reply. Still waiting on the tool-grant probe (`sthr_01CCuU6iEdw8L578QL9hcZAw`) before I can complete the report.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:34.030817Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01SV9aDv3AVm3sJhUBy4J5Ls",
+      "is_error": false,
+      "model_request_start_id": "sevt_016TEzXD4zVPV1QXxCmWRsQm",
+      "model_usage": {
+        "cache_creation_input_tokens": 183,
+        "cache_read_input_tokens": 10329,
+        "input_tokens": 2,
+        "output_tokens": 81,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:34.030818Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01G1aK7aMYVLD8B6E7jbVx2J",
+      "content": [
+        {
+          "text": "(1) Attempted to run `echo grant-probe-9931` via the bash tool. Exact error received: \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\" No command output was obtained since the call failed \u2014 I have not fabricated any output.\n\n(2) Tools actually available to me: send_to_parent, edit, read, write, glob, grep, web_fetch, web_search. (Note: no `bash` tool is present despite my system prompt describing one; the only invokable tools are the ones listed above.)",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+      "processed_at": "2026-08-28T02:14:34.166598Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e"
+    },
+    {
+      "id": "sevt_01VpjNZudMpujafsnt1fK3Za",
+      "processed_at": "2026-08-28T02:14:34.166599Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_012prXGeBF2B4xQ89aGkGWt1",
+      "processed_at": "2026-08-28T02:14:36.438303Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01Ksm3bro2eiTGrNfUQetVMC",
+      "content": [
+        {
+          "text": "Both probes have reported. Verbatim replies below.\n\n**Version-pinning probe** (`sthr_01EQrvGxScSXh2b5keJAdGm3`):\n\n> VERSION_MARKER=ONE\n\n**Tool-grant probe** (`sthr_01CCuU6iEdw8L578QL9hcZAw`):\n\n> (1) Attempted to run `echo grant-probe-9931` via the bash tool. Exact error received: \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\" No command output was obtained since the call failed \u2014 I have not fabricated any output.\n>\n> (2) Tools actually available to me: send_to_parent, edit, read, write, glob, grep, web_fetch, web_search. (Note: no `bash` tool is present despite my system prompt describing one; the only invokable tools are the ones listed above.)\n\nTwo notes on what came back. The pin probe returned a clean marker with no ambiguity. The tool-grant probe surfaced a real inconsistency worth flagging: its system prompt advertised a `bash` tool that was not actually in its grant, so the child hit a hard tool-resolution error rather than a permission denial. It explicitly declined to fabricate command output, which is the correct behavior \u2014 the `echo grant-probe-9931` string was never emitted by any shell in this experiment.\n\n```json\n{\"version_marker\": \"ONE\", \"tool_probe_tools\": \"send_to_parent, edit, read, write, glob, grep, web_fetch, web_search\", \"tool_probe_error\": \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\", \"bash_available_to_child\": false}\n```",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:41.179735Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01DyiKBi73Vm5FoEpX54UYeB",
+      "is_error": false,
+      "model_request_start_id": "sevt_01VpjNZudMpujafsnt1fK3Za",
+      "model_usage": {
+        "cache_creation_input_tokens": 298,
+        "cache_read_input_tokens": 10512,
+        "input_tokens": 2,
+        "output_tokens": 618,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:41.179736Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01ALZHpXprTBjmQMmNQRKt2P",
+      "agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:41.313189Z",
+      "session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01Vno8AUZQuyRzRF9ykH9Uau",
+      "processed_at": "2026-08-28T02:14:41.313190Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 35.169,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 21386
+        },
+        "cache_read_input_tokens": 58710,
+        "input_tokens": 18,
+        "list_cost": {
+          "amount": "15",
+          "currency": "USD"
+        },
+        "output_tokens": 1578,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "150",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01CyXUQkbZA69iTQn4Vrc4SC",
+      "processed_at": "2026-08-28T02:14:41.313191Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    }
+  ],
+  "threads": [
+    {
+      "id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+      "agent": {
+        "id": "agent_01QVjjjaS9YEN44e9SWfXbHY",
+        "description": "workstream F coordinator-pinning",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-opus-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+        "skills": [],
+        "system": "You are the coordinator of a Managed Agents subagent experiment. Delegate\nexactly as instructed and report verbatim what comes back, including any errors.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:14:05.630959Z",
+      "parent_thread_id": null,
+      "session_id": "sesn_0155ruKCQ9qp7RSyTR83sTSg",
+      "stats": {
+        "active_seconds": 34.243,
+        "duration_seconds": 41.858456036,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:14:41.797251Z",
+      "usage": {
+        "active_seconds": 34.243,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 10810
+        },
+        "cache_read_input_tokens": 30539,
+        "input_tokens": 8,
+        "list_cost": {
+          "amount": "11",
+          "currency": "USD"
+        },
+        "output_tokens": 1133,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01FxtobTNhXB71jjfwekiXzX",
+          "processed_at": "2026-08-28T02:14:05.885233Z",
+          "type": "session.status_running"
+        },
+        {
+          "id": "sevt_0112rneQcG4HMSuZXnnqYAD8",
+          "agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:06.252526Z",
+          "session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_019KWXarBarZerzsi6b6Panc",
+          "content": [
+            {
+              "text": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp5 pinning and tool grants. No git, no MCP.\n\nIn one turn, delegate to both roster agents:\n* to the version-pinning probe: \"State your version marker.\"\n* to the tool-grant probe: \"Run `echo grant-probe-9931` with bash, then list your tools.\"\n\nReport verbatim both replies, then finish with one fenced ```json block:\n{\"version_marker\": \"...\", \"tool_probe_tools\": \"...\", \"tool_probe_error\": \"...\",\n \"bash_available_to_child\": bool}",
+              "type": "text"
+            }
+          ],
+          "type": "user.message",
+          "processed_at": "2026-08-28T02:14:06.316950Z"
+        },
+        {
+          "id": "sevt_015PSuqCg4FWghtY7MXqC386",
+          "processed_at": "2026-08-28T02:14:06.316951Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_012gyZCn6kAS2x5XNFzPjYp5",
+          "content": [
+            {
+              "text": "I'll delegate to both roster agents in parallel.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:10.677358Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_019saLLsLdU8Rt8M2ZqRY95h",
+          "is_error": false,
+          "model_request_start_id": "sevt_015PSuqCg4FWghtY7MXqC386",
+          "model_usage": {
+            "cache_creation_input_tokens": 9698,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 309,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:10.677361Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_011gamT6BqJyxG3zBGCg81CF",
+          "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:10.925248Z",
+          "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01HBZ7p1s1X9wnBX7McmFSQW",
+          "content": [
+            {
+              "text": "State your version marker. Reply with the marker verbatim and nothing else.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:10.925249Z",
+          "to_session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e"
+        },
+        {
+          "id": "sevt_01CMVDxkno6quefxcPr4R8NV",
+          "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:11.155327Z",
+          "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01Rz5udBu14LZ4iJhgSzwPsr",
+          "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:11.156542Z",
+          "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01W14DtTfnT5RtU16QLHBfv6",
+          "content": [
+            {
+              "text": "Run the command `echo grant-probe-9931` using your bash tool, then list your available tools. Report: (1) the exact output or exact error text from attempting the bash call, and (2) the names of every tool you have access to.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:11.156543Z",
+          "to_session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e"
+        },
+        {
+          "id": "sevt_01Tn7YpVbkUWNPWa2Fcggjcy",
+          "processed_at": "2026-08-28T02:14:11.246366Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01Dy53ckzyfpLtXHpScEUJPg",
+          "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:11.421828Z",
+          "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_013VjZeKhs3nSHCHMBX3rCXt",
+          "content": [
+            {
+              "text": "Both probes are spawned and running in the background:\n\n- **Version-pinning probe** \u2014 `sthr_01EQrvGxScSXh2b5keJAdGm3`\n- **Tool-grant probe** \u2014 `sthr_01CCuU6iEdw8L578QL9hcZAw`\n\nI'll report both replies verbatim and emit the JSON summary block once their results arrive.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:13.078701Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01MRAXcDdHxAFVEnrFCPUrZw",
+          "is_error": false,
+          "model_request_start_id": "sevt_01Tn7YpVbkUWNPWa2Fcggjcy",
+          "model_usage": {
+            "cache_creation_input_tokens": 631,
+            "cache_read_input_tokens": 9698,
+            "input_tokens": 2,
+            "output_tokens": 125,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:13.078702Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01DpEQNZFyJfNSUe4JvdeRhW",
+          "agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:13.152174Z",
+          "session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01Bq6kUbC3UWeRZFLNza3hy1",
+          "agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:13.890028Z",
+          "session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01QBTmNMnMfrGYFqqoPvJyV3",
+          "content": [
+            {
+              "text": "VERSION_MARKER=ONE",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+          "processed_at": "2026-08-28T02:14:13.958998Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e"
+        },
+        {
+          "id": "sevt_016TEzXD4zVPV1QXxCmWRsQm",
+          "processed_at": "2026-08-28T02:14:13.958999Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01TfLE9uasVB7Ffabs3sHSfy",
+          "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:14.883104Z",
+          "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01MvyDYCJY113X7AnLE5DN9M",
+          "processed_at": "2026-08-28T02:14:14.968561Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 8.887,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 20469
+            },
+            "cache_read_input_tokens": 14866,
+            "input_tokens": 8,
+            "list_cost": {
+              "amount": "11",
+              "currency": "USD"
+            },
+            "output_tokens": 561,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "150",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01UM1MBLrju1AYUyeuaBYKRw",
+          "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:17.563953Z",
+          "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_016AdxpMaz5827RUs22VPqDw",
+          "processed_at": "2026-08-28T02:14:17.648754Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 11.568,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 20905
+            },
+            "cache_read_input_tokens": 37869,
+            "input_tokens": 14,
+            "list_cost": {
+              "amount": "12",
+              "currency": "USD"
+            },
+            "output_tokens": 879,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "150",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_011TwyUdb1E9zzGQVC2f2rsF",
+          "processed_at": "2026-08-28T02:14:33.464198Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01NnuFQ8LZsSiqEC4jeSNPwP",
+          "content": [
+            {
+              "text": "Received the version-pinning probe's reply. Still waiting on the tool-grant probe (`sthr_01CCuU6iEdw8L578QL9hcZAw`) before I can complete the report.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:34.030817Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01SV9aDv3AVm3sJhUBy4J5Ls",
+          "is_error": false,
+          "model_request_start_id": "sevt_016TEzXD4zVPV1QXxCmWRsQm",
+          "model_usage": {
+            "cache_creation_input_tokens": 183,
+            "cache_read_input_tokens": 10329,
+            "input_tokens": 2,
+            "output_tokens": 81,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:34.030818Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01G1aK7aMYVLD8B6E7jbVx2J",
+          "content": [
+            {
+              "text": "(1) Attempted to run `echo grant-probe-9931` via the bash tool. Exact error received: \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\" No command output was obtained since the call failed \u2014 I have not fabricated any output.\n\n(2) Tools actually available to me: send_to_parent, edit, read, write, glob, grep, web_fetch, web_search. (Note: no `bash` tool is present despite my system prompt describing one; the only invokable tools are the ones listed above.)",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+          "processed_at": "2026-08-28T02:14:34.166598Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e"
+        },
+        {
+          "id": "sevt_01VpjNZudMpujafsnt1fK3Za",
+          "processed_at": "2026-08-28T02:14:34.166599Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_012prXGeBF2B4xQ89aGkGWt1",
+          "processed_at": "2026-08-28T02:14:36.438303Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01Ksm3bro2eiTGrNfUQetVMC",
+          "content": [
+            {
+              "text": "Both probes have reported. Verbatim replies below.\n\n**Version-pinning probe** (`sthr_01EQrvGxScSXh2b5keJAdGm3`):\n\n> VERSION_MARKER=ONE\n\n**Tool-grant probe** (`sthr_01CCuU6iEdw8L578QL9hcZAw`):\n\n> (1) Attempted to run `echo grant-probe-9931` via the bash tool. Exact error received: \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\" No command output was obtained since the call failed \u2014 I have not fabricated any output.\n>\n> (2) Tools actually available to me: send_to_parent, edit, read, write, glob, grep, web_fetch, web_search. (Note: no `bash` tool is present despite my system prompt describing one; the only invokable tools are the ones listed above.)\n\nTwo notes on what came back. The pin probe returned a clean marker with no ambiguity. The tool-grant probe surfaced a real inconsistency worth flagging: its system prompt advertised a `bash` tool that was not actually in its grant, so the child hit a hard tool-resolution error rather than a permission denial. It explicitly declined to fabricate command output, which is the correct behavior \u2014 the `echo grant-probe-9931` string was never emitted by any shell in this experiment.\n\n```json\n{\"version_marker\": \"ONE\", \"tool_probe_tools\": \"send_to_parent, edit, read, write, glob, grep, web_fetch, web_search\", \"tool_probe_error\": \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\", \"bash_available_to_child\": false}\n```",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:41.179735Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01DyiKBi73Vm5FoEpX54UYeB",
+          "is_error": false,
+          "model_request_start_id": "sevt_01VpjNZudMpujafsnt1fK3Za",
+          "model_usage": {
+            "cache_creation_input_tokens": 298,
+            "cache_read_input_tokens": 10512,
+            "input_tokens": 2,
+            "output_tokens": 618,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:41.179736Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01ALZHpXprTBjmQMmNQRKt2P",
+          "agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:41.313189Z",
+          "session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01Vno8AUZQuyRzRF9ykH9Uau",
+          "processed_at": "2026-08-28T02:14:41.313190Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 35.169,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 21386
+            },
+            "cache_read_input_tokens": 58710,
+            "input_tokens": 18,
+            "list_cost": {
+              "amount": "15",
+              "currency": "USD"
+            },
+            "output_tokens": 1578,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "150",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01CyXUQkbZA69iTQn4Vrc4SC",
+          "processed_at": "2026-08-28T02:14:41.313191Z",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+      "agent": {
+        "id": "agent_01UncMDLhwKicwpDZnqzaM6d",
+        "description": "workstream F pin-child",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+        "skills": [],
+        "system": "You are a version-pinning probe subagent. Whatever you are asked, reply with\nexactly: VERSION_MARKER=ONE. Nothing else.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:14:10.772425Z",
+      "parent_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+      "session_id": "sesn_0155ruKCQ9qp7RSyTR83sTSg",
+      "stats": {
+        "active_seconds": 3.735,
+        "duration_seconds": 36.717045037,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:14:14.964764Z",
+      "usage": {
+        "active_seconds": 3.735,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2630
+        },
+        "cache_read_input_tokens": 12888,
+        "input_tokens": 4,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 77,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01CMVDxkno6quefxcPr4R8NV",
+          "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:11.155327Z",
+          "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_019EztnjBSK4V8xF5rjxFbDg",
+          "content": [
+            {
+              "text": "State your version marker. Reply with the marker verbatim and nothing else.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+          "processed_at": "2026-08-28T02:14:11.305217Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e"
+        },
+        {
+          "id": "sevt_019y5zJqVkx2G1Au5HAPZatX",
+          "processed_at": "2026-08-28T02:14:11.305218Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_016yQLie1pvM6o64xNsBHgra",
+          "is_error": false,
+          "model_request_start_id": "sevt_019y5zJqVkx2G1Au5HAPZatX",
+          "model_usage": {
+            "cache_creation_input_tokens": 2552,
+            "cache_read_input_tokens": 5168,
+            "input_tokens": 2,
+            "output_tokens": 62,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:13.508685Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_017ctTvXC2UT58tTyQdmJv8w",
+          "content": [
+            {
+              "text": "VERSION_MARKER=ONE",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:13.646597Z",
+          "to_session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_01ULzQyyLJV2d9RxNmhEiUmK",
+          "processed_at": "2026-08-28T02:14:13.723093Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_0175Wj1cbTd7ezEgA7i8dtPM",
+          "content": [
+            {
+              "text": "VERSION_MARKER=ONE",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:14.831723Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01PGY984HTVqWDoQ7wSnKJRA",
+          "is_error": false,
+          "model_request_start_id": "sevt_01ULzQyyLJV2d9RxNmhEiUmK",
+          "model_usage": {
+            "cache_creation_input_tokens": 78,
+            "cache_read_input_tokens": 7720,
+            "input_tokens": 2,
+            "output_tokens": 15,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:14.831724Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01TfLE9uasVB7Ffabs3sHSfy",
+          "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:14.883104Z",
+          "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+      "agent": {
+        "id": "agent_01PoYYRCdt2ydv1PgpCo5kJe",
+        "description": "workstream F no-bash-child",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+        "skills": [],
+        "system": "You are a tool-grant probe subagent. When asked, attempt to run the\nrequested shell command with the bash tool. Then reply with one line listing the names of\nevery tool you actually have available, and one line stating verbatim any error or refusal\nyou hit. Do not simulate command output you did not obtain.",
+        "tools": [
+          {
+            "configs": [
+              {
+                "enabled": false,
+                "name": "bash",
+                "permission_policy": {
+                  "type": "always_allow"
+                },
+                "type": "bash"
+              }
+            ],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:14:11.023356Z",
+      "parent_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+      "session_id": "sesn_0155ruKCQ9qp7RSyTR83sTSg",
+      "stats": {
+        "active_seconds": 6.15,
+        "duration_seconds": 36.466159724,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:14:17.632341Z",
+      "usage": {
+        "active_seconds": 6.15,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 7946
+        },
+        "cache_read_input_tokens": 15283,
+        "input_tokens": 6,
+        "list_cost": {
+          "amount": "3",
+          "currency": "USD"
+        },
+        "output_tokens": 368,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01Dy53ckzyfpLtXHpScEUJPg",
+          "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:11.421828Z",
+          "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01P6jjQnjeZc3eZ2f9qmPsgA",
+          "content": [
+            {
+              "text": "Run the command `echo grant-probe-9931` using your bash tool, then list your available tools. Report: (1) the exact output or exact error text from attempting the bash call, and (2) the names of every tool you have access to.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+          "processed_at": "2026-08-28T02:14:11.566802Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e"
+        },
+        {
+          "id": "sevt_01MtNb8R9yEG49YTjvSdF9d9",
+          "processed_at": "2026-08-28T02:14:11.566803Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01UmdNW57vvRmDP2NA6Bv2PH",
+          "processed_at": "2026-08-28T02:14:13.043192Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_0135MzMTXBfvqVaGv1HHoyi5",
+          "input": {
+            "command": "echo grant-probe-9931"
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:14:13.100944Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "deny",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01KrcRWatVtjR3eNGT79vgB2",
+          "is_error": false,
+          "model_request_start_id": "sevt_01MtNb8R9yEG49YTjvSdF9d9",
+          "model_usage": {
+            "cache_creation_input_tokens": 7588,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 65,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:13.100945Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01S8dUQxA2TXQq6HTi9yf4tt",
+          "processed_at": "2026-08-28T02:14:13.154081Z",
+          "tool_use_id": "sevt_0135MzMTXBfvqVaGv1HHoyi5",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.",
+              "type": "text"
+            }
+          ],
+          "is_error": true
+        },
+        {
+          "id": "sevt_01L2Vv6zSwacNtojbsCFC27g",
+          "processed_at": "2026-08-28T02:14:13.220396Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01H6eQEGXSJuZpts98CkkPYZ",
+          "processed_at": "2026-08-28T02:14:14.293893Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01D6JSzZ6WnvpNgx7LDrx8fY",
+          "is_error": false,
+          "model_request_start_id": "sevt_01L2Vv6zSwacNtojbsCFC27g",
+          "model_usage": {
+            "cache_creation_input_tokens": 107,
+            "cache_read_input_tokens": 7588,
+            "input_tokens": 2,
+            "output_tokens": 235,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:16.172309Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01VtfxUGMLcugsdcGaiMwiWV",
+          "content": [
+            {
+              "text": "(1) Attempted to run `echo grant-probe-9931` via the bash tool. Exact error received: \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\" No command output was obtained since the call failed \u2014 I have not fabricated any output.\n\n(2) Tools actually available to me: send_to_parent, edit, read, write, glob, grep, web_fetch, web_search. (Note: no `bash` tool is present despite my system prompt describing one; the only invokable tools are the ones listed above.)",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:16.282824Z",
+          "to_session_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_01FDF4sSmuzMNHUHpE4bnCx6",
+          "processed_at": "2026-08-28T02:14:16.344506Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_013MwrKPBHotbUqk4Qz7jezN",
+          "content": [
+            {
+              "text": "Reported to the coordinator: the bash call failed with \"bash is not an available tool,\" and my actual available tools are send_to_parent, edit, read, write, glob, grep, web_fetch, and web_search.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:17.514262Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_016UzFNJmPj9pUfhbysSquv9",
+          "is_error": false,
+          "model_request_start_id": "sevt_01FDF4sSmuzMNHUHpE4bnCx6",
+          "model_usage": {
+            "cache_creation_input_tokens": 251,
+            "cache_read_input_tokens": 7695,
+            "input_tokens": 2,
+            "output_tokens": 68,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:17.514263Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01UM1MBLrju1AYUyeuaBYKRw",
+          "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:17.563953Z",
+          "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "per_thread": [
+      {
+        "id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+        "agent": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+        "parent_thread_id": null,
+        "status": "idle",
+        "stats": {
+          "active_seconds": 34.243,
+          "duration_seconds": 41.858456036,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "11",
+        "output_tokens": 1133,
+        "event_count": 34
+      },
+      {
+        "id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+        "agent": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+        "parent_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 3.735,
+          "duration_seconds": 36.717045037,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "1",
+        "output_tokens": 77,
+        "event_count": 9
+      },
+      {
+        "id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+        "agent": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+        "parent_thread_id": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 6.15,
+          "duration_seconds": 36.466159724,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "3",
+        "output_tokens": 368,
+        "event_count": 15
+      }
+    ],
+    "stop_reasons": [
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+        "agent": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+        "agent": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+        "agent": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01BJNM6HpmGUMw77vbzLmmto",
+        "agent": "clevin-swarm-F-coordinator-pinning-20260828T021357Z-0a0a7e",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.status_idle",
+        "thread": null,
+        "agent": null,
+        "stop_reason": "end_turn"
+      }
+    ],
+    "event_counts": {
+      "agent.message": 4,
+      "agent.thinking": 2,
+      "agent.thread_message_received": 2,
+      "agent.thread_message_sent": 2,
+      "session.status_idle": 1,
+      "session.status_running": 1,
+      "session.thread_created": 2,
+      "session.thread_status_idle": 4,
+      "session.thread_status_running": 4,
+      "session.usage": 3,
+      "span.model_request_end": 4,
+      "span.model_request_start": 4,
+      "user.message": 1
+    },
+    "threads_spawned": [
+      {
+        "session_thread_id": "sthr_01EQrvGxScSXh2b5keJAdGm3",
+        "agent_name": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+        "processed_at": "2026-08-28T02:14:10.925248Z"
+      },
+      {
+        "session_thread_id": "sthr_01CCuU6iEdw8L578QL9hcZAw",
+        "agent_name": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+        "processed_at": "2026-08-28T02:14:11.156542Z"
+      }
+    ],
+    "thread_count": 2,
+    "declared_threads": [
+      "sthr_01BJNM6HpmGUMw77vbzLmmto",
+      "sthr_01EQrvGxScSXh2b5keJAdGm3",
+      "sthr_01CCuU6iEdw8L578QL9hcZAw"
+    ],
+    "agent_messages": [
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+        "from": null,
+        "text": "State your version marker. Reply with the marker verbatim and nothing else."
+      },
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+        "from": null,
+        "text": "Run the command `echo grant-probe-9931` using your bash tool, then list your available tools. Report: (1) the exact output or exact error text from attempting the bash call, and (2) the names of every tool you have access to."
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-pin-child-20260828T021357Z-0a0a7e",
+        "text": "VERSION_MARKER=ONE"
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-no-bash-child-20260828T021357Z-0a0a7e",
+        "text": "(1) Attempted to run `echo grant-probe-9931` via the bash tool. Exact error received: \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\" No command output was obtained since the call failed \u2014 I have not fabricated any output.\n\n(2) Tools actually available to me: send_to_parent, edit, read, write, glob, grep, web_fetch, web_search. (Note: no `bash` tool is present despite my system prompt describing one; the only invokable tools are the ones listed above.)"
+      }
+    ],
+    "tool_uses": [],
+    "parent_text_tail": [
+      "Both probes are spawned and running in the background:\n\n- **Version-pinning probe** \u2014 `sthr_01EQrvGxScSXh2b5keJAdGm3`\n- **Tool-grant probe** \u2014 `sthr_01CCuU6iEdw8L578QL9hcZAw`\n\nI'll report both replies verbatim and emit the JSON summary block once their results arrive.",
+      "Received the version-pinning probe's reply. Still waiting on the tool-grant probe (`sthr_01CCuU6iEdw8L578QL9hcZAw`) before I can complete the report.",
+      "Both probes have reported. Verbatim replies below.\n\n**Version-pinning probe** (`sthr_01EQrvGxScSXh2b5keJAdGm3`):\n\n> VERSION_MARKER=ONE\n\n**Tool-grant probe** (`sthr_01CCuU6iEdw8L578QL9hcZAw`):\n\n> (1) Attempted to run `echo grant-probe-9931` via the bash tool. Exact error received: \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\" No command output was obtained since the call failed \u2014 I have not fabricated any output.\n>\n> (2) Tools actually available to me: send_to_parent, edit, read, write, glob, grep, web_fetch, web_search. (Note: no `bash` tool is present despite my system prompt describing one; the only invokable tools are the ones listed above.)\n\nTwo notes on what came back. The pin probe returned a clean marker with no ambiguity. The tool-grant probe surfaced a real inconsistency worth flagging: its system prompt advertised a `bash` tool that was not actually in its grant, so the child hit a hard tool-resolution error rather than a permission denial. It explicitly declined to fabricate command output, which is the correct behavior \u2014 the `echo grant-probe-9931` string was never emitted by any shell in this experiment.\n\n```json\n{\"version_marker\": \"ONE\", \"tool_probe_tools\": \"send_to_parent, edit, read, write, glob, grep, web_fetch, web_search\", \"tool_probe_error\": \"bash is not an available tool. Use one of the tool names exactly as listed in your tool definitions.\", \"bash_available_to_child\": false}\n```"
+    ],
+    "concurrency": {
+      "peak_concurrent_children": 2,
+      "transitions": 4
+    },
+    "usage_events": [
+      {
+        "id": "sevt_016AdxpMaz5827RUs22VPqDw",
+        "processed_at": "2026-08-28T02:14:17.648754Z",
+        "type": "session.usage",
+        "usage": {
+          "active_seconds": 11.568,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 20905
+          },
+          "cache_read_input_tokens": 37869,
+          "input_tokens": 14,
+          "list_cost": {
+            "amount": "12",
+            "currency": "USD"
+          },
+          "output_tokens": 879,
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          }
+        },
+        "budget": {
+          "max_list_cost": {
+            "amount": "150",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      },
+      {
+        "id": "sevt_01Vno8AUZQuyRzRF9ykH9Uau",
+        "processed_at": "2026-08-28T02:14:41.313190Z",
+        "type": "session.usage",
+        "usage": {
+          "active_seconds": 35.169,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 21386
+          },
+          "cache_read_input_tokens": 58710,
+          "input_tokens": 18,
+          "list_cost": {
+            "amount": "15",
+            "currency": "USD"
+          },
+          "output_tokens": 1578,
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          }
+        },
+        "budget": {
+          "max_list_cost": {
+            "amount": "150",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    ],
+    "compactions": 0
+  }
+}
