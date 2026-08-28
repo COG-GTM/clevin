@@ -1,0 +1,175 @@
+{
+  "benchmark": {
+    "expected": "ANSWER=391",
+    "prompt": "CLEVIN_SMOKE_TEST Compute 17 * 23 using no tools. Reply with your marker on the first line and then exactly 'ANSWER=<number>'."
+  },
+  "canary_runs": {
+    "v1_canary_a": {
+      "pinned_version": 1,
+      "resolved_version": 1,
+      "score": {
+        "answer_correct": true,
+        "final_text": "[[CANARY-A]]\nANSWER=391",
+        "marker_present": true
+      },
+      "session_id": "sesn_011TWm28iQQsgzH5frvNQYXt",
+      "status": "idle",
+      "usage": {
+        "active_seconds": 2.065,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5433
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 147,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    "v2_canary_b": {
+      "pinned_version": 2,
+      "resolved_version": 2,
+      "score": {
+        "answer_correct": true,
+        "final_text": "[[CANARY-B]]\nANSWER=391",
+        "marker_present": true
+      },
+      "session_id": "sesn_01DYEauxkXLz4SMtFzgqjvbu",
+      "status": "idle",
+      "usage": {
+        "active_seconds": 2.651,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5440
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 208,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    "v3_broken": {
+      "pinned_version": 3,
+      "resolved_version": 3,
+      "score": {
+        "answer_correct": false,
+        "final_text": "[[BROKEN]]\nANSWER=unavailable",
+        "marker_present": true
+      },
+      "session_id": "sesn_01VY1FDzEpawmuE7w2hDS7wh",
+      "status": "idle",
+      "usage": {
+        "active_seconds": 2.186,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5444
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 148,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    }
+  },
+  "canary_verdict": {
+    "v1_canary_a": true,
+    "v2_canary_b": true,
+    "v3_broken": false
+  },
+  "cleanup": [
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_019uVU7LiPErnkfm7LCa4b2d",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T021809Z-d00953-canary"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_011TWm28iQQsgzH5frvNQYXt",
+      "kind": "session",
+      "note": "D4 v1_canary_a"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_01DYEauxkXLz4SMtFzgqjvbu",
+      "kind": "session",
+      "note": "D4 v2_canary_b"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_01VY1FDzEpawmuE7w2hDS7wh",
+      "kind": "session",
+      "note": "D4 v3_broken"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_01K4AYgK9gcqR1XnzKTfDhQ3",
+      "kind": "session",
+      "note": "D4 post-rollback"
+    }
+  ],
+  "experiment": "D4 canary and rollback",
+  "published_versions": {
+    "v1_canary_a": 1,
+    "v2_canary_b": 2,
+    "v3_broken": 3
+  },
+  "rollback": {
+    "drift_vs_v1": [],
+    "matches_v1": true,
+    "new_version": 4,
+    "post_rollback_score": {
+      "answer_correct": true,
+      "final_text": "[[CANARY-A]]\nANSWER=391",
+      "marker_present": true
+    },
+    "server_added_vs_v1": [],
+    "session_id": "sesn_01K4AYgK9gcqR1XnzKTfDhQ3",
+    "versions": [
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  "rollback_by_version_guard_only": {
+    "accepted": false,
+    "body": {
+      "error": {
+        "message": "Concurrent modification detected. Please fetch the latest version and retry.",
+        "type": "invalid_request_error"
+      },
+      "request_id": "req_011CeULxow1qn51Lvc8A4YXv",
+      "type": "error"
+    },
+    "error_type": "ConflictError",
+    "message": "Error code: 409 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Concurrent modification detected. Please fetch the latest version and retry.'}, 'request_id': 'req_011CeULxow1qn51Lvc8A4YXv'}",
+    "status_code": 409
+  }
+}

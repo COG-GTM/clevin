@@ -1,0 +1,231 @@
+{
+  "agent_id": "agent_01GCAj6MYKbc6afTCrNdHCNF",
+  "cleanup": [
+    {
+      "cleanup_action": "beta.agents.archive",
+      "cleanup_result": "archived",
+      "id": "agent_01GCAj6MYKbc6afTCrNdHCNF",
+      "kind": "agent",
+      "note": "clevin-swarm-D-20260828T022213Z-70299a-pinning"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_01EkN4DZgvK1G9LPPBFAJt3Z",
+      "kind": "session",
+      "note": "D5 live session"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_01BDXcdPrBbRdbBXsVk8c6XH",
+      "kind": "session",
+      "note": "D5 fresh latest session"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_01ALHD2k29mpdYCHBUtFDuET",
+      "kind": "session",
+      "note": "D5 pinned v1 run 0"
+    },
+    {
+      "cleanup_action": "beta.sessions.archive",
+      "cleanup_result": "archived",
+      "id": "sesn_01GhgQMW5VxeTJMQtX3UidHH",
+      "kind": "session",
+      "note": "D5 pinned v1 run 1"
+    }
+  ],
+  "experiment": "D5 version pinning and live sessions",
+  "fresh_latest_session": {
+    "marker_v2": true,
+    "resolved_agent_version": 2,
+    "session_id": "sesn_01BDXcdPrBbRdbBXsVk8c6XH"
+  },
+  "live_session": {
+    "final_snapshot": {
+      "description": "workstream D pinning probe",
+      "id": "agent_01GCAj6MYKbc6afTCrNdHCNF",
+      "mcp_servers": [],
+      "model": {
+        "effort": null,
+        "id": "claude-haiku-4-5-20251001",
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": null,
+      "name": "clevin-swarm-D-20260828T022213Z-70299a-pinning",
+      "skills": [],
+      "system": "You are a benchmark probe. Begin every message you send with the marker [[VERSION-1]]. Answer in at most eight words. Never use tools.",
+      "tools": [],
+      "type": "agent",
+      "version": 1
+    },
+    "follows_agent_forward": false,
+    "last_text": "[[VERSION-1]] Goodbye.",
+    "session_id": "sesn_01EkN4DZgvK1G9LPPBFAJt3Z",
+    "turn_1": {
+      "final_text": "[[VERSION-1]] Hello.",
+      "marker_v1": true,
+      "resolved_agent_version": 1
+    },
+    "turn_2_after_v2": {
+      "events_after": 20,
+      "events_before": 10,
+      "final_text": "[[VERSION-1]] Goodbye.",
+      "marker_v1": true,
+      "marker_v2": false,
+      "resolved_agent_version": 1,
+      "status": "idle"
+    }
+  },
+  "mid_session_agent_update": {
+    "model_replacement": {
+      "accepted": false,
+      "body": {
+        "error": {
+          "message": "Failed to parse request body: unknown field \"model\"",
+          "type": "invalid_request_error"
+        },
+        "request_id": "req_011CeUMGcYRdncgHRCih5qR2",
+        "type": "error"
+      },
+      "error_type": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Failed to parse request body: unknown field \"model\"'}, 'request_id': 'req_011CeUMGcYRdncgHRCih5qR2'}",
+      "status_code": 400
+    },
+    "multiagent_replacement": {
+      "accepted": false,
+      "body": {
+        "error": {
+          "message": "Failed to parse request body: unknown field \"multiagent\"",
+          "type": "invalid_request_error"
+        },
+        "request_id": "req_011CeUMGe6BXyoWqq4GGg8s8",
+        "type": "error"
+      },
+      "error_type": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Failed to parse request body: unknown field \"multiagent\"'}, 'request_id': 'req_011CeUMGe6BXyoWqq4GGg8s8'}",
+      "status_code": 400
+    },
+    "skills_replacement": {
+      "accepted": false,
+      "body": {
+        "error": {
+          "message": "`agent.skills`: only `tools` and `mcp_servers` are updatable. To change other fields, create a new session.",
+          "type": "invalid_request_error"
+        },
+        "request_id": "req_011CeUMGd3vrAUCdwxStYqg8",
+        "type": "error"
+      },
+      "error_type": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`agent.skills`: only `tools` and `mcp_servers` are updatable. To change other fields, create a new session.'}, 'request_id': 'req_011CeUMGd3vrAUCdwxStYqg8'}",
+      "status_code": 400
+    },
+    "system_replacement": {
+      "accepted": false,
+      "body": {
+        "error": {
+          "message": "`agent.system`: only `tools` and `mcp_servers` are updatable. To change other fields, create a new session.",
+          "type": "invalid_request_error"
+        },
+        "request_id": "req_011CeUMGbwSxfmMgzgwwTAZg",
+        "type": "error"
+      },
+      "error_type": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`agent.system`: only `tools` and `mcp_servers` are updatable. To change other fields, create a new session.'}, 'request_id': 'req_011CeUMGbwSxfmMgzgwwTAZg'}",
+      "status_code": 400
+    },
+    "tools_replacement": {
+      "accepted": true,
+      "resolved_version_after": 1,
+      "tools_after": []
+    },
+    "version_replacement": {
+      "accepted": false,
+      "body": {
+        "error": {
+          "message": "Failed to parse request body: unknown field \"version\"",
+          "type": "invalid_request_error"
+        },
+        "request_id": "req_011CeUMGdcfPy8ErxrGck4gn",
+        "type": "error"
+      },
+      "error_type": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Failed to parse request body: unknown field \"version\"'}, 'request_id': 'req_011CeUMGdcfPy8ErxrGck4gn'}",
+      "status_code": 400
+    }
+  },
+  "nonexistent_version_pin": {
+    "accepted": false,
+    "body": {
+      "error": {
+        "message": "agent.version: 99 not found",
+        "type": "not_found_error"
+      },
+      "request_id": "req_011CeUMJRK3KFkWGypATN2UE",
+      "type": "error"
+    },
+    "error_type": "NotFoundError",
+    "message": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'agent.version: 99 not found'}, 'request_id': 'req_011CeUMJRK3KFkWGypATN2UE'}",
+    "status_code": 404
+  },
+  "pinned_reproducibility": {
+    "identical_event_sequence": true,
+    "identical_final_text": false,
+    "identical_output_tokens": false,
+    "pinned_version_honoured": true,
+    "runs": [
+      {
+        "event_types": [
+          "session.status_running",
+          "session.thread_status_running",
+          "user.message",
+          "span.model_request_start",
+          "agent.thinking",
+          "agent.message",
+          "span.model_request_end",
+          "session.thread_status_idle",
+          "session.usage",
+          "session.status_idle"
+        ],
+        "final_text": "[[VERSION-1]] Paris is the capital of France.",
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "0",
+          "currency": "USD"
+        },
+        "marker_v1": true,
+        "output_tokens": 164,
+        "resolved_agent_version": 1,
+        "session_id": "sesn_01ALHD2k29mpdYCHBUtFDuET"
+      },
+      {
+        "event_types": [
+          "session.status_running",
+          "session.thread_status_running",
+          "user.message",
+          "span.model_request_start",
+          "agent.thinking",
+          "agent.message",
+          "span.model_request_end",
+          "session.thread_status_idle",
+          "session.usage",
+          "session.status_idle"
+        ],
+        "final_text": "[[VERSION-1]] The capital of France is Paris.",
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "0",
+          "currency": "USD"
+        },
+        "marker_v1": true,
+        "output_tokens": 248,
+        "resolved_agent_version": 1,
+        "session_id": "sesn_01GhgQMW5VxeTJMQtX3UidHH"
+      }
+    ]
+  },
+  "published_v2": 2
+}
