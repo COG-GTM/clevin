@@ -1,0 +1,12 @@
+{
+  "session_id": "sesn_0119Es5pYYofJFW9Et7sXyDV",
+  "mode": "interrupt-live",
+  "interrupt_accepted": true,
+  "attempts": [
+    {
+      "i": 0,
+      "status": "idle",
+      "ok": true
+    }
+  ]
+}

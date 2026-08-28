@@ -1,0 +1,25 @@
+{
+  "k3_memory_entry": {
+    "memory_store_id": "memstore_01JCboyFNzqNzucVq3xFpnYZ",
+    "path": "/k3-poll-log.md",
+    "result": "absent (already deleted)"
+  },
+  "k3_deployment": {
+    "id": "depl_0118D9QiqeNRZPN5FUEocguk",
+    "archived_at": "2026-08-28 02:25:17.490194+00:00",
+    "schedule": {
+      "expression": "* * * * *",
+      "timezone": "UTC",
+      "type": "cron",
+      "last_run_at": "2026-08-28 02:25:08.289416+00:00",
+      "upcoming_runs_at": []
+    },
+    "status": "active"
+  },
+  "k5_skill": {
+    "id": "skill_01G8E6G4hGVRiXscLuhnsK8g",
+    "display_title": "Clevin verification playbook",
+    "latest_version": "1787883845989335",
+    "disposition": "retained deliberately \u2014 referenced by the landed agent-definition skill-discovery change; attach via CLEVIN_SKILL_IDS"
+  }
+}
