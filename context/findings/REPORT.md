@@ -469,9 +469,9 @@ capabilities and limits. Full detail is in each workstream's findings file (§7)
    boundary, not the tool.
 
 ### D — Agent-as-code
-1. **The entire agent is nine code-expressible fields** — model, prompt, tools, MCPs, Skills,
-   roster, memory, metadata, name — with immutable versions and 409 concurrency guards; this is
-   arguably better than Devin's config story.
+1. **The entire agent is nine code-expressible fields** — `name`, `description`, `model`,
+   `system`, `metadata`, `mcp_servers`, `tools`, `skills`, `multiagent` — with immutable versions
+   and 409 concurrency guards; this is arguably better than Devin's config story.
 2. **Rollback is byte-exact roll-forward:** re-submitting an old version's config produces an
    identical new version; canary = pointing a fraction of sessions at it.
 3. **There is no server-side desired state:** the API returns live objects with 5–6 server-added
