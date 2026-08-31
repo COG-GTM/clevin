@@ -40,7 +40,8 @@ reasoning loop; you supply configuration and, optionally, a place for tools to e
 - **Memory Stores** — versioned key/value stores FUSE-mounted into the sandbox at `/mnt/memory`,
   surviving across sessions (E).
 - **Skills** — versioned file bundles materialized at `/workspace/skills/<name>/SKILL.md` (K).
-- **Built-in subagents** — a `multiagent` coordinator roster giving depth-1 parallel delegation
+- **Built-in subagents** — meaning the delegation *mechanism* is native, not that any subagents
+  ship prewritten: a `multiagent` coordinator roster giving depth-1 parallel delegation
   with per-thread cost attribution (F).
 - **Deployments** — cron-scheduled session creation (5-field POSIX cron, minute floor) with a
   typed auto-pausing dependency supervisor (H).
