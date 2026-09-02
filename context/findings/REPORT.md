@@ -342,115 +342,106 @@ fleet must also be re-priced before it can exist.
 
 ## 6. Security model
 
-Devin Dedicated is a *deployment posture*; Managed Agents is a *platform API* with a shared
-responsibility model, and Anthropic's own security page draws the line in one sentence:
-"Anthropic's security boundary stops at the sandbox." Anthropic secures the control plane —
-session and work-queue integrity, multitenant isolation, agent-context minimisation. Egress, key
-custody, image hardening, tool blast radius and retention of session content are the customer's.
-Provenance: the Devin column is the Dedicated whitepaper; the Managed Agents column is the
-self-hosted-sandbox security, environments and data-retention documentation plus our own
-measurements where cited. Escape resistance, denial recording, the network enforcement point and
-MCP tunnels are **documented, not tested** — we ran unrestricted networking and `always_allow`
-throughout.
+Managed Agents is a platform API with a **shared responsibility** model, and Anthropic's security
+page draws the line in one sentence: "Anthropic's security boundary stops at the sandbox."
+Anthropic secures the control plane — session and work-queue integrity, multitenant isolation,
+agent-context minimisation. Egress controls, key custody, image hardening, tool blast radius and
+the retention of session content that reaches your worker are the customer's. What follows is
+sourced from the self-hosted-sandbox security, environments and data-retention documentation, plus
+our own measurements where cited; escape resistance, denial recording, the network enforcement
+point and MCP tunnels are **documented, not tested** — we ran unrestricted networking and
+`always_allow` throughout.
 
 ### 6.1 Data retention
 
-This is the hardest fact in the section because it is an eligibility statement, not a
+The hardest fact in the section, because it is an eligibility statement rather than a
 configuration choice: **Managed Agents is not eligible for Zero Data Retention or a HIPAA BAA**,
 because, in Anthropic's words, it "is stateful by design: sessions are long-running, resume
 cleanly after pauses, and store conversation history, sandbox state, and outputs server-side."
 The eligibility table marks it *No* on both counts for **all sub-features, self-hosted sandboxes
-included** — which is the clause enterprises misread, since self-hosting relocates execution but
-not the transcript. So prompts, reasoning, tool calls, tool output and file contents persist on
-Anthropic's side until you delete the session; retention is a customer *action*, not a posture.
-There is no customer-managed encryption key, so deletion is the only containment lever and it is
-per-object: nothing expires (~90 sessions accumulated unarchived here with no TTL, and archival is
-not deletion), and memory-store versions are redactable but never deletable, so a leaked secret or
-an erasure request cannot be fully satisfied within the primitive. Devin's posture is the inverse —
-customer-scoped KMS keys in your own account, decryption only in memory, and revoking the key
-renders data at rest permanently inaccessible.
+included** — the clause enterprises misread, since self-hosting relocates execution but not the
+transcript. So prompts, reasoning, tool calls, tool output and file contents persist on Anthropic's
+side until you delete the session; retention is a customer *action*, not a posture. There is no
+customer-managed encryption key, so deletion is the only containment lever and it is per-object:
+nothing expires (~90 sessions accumulated unarchived here with no TTL, and archival is not
+deletion), and memory-store versions are redactable but never deletable, so a leaked secret or an
+erasure request cannot be fully satisfied within the primitive. ZDR is also enabled per
+organisation, so holding it elsewhere under the same account does not carry over.
 
 ### 6.2 Architecture: the layers
 
-Devin's layering is four-deep and each layer is a different owner's boundary: a dedicated
-single-tenant account and VPC, ephemeral per-session MicroVMs destroyed on completion, a
-per-session egress proxy and DNS filter sitting *outside* each MicroVM, and a multi-tenant control
-plane that coordinates but stores neither code nor session data. Managed Agents has two layers,
-and the split falls in a different place: Anthropic's multi-tenant control plane holds the agent,
-the session and its whole event history, while execution sits either in an Anthropic-run cloud
-sandbox (described only as an "isolated container", with no statement about hardware
-virtualisation, host-kernel exposure, or where network policy is enforced relative to the
-container) or in a sandbox you run, where Anthropic states plainly that it "does not inspect or
-verify your sandbox image" and cannot detect a supply-chain compromise in it. The customer-facing
-isolation unit is the **workspace** — a logical boundary in a shared platform, not an account — and
-the practical consequence is that self-hosting buys execution locality and nothing else: your code
-is cloned in your VPC, but the transcript of everything done to it still lives in the control
-plane. In this program that boundary was a Modal sandbox running with all Linux capabilities and no
-egress restriction, i.e. we ran the weak configuration and say so.
+There are two layers, and the split is not where a security reviewer expects. Anthropic's
+multi-tenant control plane holds the agent, the session and its entire event history; execution
+sits either in an Anthropic-run cloud sandbox — described only as an "isolated container", with no
+statement about hardware virtualisation, host-kernel exposure, or where network policy is enforced
+relative to the container — or in a sandbox you run, where Anthropic states plainly that it "does
+not inspect or verify your sandbox image" and cannot detect a supply-chain compromise in it. The
+customer-facing isolation unit is the **workspace**: a logical boundary in a shared platform, not
+an account, and the only place where "this team is separate" can be expressed. The practical
+consequence is that self-hosting buys execution locality and nothing else — your code is cloned
+and built in your VPC, but the transcript of everything done to it still lives in the control
+plane, and every platform-side control (network policy, permissions, retention) is unchanged by
+the move. Hardening the box is then entirely yours: the guidance is to drop unnecessary Linux
+capabilities, run as non-root and use a read-only root filesystem. In this program that boundary
+was a Modal sandbox running with all capabilities and no egress restriction — i.e. we ran the weak
+configuration, and say so.
 
 ### 6.3 Network model
 
-Devin is default-deny across four independent layers (VPC security groups, platform egress
-allowlist, per-session proxy plus DNS filter, per-session policy), no layer can widen the one above
-it, and enforcement is outside the VM so in-VM code cannot reroute it; private systems are reached
-over IPSec/PrivateLink, and egress can be routed through your own proxy for inspection. Managed
-Agents offers one layer: `networking.limited` with an `allowed_hosts` list on the **environment**,
-**default open** apart from a general safety blocklist, plus blanket switches to let package
-managers and MCP servers through anyway — switches that exist because a host list is too blunt for
-a coding agent, where one `npm install` reaches dozens of hosts. Three consequences follow. The
-unit is wrong: the policy belongs to an environment many sessions share, so you cannot narrow one
-run to the two destinations that job needs, and environments are unversioned so you cannot show
-afterwards which rules a run was under. Private systems are unreachable by shell at all from a
-cloud sandbox — no VPN, IPSec, PrivateLink or peering exists, and listing `gitlab.internal` in
-`allowed_hosts` creates no path — leaving only *tool-shaped* access (MCP tunnels, an access-gated
-research preview with Cloudflare in the path, or your own custom tools), which gives the agent
-internal data one declared call at a time but never a checkout to build against. And nothing is
-recorded: no list of hosts contacted, no refusals, and no logs of your own, because the machine is
-not yours. Self-hosted, the platform contributes no network control whatsoever — "your sandbox's
+There is one layer of control: `networking.limited` with an `allowed_hosts` list, set on the
+**environment**, **default open** apart from a general safety blocklist, plus blanket switches to
+let package managers and MCP servers through anyway — switches that exist because a host list is
+too blunt for a coding agent, where a single `npm install` reaches dozens of hosts. Three
+consequences follow. The unit is wrong: the policy belongs to an environment many sessions share,
+so you cannot narrow one run to the two destinations that job needs, and environments are
+unversioned, so you cannot show afterwards which rules a given run was under. Private systems are
+unreachable by shell from a cloud sandbox at all — there is no VPN, IPSec, PrivateLink or peering,
+and listing `gitlab.internal` in `allowed_hosts` creates no path to it — leaving only *tool-shaped*
+access: MCP tunnels (an access-gated research preview, offered as-is, with Cloudflare in the path)
+or your own custom tools, which give the agent internal data one declared call at a time but never
+a checkout to build against. And nothing is recorded: no list of hosts contacted, no refusals, and
+no logs of your own, because the machine is not yours — so a host list cannot be tightened from
+evidence. Self-hosted, the platform contributes no network control whatsoever: "your sandbox's
 network access is determined by your VPC and firewall rules."
 
 ### 6.4 Incident response
 
-Managed Agents does give you real, fast levers, and they deserve credit: revoking or rotating the
-environment key is validated on every request so it bites on the worker's next call; a vault
-credential can be rotated without disturbing a running session; agents and environments can be
-archived; sessions can be deleted; and budgets cap spend per session. Three gaps separate that from
-the whitepaper's kill-switch list. There is no key-revocation move that renders retained data
-inaccessible, because the data and the keys are Anthropic's — deletion is the only route. Pausing a
-deployment suppresses the *schedule* only and not the API, so it must not be treated as a stop
-button (H). And containment is coarse in the same way authorisation is: the environment key is the
-unit, so revoking it stops every session in that environment rather than the one you are worried
-about, and there is nothing to revoke *per session*, per repository or per person. Detection is
-also yours end to end — Anthropic "can detect anomalous usage patterns, but cannot know your key
-was compromised", there is no organisation-level audit log over agent runs, and the evidence is
+The levers that exist are real and fast, and deserve credit: revoking or rotating the environment
+key is validated on every request, so it bites on the worker's next call; a vault credential can be
+rotated without disturbing a running session; agents and environments can be archived; sessions can
+be deleted; budgets cap spend per session. Three things limit them. There is no key-revocation move
+that renders retained data inaccessible, because the data and the keys are Anthropic's — deletion is
+the only route. Pausing a deployment suppresses the *schedule* only, not the API, so it must not be
+treated as a stop button (H). And containment is as coarse as authorisation: the environment key is
+the unit, so revoking it halts every session in that environment rather than the one you are worried
+about, and there is nothing revocable per session, per repository or per person. Detection is yours
+end to end — Anthropic "can detect anomalous usage patterns, but cannot know your key was
+compromised", there is no organisation-level audit log over agent runs, and the evidence is
 asymmetric in the direction that matters: a human's denial of a tool call and a blocked `web_fetch`
-are recorded in the transcript, but a filtered `web_search` result and any blocked sandbox egress
-are recorded nowhere at all. You can evidence what an agent did, never what it was stopped from
-doing.
+are recorded in the transcript, while a filtered `web_search` result and any blocked sandbox egress
+are recorded nowhere. You can evidence what an agent did, never what it was stopped from doing.
 
 ### 6.5 Containment model
 
-The whitepaper's framing — agents reach unauthorised systems through *private data* × *untrusted
-content* × *outward communication* — is the right lens, and Managed Agents bounds the three
-unevenly. On a default cloud sandbox, untrusted repository content, an injected git PAT and
-unrestricted egress coexist inside one process, and nothing native separates them; the mitigation
-exists but is opt-in, environment-wide and unlogged. Within a session, containment is decent:
-delegation is depth-capped at one and refused at two layers, child context is isolated from the
-parent, and helpers surface only through message content. But they run in the *same* sandbox with a
-shared filesystem in both directions (parent `pid=491`, child `pid=658`; the child read a token the
-parent wrote to `/workspace`), and a `read_only` memory store is protected from upload but not from
-local modification — `bash` or a sandbox-served tool can rewrite the mounted copy and later calls in
-that session read the altered view. *Between* sessions is where the model is weakest, and this is
-measured rather than documented: one environment key holds a whole environment, the work queue does
-not route — a replacement worker of ours claimed **four sibling sessions'** work items, since the
-queue filters on nothing but age and worker id — and a bare `SessionToolRunner` with that key
-attaches to **any** session in the environment and answers its pending tool calls. That is the same
-mechanism as the only native crash recovery path, so the hole and the remedy are one object.
-Devin's containment states the opposite property explicitly: cross-session interaction is
-instruction-only, authenticated, authorised and recorded; a session cannot address another
-session's machine, relay through it, or use its credentials. The only native equivalent is
-topological — one workspace and environment per trust boundary, a manual Console workflow that
-multiplies agents, environments and vaults per boundary.
+Agents reach systems they should not through a combination of access to private data, exposure to
+untrusted content, and the ability to communicate outward; Managed Agents bounds the three
+unevenly. On a default cloud sandbox all three coexist in one process — untrusted repository
+content, an injected git PAT, and unrestricted egress — and nothing native separates them; the
+mitigation exists but is opt-in, environment-wide and unlogged. Within a session, containment is
+decent: delegation is capped at depth one and refused at two layers, child context is isolated from
+the parent, and helpers surface to the parent only as message content. But parent and child run in
+the **same sandbox** with a shared filesystem in both directions (`pid=491` and `pid=658`; the child
+read a token the parent wrote to `/workspace`), and a `read_only` memory store is protected from
+upload but not from local modification — `bash` or a sandbox-served tool can rewrite the mounted
+copy, and later calls in that session read the altered view. *Between* sessions is the weakest
+point, and here we have measurement rather than documentation: one environment key holds an entire
+environment, the work queue does not route — a replacement worker of ours claimed **four sibling
+sessions'** work items, the queue filtering on nothing but age and worker id — and a bare
+`SessionToolRunner` holding that key attaches to **any** session in the environment and answers its
+pending tool calls. That is also the only native crash-recovery path, so the hole and the remedy are
+the same object. The only native containment for it is topological, and Anthropic says as much:
+"consider provisioning a separate workspace and environment for each trust boundary" — a manual
+Console workflow that multiplies agents, environments and vaults per boundary.
 
 ---
 
