@@ -370,21 +370,49 @@ organisation, so holding it elsewhere under the same account does not carry over
 
 ### 6.2 Architecture: the layers
 
-There are two layers, and the split is not where a security reviewer expects. Anthropic's
-multi-tenant control plane holds the agent, the session and its entire event history; execution
-sits either in an Anthropic-run cloud sandbox — described only as an "isolated container", with no
-statement about hardware virtualisation, host-kernel exposure, or where network policy is enforced
-relative to the container — or in a sandbox you run, where Anthropic states plainly that it "does
-not inspect or verify your sandbox image" and cannot detect a supply-chain compromise in it. The
-customer-facing isolation unit is the **workspace**: a logical boundary in a shared platform, not
-an account, and the only place where "this team is separate" can be expressed. The practical
-consequence is that self-hosting buys execution locality and nothing else — your code is cloned
-and built in your VPC, but the transcript of everything done to it still lives in the control
-plane, and every platform-side control (network policy, permissions, retention) is unchanged by
-the move. Hardening the box is then entirely yours: the guidance is to drop unnecessary Linux
-capabilities, run as non-root and use a read-only root filesystem. In this program that boundary
-was a Modal sandbox running with all capabilities and no egress restriction — i.e. we ran the weak
-configuration, and say so.
+There are two layers, and self-hosting does not add a third — it only moves the second one.
+
+```
+  LAYER 1 — CONTROL PLANE (Anthropic's, multi-tenant, always)
+    holds: agent + versions · session + ENTIRE event history · memory
+           stores · vault credentials · the per-environment work queue
+    isolation: logical. The WORKSPACE is the only customer-facing unit —
+      not an account, not a VPC, not an encryption boundary. Within a
+      workspace, one API key reaches every agent, session and vault
+      ("finer-grained scopes … are not currently available").
+    ⇒ unaffected by self-hosting: no way to move it, key it, or opt out
+
+  ──── boundary is a QUEUE + the ENVIRONMENT KEY, not a perimeter ────
+       your worker polls outward; Anthropic never dials in.
+       isolation: the ENVIRONMENT. One key, whole environment, no
+       scoped or read-only variant, no routing — MEASURED: a worker
+       claimed four sibling sessions' items, and a bare runner with
+       that key can answer ANY session's pending tool calls (C)
+
+  LAYER 2 — SANDBOX (where tools run)
+    a) Anthropic cloud: "isolated container" per session. Nothing
+       documented about hardware virtualisation or host-kernel
+       exposure; untestable from the API
+    b) self-hosted: whatever you built. Anthropic "does not inspect
+       or verify your sandbox image" and "cannot isolate individual
+       tools inside your sandbox"
+    isolation WITHIN a sandbox: none between tools, and none between
+      a session and its subagents — same box, shared filesystem both
+      ways (parent pid=491 / child pid=658, F). Depth is capped at 1
+```
+
+So the isolation model degrades as you descend: strong and Anthropic-owned at the control plane
+(work-queue integrity, multitenancy, lease fencing that provably prevents split-brain), coarse and
+credential-shaped in the middle (the environment, holding one all-powerful Console-only key, which
+is why Anthropic's own containment advice is topological — "consider provisioning a separate
+workspace and environment for each trust boundary"), and absent at the bottom, where every tool
+call, every subagent and any untrusted content the repository carries share one process tree, one
+filesystem and one set of injected credentials. The practical consequence is that self-hosting buys
+execution locality and nothing else: your code is cloned and built in your VPC, but the transcript
+of everything done to it still lives in layer 1, and every platform-side control — permissions,
+retention, ZDR ineligibility — is untouched by the move. Hardening layer 2 is then entirely yours
+(drop capabilities, non-root, read-only root filesystem); in this program it was a Modal sandbox
+with all capabilities and no egress restriction, i.e. we ran the weak configuration and say so.
 
 ### 6.3 Network model (self-hosted sandboxes)
 
