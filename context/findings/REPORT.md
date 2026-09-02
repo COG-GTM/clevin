@@ -454,27 +454,32 @@ asymmetric in the direction that matters: a human's denial of a tool call and a 
 are recorded in the transcript, while a filtered `web_search` result and any blocked sandbox egress
 are recorded nowhere. You can evidence what an agent did, never what it was stopped from doing.
 
-### 6.5 Containment model
+### 6.5 Containment model (self-hosted sandboxes)
 
-Agents reach systems they should not through a combination of access to private data, exposure to
-untrusted content, and the ability to communicate outward; Managed Agents bounds the three
-unevenly. On a default cloud sandbox all three coexist in one process — untrusted repository
-content, an injected git PAT, and unrestricted egress — and nothing native separates them; the
-mitigation exists but is opt-in, environment-wide and unlogged. Within a session, containment is
-decent: delegation is capped at depth one and refused at two layers, child context is isolated from
-the parent, and helpers surface to the parent only as message content. But parent and child run in
-the **same sandbox** with a shared filesystem in both directions (`pid=491` and `pid=658`; the child
-read a token the parent wrote to `/workspace`), and a `read_only` memory store is protected from
-upload but not from local modification — `bash` or a sandbox-served tool can rewrite the mounted
-copy, and later calls in that session read the altered view. *Between* sessions is the weakest
-point, and here we have measurement rather than documentation: one environment key holds an entire
-environment, the work queue does not route — a replacement worker of ours claimed **four sibling
-sessions'** work items, the queue filtering on nothing but age and worker id — and a bare
-`SessionToolRunner` holding that key attaches to **any** session in the environment and answers its
-pending tool calls. That is also the only native crash-recovery path, so the hole and the remedy are
-the same object. The only native containment for it is topological, and Anthropic says as much:
-"consider provisioning a separate workspace and environment for each trust boundary" — a manual
-Console workflow that multiplies agents, environments and vaults per boundary.
+Self-hosting is what makes containment your problem, because it is what puts everything worth
+stealing in one place: the shell's git PAT and cloud keys you injected, the environment key, the
+session secret, the mounted memory stores, and the checkout of untrusted repository content — all
+in a single process tree with, by default, unrestricted outbound reach. Anthropic is explicit that
+it "cannot isolate individual tools inside your sandbox", so nothing separates a prompt-injecting
+README from the credential that can push, and the mitigations are structural ones you build: a
+non-root, capability-dropped image, a read-only root filesystem, per-session credentials with the
+smallest possible scope, and enforcement outside the box. Inside a session the platform does help —
+delegation is capped at depth one and refused at two layers, and child context is isolated from the
+parent — but the child runs in the **same** sandbox with a filesystem shared both ways (parent
+`pid=491`, child `pid=658`; the child read a token the parent wrote to `/workspace`), and a
+`read_only` memory store is protected from upload, not from local edits, so `bash` or a
+sandbox-served tool can rewrite the mounted copy and later calls in that session read the altered
+view. *Between* sandboxes is the weakest point, and it is measured rather than documented: every
+worker in an environment holds the same all-powerful key, the work queue does not route — a
+replacement worker of ours claimed **four sibling sessions'** work items, the queue filtering on
+nothing but age and worker id — and a bare `SessionToolRunner` with that key attaches to **any**
+session in the environment and answers its pending tool calls, which is also the only native
+crash-recovery path, so the hole and the remedy are the same object. If your workers share a host,
+a volume or a network segment, they are one compromise away from each other; and because session
+completion is not machine destruction (§6.2), an abnormal exit leaves a live box still holding
+those credentials. The only native containment for the cross-session case is topological, and
+Anthropic says so: "consider provisioning a separate workspace and environment for each trust
+boundary" — a manual Console workflow that multiplies agents, environments and vaults per boundary.
 
 ---
 
