@@ -452,6 +452,7 @@ session's machine, relay through it, or use its credentials. The only native equ
 topological — one workspace and environment per trust boundary, a manual Console workflow that
 multiplies agents, environments and vaults per boundary.
 
+---
 
 ## 7. Custom-build audit
 
