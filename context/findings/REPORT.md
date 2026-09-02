@@ -386,23 +386,28 @@ capabilities, run as non-root and use a read-only root filesystem. In this progr
 was a Modal sandbox running with all capabilities and no egress restriction — i.e. we ran the weak
 configuration, and say so.
 
-### 6.3 Network model
+### 6.3 Network model (self-hosted sandboxes)
 
-There is one layer of control: `networking.limited` with an `allowed_hosts` list, set on the
-**environment**, **default open** apart from a general safety blocklist, plus blanket switches to
-let package managers and MCP servers through anyway — switches that exist because a host list is
-too blunt for a coding agent, where a single `npm install` reaches dozens of hosts. Three
-consequences follow. The unit is wrong: the policy belongs to an environment many sessions share,
-so you cannot narrow one run to the two destinations that job needs, and environments are
-unversioned, so you cannot show afterwards which rules a given run was under. Private systems are
-unreachable by shell from a cloud sandbox at all — there is no VPN, IPSec, PrivateLink or peering,
-and listing `gitlab.internal` in `allowed_hosts` creates no path to it — leaving only *tool-shaped*
-access: MCP tunnels (an access-gated research preview, offered as-is, with Cloudflare in the path)
-or your own custom tools, which give the agent internal data one declared call at a time but never
-a checkout to build against. And nothing is recorded: no list of hosts contacted, no refusals, and
-no logs of your own, because the machine is not yours — so a host list cannot be tightened from
-evidence. Self-hosted, the platform contributes no network control whatsoever: "your sandbox's
-network access is determined by your VPC and firewall rules."
+In the self-hosted model the platform contributes **no network control at all**: the `networking`
+block with its `allowed_hosts` list governs Anthropic-run cloud sandboxes only, and for a sandbox
+you run "your sandbox's network access is determined by your VPC and firewall rules." That is
+liberating and it is the reason to self-host — a worker inside your VPC can reach internal Git
+hosts, package mirrors and databases that a cloud sandbox cannot touch at all, and the traffic
+shape is friendly to lock down, since the worker *polls outward* and Anthropic never dials in, so
+nothing needs an inbound rule. But it means every control an enterprise reviewer will ask for is
+one you build and operate: default-deny egress, per-session policy rather than one rule set for
+the whole fleet, DNS filtering, an enforcement point outside the sandbox so in-sandbox code cannot
+reroute it, and a traffic log — Anthropic never sees a refusal and records nothing, so whatever
+your infrastructure captures is the entire audit trail. The exposure is also sharper than in the
+hosted case, because self-hosting is what puts real credentials in the box: the shell's git PAT and
+cloud keys are injected by you into the same process that reads untrusted repository content, and
+the sandbox additionally holds the environment key and the session secret. In this program none of
+that was done — the Modal sandbox ran with all Linux capabilities, as root, with unrestricted
+egress and no traffic log, which is the default posture you get if you build the worker and stop
+there. Anthropic's guidance names the same list (drop capabilities, non-root, read-only root
+filesystem, restrict egress, isolate untrusted workloads) and is explicit that it "does not inspect
+or verify your sandbox image" and "cannot isolate individual tools inside your sandbox" — the
+weakest link is whatever your image and firewall happen to be.
 
 ### 6.4 Incident response
 
