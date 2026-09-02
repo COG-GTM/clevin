@@ -1,0 +1,4015 @@
+{
+  "session": {
+    "id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+    "agent": {
+      "id": "agent_01XRvPxBEBhxv1zQ6qwnNH95",
+      "description": "workstream F coordinator-fanout",
+      "mcp_servers": [],
+      "model": {
+        "id": "claude-opus-5",
+        "effort": {
+          "type": "high"
+        },
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": {
+        "agents": [
+          {
+            "id": "agent_017Z7SXjpqF2kS5fWeKSK7tr",
+            "description": "workstream F worker-0",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+            "skills": [],
+            "system": "You are worker 0 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          },
+          {
+            "id": "agent_0139LBBzYsajxqSoGqtUG65K",
+            "description": "workstream F worker-1",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+            "skills": [],
+            "system": "You are worker 1 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          },
+          {
+            "id": "agent_013oT4peNeh21VB3Uz8R1fCD",
+            "description": "workstream F worker-2",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+            "skills": [],
+            "system": "You are worker 2 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          },
+          {
+            "id": "agent_01N2Pk1nMPhyftig1CAAZci4",
+            "description": "workstream F worker-3",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+            "skills": [],
+            "system": "You are worker 3 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          },
+          {
+            "id": "agent_01ANZmZrtrhQR6DGQupK178T",
+            "description": "workstream F worker-4",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+            "skills": [],
+            "system": "You are worker 4 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          },
+          {
+            "id": "agent_01NSZcoUaz7MfM5bK3qUWdpN",
+            "description": "workstream F worker-5",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+            "skills": [],
+            "system": "You are worker 5 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          }
+        ],
+        "type": "coordinator"
+      },
+      "name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+      "skills": [],
+      "system": "You are the coordinator of a Managed Agents subagent experiment.\n\nDelegate as instructed, then judge what comes back. You are accountable for the truth of\nyour final answer, not for agreeing with your subagents. When child reports conflict,\nsay so explicitly and settle it with your own evidence.",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "version": 1
+    },
+    "archived_at": null,
+    "budget": {
+      "max_list_cost": {
+        "amount": "200",
+        "currency": "USD"
+      },
+      "type": "limit"
+    },
+    "created_at": "2026-08-28T02:12:56.175808Z",
+    "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+    "metadata": {
+      "experiment": "clevin-swarm-F",
+      "label": "fanout",
+      "run_id": "20260828T021253Z-2df88d"
+    },
+    "outcome_evaluations": [],
+    "resources": [],
+    "stats": {
+      "active_seconds": 272.565,
+      "duration_seconds": 72.088792568
+    },
+    "status": "idle",
+    "title": "F/exp2_fanout_and_conflict/fanout",
+    "type": "session",
+    "updated_at": "2026-08-28T02:14:02.759449Z",
+    "usage": {
+      "active_seconds": 66.351,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 34681
+      },
+      "cache_read_input_tokens": 244556,
+      "input_tokens": 60,
+      "list_cost": {
+        "amount": "30",
+        "currency": "USD"
+      },
+      "output_tokens": 3529,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "vault_ids": [],
+    "deployment_id": null
+  },
+  "events": [
+    {
+      "id": "sevt_01TR3Q3W344gnJPwAHcD1uu3",
+      "processed_at": "2026-08-28T02:12:56.440099Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_01WQSHyqysyqEejdmHg4216N",
+      "agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:12:56.754818Z",
+      "session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_013g76YxEWgnGJm1g4vNRQBe",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp2 fan-out. No git, no MCP, no external state.\n\nIn ONE turn, delegate to every agent in your roster at once, and additionally delegate a\nsecond, separate task to the FIRST roster agent so that it runs twice concurrently.\nEach delegation message must be exactly: \"Sleep 25 seconds with `sleep 25`, then reply\nwith your agent name and the output of `date -u +%H:%M:%S`.\"\n\nThen wait for all of them. Finish with one fenced ```json block:\n{\"replies\": {\"<agent name + instance>\": \"<time reported>\"},\n \"total_children_spawned\": <int>,\n \"same_agent_ran_twice\": bool,\n \"any_delegation_refused\": \"<verbatim error if any, else none>\"}",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T02:12:56.814338Z"
+    },
+    {
+      "id": "sevt_01695T2xhDaGA796pFKbVcep",
+      "processed_at": "2026-08-28T02:12:56.814339Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_012DUwcFoQAHW9EVvvk19dNo",
+      "content": [
+        {
+          "text": "I'll spawn all 6 roster agents plus a second instance of worker-0, for 7 total.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:05.648681Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01XHxYNBiDabCpuQ538YKf6s",
+      "is_error": false,
+      "model_request_start_id": "sevt_01695T2xhDaGA796pFKbVcep",
+      "model_usage": {
+        "cache_creation_input_tokens": 9977,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 2,
+        "output_tokens": 1023,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:13:05.648689Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_011pt7Li4YNkVaNACH1gyBJE",
+      "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:05.922756Z",
+      "session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_01GhkJ9mfi9kqAcv6yLKS5B4",
+      "content": [
+        {
+          "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:05.922757Z",
+      "to_session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_017JLhVReZrGvT59UGSrx7TH",
+      "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:06.191542Z",
+      "session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_016M1sr2pJRzQuV2fA1SYXCi",
+      "content": [
+        {
+          "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:06.191543Z",
+      "to_session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_0197Ui1GAub7GYyiSRtAP7Nk",
+      "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:06.209978Z",
+      "session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_018HEwfcgVe9F8NF33hMa8Rq",
+      "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:06.436499Z",
+      "session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01MFEwnoSjRSF9DdGvBAfSdR",
+      "agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:06.452598Z",
+      "session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_017qdxdhuMvp7bbyXjkUdcgk",
+      "content": [
+        {
+          "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:06.452599Z",
+      "to_session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_01UpuWSF9pEKuxuyDXuVqgne",
+      "agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:06.710497Z",
+      "session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_01TKJgrMDPSF9uQ4urgvG6cV",
+      "content": [
+        {
+          "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:06.710498Z",
+      "to_session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_01TCCneUEvNLaZzTVkLvpGRp",
+      "agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:06.726942Z",
+      "session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_012vEMhi84hGB2gSyFJ8GX9f",
+      "agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:06.993347Z",
+      "session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_01GP537WAYSV77bQyZWz6cJq",
+      "content": [
+        {
+          "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:06.993348Z",
+      "to_session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_01AhKKgZ9at4uoZvTMnAdo4T",
+      "agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:07.004158Z",
+      "session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01772VBxgDhHRKm4zqwHSEfU",
+      "agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:07.261457Z",
+      "session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_01P3zki4TzuvbCAH8i4yvKr3",
+      "content": [
+        {
+          "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:07.261458Z",
+      "to_session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_01STx6EVjFQMjeLGKBhVzEMU",
+      "agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:07.263891Z",
+      "session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_016saLSP5K8XuseuCiVmRACS",
+      "agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:07.507499Z",
+      "session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01CUEbDkFZH2DxiGDXSsNFex",
+      "agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:07.556148Z",
+      "session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_01BzMVi1q1khrFopKHidxd7j",
+      "content": [
+        {
+          "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:07.556149Z",
+      "to_session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_018R2ed1ziScDvssQduyebH5",
+      "processed_at": "2026-08-28T02:13:07.652620Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01PSxu6V5LZ295A1q31cqBbb",
+      "agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:07.817706Z",
+      "session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01CKJHt3FGMgjmxkmSGLpGa8",
+      "content": [
+        {
+          "text": "All 7 spawned (6 roster agents + a duplicate worker-0). Waiting for replies.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:08.902846Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01Qha8YqJLRJKqb6XvWxJPk9",
+      "is_error": false,
+      "model_request_start_id": "sevt_018R2ed1ziScDvssQduyebH5",
+      "model_usage": {
+        "cache_creation_input_tokens": 2118,
+        "cache_read_input_tokens": 9977,
+        "input_tokens": 2,
+        "output_tokens": 35,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:13:08.902847Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_015DEdvqwitHMtWErebKgUnd",
+      "agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:09.110639Z",
+      "session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01TEBx4CcLRDrA1tTBY9SSuR",
+      "agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:36.293757Z",
+      "session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01R92v6JfF7gFnh7GxaQdhVJ",
+      "content": [
+        {
+          "text": "Agent: worker 0. UTC time after sleep 25: 02:13:34",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+      "processed_at": "2026-08-28T02:13:36.371962Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_01UXaX6iJfJ49NVJScE1fRKu",
+      "processed_at": "2026-08-28T02:13:36.371963Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01YBPgJtEuRQsbEjYGoXoXDy",
+      "agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:37.537186Z",
+      "session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_014vL8HzACsW71aKsB7z4Tzz",
+      "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:37.570512Z",
+      "session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_0194srg17EV93uy18cQ6ZAmx",
+      "processed_at": "2026-08-28T02:13:37.656149Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 41.1,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 30365
+        },
+        "cache_read_input_tokens": 69373,
+        "input_tokens": 24,
+        "list_cost": {
+          "amount": "17",
+          "currency": "USD"
+        },
+        "output_tokens": 1804,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "200",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01A7zRuDEKj12BYkG9aE9KTn",
+      "processed_at": "2026-08-28T02:13:37.695634Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 41.133,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 30532
+        },
+        "cache_read_input_tokens": 85032,
+        "input_tokens": 28,
+        "list_cost": {
+          "amount": "18",
+          "currency": "USD"
+        },
+        "output_tokens": 1852,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "200",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01M2BDFVvjzsawPaqQkRT7pE",
+      "content": [
+        {
+          "text": "Worker-0 instance A reported. Waiting on the remaining 6.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:38.028972Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01DQxfwxwVHFbJWYcimJM614",
+      "is_error": false,
+      "model_request_start_id": "sevt_01UXaX6iJfJ49NVJScE1fRKu",
+      "model_usage": {
+        "cache_creation_input_tokens": 105,
+        "cache_read_input_tokens": 12095,
+        "input_tokens": 2,
+        "output_tokens": 26,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:13:38.028973Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01EzWGSw86Vugkb2DP6ESjdG",
+      "agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:38.077927Z",
+      "session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01FvEcHKQp3hjFeNVyCAZ3uQ",
+      "content": [
+        {
+          "text": "worker 1: 02:13:34",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+      "processed_at": "2026-08-28T02:13:38.163012Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_014vUzEPzDVGrdLjA1qWXp6R",
+      "processed_at": "2026-08-28T02:13:38.163013Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01F2uWSaGUpGa7VuvJDPYq3Z",
+      "processed_at": "2026-08-28T02:13:38.168335Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 41.605,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 30735
+        },
+        "cache_read_input_tokens": 112687,
+        "input_tokens": 34,
+        "list_cost": {
+          "amount": "19",
+          "currency": "USD"
+        },
+        "output_tokens": 2003,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "200",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01DJKM95vRjRCUK7xRCmsDMj",
+      "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:39.067639Z",
+      "session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01A2D7UcKyVqsDFTi872dvvq",
+      "processed_at": "2026-08-28T02:13:39.153486Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 42.596,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 30892
+        },
+        "cache_read_input_tokens": 128343,
+        "input_tokens": 38,
+        "list_cost": {
+          "amount": "19",
+          "currency": "USD"
+        },
+        "output_tokens": 2043,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "200",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01H3L2qLuNowaY4otgW7Ppb7",
+      "agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:39.422472Z",
+      "session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01PE5hj14L7Y43go6asXHrAB",
+      "processed_at": "2026-08-28T02:13:39.520739Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 42.959,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 30974
+        },
+        "cache_read_input_tokens": 136172,
+        "input_tokens": 40,
+        "list_cost": {
+          "amount": "20",
+          "currency": "USD"
+        },
+        "output_tokens": 2071,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "200",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01GxpvYahF5YoHYLx6BZBSgu",
+      "content": [
+        {
+          "text": "Worker-1 reported. Waiting on the remaining 5.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:39.871080Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01NJWumRHtgJEx2PnocAGMHs",
+      "is_error": false,
+      "model_request_start_id": "sevt_014vUzEPzDVGrdLjA1qWXp6R",
+      "model_usage": {
+        "cache_creation_input_tokens": 83,
+        "cache_read_input_tokens": 12200,
+        "input_tokens": 2,
+        "output_tokens": 23,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:13:39.871081Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_014d8Coqm2mbJSLd8WFGyHXF",
+      "content": [
+        {
+          "text": "Worker 3, UTC time: 02:13:34",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+      "processed_at": "2026-08-28T02:13:39.986386Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_0188hWAU3ZztC64VrATNoUU8",
+      "processed_at": "2026-08-28T02:13:39.986387Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01Bu3ozTqakPX3K9ZtQS1CxR",
+      "content": [
+        {
+          "text": "Worker-3 reported. Waiting on the remaining 4.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:41.616883Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01L1zkXchZXM5THqA1ThQyHM",
+      "is_error": false,
+      "model_request_start_id": "sevt_0188hWAU3ZztC64VrATNoUU8",
+      "model_usage": {
+        "cache_creation_input_tokens": 85,
+        "cache_read_input_tokens": 12283,
+        "input_tokens": 2,
+        "output_tokens": 23,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:13:41.616884Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01SUmM9bNqJbLwaNHX5SADpX",
+      "content": [
+        {
+          "text": "worker0: 02:13:35",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+      "processed_at": "2026-08-28T02:13:41.745233Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_01A8oVHqvBGFeHkY6rZw3CLR",
+      "processed_at": "2026-08-28T02:13:41.745234Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01X5VeUR8YAVjHWNEzRK8EKa",
+      "content": [
+        {
+          "text": "Worker-0 instance B reported \u2014 the same agent has now run twice concurrently. Waiting on the remaining 3.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:43.607473Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01LH5FzFZb44TAQBQJU6VKoS",
+      "is_error": false,
+      "model_request_start_id": "sevt_01A8oVHqvBGFeHkY6rZw3CLR",
+      "model_usage": {
+        "cache_creation_input_tokens": 81,
+        "cache_read_input_tokens": 12368,
+        "input_tokens": 2,
+        "output_tokens": 66,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:13:43.607475Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01AMAcMKhcfSLQvBv4mC4am5",
+      "content": [
+        {
+          "text": "Worker 2, UTC time: 02:13:34",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+      "processed_at": "2026-08-28T02:13:43.814413Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_01P4CFVf7QQJdSRTFKaM86NM",
+      "processed_at": "2026-08-28T02:13:43.911762Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01NRLnZmQhoZEHPFshLxyDtN",
+      "content": [
+        {
+          "text": "Worker-2 reported. Waiting on workers 4 and 5.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:45.119154Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01N7Kixq38mBVeSt4pnXtTRp",
+      "is_error": false,
+      "model_request_start_id": "sevt_01P4CFVf7QQJdSRTFKaM86NM",
+      "model_usage": {
+        "cache_creation_input_tokens": 1481,
+        "cache_read_input_tokens": 12449,
+        "input_tokens": 2,
+        "output_tokens": 25,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:13:45.119155Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_014KijHCFv9jzQNAMX2wkrp2",
+      "content": [
+        {
+          "text": "Worker 5, UTC time: 02:13:35",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+      "processed_at": "2026-08-28T02:13:45.283368Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_01QeHWJbv7G7feB9m9XvNDK3",
+      "processed_at": "2026-08-28T02:13:45.283369Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01GbycbVCB8RELobajUUGiHb",
+      "agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:45.467545Z",
+      "session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_017aBSpgXx2vJAgvvRWsgTQp",
+      "processed_at": "2026-08-28T02:13:45.569846Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 49.003,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 32964
+        },
+        "cache_read_input_tokens": 208781,
+        "input_tokens": 54,
+        "list_cost": {
+          "amount": "24",
+          "currency": "USD"
+        },
+        "output_tokens": 2371,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "200",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01T2YGA1ZMYE6PJmioEZDzg8",
+      "agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:13:45.709953Z",
+      "session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01CC4y5ue36qPevAvhcUMWmv",
+      "processed_at": "2026-08-28T02:13:45.794765Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 49.232,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 33046
+        },
+        "cache_read_input_tokens": 216610,
+        "input_tokens": 56,
+        "list_cost": {
+          "amount": "24",
+          "currency": "USD"
+        },
+        "output_tokens": 2399,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "200",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01QtR1Cc6mWkTijhKshaZ4bT",
+      "content": [
+        {
+          "text": "Worker-5 reported. Waiting on worker-4, the last outstanding child.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:13:47.029137Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01Xq5Ho1a1FHEtr6r1hZzucn",
+      "is_error": false,
+      "model_request_start_id": "sevt_01QeHWJbv7G7feB9m9XvNDK3",
+      "model_usage": {
+        "cache_creation_input_tokens": 86,
+        "cache_read_input_tokens": 13930,
+        "input_tokens": 2,
+        "output_tokens": 55,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:13:47.029139Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_014gwPEHAZ2vvMDpFQB2Rn2K",
+      "content": [
+        {
+          "text": "Worker 4, UTC time: 02:13:34",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+      "processed_at": "2026-08-28T02:13:47.201562Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d"
+    },
+    {
+      "id": "sevt_01RQfKhwgsdey9sRuhEPLxzk",
+      "processed_at": "2026-08-28T02:13:47.308671Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_019kt3Juygg37vAbADyjEnrE",
+      "processed_at": "2026-08-28T02:13:53.658773Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01Nihi7KeQzzZuTiFyzaNU5J",
+      "content": [
+        {
+          "text": "All 7 children have reported. My own verification of the results:\n\n- **Fan-out was complete and concurrent.** Every one of the 6 roster agents spawned successfully, plus a second worker-0 instance on a distinct thread (`sthr_01Btanu\u2026` and `sthr_01C2XwP\u2026`). Two live threads of the same agent type confirms same-agent re-entrancy.\n- **Timestamps corroborate parallelism.** All 7 replies land in the 02:13:34\u201302:13:35 window. Seven serialized 25-second sleeps would have spanned ~175 seconds; a 1-second spread is only consistent with genuine concurrent execution.\n- **No conflicts to settle.** No child's report contradicts another. One thing I'll flag rather than paper over: an intermediate `list_agents` snapshot showed worker-4's thread as IDLE with its reply \"(none yet)\" while a message was still outstanding \u2014 that was a lag in the roster view, since worker-4's reply arrived normally right after. Not a refusal or a failure.\n- **Cosmetic only:** children self-identified in short form (\"worker 0\", \"worker0\", \"Worker 5\") rather than by their full roster IDs. I've mapped them back to canonical names below.\n\n```json\n{\"replies\": {\"clevin-swarm-F-worker-0-20260828T021253Z-2df88d#1\": \"02:13:34\",\n             \"clevin-swarm-F-worker-0-20260828T021253Z-2df88d#2\": \"02:13:35\",\n             \"clevin-swarm-F-worker-1-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-2-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-3-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-4-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-5-20260828T021253Z-2df88d\": \"02:13:35\"},\n \"total_children_spawned\": 7,\n \"same_agent_ran_twice\": true,\n \"any_delegation_refused\": \"none\"}\n```",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:02.412271Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01SKjZ1bwd4nRCu9toxrbAnZ",
+      "is_error": false,
+      "model_request_start_id": "sevt_01RQfKhwgsdey9sRuhEPLxzk",
+      "model_usage": {
+        "cache_creation_input_tokens": 1549,
+        "cache_read_input_tokens": 14016,
+        "input_tokens": 2,
+        "output_tokens": 1075,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:02.412272Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01EHCRVDBZ5U5j7QzJYe5Tig",
+      "agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+      "processed_at": "2026-08-28T02:14:02.659922Z",
+      "session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_016fh7VrbLDP1tir1ML94mLi",
+      "processed_at": "2026-08-28T02:14:02.659923Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 66.052,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 34681
+        },
+        "cache_read_input_tokens": 244556,
+        "input_tokens": 60,
+        "list_cost": {
+          "amount": "30",
+          "currency": "USD"
+        },
+        "output_tokens": 3529,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "200",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01H2jzpvCfBXRMvhYBZ3SvNG",
+      "processed_at": "2026-08-28T02:14:02.659924Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    }
+  ],
+  "threads": [
+    {
+      "id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "agent": {
+        "id": "agent_01XRvPxBEBhxv1zQ6qwnNH95",
+        "description": "workstream F coordinator-fanout",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-opus-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+        "skills": [],
+        "system": "You are the coordinator of a Managed Agents subagent experiment.\n\nDelegate as instructed, then judge what comes back. You are accountable for the truth of\nyour final answer, not for agreeing with your subagents. When child reports conflict,\nsay so explicitly and settle it with your own evidence.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:12:56.175808Z",
+      "parent_thread_id": null,
+      "session_id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+      "stats": {
+        "active_seconds": 38.629999999999995,
+        "duration_seconds": 72.505212737,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:14:03.121566Z",
+      "usage": {
+        "active_seconds": 38.629999999999995,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 15565
+        },
+        "cache_read_input_tokens": 99318,
+        "input_tokens": 18,
+        "list_cost": {
+          "amount": "21",
+          "currency": "USD"
+        },
+        "output_tokens": 2351,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01TR3Q3W344gnJPwAHcD1uu3",
+          "processed_at": "2026-08-28T02:12:56.440099Z",
+          "type": "session.status_running"
+        },
+        {
+          "id": "sevt_01WQSHyqysyqEejdmHg4216N",
+          "agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:12:56.754818Z",
+          "session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_013g76YxEWgnGJm1g4vNRQBe",
+          "content": [
+            {
+              "text": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp2 fan-out. No git, no MCP, no external state.\n\nIn ONE turn, delegate to every agent in your roster at once, and additionally delegate a\nsecond, separate task to the FIRST roster agent so that it runs twice concurrently.\nEach delegation message must be exactly: \"Sleep 25 seconds with `sleep 25`, then reply\nwith your agent name and the output of `date -u +%H:%M:%S`.\"\n\nThen wait for all of them. Finish with one fenced ```json block:\n{\"replies\": {\"<agent name + instance>\": \"<time reported>\"},\n \"total_children_spawned\": <int>,\n \"same_agent_ran_twice\": bool,\n \"any_delegation_refused\": \"<verbatim error if any, else none>\"}",
+              "type": "text"
+            }
+          ],
+          "type": "user.message",
+          "processed_at": "2026-08-28T02:12:56.814338Z"
+        },
+        {
+          "id": "sevt_01695T2xhDaGA796pFKbVcep",
+          "processed_at": "2026-08-28T02:12:56.814339Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_012DUwcFoQAHW9EVvvk19dNo",
+          "content": [
+            {
+              "text": "I'll spawn all 6 roster agents plus a second instance of worker-0, for 7 total.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:05.648681Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01XHxYNBiDabCpuQ538YKf6s",
+          "is_error": false,
+          "model_request_start_id": "sevt_01695T2xhDaGA796pFKbVcep",
+          "model_usage": {
+            "cache_creation_input_tokens": 9977,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 1023,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:05.648689Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_011pt7Li4YNkVaNACH1gyBJE",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:05.922756Z",
+          "session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01GhkJ9mfi9kqAcv6yLKS5B4",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:05.922757Z",
+          "to_session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_017JLhVReZrGvT59UGSrx7TH",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.191542Z",
+          "session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_016M1sr2pJRzQuV2fA1SYXCi",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:06.191543Z",
+          "to_session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_0197Ui1GAub7GYyiSRtAP7Nk",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.209978Z",
+          "session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_018HEwfcgVe9F8NF33hMa8Rq",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.436499Z",
+          "session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01MFEwnoSjRSF9DdGvBAfSdR",
+          "agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.452598Z",
+          "session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_017qdxdhuMvp7bbyXjkUdcgk",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:06.452599Z",
+          "to_session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01UpuWSF9pEKuxuyDXuVqgne",
+          "agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.710497Z",
+          "session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01TKJgrMDPSF9uQ4urgvG6cV",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:06.710498Z",
+          "to_session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01TCCneUEvNLaZzTVkLvpGRp",
+          "agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.726942Z",
+          "session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_012vEMhi84hGB2gSyFJ8GX9f",
+          "agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.993347Z",
+          "session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01GP537WAYSV77bQyZWz6cJq",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:06.993348Z",
+          "to_session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01AhKKgZ9at4uoZvTMnAdo4T",
+          "agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.004158Z",
+          "session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01772VBxgDhHRKm4zqwHSEfU",
+          "agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.261457Z",
+          "session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01P3zki4TzuvbCAH8i4yvKr3",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:07.261458Z",
+          "to_session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01STx6EVjFQMjeLGKBhVzEMU",
+          "agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.263891Z",
+          "session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_016saLSP5K8XuseuCiVmRACS",
+          "agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.507499Z",
+          "session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01CUEbDkFZH2DxiGDXSsNFex",
+          "agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.556148Z",
+          "session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01BzMVi1q1khrFopKHidxd7j",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:07.556149Z",
+          "to_session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_018R2ed1ziScDvssQduyebH5",
+          "processed_at": "2026-08-28T02:13:07.652620Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01PSxu6V5LZ295A1q31cqBbb",
+          "agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.817706Z",
+          "session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01CKJHt3FGMgjmxkmSGLpGa8",
+          "content": [
+            {
+              "text": "All 7 spawned (6 roster agents + a duplicate worker-0). Waiting for replies.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:08.902846Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01Qha8YqJLRJKqb6XvWxJPk9",
+          "is_error": false,
+          "model_request_start_id": "sevt_018R2ed1ziScDvssQduyebH5",
+          "model_usage": {
+            "cache_creation_input_tokens": 2118,
+            "cache_read_input_tokens": 9977,
+            "input_tokens": 2,
+            "output_tokens": 35,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:08.902847Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_015DEdvqwitHMtWErebKgUnd",
+          "agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:09.110639Z",
+          "session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01TEBx4CcLRDrA1tTBY9SSuR",
+          "agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:36.293757Z",
+          "session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01R92v6JfF7gFnh7GxaQdhVJ",
+          "content": [
+            {
+              "text": "Agent: worker 0. UTC time after sleep 25: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+          "processed_at": "2026-08-28T02:13:36.371962Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01UXaX6iJfJ49NVJScE1fRKu",
+          "processed_at": "2026-08-28T02:13:36.371963Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01YBPgJtEuRQsbEjYGoXoXDy",
+          "agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:37.537186Z",
+          "session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_014vL8HzACsW71aKsB7z4Tzz",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:37.570512Z",
+          "session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_0194srg17EV93uy18cQ6ZAmx",
+          "processed_at": "2026-08-28T02:13:37.656149Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 41.1,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 30365
+            },
+            "cache_read_input_tokens": 69373,
+            "input_tokens": 24,
+            "list_cost": {
+              "amount": "17",
+              "currency": "USD"
+            },
+            "output_tokens": 1804,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "200",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01A7zRuDEKj12BYkG9aE9KTn",
+          "processed_at": "2026-08-28T02:13:37.695634Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 41.133,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 30532
+            },
+            "cache_read_input_tokens": 85032,
+            "input_tokens": 28,
+            "list_cost": {
+              "amount": "18",
+              "currency": "USD"
+            },
+            "output_tokens": 1852,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "200",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01M2BDFVvjzsawPaqQkRT7pE",
+          "content": [
+            {
+              "text": "Worker-0 instance A reported. Waiting on the remaining 6.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:38.028972Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01DQxfwxwVHFbJWYcimJM614",
+          "is_error": false,
+          "model_request_start_id": "sevt_01UXaX6iJfJ49NVJScE1fRKu",
+          "model_usage": {
+            "cache_creation_input_tokens": 105,
+            "cache_read_input_tokens": 12095,
+            "input_tokens": 2,
+            "output_tokens": 26,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:38.028973Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01EzWGSw86Vugkb2DP6ESjdG",
+          "agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:38.077927Z",
+          "session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01FvEcHKQp3hjFeNVyCAZ3uQ",
+          "content": [
+            {
+              "text": "worker 1: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+          "processed_at": "2026-08-28T02:13:38.163012Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_014vUzEPzDVGrdLjA1qWXp6R",
+          "processed_at": "2026-08-28T02:13:38.163013Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01F2uWSaGUpGa7VuvJDPYq3Z",
+          "processed_at": "2026-08-28T02:13:38.168335Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 41.605,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 30735
+            },
+            "cache_read_input_tokens": 112687,
+            "input_tokens": 34,
+            "list_cost": {
+              "amount": "19",
+              "currency": "USD"
+            },
+            "output_tokens": 2003,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "200",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01DJKM95vRjRCUK7xRCmsDMj",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:39.067639Z",
+          "session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01A2D7UcKyVqsDFTi872dvvq",
+          "processed_at": "2026-08-28T02:13:39.153486Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 42.596,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 30892
+            },
+            "cache_read_input_tokens": 128343,
+            "input_tokens": 38,
+            "list_cost": {
+              "amount": "19",
+              "currency": "USD"
+            },
+            "output_tokens": 2043,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "200",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01H3L2qLuNowaY4otgW7Ppb7",
+          "agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:39.422472Z",
+          "session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01PE5hj14L7Y43go6asXHrAB",
+          "processed_at": "2026-08-28T02:13:39.520739Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 42.959,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 30974
+            },
+            "cache_read_input_tokens": 136172,
+            "input_tokens": 40,
+            "list_cost": {
+              "amount": "20",
+              "currency": "USD"
+            },
+            "output_tokens": 2071,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "200",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01GxpvYahF5YoHYLx6BZBSgu",
+          "content": [
+            {
+              "text": "Worker-1 reported. Waiting on the remaining 5.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:39.871080Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01NJWumRHtgJEx2PnocAGMHs",
+          "is_error": false,
+          "model_request_start_id": "sevt_014vUzEPzDVGrdLjA1qWXp6R",
+          "model_usage": {
+            "cache_creation_input_tokens": 83,
+            "cache_read_input_tokens": 12200,
+            "input_tokens": 2,
+            "output_tokens": 23,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:39.871081Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_014d8Coqm2mbJSLd8WFGyHXF",
+          "content": [
+            {
+              "text": "Worker 3, UTC time: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+          "processed_at": "2026-08-28T02:13:39.986386Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_0188hWAU3ZztC64VrATNoUU8",
+          "processed_at": "2026-08-28T02:13:39.986387Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01Bu3ozTqakPX3K9ZtQS1CxR",
+          "content": [
+            {
+              "text": "Worker-3 reported. Waiting on the remaining 4.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:41.616883Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01L1zkXchZXM5THqA1ThQyHM",
+          "is_error": false,
+          "model_request_start_id": "sevt_0188hWAU3ZztC64VrATNoUU8",
+          "model_usage": {
+            "cache_creation_input_tokens": 85,
+            "cache_read_input_tokens": 12283,
+            "input_tokens": 2,
+            "output_tokens": 23,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:41.616884Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01SUmM9bNqJbLwaNHX5SADpX",
+          "content": [
+            {
+              "text": "worker0: 02:13:35",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+          "processed_at": "2026-08-28T02:13:41.745233Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01A8oVHqvBGFeHkY6rZw3CLR",
+          "processed_at": "2026-08-28T02:13:41.745234Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01X5VeUR8YAVjHWNEzRK8EKa",
+          "content": [
+            {
+              "text": "Worker-0 instance B reported \u2014 the same agent has now run twice concurrently. Waiting on the remaining 3.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:43.607473Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01LH5FzFZb44TAQBQJU6VKoS",
+          "is_error": false,
+          "model_request_start_id": "sevt_01A8oVHqvBGFeHkY6rZw3CLR",
+          "model_usage": {
+            "cache_creation_input_tokens": 81,
+            "cache_read_input_tokens": 12368,
+            "input_tokens": 2,
+            "output_tokens": 66,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:43.607475Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01AMAcMKhcfSLQvBv4mC4am5",
+          "content": [
+            {
+              "text": "Worker 2, UTC time: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+          "processed_at": "2026-08-28T02:13:43.814413Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01P4CFVf7QQJdSRTFKaM86NM",
+          "processed_at": "2026-08-28T02:13:43.911762Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01NRLnZmQhoZEHPFshLxyDtN",
+          "content": [
+            {
+              "text": "Worker-2 reported. Waiting on workers 4 and 5.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:45.119154Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01N7Kixq38mBVeSt4pnXtTRp",
+          "is_error": false,
+          "model_request_start_id": "sevt_01P4CFVf7QQJdSRTFKaM86NM",
+          "model_usage": {
+            "cache_creation_input_tokens": 1481,
+            "cache_read_input_tokens": 12449,
+            "input_tokens": 2,
+            "output_tokens": 25,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:45.119155Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_014KijHCFv9jzQNAMX2wkrp2",
+          "content": [
+            {
+              "text": "Worker 5, UTC time: 02:13:35",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+          "processed_at": "2026-08-28T02:13:45.283368Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01QeHWJbv7G7feB9m9XvNDK3",
+          "processed_at": "2026-08-28T02:13:45.283369Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01GbycbVCB8RELobajUUGiHb",
+          "agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:45.467545Z",
+          "session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_017aBSpgXx2vJAgvvRWsgTQp",
+          "processed_at": "2026-08-28T02:13:45.569846Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 49.003,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 32964
+            },
+            "cache_read_input_tokens": 208781,
+            "input_tokens": 54,
+            "list_cost": {
+              "amount": "24",
+              "currency": "USD"
+            },
+            "output_tokens": 2371,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "200",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01T2YGA1ZMYE6PJmioEZDzg8",
+          "agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:45.709953Z",
+          "session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01CC4y5ue36qPevAvhcUMWmv",
+          "processed_at": "2026-08-28T02:13:45.794765Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 49.232,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 33046
+            },
+            "cache_read_input_tokens": 216610,
+            "input_tokens": 56,
+            "list_cost": {
+              "amount": "24",
+              "currency": "USD"
+            },
+            "output_tokens": 2399,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "200",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01QtR1Cc6mWkTijhKshaZ4bT",
+          "content": [
+            {
+              "text": "Worker-5 reported. Waiting on worker-4, the last outstanding child.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:47.029137Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01Xq5Ho1a1FHEtr6r1hZzucn",
+          "is_error": false,
+          "model_request_start_id": "sevt_01QeHWJbv7G7feB9m9XvNDK3",
+          "model_usage": {
+            "cache_creation_input_tokens": 86,
+            "cache_read_input_tokens": 13930,
+            "input_tokens": 2,
+            "output_tokens": 55,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:47.029139Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_014gwPEHAZ2vvMDpFQB2Rn2K",
+          "content": [
+            {
+              "text": "Worker 4, UTC time: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+          "processed_at": "2026-08-28T02:13:47.201562Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01RQfKhwgsdey9sRuhEPLxzk",
+          "processed_at": "2026-08-28T02:13:47.308671Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_019kt3Juygg37vAbADyjEnrE",
+          "processed_at": "2026-08-28T02:13:53.658773Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01Nihi7KeQzzZuTiFyzaNU5J",
+          "content": [
+            {
+              "text": "All 7 children have reported. My own verification of the results:\n\n- **Fan-out was complete and concurrent.** Every one of the 6 roster agents spawned successfully, plus a second worker-0 instance on a distinct thread (`sthr_01Btanu\u2026` and `sthr_01C2XwP\u2026`). Two live threads of the same agent type confirms same-agent re-entrancy.\n- **Timestamps corroborate parallelism.** All 7 replies land in the 02:13:34\u201302:13:35 window. Seven serialized 25-second sleeps would have spanned ~175 seconds; a 1-second spread is only consistent with genuine concurrent execution.\n- **No conflicts to settle.** No child's report contradicts another. One thing I'll flag rather than paper over: an intermediate `list_agents` snapshot showed worker-4's thread as IDLE with its reply \"(none yet)\" while a message was still outstanding \u2014 that was a lag in the roster view, since worker-4's reply arrived normally right after. Not a refusal or a failure.\n- **Cosmetic only:** children self-identified in short form (\"worker 0\", \"worker0\", \"Worker 5\") rather than by their full roster IDs. I've mapped them back to canonical names below.\n\n```json\n{\"replies\": {\"clevin-swarm-F-worker-0-20260828T021253Z-2df88d#1\": \"02:13:34\",\n             \"clevin-swarm-F-worker-0-20260828T021253Z-2df88d#2\": \"02:13:35\",\n             \"clevin-swarm-F-worker-1-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-2-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-3-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-4-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-5-20260828T021253Z-2df88d\": \"02:13:35\"},\n \"total_children_spawned\": 7,\n \"same_agent_ran_twice\": true,\n \"any_delegation_refused\": \"none\"}\n```",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:02.412271Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01SKjZ1bwd4nRCu9toxrbAnZ",
+          "is_error": false,
+          "model_request_start_id": "sevt_01RQfKhwgsdey9sRuhEPLxzk",
+          "model_usage": {
+            "cache_creation_input_tokens": 1549,
+            "cache_read_input_tokens": 14016,
+            "input_tokens": 2,
+            "output_tokens": 1075,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:02.412272Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01EHCRVDBZ5U5j7QzJYe5Tig",
+          "agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:14:02.659922Z",
+          "session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_016fh7VrbLDP1tir1ML94mLi",
+          "processed_at": "2026-08-28T02:14:02.659923Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 66.052,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 34681
+            },
+            "cache_read_input_tokens": 244556,
+            "input_tokens": 60,
+            "list_cost": {
+              "amount": "30",
+              "currency": "USD"
+            },
+            "output_tokens": 3529,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "200",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01H2jzpvCfBXRMvhYBZ3SvNG",
+          "processed_at": "2026-08-28T02:14:02.659924Z",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+      "agent": {
+        "id": "agent_017Z7SXjpqF2kS5fWeKSK7tr",
+        "description": "workstream F worker-0",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "skills": [],
+        "system": "You are worker 0 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:13:05.769006Z",
+      "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "session_id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+      "stats": {
+        "active_seconds": 31.352,
+        "duration_seconds": 62.912126382,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:13:37.651642Z",
+      "usage": {
+        "active_seconds": 31.352,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2752
+        },
+        "cache_read_input_tokens": 20737,
+        "input_tokens": 6,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 188,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_0197Ui1GAub7GYyiSRtAP7Nk",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.209978Z",
+          "session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01QtHLtf5GrwWv85RRfweP7r",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "processed_at": "2026-08-28T02:13:06.391299Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_016cGpgbFSyao5ehhJyctpvy",
+          "processed_at": "2026-08-28T02:13:06.391300Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01PZr3NUJ6STdwgAfMqVKvcz",
+          "processed_at": "2026-08-28T02:13:08.390724Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01SpincpKU8LDYGoXcYZeJyg",
+          "input": {
+            "command": "sleep 25 && date -u +%H:%M:%S"
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:13:08.452057Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01R9659VBWLdybiNJ4UihD97",
+          "is_error": false,
+          "model_request_start_id": "sevt_016cGpgbFSyao5ehhJyctpvy",
+          "model_usage": {
+            "cache_creation_input_tokens": 2572,
+            "cache_read_input_tokens": 5168,
+            "input_tokens": 2,
+            "output_tokens": 78,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:08.452058Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01Jwu1exJV2JfLKpvvJxH3nU",
+          "processed_at": "2026-08-28T02:13:34.414647Z",
+          "tool_use_id": "sevt_01SpincpKU8LDYGoXcYZeJyg",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "02:13:34\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_01HUf8wnCEzVzJWVfuGHdUbC",
+          "processed_at": "2026-08-28T02:13:34.490327Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01JsGmNjGVBuMPmBGh93tnf8",
+          "is_error": false,
+          "model_request_start_id": "sevt_01HUf8wnCEzVzJWVfuGHdUbC",
+          "model_usage": {
+            "cache_creation_input_tokens": 89,
+            "cache_read_input_tokens": 7740,
+            "input_tokens": 2,
+            "output_tokens": 75,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:35.933195Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01EbPRMYKV4hthcz3NbDWAxc",
+          "content": [
+            {
+              "text": "Agent: worker 0. UTC time after sleep 25: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:36.051115Z",
+          "to_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_01XEbU78soJEXt9Qo9DkPN4T",
+          "processed_at": "2026-08-28T02:13:36.123654Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01GpPB8Ptke1XVHGwC4qDmH7",
+          "content": [
+            {
+              "text": "Done: worker 0 reported UTC time 02:13:34 after sleeping 25 seconds.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:37.505343Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01VejfySwSyS6G697QnyfTHJ",
+          "is_error": false,
+          "model_request_start_id": "sevt_01XEbU78soJEXt9Qo9DkPN4T",
+          "model_usage": {
+            "cache_creation_input_tokens": 91,
+            "cache_read_input_tokens": 7829,
+            "input_tokens": 2,
+            "output_tokens": 35,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:37.505344Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_014vL8HzACsW71aKsB7z4Tzz",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:37.570512Z",
+          "session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+      "agent": {
+        "id": "agent_017Z7SXjpqF2kS5fWeKSK7tr",
+        "description": "workstream F worker-0",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "skills": [],
+        "system": "You are worker 0 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:13:06.041801Z",
+      "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "session_id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+      "stats": {
+        "active_seconds": 32.63,
+        "duration_seconds": 62.639392149,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:13:39.138375Z",
+      "usage": {
+        "active_seconds": 32.63,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2656
+        },
+        "cache_read_input_tokens": 20817,
+        "input_tokens": 6,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 149,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_018HEwfcgVe9F8NF33hMa8Rq",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.436499Z",
+          "session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01RZpYvwjAUXEZftS7kRCXsg",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "processed_at": "2026-08-28T02:13:06.592813Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01GKVNXecJ3TCALo3YC19Dvk",
+          "processed_at": "2026-08-28T02:13:06.592814Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_017re9H2LCtCGaAimcs8VUp5",
+          "processed_at": "2026-08-28T02:13:10.044722Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01YDxuEhw5Ve8G8oq9TNRsXp",
+          "input": {
+            "command": "sleep 25 && date -u +%H:%M:%S"
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:13:10.104826Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01NVoPbSHbTDxN1hEUQDubrr",
+          "is_error": false,
+          "model_request_start_id": "sevt_01GKVNXecJ3TCALo3YC19Dvk",
+          "model_usage": {
+            "cache_creation_input_tokens": 2572,
+            "cache_read_input_tokens": 5168,
+            "input_tokens": 2,
+            "output_tokens": 78,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:10.104827Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01KoW6c7L4nWSCWsj2ena9Qx",
+          "processed_at": "2026-08-28T02:13:35.795815Z",
+          "tool_use_id": "sevt_01YDxuEhw5Ve8G8oq9TNRsXp",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "02:13:35\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_01FAwyjdzg3PeotkmSHp8KHR",
+          "processed_at": "2026-08-28T02:13:35.863245Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_0133S3BPYv3rc698VKsymfh6",
+          "is_error": false,
+          "model_request_start_id": "sevt_01FAwyjdzg3PeotkmSHp8KHR",
+          "model_usage": {
+            "cache_creation_input_tokens": 9,
+            "cache_read_input_tokens": 7820,
+            "input_tokens": 2,
+            "output_tokens": 59,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:37.715349Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01AkS6CmJRHj6ZRpyP731CjE",
+          "content": [
+            {
+              "text": "worker0: 02:13:35",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:37.829801Z",
+          "to_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_01GxfcuQhWVSYD3oJKB8ZtVu",
+          "processed_at": "2026-08-28T02:13:37.893763Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01TME4xYxnqQ4tHBL5Pxeqq8",
+          "content": [
+            {
+              "text": "worker0: 02:13:35",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:39.015474Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01VcPx4zgpGmWqaWtBkEkCNr",
+          "is_error": false,
+          "model_request_start_id": "sevt_01GxfcuQhWVSYD3oJKB8ZtVu",
+          "model_usage": {
+            "cache_creation_input_tokens": 75,
+            "cache_read_input_tokens": 7829,
+            "input_tokens": 2,
+            "output_tokens": 12,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:39.015475Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01DJKM95vRjRCUK7xRCmsDMj",
+          "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:39.067639Z",
+          "session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+      "agent": {
+        "id": "agent_0139LBBzYsajxqSoGqtUG65K",
+        "description": "workstream F worker-1",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+        "skills": [],
+        "system": "You are worker 1 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:13:06.305840Z",
+      "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "session_id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+      "stats": {
+        "active_seconds": 30.853,
+        "duration_seconds": 62.375406737,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:13:37.648610Z",
+      "usage": {
+        "active_seconds": 30.853,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2738
+        },
+        "cache_read_input_tokens": 20738,
+        "input_tokens": 6,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 152,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01TCCneUEvNLaZzTVkLvpGRp",
+          "agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:06.726942Z",
+          "session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01PYWzwKK3reH5aj6nTd29zi",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "processed_at": "2026-08-28T02:13:06.900052Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01RiQhRjb1ytcEfErRsdBun3",
+          "processed_at": "2026-08-28T02:13:06.900053Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_0152jp6FrFy5GnWHn8EiQYvq",
+          "processed_at": "2026-08-28T02:13:08.907426Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01TLWL5ks3jixQCiAVTqa2Ve",
+          "input": {
+            "command": "sleep 25 && date -u +%H:%M:%S"
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:13:08.981125Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_011AtSR6b8nDkNigeSAXtpjd",
+          "is_error": false,
+          "model_request_start_id": "sevt_01RiQhRjb1ytcEfErRsdBun3",
+          "model_usage": {
+            "cache_creation_input_tokens": 2572,
+            "cache_read_input_tokens": 5168,
+            "input_tokens": 2,
+            "output_tokens": 79,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:08.981126Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_014SzW25jziwwMae6rNSdoDh",
+          "processed_at": "2026-08-28T02:13:34.688482Z",
+          "tool_use_id": "sevt_01TLWL5ks3jixQCiAVTqa2Ve",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "02:13:34\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_01MPz3tKCMjEhLvLsm5tzpBa",
+          "processed_at": "2026-08-28T02:13:34.761581Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01Qm3TnrVsfEjAyUH567cAzy",
+          "is_error": false,
+          "model_request_start_id": "sevt_01MPz3tKCMjEhLvLsm5tzpBa",
+          "model_usage": {
+            "cache_creation_input_tokens": 90,
+            "cache_read_input_tokens": 7740,
+            "input_tokens": 2,
+            "output_tokens": 60,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:36.042716Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01GS9fzp5XZok1ZeorcQAGWY",
+          "content": [
+            {
+              "text": "worker 1: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:36.191437Z",
+          "to_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_01KRkfkMC5ngR2Yc9eBJNvdc",
+          "processed_at": "2026-08-28T02:13:36.258771Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01NumVSy6t2cJR9YE2KiUa9D",
+          "content": [
+            {
+              "text": "worker 1: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:37.483393Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01Tirq9Lwof3VWi2nSoANkap",
+          "is_error": false,
+          "model_request_start_id": "sevt_01KRkfkMC5ngR2Yc9eBJNvdc",
+          "model_usage": {
+            "cache_creation_input_tokens": 76,
+            "cache_read_input_tokens": 7830,
+            "input_tokens": 2,
+            "output_tokens": 13,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:37.483394Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01YBPgJtEuRQsbEjYGoXoXDy",
+          "agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:37.537186Z",
+          "session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+      "agent": {
+        "id": "agent_013oT4peNeh21VB3Uz8R1fCD",
+        "description": "workstream F worker-2",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+        "skills": [],
+        "system": "You are worker 2 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:13:06.569553Z",
+      "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "session_id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+      "stats": {
+        "active_seconds": 38.471,
+        "duration_seconds": 62.111751494,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:13:45.545696Z",
+      "usage": {
+        "active_seconds": 38.471,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2743
+        },
+        "cache_read_input_tokens": 20737,
+        "input_tokens": 6,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 175,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01AhKKgZ9at4uoZvTMnAdo4T",
+          "agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.004158Z",
+          "session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_014uYMHWJrRLusz2GbrzQo3W",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "processed_at": "2026-08-28T02:13:07.184277Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_018WYXEotAnEwnQoDLJoE9dM",
+          "processed_at": "2026-08-28T02:13:07.184278Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_018n6UZStvjgfGWajT9F75Nv",
+          "processed_at": "2026-08-28T02:13:09.034638Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01WTfMUNp1uo7Uqvhnans1dQ",
+          "input": {
+            "command": "sleep 25 && date -u +%H:%M:%S"
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:13:09.108119Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01Ph61z9p2on3wQcUC2Hy9q9",
+          "is_error": false,
+          "model_request_start_id": "sevt_018WYXEotAnEwnQoDLJoE9dM",
+          "model_usage": {
+            "cache_creation_input_tokens": 2572,
+            "cache_read_input_tokens": 5168,
+            "input_tokens": 2,
+            "output_tokens": 78,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:09.108120Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01VasyKgcVUK2hVapJAprDTo",
+          "processed_at": "2026-08-28T02:13:34.833332Z",
+          "tool_use_id": "sevt_01WTfMUNp1uo7Uqvhnans1dQ",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "02:13:34\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_0178tC6AK52yzxeMeaE4iELD",
+          "processed_at": "2026-08-28T02:13:34.904118Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01TtXidQhTzPeEF96yDKPnzB",
+          "is_error": false,
+          "model_request_start_id": "sevt_0178tC6AK52yzxeMeaE4iELD",
+          "model_usage": {
+            "cache_creation_input_tokens": 89,
+            "cache_read_input_tokens": 7740,
+            "input_tokens": 2,
+            "output_tokens": 66,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:43.212626Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01JBDBzw4oCquprmuUFpsnZL",
+          "content": [
+            {
+              "text": "Worker 2, UTC time: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:43.329803Z",
+          "to_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_01R5WskHMsKhzskr8rcsvRT8",
+          "processed_at": "2026-08-28T02:13:43.400805Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01R8QdBqvms1pWs4LromoxLJ",
+          "content": [
+            {
+              "text": "Done \u2014 reported worker 2's result (02:13:34 UTC) to the coordinator.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:45.417505Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01R3LV3v8CjvY9PpyQNVAtdN",
+          "is_error": false,
+          "model_request_start_id": "sevt_01R5WskHMsKhzskr8rcsvRT8",
+          "model_usage": {
+            "cache_creation_input_tokens": 82,
+            "cache_read_input_tokens": 7829,
+            "input_tokens": 2,
+            "output_tokens": 31,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:45.417506Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01GbycbVCB8RELobajUUGiHb",
+          "agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:45.467545Z",
+          "session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+      "agent": {
+        "id": "agent_01N2Pk1nMPhyftig1CAAZci4",
+        "description": "workstream F worker-3",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+        "skills": [],
+        "system": "You are worker 3 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:13:06.838071Z",
+      "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "session_id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+      "stats": {
+        "active_seconds": 30.815,
+        "duration_seconds": 61.843286994,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:13:38.189230Z",
+      "usage": {
+        "active_seconds": 30.815,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2741
+        },
+        "cache_read_input_tokens": 20735,
+        "input_tokens": 6,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 170,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01STx6EVjFQMjeLGKBhVzEMU",
+          "agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.263891Z",
+          "session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01AJeeUA4pJ2aHZD8oAXwbhV",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "processed_at": "2026-08-28T02:13:07.426659Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_016XERYyAEXmzxVVxVxgquTD",
+          "processed_at": "2026-08-28T02:13:07.426660Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01GAuByanswyjP79qHk9J4WE",
+          "processed_at": "2026-08-28T02:13:09.191051Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01JR1yvhnRgwqL5VViB8CG69",
+          "input": {
+            "command": "sleep 25 && date -u +%H:%M:%S"
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:13:09.295415Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01MdCJrSwPRVjz9UbuQHN1Bi",
+          "is_error": false,
+          "model_request_start_id": "sevt_016XERYyAEXmzxVVxVxgquTD",
+          "model_usage": {
+            "cache_creation_input_tokens": 2572,
+            "cache_read_input_tokens": 5168,
+            "input_tokens": 2,
+            "output_tokens": 76,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:09.295416Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01Qa6KP97AbpDgxR4SfZL2zf",
+          "processed_at": "2026-08-28T02:13:35.002711Z",
+          "tool_use_id": "sevt_01JR1yvhnRgwqL5VViB8CG69",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "02:13:34\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_01HF8WjuheSq8fUKf9tGf9qG",
+          "processed_at": "2026-08-28T02:13:35.059449Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_016Kc1x2jhn1Exteq7fMiH26",
+          "is_error": false,
+          "model_request_start_id": "sevt_01HF8WjuheSq8fUKf9tGf9qG",
+          "model_usage": {
+            "cache_creation_input_tokens": 87,
+            "cache_read_input_tokens": 7740,
+            "input_tokens": 2,
+            "output_tokens": 66,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:36.382673Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01GpTQxVYRW79RFMDkn1s8tW",
+          "content": [
+            {
+              "text": "Worker 3, UTC time: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:36.523556Z",
+          "to_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_011Lm2vzwFpGZTaBNaX9XbLE",
+          "processed_at": "2026-08-28T02:13:36.606382Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01DNbr5C5LuZ6HwvTTuQemeQ",
+          "content": [
+            {
+              "text": "Worker 3 reported UTC time 02:13:34 to the coordinator.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:38.024802Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01A3DhKKM4Mg9Tg1FkwB73zS",
+          "is_error": false,
+          "model_request_start_id": "sevt_011Lm2vzwFpGZTaBNaX9XbLE",
+          "model_usage": {
+            "cache_creation_input_tokens": 82,
+            "cache_read_input_tokens": 7827,
+            "input_tokens": 2,
+            "output_tokens": 28,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:38.024803Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01EzWGSw86Vugkb2DP6ESjdG",
+          "agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:38.077927Z",
+          "session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+      "agent": {
+        "id": "agent_01ANZmZrtrhQR6DGQupK178T",
+        "description": "workstream F worker-4",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+        "skills": [],
+        "system": "You are worker 4 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:13:07.104756Z",
+      "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "session_id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+      "stats": {
+        "active_seconds": 38.201,
+        "duration_seconds": 61.576656177,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:13:45.775364Z",
+      "usage": {
+        "active_seconds": 38.201,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2743
+        },
+        "cache_read_input_tokens": 20737,
+        "input_tokens": 6,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 172,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_016saLSP5K8XuseuCiVmRACS",
+          "agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.507499Z",
+          "session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_015n5LGDsijdvgPEhyKoWN9L",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "processed_at": "2026-08-28T02:13:07.665551Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_016pva57fkZdQvtZRqmkLa99",
+          "processed_at": "2026-08-28T02:13:07.665552Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01FcXEDDEgXztQfS5Co4Hby6",
+          "processed_at": "2026-08-28T02:13:09.233739Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01RRgNiDGJYENZzsitkZmTP5",
+          "input": {
+            "command": "sleep 25 && date -u +%H:%M:%S"
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:13:09.287937Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01HGdLXwajVE2PZbUidkSp1Z",
+          "is_error": false,
+          "model_request_start_id": "sevt_016pva57fkZdQvtZRqmkLa99",
+          "model_usage": {
+            "cache_creation_input_tokens": 2572,
+            "cache_read_input_tokens": 5168,
+            "input_tokens": 2,
+            "output_tokens": 78,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:09.287938Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01HPY26uG3KTwRYSANsu1Fmv",
+          "processed_at": "2026-08-28T02:13:34.937599Z",
+          "tool_use_id": "sevt_01RRgNiDGJYENZzsitkZmTP5",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "02:13:34\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_01D9iwhRAhYLsqEcqJwYm8BT",
+          "processed_at": "2026-08-28T02:13:35.011145Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_011ST58qnWEbJutsFDFguSgg",
+          "is_error": false,
+          "model_request_start_id": "sevt_01D9iwhRAhYLsqEcqJwYm8BT",
+          "model_usage": {
+            "cache_creation_input_tokens": 89,
+            "cache_read_input_tokens": 7740,
+            "input_tokens": 2,
+            "output_tokens": 66,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:44.311459Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01DzPdHmuqXzTEVkRVMUQPft",
+          "content": [
+            {
+              "text": "Worker 4, UTC time: 02:13:34",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:44.421667Z",
+          "to_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_01WsVUL5j1Xxm66tbSMn5Xgz",
+          "processed_at": "2026-08-28T02:13:44.491113Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01RZH6JReWLwpraPfJBn1BDq",
+          "content": [
+            {
+              "text": "Worker 4 reported UTC time 02:13:34 to the coordinator.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:45.662138Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01GpkVkRTGBJPNVpyoCLR4GZ",
+          "is_error": false,
+          "model_request_start_id": "sevt_01WsVUL5j1Xxm66tbSMn5Xgz",
+          "model_usage": {
+            "cache_creation_input_tokens": 82,
+            "cache_read_input_tokens": 7829,
+            "input_tokens": 2,
+            "output_tokens": 28,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:45.662139Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01T2YGA1ZMYE6PJmioEZDzg8",
+          "agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:45.709953Z",
+          "session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+      "agent": {
+        "id": "agent_01NSZcoUaz7MfM5bK3qUWdpN",
+        "description": "workstream F worker-5",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-sonnet-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+        "skills": [],
+        "system": "You are worker 5 in a Managed Agents concurrency experiment. Do exactly\nwhat the task says, then reply in one short line. Never do anything else.",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:13:07.398719Z",
+      "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "session_id": "sesn_01V5cXU3hESXoTbzrJB3WLkq",
+      "stats": {
+        "active_seconds": 31.613,
+        "duration_seconds": 61.282743114,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:13:39.497182Z",
+      "usage": {
+        "active_seconds": 31.613,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2743
+        },
+        "cache_read_input_tokens": 20737,
+        "input_tokens": 6,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 172,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01PSxu6V5LZ295A1q31cqBbb",
+          "agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:07.817706Z",
+          "session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01QJRQ7yaGy2USsrB4QMD9dA",
+          "content": [
+            {
+              "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`.",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "processed_at": "2026-08-28T02:13:07.956408Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d"
+        },
+        {
+          "id": "sevt_01WWKMvEMUSh6deH3K4ZQUsn",
+          "processed_at": "2026-08-28T02:13:07.956409Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_015NdPKuEuUtM7PM4oDe4huc",
+          "processed_at": "2026-08-28T02:13:09.574355Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01E6WJ6RsmhGjnN6BoVSBGuC",
+          "input": {
+            "command": "sleep 25 && date -u +%H:%M:%S"
+          },
+          "name": "bash",
+          "processed_at": "2026-08-28T02:13:09.622136Z",
+          "type": "agent.tool_use",
+          "evaluated_permission": "allow",
+          "session_thread_id": null
+        },
+        {
+          "id": "sevt_01RYWUtVZqS8HGDVXqNvWjK1",
+          "is_error": false,
+          "model_request_start_id": "sevt_01WWKMvEMUSh6deH3K4ZQUsn",
+          "model_usage": {
+            "cache_creation_input_tokens": 2572,
+            "cache_read_input_tokens": 5168,
+            "input_tokens": 2,
+            "output_tokens": 78,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:09.622137Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01889eEzF4rW45tbrKMBphWi",
+          "processed_at": "2026-08-28T02:13:35.260751Z",
+          "tool_use_id": "sevt_01E6WJ6RsmhGjnN6BoVSBGuC",
+          "type": "agent.tool_result",
+          "content": [
+            {
+              "text": "02:13:35\n",
+              "type": "text"
+            }
+          ],
+          "is_error": false
+        },
+        {
+          "id": "sevt_01724iZ3hUbM2QKzuBk47qX3",
+          "processed_at": "2026-08-28T02:13:35.356799Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_014YcE1x79dZbCCeo46CHEYG",
+          "is_error": false,
+          "model_request_start_id": "sevt_01724iZ3hUbM2QKzuBk47qX3",
+          "model_usage": {
+            "cache_creation_input_tokens": 89,
+            "cache_read_input_tokens": 7740,
+            "input_tokens": 2,
+            "output_tokens": 66,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:37.748321Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01UKs31hz9UsryZnpzErwwTn",
+          "content": [
+            {
+              "text": "Worker 5, UTC time: 02:13:35",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:37.865640Z",
+          "to_session_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_01FzQdrs7B7sPPYRKojSWZ7d",
+          "processed_at": "2026-08-28T02:13:37.922934Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01LdjMqVSnoRkMf4NesrDtBo",
+          "content": [
+            {
+              "text": "Worker 5 reported UTC time 02:13:35 to the coordinator.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:13:39.374591Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01PCpWCqSevPZMzr2zYCDea1",
+          "is_error": false,
+          "model_request_start_id": "sevt_01FzQdrs7B7sPPYRKojSWZ7d",
+          "model_usage": {
+            "cache_creation_input_tokens": 82,
+            "cache_read_input_tokens": 7829,
+            "input_tokens": 2,
+            "output_tokens": 28,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:13:39.374592Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01H3L2qLuNowaY4otgW7Ppb7",
+          "agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+          "processed_at": "2026-08-28T02:13:39.422472Z",
+          "session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "per_thread": [
+      {
+        "id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "agent": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+        "parent_thread_id": null,
+        "status": "idle",
+        "stats": {
+          "active_seconds": 38.629999999999995,
+          "duration_seconds": 72.505212737,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "21",
+        "output_tokens": 2351,
+        "event_count": 78
+      },
+      {
+        "id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+        "agent": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 31.352,
+          "duration_seconds": 62.912126382,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "1",
+        "output_tokens": 188,
+        "event_count": 14
+      },
+      {
+        "id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+        "agent": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 32.63,
+          "duration_seconds": 62.639392149,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "1",
+        "output_tokens": 149,
+        "event_count": 14
+      },
+      {
+        "id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+        "agent": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+        "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 30.853,
+          "duration_seconds": 62.375406737,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "1",
+        "output_tokens": 152,
+        "event_count": 14
+      },
+      {
+        "id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+        "agent": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+        "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 38.471,
+          "duration_seconds": 62.111751494,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "1",
+        "output_tokens": 175,
+        "event_count": 14
+      },
+      {
+        "id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+        "agent": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+        "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 30.815,
+          "duration_seconds": 61.843286994,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "1",
+        "output_tokens": 170,
+        "event_count": 14
+      },
+      {
+        "id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+        "agent": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+        "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 38.201,
+          "duration_seconds": 61.576656177,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "1",
+        "output_tokens": 172,
+        "event_count": 14
+      },
+      {
+        "id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+        "agent": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+        "parent_thread_id": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 31.613,
+          "duration_seconds": 61.282743114,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "1",
+        "output_tokens": 172,
+        "event_count": 14
+      }
+    ],
+    "stop_reasons": [
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "agent": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+        "agent": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01BtanuDhUHXavpgRQnEVnog",
+        "agent": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+        "agent": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+        "agent": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_019eet3THXPZt4QjkYd7hBRG",
+        "agent": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+        "agent": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+        "agent": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01CKGa2QUVMeWVbszQsziix5",
+        "agent": "clevin-swarm-F-coordinator-fanout-20260828T021253Z-2df88d",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.status_idle",
+        "thread": null,
+        "agent": null,
+        "stop_reason": "end_turn"
+      }
+    ],
+    "event_counts": {
+      "agent.message": 9,
+      "agent.thinking": 1,
+      "agent.thread_message_received": 7,
+      "agent.thread_message_sent": 7,
+      "session.status_idle": 1,
+      "session.status_running": 1,
+      "session.thread_created": 7,
+      "session.thread_status_idle": 9,
+      "session.thread_status_running": 9,
+      "session.usage": 8,
+      "span.model_request_end": 9,
+      "span.model_request_start": 9,
+      "user.message": 1
+    },
+    "threads_spawned": [
+      {
+        "session_thread_id": "sthr_01BtanuDhUHXavpgRQnEVnog",
+        "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "processed_at": "2026-08-28T02:13:05.922756Z"
+      },
+      {
+        "session_thread_id": "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+        "agent_name": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "processed_at": "2026-08-28T02:13:06.191542Z"
+      },
+      {
+        "session_thread_id": "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+        "agent_name": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+        "processed_at": "2026-08-28T02:13:06.452598Z"
+      },
+      {
+        "session_thread_id": "sthr_01TJYiSuaXrAQSh94TAtodb1",
+        "agent_name": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+        "processed_at": "2026-08-28T02:13:06.710497Z"
+      },
+      {
+        "session_thread_id": "sthr_01S9dZt7JUdPNFck9bKKdo88",
+        "agent_name": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+        "processed_at": "2026-08-28T02:13:06.993347Z"
+      },
+      {
+        "session_thread_id": "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+        "agent_name": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+        "processed_at": "2026-08-28T02:13:07.261457Z"
+      },
+      {
+        "session_thread_id": "sthr_019eet3THXPZt4QjkYd7hBRG",
+        "agent_name": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+        "processed_at": "2026-08-28T02:13:07.556148Z"
+      }
+    ],
+    "thread_count": 7,
+    "declared_threads": [
+      "sthr_01CKGa2QUVMeWVbszQsziix5",
+      "sthr_01BtanuDhUHXavpgRQnEVnog",
+      "sthr_01C2XwPcHCAhcwXa3Bv8RAuH",
+      "sthr_01JEHvEjs2SVozEPMGQVKF1T",
+      "sthr_01TJYiSuaXrAQSh94TAtodb1",
+      "sthr_01S9dZt7JUdPNFck9bKKdo88",
+      "sthr_015zX6Ki4pwCeL8G9x4oa5XN",
+      "sthr_019eet3THXPZt4QjkYd7hBRG"
+    ],
+    "agent_messages": [
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "from": null,
+        "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`."
+      },
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "from": null,
+        "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`."
+      },
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+        "from": null,
+        "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`."
+      },
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+        "from": null,
+        "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`."
+      },
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+        "from": null,
+        "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`."
+      },
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+        "from": null,
+        "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`."
+      },
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+        "from": null,
+        "text": "Sleep 25 seconds with `sleep 25`, then reply with your agent name and the output of `date -u +%H:%M:%S`."
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "text": "Agent: worker 0. UTC time after sleep 25: 02:13:34"
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-worker-1-20260828T021253Z-2df88d",
+        "text": "worker 1: 02:13:34"
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-worker-3-20260828T021253Z-2df88d",
+        "text": "Worker 3, UTC time: 02:13:34"
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-worker-0-20260828T021253Z-2df88d",
+        "text": "worker0: 02:13:35"
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-worker-2-20260828T021253Z-2df88d",
+        "text": "Worker 2, UTC time: 02:13:34"
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-worker-5-20260828T021253Z-2df88d",
+        "text": "Worker 5, UTC time: 02:13:35"
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-worker-4-20260828T021253Z-2df88d",
+        "text": "Worker 4, UTC time: 02:13:34"
+      }
+    ],
+    "tool_uses": [],
+    "parent_text_tail": [
+      "Worker-2 reported. Waiting on workers 4 and 5.",
+      "Worker-5 reported. Waiting on worker-4, the last outstanding child.",
+      "All 7 children have reported. My own verification of the results:\n\n- **Fan-out was complete and concurrent.** Every one of the 6 roster agents spawned successfully, plus a second worker-0 instance on a distinct thread (`sthr_01Btanu\u2026` and `sthr_01C2XwP\u2026`). Two live threads of the same agent type confirms same-agent re-entrancy.\n- **Timestamps corroborate parallelism.** All 7 replies land in the 02:13:34\u201302:13:35 window. Seven serialized 25-second sleeps would have spanned ~175 seconds; a 1-second spread is only consistent with genuine concurrent execution.\n- **No conflicts to settle.** No child's report contradicts another. One thing I'll flag rather than paper over: an intermediate `list_agents` snapshot showed worker-4's thread as IDLE with its reply \"(none yet)\" while a message was still outstanding \u2014 that was a lag in the roster view, since worker-4's reply arrived normally right after. Not a refusal or a failure.\n- **Cosmetic only:** children self-identified in short form (\"worker 0\", \"worker0\", \"Worker 5\") rather than by their full roster IDs. I've mapped them back to canonical names below.\n\n```json\n{\"replies\": {\"clevin-swarm-F-worker-0-20260828T021253Z-2df88d#1\": \"02:13:34\",\n             \"clevin-swarm-F-worker-0-20260828T021253Z-2df88d#2\": \"02:13:35\",\n             \"clevin-swarm-F-worker-1-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-2-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-3-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-4-20260828T021253Z-2df88d\": \"02:13:34\",\n             \"clevin-swarm-F-worker-5-20260828T021253Z-2df88d\": \"02:13:35\"},\n \"total_children_spawned\": 7,\n \"same_agent_ran_twice\": true,\n \"any_delegation_refused\": \"none\"}\n```"
+    ],
+    "concurrency": {
+      "peak_concurrent_children": 7,
+      "transitions": 14
+    },
+    "usage_events": [
+      {
+        "id": "sevt_01CC4y5ue36qPevAvhcUMWmv",
+        "processed_at": "2026-08-28T02:13:45.794765Z",
+        "type": "session.usage",
+        "usage": {
+          "active_seconds": 49.232,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 33046
+          },
+          "cache_read_input_tokens": 216610,
+          "input_tokens": 56,
+          "list_cost": {
+            "amount": "24",
+            "currency": "USD"
+          },
+          "output_tokens": 2399,
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          }
+        },
+        "budget": {
+          "max_list_cost": {
+            "amount": "200",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      },
+      {
+        "id": "sevt_016fh7VrbLDP1tir1ML94mLi",
+        "processed_at": "2026-08-28T02:14:02.659923Z",
+        "type": "session.usage",
+        "usage": {
+          "active_seconds": 66.052,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 34681
+          },
+          "cache_read_input_tokens": 244556,
+          "input_tokens": 60,
+          "list_cost": {
+            "amount": "30",
+            "currency": "USD"
+          },
+          "output_tokens": 3529,
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          }
+        },
+        "budget": {
+          "max_list_cost": {
+            "amount": "200",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    ],
+    "compactions": 0
+  }
+}

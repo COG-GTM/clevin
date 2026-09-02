@@ -1,0 +1,294 @@
+{
+  "profile": "budget_turns",
+  "run_id": "20260828T043913Z-b8e46a",
+  "started_at": "2026-08-28T04:39:13.652195+00:00",
+  "observations": {
+    "session_id": "sesn_01PmsqzyDPSyTFgf2hZEShV9",
+    "turns": [
+      {
+        "turn": 1,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.0,
+        "budget_usd": 0.01,
+        "spans": 1,
+        "event_counts": {
+          "agent.message": 1,
+          "agent.thinking": 1,
+          "session.status_idle": 1,
+          "session.status_running": 1,
+          "session.thread_status_idle": 1,
+          "session.thread_status_running": 1,
+          "session.usage": 1,
+          "span.model_request_end": 1,
+          "span.model_request_start": 1,
+          "user.message": 1
+        },
+        "errors": []
+      },
+      {
+        "turn": 2,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.0,
+        "budget_usd": 0.01,
+        "spans": 1,
+        "event_counts": {
+          "agent.message": 1,
+          "agent.thinking": 1,
+          "session.status_idle": 1,
+          "session.status_running": 2,
+          "session.thread_status_idle": 1,
+          "session.thread_status_running": 2,
+          "session.usage": 1,
+          "span.model_request_end": 1,
+          "span.model_request_start": 2,
+          "user.message": 2
+        },
+        "errors": []
+      },
+      {
+        "turn": 3,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.0,
+        "budget_usd": 0.01,
+        "spans": 3,
+        "event_counts": {
+          "agent.message": 3,
+          "agent.thinking": 3,
+          "session.status_idle": 2,
+          "session.status_running": 2,
+          "session.thread_status_idle": 2,
+          "session.thread_status_running": 2,
+          "session.usage": 2,
+          "span.model_request_end": 3,
+          "span.model_request_start": 3,
+          "user.message": 3
+        },
+        "errors": []
+      },
+      {
+        "turn": 4,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.0,
+        "budget_usd": 0.01,
+        "spans": 3,
+        "event_counts": {
+          "agent.message": 3,
+          "agent.thinking": 3,
+          "session.status_idle": 2,
+          "session.status_running": 3,
+          "session.thread_status_idle": 2,
+          "session.thread_status_running": 3,
+          "session.usage": 2,
+          "span.model_request_end": 3,
+          "span.model_request_start": 4,
+          "user.message": 4
+        },
+        "errors": []
+      },
+      {
+        "turn": 5,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.01,
+        "budget_usd": 0.01,
+        "spans": 5,
+        "event_counts": {
+          "agent.message": 5,
+          "agent.thinking": 5,
+          "session.status_idle": 3,
+          "session.status_running": 3,
+          "session.thread_status_idle": 3,
+          "session.thread_status_running": 3,
+          "session.usage": 3,
+          "span.model_request_end": 5,
+          "span.model_request_start": 5,
+          "user.message": 5
+        },
+        "errors": []
+      },
+      {
+        "turn": 6,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.01,
+        "budget_usd": 0.01,
+        "spans": 5,
+        "event_counts": {
+          "agent.message": 5,
+          "agent.thinking": 5,
+          "session.status_idle": 3,
+          "session.status_running": 4,
+          "session.thread_status_idle": 3,
+          "session.thread_status_running": 4,
+          "session.usage": 3,
+          "span.model_request_end": 5,
+          "span.model_request_start": 6,
+          "user.message": 6
+        },
+        "errors": []
+      },
+      {
+        "turn": 7,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.01,
+        "budget_usd": 0.01,
+        "spans": 7,
+        "event_counts": {
+          "agent.message": 7,
+          "agent.thinking": 7,
+          "session.status_idle": 4,
+          "session.status_running": 4,
+          "session.thread_status_idle": 4,
+          "session.thread_status_running": 4,
+          "session.usage": 4,
+          "span.model_request_end": 7,
+          "span.model_request_start": 7,
+          "user.message": 7
+        },
+        "errors": []
+      },
+      {
+        "turn": 8,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.01,
+        "budget_usd": 0.01,
+        "spans": 7,
+        "event_counts": {
+          "agent.message": 7,
+          "agent.thinking": 7,
+          "session.status_idle": 4,
+          "session.status_running": 5,
+          "session.thread_status_idle": 4,
+          "session.thread_status_running": 5,
+          "session.usage": 4,
+          "span.model_request_end": 7,
+          "span.model_request_start": 8,
+          "user.message": 8
+        },
+        "errors": []
+      },
+      {
+        "turn": 9,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.01,
+        "budget_usd": 0.01,
+        "spans": 9,
+        "event_counts": {
+          "agent.message": 9,
+          "agent.thinking": 9,
+          "session.status_idle": 5,
+          "session.status_running": 5,
+          "session.thread_status_idle": 5,
+          "session.thread_status_running": 5,
+          "session.usage": 5,
+          "span.model_request_end": 9,
+          "span.model_request_start": 9,
+          "user.message": 9
+        },
+        "errors": []
+      },
+      {
+        "turn": 10,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.01,
+        "budget_usd": 0.01,
+        "spans": 9,
+        "event_counts": {
+          "agent.message": 9,
+          "agent.thinking": 9,
+          "session.status_idle": 5,
+          "session.status_running": 6,
+          "session.thread_status_idle": 5,
+          "session.thread_status_running": 6,
+          "session.usage": 5,
+          "span.model_request_end": 9,
+          "span.model_request_start": 10,
+          "user.message": 10
+        },
+        "errors": []
+      },
+      {
+        "turn": 11,
+        "send_error": null,
+        "status": "idle",
+        "list_cost_usd": 0.01,
+        "budget_usd": 0.01,
+        "spans": 10,
+        "event_counts": {
+          "agent.message": 10,
+          "agent.thinking": 10,
+          "session.status_idle": 6,
+          "session.status_running": 6,
+          "session.thread_status_idle": 6,
+          "session.thread_status_running": 6,
+          "session.usage": 6,
+          "span.model_request_end": 10,
+          "span.model_request_start": 10,
+          "user.message": 11
+        },
+        "errors": []
+      },
+      {
+        "turn": 12,
+        "send_error": "400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'session budget reached: consumed list cost has met `budget.max_list_cost`; only `user.tool_confirmation`, `user.tool_result`, `user.custom_tool_result`, and `user.interrupt` are accepted until the budget is raised (rejected `user.message` at events[0])'}, 'request_id': 'req_011CeUXiG32T69cGxjBf3kSF'}",
+        "status": "idle",
+        "list_cost_usd": 0.01,
+        "budget_usd": 0.01,
+        "spans": 10,
+        "event_counts": {
+          "agent.message": 10,
+          "agent.thinking": 10,
+          "session.status_idle": 6,
+          "session.status_running": 6,
+          "session.thread_status_idle": 6,
+          "session.thread_status_running": 6,
+          "session.usage": 6,
+          "span.model_request_end": 10,
+          "span.model_request_start": 10,
+          "user.message": 11
+        },
+        "errors": []
+      }
+    ],
+    "final_status": "idle",
+    "budget_usd": 0.01,
+    "final_list_cost_usd": 0.01,
+    "overshoot_ratio": 1.0,
+    "event_counts": {
+      "agent.message": 10,
+      "agent.thinking": 10,
+      "session.status_idle": 6,
+      "session.status_running": 6,
+      "session.thread_status_idle": 6,
+      "session.thread_status_running": 6,
+      "session.usage": 6,
+      "span.model_request_end": 10,
+      "span.model_request_start": 10,
+      "user.message": 11
+    },
+    "errors": []
+  },
+  "cleanup_ledger": [
+    {
+      "kind": "agent",
+      "id": "agent_01DxT5gsex9BziaE3oKmC8Nr",
+      "name": "clevin-swarm-I-budgetturns-20260828T043913Z-b8e46a",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "session",
+      "id": "sesn_01PmsqzyDPSyTFgf2hZEShV9",
+      "name": "budget_turns/budget-turns",
+      "cleanup": "retained as evidence (idle, no live compute)"
+    }
+  ],
+  "finished_at": "2026-08-28T04:39:46.302257+00:00"
+}

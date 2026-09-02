@@ -1,0 +1,296 @@
+[
+  {
+    "kind": "agent",
+    "id": "agent_01TQFVVP7r2YFAZuwzKyxSrB",
+    "name": "clevin-swarm-B-b0_smoke_known_env-20260828T043047Z-d0bc18",
+    "created_at": "2026-08-28T04:30:47.970436+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_01RqxhRcrt9veLo3zuaV5sNy",
+    "name": "B/b0_smoke_known_env/20260828T043047Z-d0bc18",
+    "created_at": "2026-08-28T04:30:48.771528+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "environment",
+    "id": "env_01NafgppWcCBUZRMxfxXknqE",
+    "name": "clevin-swarm-B-env-20260828T042807Z-631a32",
+    "created_at": "2026-08-28T04:28:08.454389+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01FYSveaZwz77XKcjcU6UcqD",
+    "name": "clevin-swarm-B-b0_smoke-20260828T042808Z-359a1d",
+    "created_at": "2026-08-28T04:28:08.699142+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_011bF2YLtCVW7zq1hFf55q2K",
+    "name": "B/b0_smoke/20260828T042808Z-359a1d",
+    "created_at": "2026-08-28T04:28:09.329529+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01K2pbKvnBhV6tBv9yk9DtnG",
+    "name": "clevin-swarm-B-b2_planned-20260828T043404Z-30a359",
+    "created_at": "2026-08-28T04:34:04.824741+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01JBhoFp5icC2WUkcZ8dVeV7",
+    "name": "clevin-swarm-B-b1_baseline-20260828T043404Z-4f6d35",
+    "created_at": "2026-08-28T04:34:04.826897+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01EepoEZndnN7DEK9KNCUAst",
+    "name": "clevin-swarm-B-b1_repeat-20260828T043404Z-6dd04a",
+    "created_at": "2026-08-28T04:34:04.831201+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01Y3tNaW29uEcX5YX7BaNZmt",
+    "name": "clevin-swarm-B-b4_memory-20260828T043404Z-0b795c",
+    "created_at": "2026-08-28T04:34:04.843766+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_011Kqdd2zcwVzwdMMcDYTXbX",
+    "name": "B/b1_repeat/20260828T043404Z-6dd04a",
+    "created_at": "2026-08-28T04:34:05.540314+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_014DCfuUvsNpkxGGjQWHEJUQ",
+    "name": "B/b1_baseline/20260828T043404Z-4f6d35",
+    "created_at": "2026-08-28T04:34:05.541971+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_017GjF4Zxx8KP2mkfq7PxbEG",
+    "name": "B/b4_memory/20260828T043404Z-0b795c",
+    "created_at": "2026-08-28T04:34:05.547939+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_015FewBkngdUWXbEJ6A27EZ6",
+    "name": "B/b2_planned/20260828T043404Z-30a359",
+    "created_at": "2026-08-28T04:34:05.581590+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01DVNTvn2Xm1w7tmuBTrX2Y7",
+    "name": "clevin-swarm-B-b2_planned-20260828T043848Z-3600d7",
+    "created_at": "2026-08-28T04:38:49.009770+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_018KKopoNtRadAuvt8A28H6n",
+    "name": "clevin-swarm-B-b1_repeat-20260828T043848Z-c46c17",
+    "created_at": "2026-08-28T04:38:49.022760+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_0181v24KdpFHJVoq9Zb138bk",
+    "name": "clevin-swarm-B-b1_baseline-20260828T043848Z-d59691",
+    "created_at": "2026-08-28T04:38:49.025263+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_012wbAUdfzzA999Y1q3ejcMo",
+    "name": "clevin-swarm-B-b4_memory-20260828T043848Z-325ebb",
+    "created_at": "2026-08-28T04:38:49.047016+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01SFjnVEJyM7KNoPnpovRYdd",
+    "name": "clevin-swarm-B-b3_subagents-explorer-20260828T043848Z-91f500",
+    "created_at": "2026-08-28T04:38:49.058000+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01QbHboRCdivWnvk7n34bADx",
+    "name": "clevin-swarm-B-b3_subagents-test_debugger-20260828T043848Z-91f500",
+    "created_at": "2026-08-28T04:38:49.289135+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01K8U3CDuJgNa5zFWAQYXqAC",
+    "name": "clevin-swarm-B-b3_subagents-reviewer-20260828T043848Z-91f500",
+    "created_at": "2026-08-28T04:38:49.479713+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_01UE36DCGwwQtwTrxCGtyfdw",
+    "name": "B/b1_baseline/20260828T043848Z-d59691",
+    "created_at": "2026-08-28T04:38:49.705749+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_011fwZNLZZPBzoGauFzdWQer",
+    "name": "B/b2_planned/20260828T043848Z-3600d7",
+    "created_at": "2026-08-28T04:38:49.719941+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_01Ti1qMo3nuztoxfx6cYY6bb",
+    "name": "B/b1_repeat/20260828T043848Z-c46c17",
+    "created_at": "2026-08-28T04:38:49.730089+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_013Ppzdzmdq8QJsXpQnCCXkw",
+    "name": "clevin-swarm-B-b3_subagents-20260828T043848Z-91f500",
+    "created_at": "2026-08-28T04:38:49.773197+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_0173N5Tn7J7Tmau5H1ktx3Th",
+    "name": "B/b4_memory/20260828T043848Z-325ebb",
+    "created_at": "2026-08-28T04:38:50.198862+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_01GaubMzQNcR9AfkigieR2X8",
+    "name": "B/b3_subagents/20260828T043848Z-91f500",
+    "created_at": "2026-08-28T04:38:50.455915+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01KQqE5ZViDVqCr8dSwMrVv4",
+    "name": "clevin-swarm-B-b8_compaction-20260828T044001Z-63678c",
+    "created_at": "2026-08-28T04:40:01.554010+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01XJCf4Uzb4mf6SWfM4tex7R",
+    "name": "clevin-swarm-B-b6_changing-20260828T044001Z-dbcdcf",
+    "created_at": "2026-08-28T04:40:01.556085+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01Ra8KbSaCr5UbtzXCRnLxLu",
+    "name": "clevin-swarm-B-b7_interrupt-20260828T044001Z-b653c7",
+    "created_at": "2026-08-28T04:40:01.560125+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01VVgGf8xtaY6zsMjBgZqgVx",
+    "name": "clevin-swarm-B-b5_resume-20260828T044001Z-e3af83",
+    "created_at": "2026-08-28T04:40:01.561454+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_012LhdngwoQCEWot586kMghx",
+    "name": "B/b5_resume/20260828T044001Z-e3af83",
+    "created_at": "2026-08-28T04:40:02.259864+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_01WxxX6jTBjEHKjWBPu2XK1x",
+    "name": "B/b8_compaction/20260828T044001Z-63678c",
+    "created_at": "2026-08-28T04:40:02.267314+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_01JZyfBFEttydpgbyDQVctBc",
+    "name": "B/b6_changing/20260828T044001Z-dbcdcf",
+    "created_at": "2026-08-28T04:40:02.273236+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_015eCLRAcPtEFt8DKaHaZTTZ",
+    "name": "B/b7_interrupt/20260828T044001Z-b653c7",
+    "created_at": "2026-08-28T04:40:02.403158+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "agent",
+    "id": "agent_01Qexq5rwoGDYf61Asg6csRM",
+    "name": "clevin-swarm-B-b9_toolfail-20260828T044208Z-1653cf",
+    "created_at": "2026-08-28T04:42:08.721627+00:00",
+    "cleanup": "archived"
+  },
+  {
+    "kind": "session",
+    "id": "sesn_01MfEiwmPsGrHvyLGncqRHPa",
+    "name": "B/b9_toolfail/20260828T044208Z-1653cf",
+    "created_at": "2026-08-28T04:42:09.670951+00:00",
+    "cleanup": "kept: evidence"
+  },
+  {
+    "kind": "file",
+    "id": "file_01TWbycwSmrifW2rpvEpAKyg",
+    "name": "seed tarball (native file resource)",
+    "created_at": "2026-08-28T05:06:57.042626+00:00",
+    "cleanup": "deleted"
+  },
+  {
+    "kind": "file",
+    "id": "file_01DkArUmCuBvPAUPa9xDH3vW",
+    "name": "seed tarball (native file resource)",
+    "created_at": "2026-08-28T05:06:57.042642+00:00",
+    "cleanup": "deleted"
+  },
+  {
+    "kind": "file",
+    "id": "file_014oXHfxgiWzWoiTUvW7SuUw",
+    "name": "seed tarball (native file resource)",
+    "created_at": "2026-08-28T05:06:57.042644+00:00",
+    "cleanup": "deleted"
+  },
+  {
+    "kind": "file",
+    "id": "file_01RPyaiiQJz3dhufzVNS8qE7",
+    "name": "seed tarball (native file resource)",
+    "created_at": "2026-08-28T05:06:57.042646+00:00",
+    "cleanup": "deleted"
+  },
+  {
+    "kind": "file",
+    "id": "file_01Dcy1Udv8VM4K6nH2cza83t",
+    "name": "seed tarball (native file resource)",
+    "created_at": "2026-08-28T05:06:57.042647+00:00",
+    "cleanup": "deleted"
+  },
+  {
+    "kind": "file",
+    "id": "file_01ApNKQ9pKjEGL13iW11a5dE",
+    "name": "seed tarball (native file resource)",
+    "created_at": "2026-08-28T05:06:57.042649+00:00",
+    "cleanup": "deleted"
+  }
+]

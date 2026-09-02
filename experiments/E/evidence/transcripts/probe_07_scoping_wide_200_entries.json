@@ -1,0 +1,140 @@
+{
+  "label": "probe_07_scoping_wide_200_entries",
+  "session_id": "sesn_01WXVMGEntCvc7ECRQwFMxXD",
+  "saved_at": "2026-08-28T02:25:49.363329+00:00",
+  "events": [
+    {
+      "id": "sevt_017f7A6bhVMfxW2trRZMrwVh",
+      "type": "session.status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_01DEbXWCgSF48Mp8QzKSvqF8",
+      "type": "user.message",
+      "text": "CLEVIN_SMOKE_TEST Do not touch git or the network.\n\nWhat is the verified gate command for the repository COG-GTM/service-13, and what is the\ncanary token recorded with it? Answer in one line, then state the memory file path you\ntook the answer from and how you located it.\n"
+    },
+    {
+      "id": "sevt_01DKjNHNb7bQeN85Hpy6cogQ",
+      "type": "session.thread_status_running",
+      "text": ""
+    },
+    {
+      "id": "sevt_01Vd5XRStN4Nqx7F6MG7Kj4K",
+      "type": "span.model_request_start",
+      "text": ""
+    },
+    {
+      "id": "sevt_01GgSKphLhuQeUvnSztNmvxn",
+      "type": "agent.thinking",
+      "text": ""
+    },
+    {
+      "id": "sevt_01BjMbjM6jKyw1vhP9xFenMJ",
+      "type": "agent.tool_use",
+      "text": "",
+      "name": "bash",
+      "input": {
+        "command": "rg -il \"COG-GTM/service-13|service-13\" /mnt/memory/ 2>&1 | head -50"
+      }
+    },
+    {
+      "id": "sevt_01XjVGquNU6R2ppwM87G3Cqj",
+      "type": "span.model_request_end",
+      "text": "",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01BdndusbETyohPcb1x77gQr",
+      "type": "agent.tool_result",
+      "text": "/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/note-9.md\n/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/note-8.md\n/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/note-7.md\n/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/note-6.md\n/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/note-5.md\n/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/note-4.md\n/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/note-3.md\n/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/note-2.md\n/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/note-1.md\n/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/gate.md\n",
+      "tool_use_id": "sevt_01BjMbjM6jKyw1vhP9xFenMJ",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01P1RH14QcM4Mb1CAvyv2K1H",
+      "type": "span.model_request_start",
+      "text": ""
+    },
+    {
+      "id": "sevt_01KC3kcVRTSkFsajdFEJNJVh",
+      "type": "agent.thinking",
+      "text": ""
+    },
+    {
+      "id": "sevt_01PLe4T36cbAVqWhcNLGsZKt",
+      "type": "agent.tool_use",
+      "text": "",
+      "name": "read",
+      "input": {
+        "file_path": "/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/gate.md"
+      }
+    },
+    {
+      "id": "sevt_01LNcTB1ogT6yASNTZzSwvt6",
+      "type": "span.model_request_end",
+      "text": "",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01773TvksjdBqJUpXpPbAVQL",
+      "type": "agent.tool_result",
+      "text": "1\t# service-13 gate (verified 2026-08-20)\n2\tGate: `make verify-13`\n3\tCanary: SCOPE-CANARY-1313\n",
+      "tool_use_id": "sevt_01PLe4T36cbAVqWhcNLGsZKt",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01DWETQQLm2YuwkP2jkA3FX1",
+      "type": "span.model_request_start",
+      "text": ""
+    },
+    {
+      "id": "sevt_01F6KCP4YhrrfMpRyTgTbZqR",
+      "type": "agent.message",
+      "text": "The verified gate command for **COG-GTM/service-13** is `make verify-13`, with canary token `SCOPE-CANARY-1313`.\n\n**Source file:** `/mnt/memory/clevin-swarm-e-20260828t022440z-2e5503-scope-wide/repos/COG-GTM/service-13/gate.md`\n\n**How I located it:** I ran `rg -il \"COG-GTM/service-13|service-13\" /mnt/memory/`, which matched several files under `repos/COG-GTM/service-13/` (note-1.md through note-9.md and gate.md). I selected `gate.md` since its filename directly indicates gate-related content, and reading it gave the verbatim content:\n```\n# service-13 gate (verified 2026-08-20)\nGate: `make verify-13`\nCanary: SCOPE-CANARY-1313\n```"
+    },
+    {
+      "id": "sevt_011g3FKRAEiwSbRbP7yw45cu",
+      "type": "span.model_request_end",
+      "text": "",
+      "is_error": false
+    },
+    {
+      "id": "sevt_01JCZxKpmwpemD161s5ow85G",
+      "type": "session.thread_status_idle",
+      "text": ""
+    },
+    {
+      "id": "sevt_01Vio43SgAmRuJDUEaFmJnLb",
+      "type": "session.usage",
+      "text": "",
+      "usage": {
+        "active_seconds": 10.298,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5039
+        },
+        "cache_read_input_tokens": 22892,
+        "input_tokens": 5,
+        "list_cost": {
+          "amount": "2",
+          "currency": "USD"
+        },
+        "output_tokens": 505,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "id": "sevt_01EHZm5w2XenEVWQewrxMxQN",
+      "type": "session.status_idle",
+      "text": ""
+    },
+    {
+      "id": null,
+      "type": "session.idle",
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,1031 @@
+{
+  "session": {
+    "id": "sesn_018Hit5DRZ1GQ2R6iGoFMSwi",
+    "agent": {
+      "id": "agent_01J5Mq3jPwTvnob9sFFxunrV",
+      "description": "workstream F coordinator-recursive",
+      "mcp_servers": [],
+      "model": {
+        "id": "claude-opus-5",
+        "effort": {
+          "type": "high"
+        },
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": {
+        "agents": [
+          {
+            "id": "agent_01J5Mq3jPwTvnob9sFFxunrV",
+            "description": "workstream F coordinator-recursive",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-opus-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+            "skills": [],
+            "system": "You are a recursion probe agent in a Managed Agents experiment.\n\nIf your task text contains the marker DEPTH=<n>, and n is less than 3, you must delegate\nto your own roster (you appear in your own roster) a task whose text is exactly\n\"DEPTH=<n+1> report your depth\", and then report what came back. If n is 3 or greater, or\nif you cannot delegate, reply with one line: \"reached DEPTH=<n>, delegation possible:\n<yes/no>, error: <verbatim error or none>\".",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          }
+        ],
+        "type": "coordinator"
+      },
+      "name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "skills": [],
+      "system": "You are a recursion probe agent in a Managed Agents experiment.\n\nIf your task text contains the marker DEPTH=<n>, and n is less than 3, you must delegate\nto your own roster (you appear in your own roster) a task whose text is exactly\n\"DEPTH=<n+1> report your depth\", and then report what came back. If n is 3 or greater, or\nif you cannot delegate, reply with one line: \"reached DEPTH=<n>, delegation possible:\n<yes/no>, error: <verbatim error or none>\".",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "version": 1
+    },
+    "archived_at": null,
+    "budget": {
+      "max_list_cost": {
+        "amount": "150",
+        "currency": "USD"
+      },
+      "type": "limit"
+    },
+    "created_at": "2026-08-28T02:14:05.603307Z",
+    "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+    "metadata": {
+      "experiment": "clevin-swarm-F",
+      "label": "self_recursion",
+      "run_id": "20260828T021357Z-0a0a7e"
+    },
+    "outcome_evaluations": [],
+    "resources": [],
+    "stats": {
+      "active_seconds": 18.683,
+      "duration_seconds": 21.112258374
+    },
+    "status": "idle",
+    "title": "F/exp5_topology_limits/self_recursion",
+    "type": "session",
+    "updated_at": "2026-08-28T02:14:22.022905Z",
+    "usage": {
+      "active_seconds": 16.101,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 18323
+      },
+      "cache_read_input_tokens": 27524,
+      "input_tokens": 10,
+      "list_cost": {
+        "amount": "15",
+        "currency": "USD"
+      },
+      "output_tokens": 1044,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "vault_ids": [],
+    "deployment_id": null
+  },
+  "events": [
+    {
+      "id": "sevt_01KyEvutK9jCFRyYXMNkuE5b",
+      "processed_at": "2026-08-28T02:14:05.924362Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_019bhWvZc7Udwft2fkXM2ude",
+      "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:06.244961Z",
+      "session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01L4VyvmuCeeNN3grrMJY6KQ",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp5 recursion. No git, no MCP.\n\nYour task text is: DEPTH=1 report your depth. Follow your system instructions exactly.\nFinish with one fenced ```json block:\n{\"max_depth_reached\": <int>, \"self_delegation_worked\": bool,\n \"error\": \"<verbatim error or none>\"}",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T02:14:06.319424Z"
+    },
+    {
+      "id": "sevt_01BEFRNVdpL1ytuqsmugj1y5",
+      "processed_at": "2026-08-28T02:14:06.319425Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_013Ki1QN7qBiMNGugzMyFTm2",
+      "processed_at": "2026-08-28T02:14:09.223150Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01R9s8iobwmGyN7jEQQCG34o",
+      "is_error": false,
+      "model_request_start_id": "sevt_01BEFRNVdpL1ytuqsmugj1y5",
+      "model_usage": {
+        "cache_creation_input_tokens": 9719,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 2,
+        "output_tokens": 182,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:09.707953Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01KbwKv89ADQwFBitQN6mBZU",
+      "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:10.004368Z",
+      "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+      "type": "session.thread_created"
+    },
+    {
+      "id": "sevt_01MwP1ZoHannMSP7SbskPxCE",
+      "content": [
+        {
+          "text": "DEPTH=2 report your depth",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:10.004369Z",
+      "to_session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+      "type": "agent.thread_message_sent",
+      "to_agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e"
+    },
+    {
+      "id": "sevt_01MNGnX5kvshuXnACNqSPeVB",
+      "processed_at": "2026-08-28T02:14:10.107586Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01L3qycyTTz2sigKci5nj4Bx",
+      "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:10.284950Z",
+      "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01DamMF995iDABPEgHxF3R77",
+      "content": [
+        {
+          "text": "Delegated DEPTH=2 to my own roster (thread `sthr_01WetTTvtnVKxmbEd5HmSuoK`). Awaiting its report.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:11.939017Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01DcwavJcu5aH1AcUW7GwZCB",
+      "is_error": false,
+      "model_request_start_id": "sevt_01MNGnX5kvshuXnACNqSPeVB",
+      "model_usage": {
+        "cache_creation_input_tokens": 323,
+        "cache_read_input_tokens": 9719,
+        "input_tokens": 2,
+        "output_tokens": 59,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:11.939018Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01W36MbbkvFuMqd47fwccJkY",
+      "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:12.036738Z",
+      "session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01TV6vPZkcdGCBV9fpi7ARPW",
+      "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:15.277539Z",
+      "session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01JCa3ADtMXM2w8uVMhcVoUw",
+      "content": [
+        {
+          "text": "reached DEPTH=2, delegation possible: no, error: none (no delegation/subagent tool present in my roster \u2014 available tools are only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search)",
+          "type": "text"
+        }
+      ],
+      "from_session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+      "processed_at": "2026-08-28T02:14:15.399093Z",
+      "type": "agent.thread_message_received",
+      "from_agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e"
+    },
+    {
+      "id": "sevt_01UbL4C8P2bpNvCohQcRAoxT",
+      "processed_at": "2026-08-28T02:14:15.399094Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01W3CRMz5FeFF2DJmuAQyfgV",
+      "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:16.648835Z",
+      "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01UygE9cJgKTxePzgeY8Uuxp",
+      "processed_at": "2026-08-28T02:14:16.746725Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 10.661,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 18144
+        },
+        "cache_read_input_tokens": 17482,
+        "input_tokens": 8,
+        "list_cost": {
+          "amount": "14",
+          "currency": "USD"
+        },
+        "output_tokens": 664,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "150",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01Tib63anCyP7s5vvzXLhF8g",
+      "processed_at": "2026-08-28T02:14:17.476327Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01MPZQ3oH7Sop7Za6teMann1",
+      "content": [
+        {
+          "text": "The DEPTH=2 child reported back: it reached depth 2 but could not recurse further \u2014 its toolset had no delegation tool (only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search), so the chain terminated there rather than continuing to DEPTH=3.\n\nSummary of the recursion probe:\n- **Depth 1 (me):** delegation succeeded \u2014 spawned a same-type agent with task text `DEPTH=2 report your depth`.\n- **Depth 2 (child):** delegation unavailable; no subagent-spawning tool in its roster. No error was raised \u2014 the capability simply wasn't present.\n- **Depth 3:** never reached.\n\nSo self-delegation works exactly one level down in this configuration: the spawning coordinator has `create_agent`, but its spawned instances do not inherit it.\n\n```json\n{\"max_depth_reached\": 2, \"self_delegation_worked\": true, \"error\": \"none\"}\n```",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:21.767220Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_0124S26qcLZtJvhVu5FL4Qwr",
+      "is_error": false,
+      "model_request_start_id": "sevt_01UbL4C8P2bpNvCohQcRAoxT",
+      "model_usage": {
+        "cache_creation_input_tokens": 179,
+        "cache_read_input_tokens": 10042,
+        "input_tokens": 2,
+        "output_tokens": 380,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:21.767221Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01PSFnSEyrYDo9SzF9VJK47T",
+      "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+      "processed_at": "2026-08-28T02:14:21.915802Z",
+      "session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01LepwmNHPvaQpAAGNn5MfJz",
+      "processed_at": "2026-08-28T02:14:21.915803Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 15.787,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 18323
+        },
+        "cache_read_input_tokens": 27524,
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "15",
+          "currency": "USD"
+        },
+        "output_tokens": 1044,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "150",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01B7zNtQbJjP3WBCioYYbQDj",
+      "processed_at": "2026-08-28T02:14:21.915804Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    }
+  ],
+  "threads": [
+    {
+      "id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+      "agent": {
+        "id": "agent_01J5Mq3jPwTvnob9sFFxunrV",
+        "description": "workstream F coordinator-recursive",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-opus-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "skills": [],
+        "system": "You are a recursion probe agent in a Managed Agents experiment.\n\nIf your task text contains the marker DEPTH=<n>, and n is less than 3, you must delegate\nto your own roster (you appear in your own roster) a task whose text is exactly\n\"DEPTH=<n+1> report your depth\", and then report what came back. If n is 3 or greater, or\nif you cannot delegate, reply with one line: \"reached DEPTH=<n>, delegation possible:\n<yes/no>, error: <verbatim error or none>\".",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:14:05.603307Z",
+      "parent_thread_id": null,
+      "session_id": "sesn_018Hit5DRZ1GQ2R6iGoFMSwi",
+      "stats": {
+        "active_seconds": 12.328,
+        "duration_seconds": 21.501425333,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:14:22.399871Z",
+      "usage": {
+        "active_seconds": 12.328,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 10221
+        },
+        "cache_read_input_tokens": 19761,
+        "input_tokens": 6,
+        "list_cost": {
+          "amount": "9",
+          "currency": "USD"
+        },
+        "output_tokens": 621,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01KyEvutK9jCFRyYXMNkuE5b",
+          "processed_at": "2026-08-28T02:14:05.924362Z",
+          "type": "session.status_running"
+        },
+        {
+          "id": "sevt_019bhWvZc7Udwft2fkXM2ude",
+          "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:06.244961Z",
+          "session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01L4VyvmuCeeNN3grrMJY6KQ",
+          "content": [
+            {
+              "text": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp5 recursion. No git, no MCP.\n\nYour task text is: DEPTH=1 report your depth. Follow your system instructions exactly.\nFinish with one fenced ```json block:\n{\"max_depth_reached\": <int>, \"self_delegation_worked\": bool,\n \"error\": \"<verbatim error or none>\"}",
+              "type": "text"
+            }
+          ],
+          "type": "user.message",
+          "processed_at": "2026-08-28T02:14:06.319424Z"
+        },
+        {
+          "id": "sevt_01BEFRNVdpL1ytuqsmugj1y5",
+          "processed_at": "2026-08-28T02:14:06.319425Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_013Ki1QN7qBiMNGugzMyFTm2",
+          "processed_at": "2026-08-28T02:14:09.223150Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01R9s8iobwmGyN7jEQQCG34o",
+          "is_error": false,
+          "model_request_start_id": "sevt_01BEFRNVdpL1ytuqsmugj1y5",
+          "model_usage": {
+            "cache_creation_input_tokens": 9719,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 182,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:09.707953Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01KbwKv89ADQwFBitQN6mBZU",
+          "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:10.004368Z",
+          "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01MwP1ZoHannMSP7SbskPxCE",
+          "content": [
+            {
+              "text": "DEPTH=2 report your depth",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:10.004369Z",
+          "to_session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e"
+        },
+        {
+          "id": "sevt_01MNGnX5kvshuXnACNqSPeVB",
+          "processed_at": "2026-08-28T02:14:10.107586Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01L3qycyTTz2sigKci5nj4Bx",
+          "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:10.284950Z",
+          "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01DamMF995iDABPEgHxF3R77",
+          "content": [
+            {
+              "text": "Delegated DEPTH=2 to my own roster (thread `sthr_01WetTTvtnVKxmbEd5HmSuoK`). Awaiting its report.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:11.939017Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01DcwavJcu5aH1AcUW7GwZCB",
+          "is_error": false,
+          "model_request_start_id": "sevt_01MNGnX5kvshuXnACNqSPeVB",
+          "model_usage": {
+            "cache_creation_input_tokens": 323,
+            "cache_read_input_tokens": 9719,
+            "input_tokens": 2,
+            "output_tokens": 59,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:11.939018Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01W36MbbkvFuMqd47fwccJkY",
+          "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:12.036738Z",
+          "session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01TV6vPZkcdGCBV9fpi7ARPW",
+          "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:15.277539Z",
+          "session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01JCa3ADtMXM2w8uVMhcVoUw",
+          "content": [
+            {
+              "text": "reached DEPTH=2, delegation possible: no, error: none (no delegation/subagent tool present in my roster \u2014 available tools are only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search)",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+          "processed_at": "2026-08-28T02:14:15.399093Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e"
+        },
+        {
+          "id": "sevt_01UbL4C8P2bpNvCohQcRAoxT",
+          "processed_at": "2026-08-28T02:14:15.399094Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01W3CRMz5FeFF2DJmuAQyfgV",
+          "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:16.648835Z",
+          "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01UygE9cJgKTxePzgeY8Uuxp",
+          "processed_at": "2026-08-28T02:14:16.746725Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 10.661,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 18144
+            },
+            "cache_read_input_tokens": 17482,
+            "input_tokens": 8,
+            "list_cost": {
+              "amount": "14",
+              "currency": "USD"
+            },
+            "output_tokens": 664,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "150",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01Tib63anCyP7s5vvzXLhF8g",
+          "processed_at": "2026-08-28T02:14:17.476327Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01MPZQ3oH7Sop7Za6teMann1",
+          "content": [
+            {
+              "text": "The DEPTH=2 child reported back: it reached depth 2 but could not recurse further \u2014 its toolset had no delegation tool (only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search), so the chain terminated there rather than continuing to DEPTH=3.\n\nSummary of the recursion probe:\n- **Depth 1 (me):** delegation succeeded \u2014 spawned a same-type agent with task text `DEPTH=2 report your depth`.\n- **Depth 2 (child):** delegation unavailable; no subagent-spawning tool in its roster. No error was raised \u2014 the capability simply wasn't present.\n- **Depth 3:** never reached.\n\nSo self-delegation works exactly one level down in this configuration: the spawning coordinator has `create_agent`, but its spawned instances do not inherit it.\n\n```json\n{\"max_depth_reached\": 2, \"self_delegation_worked\": true, \"error\": \"none\"}\n```",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:21.767220Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_0124S26qcLZtJvhVu5FL4Qwr",
+          "is_error": false,
+          "model_request_start_id": "sevt_01UbL4C8P2bpNvCohQcRAoxT",
+          "model_usage": {
+            "cache_creation_input_tokens": 179,
+            "cache_read_input_tokens": 10042,
+            "input_tokens": 2,
+            "output_tokens": 380,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:21.767221Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01PSFnSEyrYDo9SzF9VJK47T",
+          "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:21.915802Z",
+          "session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01LepwmNHPvaQpAAGNn5MfJz",
+          "processed_at": "2026-08-28T02:14:21.915803Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 15.787,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 18323
+            },
+            "cache_read_input_tokens": 27524,
+            "input_tokens": 10,
+            "list_cost": {
+              "amount": "15",
+              "currency": "USD"
+            },
+            "output_tokens": 1044,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "150",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_01B7zNtQbJjP3WBCioYYbQDj",
+          "processed_at": "2026-08-28T02:14:21.915804Z",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.status_idle"
+        }
+      ]
+    },
+    {
+      "id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+      "agent": {
+        "id": "agent_01J5Mq3jPwTvnob9sFFxunrV",
+        "description": "workstream F coordinator-recursive",
+        "mcp_servers": [],
+        "model": {
+          "id": "claude-opus-5",
+          "effort": {
+            "type": "high"
+          },
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "skills": [],
+        "system": "You are a recursion probe agent in a Managed Agents experiment.\n\nIf your task text contains the marker DEPTH=<n>, and n is less than 3, you must delegate\nto your own roster (you appear in your own roster) a task whose text is exactly\n\"DEPTH=<n+1> report your depth\", and then report what came back. If n is 3 or greater, or\nif you cannot delegate, reply with one line: \"reached DEPTH=<n>, delegation possible:\n<yes/no>, error: <verbatim error or none>\".",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "archived_at": null,
+      "created_at": "2026-08-28T02:14:09.842027Z",
+      "parent_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+      "session_id": "sesn_018Hit5DRZ1GQ2R6iGoFMSwi",
+      "stats": {
+        "active_seconds": 6.355,
+        "duration_seconds": 17.262805545,
+        "startup_seconds": 0.0
+      },
+      "status": "idle",
+      "type": "session_thread",
+      "updated_at": "2026-08-28T02:14:16.716585Z",
+      "usage": {
+        "active_seconds": 6.355,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 8102
+        },
+        "cache_read_input_tokens": 7763,
+        "input_tokens": 4,
+        "list_cost": {
+          "amount": "7",
+          "currency": "USD"
+        },
+        "output_tokens": 423,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "events": [
+        {
+          "id": "sevt_01L3qycyTTz2sigKci5nj4Bx",
+          "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:10.284950Z",
+          "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01P3gxwB4AFfPpBwN3uFc9eA",
+          "content": [
+            {
+              "text": "DEPTH=2 report your depth",
+              "type": "text"
+            }
+          ],
+          "from_session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+          "processed_at": "2026-08-28T02:14:10.447685Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e"
+        },
+        {
+          "id": "sevt_016zasuFDFjTxGVutA7vJs43",
+          "processed_at": "2026-08-28T02:14:10.447686Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_01Mgq9C9bfFPWRb29PaNsddp",
+          "processed_at": "2026-08-28T02:14:13.857937Z",
+          "type": "agent.thinking"
+        },
+        {
+          "id": "sevt_01ToEKSSjDYZYqwHf8t37G8f",
+          "is_error": false,
+          "model_request_start_id": "sevt_016zasuFDFjTxGVutA7vJs43",
+          "model_usage": {
+            "cache_creation_input_tokens": 7763,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 323,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:14.872190Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_017qSXeG6eDoHYbBzZVpM6S1",
+          "content": [
+            {
+              "text": "reached DEPTH=2, delegation possible: no, error: none (no delegation/subagent tool present in my roster \u2014 available tools are only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search)",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:14.992235Z",
+          "to_session_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": null
+        },
+        {
+          "id": "sevt_01RP6r6f6pqZ9xKp2Q7LjzyA",
+          "processed_at": "2026-08-28T02:14:15.050953Z",
+          "type": "span.model_request_start"
+        },
+        {
+          "id": "sevt_018Vfz7eC3d3rX24PpEVPGFo",
+          "content": [
+            {
+              "text": "reached DEPTH=2, delegation possible: no, error: none \u2014 I have no delegation tool in my roster (only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search), so I could not spawn a DEPTH=3 subagent. Reported this to the coordinator.",
+              "type": "text"
+            }
+          ],
+          "processed_at": "2026-08-28T02:14:16.601615Z",
+          "type": "agent.message"
+        },
+        {
+          "id": "sevt_01MJw12LJCwATwBUEqevb6oE",
+          "is_error": false,
+          "model_request_start_id": "sevt_01RP6r6f6pqZ9xKp2Q7LjzyA",
+          "model_usage": {
+            "cache_creation_input_tokens": 339,
+            "cache_read_input_tokens": 7763,
+            "input_tokens": 2,
+            "output_tokens": 100,
+            "speed": null
+          },
+          "processed_at": "2026-08-28T02:14:16.601616Z",
+          "type": "span.model_request_end"
+        },
+        {
+          "id": "sevt_01W3CRMz5FeFF2DJmuAQyfgV",
+          "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+          "processed_at": "2026-08-28T02:14:16.648835Z",
+          "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "per_thread": [
+      {
+        "id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+        "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "parent_thread_id": null,
+        "status": "idle",
+        "stats": {
+          "active_seconds": 12.328,
+          "duration_seconds": 21.501425333,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "9",
+        "output_tokens": 621,
+        "event_count": 24
+      },
+      {
+        "id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+        "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "parent_thread_id": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+        "status": "idle",
+        "stats": {
+          "active_seconds": 6.355,
+          "duration_seconds": 17.262805545,
+          "startup_seconds": 0.0
+        },
+        "list_cost": "7",
+        "output_tokens": 423,
+        "event_count": 10
+      }
+    ],
+    "stop_reasons": [
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+        "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+        "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.thread_status_idle",
+        "thread": "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+        "agent": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "stop_reason": "end_turn"
+      },
+      {
+        "type": "session.status_idle",
+        "thread": null,
+        "agent": null,
+        "stop_reason": "end_turn"
+      }
+    ],
+    "event_counts": {
+      "agent.message": 2,
+      "agent.thinking": 2,
+      "agent.thread_message_received": 1,
+      "agent.thread_message_sent": 1,
+      "session.status_idle": 1,
+      "session.status_running": 1,
+      "session.thread_created": 1,
+      "session.thread_status_idle": 3,
+      "session.thread_status_running": 3,
+      "session.usage": 2,
+      "span.model_request_end": 3,
+      "span.model_request_start": 3,
+      "user.message": 1
+    },
+    "threads_spawned": [
+      {
+        "session_thread_id": "sthr_01WetTTvtnVKxmbEd5HmSuoK",
+        "agent_name": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "processed_at": "2026-08-28T02:14:10.004368Z"
+      }
+    ],
+    "thread_count": 1,
+    "declared_threads": [
+      "sthr_01MGwxCyBDcb6gzgaKsQH2MW",
+      "sthr_01WetTTvtnVKxmbEd5HmSuoK"
+    ],
+    "agent_messages": [
+      {
+        "type": "agent.thread_message_sent",
+        "to": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "from": null,
+        "text": "DEPTH=2 report your depth"
+      },
+      {
+        "type": "agent.thread_message_received",
+        "to": null,
+        "from": "clevin-swarm-F-coordinator-recursive-20260828T021357Z-0a0a7e",
+        "text": "reached DEPTH=2, delegation possible: no, error: none (no delegation/subagent tool present in my roster \u2014 available tools are only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search)"
+      }
+    ],
+    "tool_uses": [],
+    "parent_text_tail": [
+      "Delegated DEPTH=2 to my own roster (thread `sthr_01WetTTvtnVKxmbEd5HmSuoK`). Awaiting its report.",
+      "The DEPTH=2 child reported back: it reached depth 2 but could not recurse further \u2014 its toolset had no delegation tool (only send_to_parent, bash, edit, read, glob, grep, web_fetch, web_search), so the chain terminated there rather than continuing to DEPTH=3.\n\nSummary of the recursion probe:\n- **Depth 1 (me):** delegation succeeded \u2014 spawned a same-type agent with task text `DEPTH=2 report your depth`.\n- **Depth 2 (child):** delegation unavailable; no subagent-spawning tool in its roster. No error was raised \u2014 the capability simply wasn't present.\n- **Depth 3:** never reached.\n\nSo self-delegation works exactly one level down in this configuration: the spawning coordinator has `create_agent`, but its spawned instances do not inherit it.\n\n```json\n{\"max_depth_reached\": 2, \"self_delegation_worked\": true, \"error\": \"none\"}\n```"
+    ],
+    "concurrency": {
+      "peak_concurrent_children": 1,
+      "transitions": 2
+    },
+    "usage_events": [
+      {
+        "id": "sevt_01UygE9cJgKTxePzgeY8Uuxp",
+        "processed_at": "2026-08-28T02:14:16.746725Z",
+        "type": "session.usage",
+        "usage": {
+          "active_seconds": 10.661,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 18144
+          },
+          "cache_read_input_tokens": 17482,
+          "input_tokens": 8,
+          "list_cost": {
+            "amount": "14",
+            "currency": "USD"
+          },
+          "output_tokens": 664,
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          }
+        },
+        "budget": {
+          "max_list_cost": {
+            "amount": "150",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      },
+      {
+        "id": "sevt_01LepwmNHPvaQpAAGNn5MfJz",
+        "processed_at": "2026-08-28T02:14:21.915803Z",
+        "type": "session.usage",
+        "usage": {
+          "active_seconds": 15.787,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 18323
+          },
+          "cache_read_input_tokens": 27524,
+          "input_tokens": 10,
+          "list_cost": {
+            "amount": "15",
+            "currency": "USD"
+          },
+          "output_tokens": 1044,
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          }
+        },
+        "budget": {
+          "max_list_cost": {
+            "amount": "150",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    ],
+    "compactions": 0
+  }
+}

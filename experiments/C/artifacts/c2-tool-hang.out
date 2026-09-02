@@ -1,0 +1,27 @@
+worker pid=6967 log=/home/ubuntu/repos/clevin/experiments/C/artifacts/c2-tool-hang-worker.log
+session sesn_01LP1pjukhvc8V5FPw3QA44w
+[0s] user.message null
+[5s] session.status_idle {"event_ids": ["sevt_01CeoNUUJzvnqp7JgTU5wLD1"], "type": "requires_action"}
+[152s] session.thread_status_running null
+[158s] session.status_idle {"type": "end_turn"}
+worker pid=6967 exit=-15
+{"artifact": "/home/ubuntu/repos/clevin/experiments/C/artifacts/c2-tool-hang.json"}
+None session.status_running
+None session.thread_status_running
+None user.message 'CLEVIN_SMOKE_TEST c2: run exactly one bash command `echo CHAOS-hang`, report what happened including any tool error text verbatim, then stop. Retry at most once.'
+None span.model_request_start
+None agent.thinking
+None agent.tool_use name=bash id=sevt_01CeoNUUJzvnqp7JgTU5wLD1 input={"command": "echo CHAOS-hang"}
+None span.model_request_end
+None session.thread_status_idle
+None session.usage {"active_seconds": 2.049, "cache_creation": {"ephemeral_1h_input_tokens": 0, "ephemeral_5m_input_tokens": 5369}, "cache_read_input_tokens": 0, "input_tokens": 10, "list_cost": {"amount": "1", "currenc
+None session.status_idle stop_reason={"event_ids": ["sevt_01CeoNUUJzvnqp7JgTU5wLD1"], "type": "requires_action"}
+None user.tool_result for=sevt_01CeoNUUJzvnqp7JgTU5wLD1 is_error=True [{"text": "tool 'bash' timed out", "type": "text"}]
+None session.status_running
+None session.thread_status_running
+None span.model_request_start
+None agent.message 'The bash tool timed out with error "tool \'bash\' timed out". This looks like the command hung as expected from the test name. Stopping as requested—no retry since this appears to be the intended behavior.'
+None span.model_request_end
+None session.thread_status_idle
+None session.usage {"active_seconds": 3.653, "cache_creation": {"ephemeral_1h_input_tokens": 0, "ephemeral_5m_input_tokens": 5554}, "cache_read_input_tokens": 5369, "input_tokens": 17, "list_cost": {"amount": "1", "curr
+None session.status_idle stop_reason={"type": "end_turn"}

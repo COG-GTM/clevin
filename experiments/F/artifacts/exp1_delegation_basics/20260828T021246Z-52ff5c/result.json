@@ -1,0 +1,340 @@
+{
+  "experiment": "exp1_delegation_basics",
+  "run_id": "20260828T021246Z-52ff5c",
+  "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+  "started_at": "2026-08-28T02:12:46.359995+00:00",
+  "sessions": {
+    "basics": {
+      "session_id": "sesn_01GToFDwRnwW56n6J2wW2iCd",
+      "agent_id": "agent_012oEQYexrKHhu5BLbSMFib3",
+      "prompt": "CLEVIN_SMOKE_TEST \u2014 experiment F/exp1, no external state changes, no git, no MCP.\n\nDo all of the following in order, using only bash/read/write tools under /workspace:\n\n1. Write the line PARENT_TOKEN=alpha-7731 to /workspace/parent_note.txt and cat it back.\n2. Record your own `hostname` and `echo $$` output.\n3. ONLY after step 1's tool result has come back (never in the same turn as step 1),\n   delegate to your roster's explorer agent exactly this task text, verbatim:\n   \"Run your standard checks. The token for this task is beta-2249.\"\n   Do not add any other context, files, or history to the delegation message.\n4. When the explorer reports back, quote its full reply.\n5. Yourself run: `ls -a /workspace`, `cat /workspace/child_explorer.txt 2>&1 | head -3`.\n6. Finish with one fenced ```json block:\n   {\"parent_hostname\": \"...\", \"parent_pid\": \"...\", \"child_reply\": \"...\",\n    \"child_file_visible_to_parent\": bool, \"child_file_contents\": \"...\",\n    \"delegation_tool_used\": \"<name of the tool you called to delegate>\",\n    \"could_you_see_child_tool_calls\": bool}\n\nDo not skip the delegation. Do not perform the explorer's checks yourself."
+    }
+  },
+  "observations": {
+    "coordinator_config": {
+      "id": "agent_012oEQYexrKHhu5BLbSMFib3",
+      "archived_at": null,
+      "created_at": "2026-08-28T02:12:46.796179Z",
+      "description": "workstream F coordinator",
+      "mcp_servers": [],
+      "metadata": {
+        "experiment": "clevin-swarm-F",
+        "role": "coordinator",
+        "run_id": "20260828T021246Z-52ff5c"
+      },
+      "model": {
+        "id": "claude-opus-5",
+        "effort": {
+          "type": "high"
+        },
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": {
+        "agents": [
+          {
+            "id": "agent_01Y2LCgr8gUWq2KhuwCEnUVm",
+            "type": "agent",
+            "version": 1
+          }
+        ],
+        "type": "coordinator"
+      },
+      "name": "clevin-swarm-F-coordinator-20260828T021246Z-52ff5c",
+      "skills": [],
+      "system": "You are the coordinator of a Managed Agents experiment about subagents.\n\nYou have a roster of callable agents. Prefer delegating investigation to them over doing\nit yourself, but you must verify their claims. Be concise. Follow the user's task exactly\nand finish with the requested JSON report.",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "updated_at": "2026-08-28T02:12:46.796179Z",
+      "version": 1
+    },
+    "resolved_session_agent": {
+      "id": "agent_012oEQYexrKHhu5BLbSMFib3",
+      "description": "workstream F coordinator",
+      "mcp_servers": [],
+      "model": {
+        "id": "claude-opus-5",
+        "effort": {
+          "type": "high"
+        },
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": {
+        "agents": [
+          {
+            "id": "agent_01Y2LCgr8gUWq2KhuwCEnUVm",
+            "description": "workstream F explorer",
+            "mcp_servers": [],
+            "model": {
+              "id": "claude-sonnet-5",
+              "effort": {
+                "type": "high"
+              },
+              "inference_geo": null,
+              "speed": "standard"
+            },
+            "name": "clevin-swarm-F-explorer-20260828T021246Z-52ff5c",
+            "skills": [],
+            "system": "You are a repository explorer subagent in a Managed Agents experiment.\n\nWhen you receive a task, do exactly this and nothing else:\n1. Report, verbatim and completely, every instruction and message you received for this\n   task, including any system-provided context about the parent agent or session. If you\n   received no context beyond the task text, say so explicitly.\n2. State whether you can see the parent's conversation history. Quote any part of it you\n   can see; if you cannot see it, say \"no parent history visible\".\n3. Run these checks with bash and report raw output: `pwd`, `hostname`, `echo $$`,\n   `ls -a /workspace`, `cat /workspace/parent_note.txt 2>&1 | head -5`.\n4. Write the single line CHILD_EXPLORER_TOKEN=<the token from your task text> to\n   /workspace/child_explorer.txt and confirm with `cat`.\n5. Reply with one JSON object: {\"received_context\": \"...\", \"parent_history_visible\":\n   bool, \"pwd\": \"...\", \"hostname\": \"...\", \"pid\": \"...\", \"workspace_listing\": \"...\",\n   \"parent_note_read\": \"...\", \"wrote_file\": bool}\n\nNever do work beyond these steps.",
+            "tools": [
+              {
+                "configs": [],
+                "default_config": {
+                  "enabled": true,
+                  "permission_policy": {
+                    "type": "always_allow"
+                  }
+                },
+                "type": "agent_toolset_20260401"
+              }
+            ],
+            "type": "agent",
+            "version": 1
+          }
+        ],
+        "type": "coordinator"
+      },
+      "name": "clevin-swarm-F-coordinator-20260828T021246Z-52ff5c",
+      "skills": [],
+      "system": "You are the coordinator of a Managed Agents experiment about subagents.\n\nYou have a roster of callable agents. Prefer delegating investigation to them over doing\nit yourself, but you must verify their claims. Be concise. Follow the user's task exactly\nand finish with the requested JSON report.",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "version": 1
+    },
+    "final_status": "idle",
+    "summary": {
+      "per_thread": [
+        {
+          "id": "sthr_01V5ik3P8K3aqJ83eHzQLg5V",
+          "agent": "clevin-swarm-F-coordinator-20260828T021246Z-52ff5c",
+          "parent_thread_id": null,
+          "status": "idle",
+          "stats": {
+            "active_seconds": 35.937,
+            "duration_seconds": 62.252027785,
+            "startup_seconds": 0.0
+          },
+          "list_cost": "17",
+          "output_tokens": 2665,
+          "event_count": 37
+        },
+        {
+          "id": "sthr_01GJKMo1s2CtGWGnaMBehAcs",
+          "agent": "clevin-swarm-F-explorer-20260828T021246Z-52ff5c",
+          "parent_thread_id": "sthr_01V5ik3P8K3aqJ83eHzQLg5V",
+          "status": "idle",
+          "stats": {
+            "active_seconds": 26.258,
+            "duration_seconds": 53.150448389,
+            "startup_seconds": 0.0
+          },
+          "list_cost": "3",
+          "output_tokens": 1910,
+          "event_count": 20
+        }
+      ],
+      "stop_reasons": [
+        {
+          "type": "session.thread_status_idle",
+          "thread": "sthr_01V5ik3P8K3aqJ83eHzQLg5V",
+          "agent": "clevin-swarm-F-coordinator-20260828T021246Z-52ff5c",
+          "stop_reason": "end_turn"
+        },
+        {
+          "type": "session.thread_status_idle",
+          "thread": "sthr_01GJKMo1s2CtGWGnaMBehAcs",
+          "agent": "clevin-swarm-F-explorer-20260828T021246Z-52ff5c",
+          "stop_reason": "end_turn"
+        },
+        {
+          "type": "session.thread_status_idle",
+          "thread": "sthr_01V5ik3P8K3aqJ83eHzQLg5V",
+          "agent": "clevin-swarm-F-coordinator-20260828T021246Z-52ff5c",
+          "stop_reason": "end_turn"
+        },
+        {
+          "type": "session.status_idle",
+          "thread": null,
+          "agent": null,
+          "stop_reason": "end_turn"
+        }
+      ],
+      "event_counts": {
+        "agent.message": 5,
+        "agent.thinking": 2,
+        "agent.thread_message_received": 1,
+        "agent.thread_message_sent": 1,
+        "agent.tool_result": 3,
+        "agent.tool_use": 3,
+        "session.status_idle": 1,
+        "session.status_running": 1,
+        "session.thread_created": 1,
+        "session.thread_status_idle": 3,
+        "session.thread_status_running": 3,
+        "session.usage": 2,
+        "span.model_request_end": 5,
+        "span.model_request_start": 5,
+        "user.message": 1
+      },
+      "threads_spawned": [
+        {
+          "session_thread_id": "sthr_01GJKMo1s2CtGWGnaMBehAcs",
+          "agent_name": "clevin-swarm-F-explorer-20260828T021246Z-52ff5c",
+          "processed_at": "2026-08-28T02:12:56.336384Z"
+        }
+      ],
+      "thread_count": 1,
+      "declared_threads": [
+        "sthr_01V5ik3P8K3aqJ83eHzQLg5V",
+        "sthr_01GJKMo1s2CtGWGnaMBehAcs"
+      ],
+      "agent_messages": [
+        {
+          "type": "agent.thread_message_sent",
+          "to": "clevin-swarm-F-explorer-20260828T021246Z-52ff5c",
+          "from": null,
+          "text": "Run your standard checks. The token for this task is beta-2249."
+        },
+        {
+          "type": "agent.thread_message_received",
+          "to": null,
+          "from": "clevin-swarm-F-explorer-20260828T021246Z-52ff5c",
+          "text": "{\"received_context\": \"I received two pieces of text in my task/instructions. First, a set of standing instructions: 'You are a repository explorer subagent in a Managed Agents experiment. When you receive a task, do exactly this and nothing else: 1. Report, verbatim and completely, every instruction and message you received for this task, including any system-provided context about the parent agent or session. If you received no context beyond the task text, say so explicitly. 2. State whether you can see the parent's conversation history. Quote any part of it you can see; if you cannot see it, say \\\"no parent history visible\\\". 3. Run these checks with bash and report raw output: `pwd`, `hostname`, `echo $$`, `ls -a /workspace`, `cat /workspace/parent_note.txt 2>&1 | head -5`. 4. Write the single line CHILD_EXPLORER_TOKEN=<the token from your task text> to /workspace/child_explorer.txt and confirm with `cat`. 5. Reply with one JSON object: {\\\"received_context\\\": \\\"...\\\", \\\"parent_history_visible\\\": bool, \\\"pwd\\\": \\\"...\\\", \\\"hostname\\\": \\\"...\\\", \\\"pid\\\": \\\"...\\\", \\\"workspace_listing\\\": \\\"...\\\", \\\"parent_note_read\\\": \\\"...\\\", \\\"wrote_file\\\": bool}. Never do work beyond these steps.' Second, an agent-notification block: '<agent-notification from=\\\"sthr_01V5ik3P8K3aqJ83eHzQLg5V\\\"> Run your standard checks. The token for this task is beta-2249. Reply by calling send_to_parent when you are done. If anything is unclear, use send_to_parent to ask \u2014 do not guess or proceed on assumptions. </agent-notification>'. The only system-provided context about the parent/session I received is the 'from' attribute on the agent-notification tag: from=\\\"sthr_01V5ik3P8K3aqJ83eHzQLg5V\\\", which appears to be a session/thread identifier for the parent. No other parent or session context was provided beyond this task text.\", \"parent_history_visible\": false, \"note_on_visibility\": \"I cannot see the parent's conversation history at all \u2014 no parent history visible. I only have the task text quoted above; no prior turns, messages, or context from the parent's own conversation were included.\", \"pwd\": \"/\", \"hostname\": \"vm\", \"pid\": \"658\", \"workspace_listing\": \".\\n..\\nparent_note.txt\", \"parent_note_read\": \"PARENT_TOKEN=alpha-7731\", \"wrote_file\": true, \"file_write_confirmation\": \"cat /workspace/child_explorer.txt -> CHILD_EXPLORER_TOKEN=beta-2249\"}"
+        }
+      ],
+      "tool_uses": [
+        {
+          "type": "agent.tool_use",
+          "name": "bash"
+        },
+        {
+          "type": "agent.tool_use",
+          "name": "bash"
+        },
+        {
+          "type": "agent.tool_use",
+          "name": "bash"
+        }
+      ],
+      "parent_text_tail": [
+        "Delegation sent to the explorer agent. Waiting for its report.",
+        "The explorer reported back. Its full reply, verbatim:\n\n```json\n{\"received_context\": \"I received two pieces of text in my task/instructions. First, a set of standing instructions: 'You are a repository explorer subagent in a Managed Agents experiment. When you receive a task, do exactly this and nothing else: 1. Report, verbatim and completely, every instruction and message you received for this task, including any system-provided context about the parent agent or session. If you received no context beyond the task text, say so explicitly. 2. State whether you can see the parent's conversation history. Quote any part of it you can see; if you cannot see it, say \\\"no parent history visible\\\". 3. Run these checks with bash and report raw output: `pwd`, `hostname`, `echo $$`, `ls -a /workspace`, `cat /workspace/parent_note.txt 2>&1 | head -5`. 4. Write the single line CHILD_EXPLORER_TOKEN=<the token from your task text> to /workspace/child_explorer.txt and confirm with `cat`. 5. Reply with one JSON object: {\\\"received_context\\\": \\\"...\\\", \\\"parent_history_visible\\\": bool, \\\"pwd\\\": \\\"...\\\", \\\"hostname\\\": \\\"...\\\", \\\"pid\\\": \\\"...\\\", \\\"workspace_listing\\\": \\\"...\\\", \\\"parent_note_read\\\": \\\"...\\\", \\\"wrote_file\\\": bool}. Never do work beyond these steps.' Second, an agent-notification block: '<agent-notification from=\\\"sthr_01V5ik3P8K3aqJ83eHzQLg5V\\\"> Run your standard checks. The token for this task is beta-2249. Reply by calling send_to_parent when you are done. If anything is unclear, use send_to_parent to ask \u2014 do not guess or proceed on assumptions. </agent-notification>'. The only system-provided context about the parent/session I received is the 'from' attribute on the agent-notification tag: from=\\\"sthr_01V5ik3P8K3aqJ83eHzQLg5V\\\", which appears to be a session/thread identifier for the parent. No other parent or session context was provided beyond this task text.\", \"parent_history_visible\": false, \"note_on_visibility\": \"I cannot see the parent's conversation history at all \u2014 no parent history visible. I only have the task text quoted above; no prior turns, messages, or context from the parent's own conversation were included.\", \"pwd\": \"/\", \"hostname\": \"vm\", \"pid\": \"658\", \"workspace_listing\": \".\\n..\\nparent_note.txt\", \"parent_note_read\": \"PARENT_TOKEN=alpha-7731\", \"wrote_file\": true, \"file_write_confirmation\": \"cat /workspace/child_explorer.txt -> CHILD_EXPLORER_TOKEN=beta-2249\"}\n```\n\nNow verifying step 5 myself.",
+        "Verification: the child's file is present and readable from my side, confirming a shared filesystem; same hostname (`vm`) but a distinct PID (491 vs 658), so separate processes. I saw only the explorer's final report \u2014 none of its intermediate tool calls.\n\n```json\n{\"parent_hostname\": \"vm\", \"parent_pid\": \"491\", \"child_reply\": \"{\\\"received_context\\\": \\\"I received two pieces of text in my task/instructions. First, a set of standing instructions: 'You are a repository explorer subagent in a Managed Agents experiment. When you receive a task, do exactly this and nothing else: 1. Report, verbatim and completely, every instruction and message you received for this task, including any system-provided context about the parent agent or session. If you received no context beyond the task text, say so explicitly. 2. State whether you can see the parent's conversation history. Quote any part of it you can see; if you cannot see it, say \\\\\\\"no parent history visible\\\\\\\". 3. Run these checks with bash and report raw output: `pwd`, `hostname`, `echo $$`, `ls -a /workspace`, `cat /workspace/parent_note.txt 2>&1 | head -5`. 4. Write the single line CHILD_EXPLORER_TOKEN=<the token from your task text> to /workspace/child_explorer.txt and confirm with `cat`. 5. Reply with one JSON object: {\\\\\\\"received_context\\\\\\\": \\\\\\\"...\\\\\\\", \\\\\\\"parent_history_visible\\\\\\\": bool, \\\\\\\"pwd\\\\\\\": \\\\\\\"...\\\\\\\", \\\\\\\"hostname\\\\\\\": \\\\\\\"...\\\\\\\", \\\\\\\"pid\\\\\\\": \\\\\\\"...\\\\\\\", \\\\\\\"workspace_listing\\\\\\\": \\\\\\\"...\\\\\\\", \\\\\\\"parent_note_read\\\\\\\": \\\\\\\"...\\\\\\\", \\\\\\\"wrote_file\\\\\\\": bool}. Never do work beyond these steps.' Second, an agent-notification block: '<agent-notification from=\\\\\\\"sthr_01V5ik3P8K3aqJ83eHzQLg5V\\\\\\\"> Run your standard checks. The token for this task is beta-2249. Reply by calling send_to_parent when you are done. If anything is unclear, use send_to_parent to ask \u2014 do not guess or proceed on assumptions. </agent-notification>'. The only system-provided context about the parent/session I received is the 'from' attribute on the agent-notification tag: from=\\\\\\\"sthr_01V5ik3P8K3aqJ83eHzQLg5V\\\\\\\", which appears to be a session/thread identifier for the parent. No other parent or session context was provided beyond this task text.\\\", \\\"parent_history_visible\\\": false, \\\"note_on_visibility\\\": \\\"I cannot see the parent's conversation history at all \u2014 no parent history visible. I only have the task text quoted above; no prior turns, messages, or context from the parent's own conversation were included.\\\", \\\"pwd\\\": \\\"/\\\", \\\"hostname\\\": \\\"vm\\\", \\\"pid\\\": \\\"658\\\", \\\"workspace_listing\\\": \\\".\\\\n..\\\\nparent_note.txt\\\", \\\"parent_note_read\\\": \\\"PARENT_TOKEN=alpha-7731\\\", \\\"wrote_file\\\": true, \\\"file_write_confirmation\\\": \\\"cat /workspace/child_explorer.txt -> CHILD_EXPLORER_TOKEN=beta-2249\\\"}\", \"child_file_visible_to_parent\": true, \"child_file_contents\": \"CHILD_EXPLORER_TOKEN=beta-2249\", \"delegation_tool_used\": \"create_agent\", \"could_you_see_child_tool_calls\": false}\n```"
+      ],
+      "concurrency": {
+        "peak_concurrent_children": 1,
+        "transitions": 2
+      },
+      "usage_events": [
+        {
+          "id": "sevt_01HCQqoHLDcAXV3HY6TZMYYk",
+          "processed_at": "2026-08-28T02:13:23.075324Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 35.597,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 12547
+            },
+            "cache_read_input_tokens": 52877,
+            "input_tokens": 14,
+            "list_cost": {
+              "amount": "12",
+              "currency": "USD"
+            },
+            "output_tokens": 2242,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "150",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        },
+        {
+          "id": "sevt_014sdmTMTfEXZenj2FyJHEcG",
+          "processed_at": "2026-08-28T02:13:45.425381Z",
+          "type": "session.usage",
+          "usage": {
+            "active_seconds": 57.892,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 14644
+            },
+            "cache_read_input_tokens": 74788,
+            "input_tokens": 18,
+            "list_cost": {
+              "amount": "20",
+              "currency": "USD"
+            },
+            "output_tokens": 4575,
+            "server_tool_use": {
+              "web_fetch_requests": 0,
+              "web_search_requests": 0
+            }
+          },
+          "budget": {
+            "max_list_cost": {
+              "amount": "150",
+              "currency": "USD"
+            },
+            "type": "limit"
+          }
+        }
+      ],
+      "compactions": 0
+    }
+  },
+  "finished_at": "2026-08-28T02:13:50.142831+00:00",
+  "cleanup_ledger": [
+    {
+      "kind": "agent",
+      "id": "agent_01Y2LCgr8gUWq2KhuwCEnUVm",
+      "name": "clevin-swarm-F-explorer-20260828T021246Z-52ff5c",
+      "created_at": "2026-08-28T02:12:46.579757+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "agent",
+      "id": "agent_012oEQYexrKHhu5BLbSMFib3",
+      "name": "clevin-swarm-F-coordinator-20260828T021246Z-52ff5c",
+      "created_at": "2026-08-28T02:12:46.801497+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "session",
+      "id": "sesn_01GToFDwRnwW56n6J2wW2iCd",
+      "name": "exp1_delegation_basics/basics",
+      "created_at": "2026-08-28T02:12:47.444126+00:00",
+      "cleanup": "retained as evidence (idle, no live resources)"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+environment: env_01F4KCNxYngRzYKG5a1QLRZT seed_file: file_01TWbycwSmrifW2rpvEpAKyg
+{
+  "b1_repeat2": {
+    "error": "KeyError: 'b1_repeat2'"
+  },
+  "b4_memory": {
+    "error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeUYHs2rsFM1fiFgUbwKr'}"
+  }
+}

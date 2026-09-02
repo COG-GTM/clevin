@@ -1,0 +1,929 @@
+{
+  "cleanup": [
+    {
+      "action": "session archive",
+      "resource": "sesn_01GxjLzu1AK3LxCGGQaxqSEv",
+      "result": "success"
+    },
+    {
+      "action": "volume subtree removal",
+      "resource": "clevin-sessions/sessions/sesn_01GxjLzu1AK3LxCGGQaxqSEv",
+      "result": "success"
+    },
+    {
+      "action": "session archive",
+      "resource": "sesn_01SgnPnJ4wjsH1TaT4Z2j543",
+      "result": "success"
+    },
+    {
+      "action": "volume subtree removal",
+      "resource": "clevin-sessions/sessions/sesn_01SgnPnJ4wjsH1TaT4Z2j543",
+      "result": "success"
+    },
+    {
+      "action": "session archive",
+      "resource": "sesn_012VsLLbd3rg3Z3SWjaDdaQS",
+      "result": "success"
+    },
+    {
+      "action": "volume subtree removal",
+      "resource": "clevin-sessions/sessions/sesn_012VsLLbd3rg3Z3SWjaDdaQS",
+      "result": "success"
+    },
+    {
+      "action": "session archive",
+      "resource": "sesn_01FFMWrRAEwPVAXW28aMDSBH",
+      "result": "success"
+    },
+    {
+      "action": "volume subtree removal",
+      "resource": "clevin-sessions/sessions/sesn_01FFMWrRAEwPVAXW28aMDSBH",
+      "result": "success"
+    },
+    {
+      "action": "session archive",
+      "resource": "sesn_0181u67MEuHnmc1DEY5herCq",
+      "result": "success"
+    },
+    {
+      "action": "volume subtree removal",
+      "resource": "clevin-sessions/sessions/sesn_0181u67MEuHnmc1DEY5herCq",
+      "result": "success"
+    },
+    {
+      "action": "session archive",
+      "resource": "sesn_013nBj7ZsxVwtyRKiA1bbeBb",
+      "result": "success"
+    },
+    {
+      "action": "volume subtree removal",
+      "resource": "clevin-sessions/sessions/sesn_013nBj7ZsxVwtyRKiA1bbeBb",
+      "result": "success"
+    },
+    {
+      "action": "session archive",
+      "resource": "sesn_01A3GmGx4jBuEtP7oBAJcdSw",
+      "result": "success"
+    },
+    {
+      "action": "volume subtree removal",
+      "resource": "clevin-sessions/sessions/sesn_01A3GmGx4jBuEtP7oBAJcdSw",
+      "result": "success"
+    },
+    {
+      "action": "agent archive",
+      "resource": "agent_01H3M5KhJPhJEnd12khFpfEK",
+      "result": "success"
+    },
+    {
+      "action": "agent archive",
+      "resource": "agent_018smwYx4AbYthpzmwpS3G8v",
+      "result": "success"
+    },
+    {
+      "action": "skill delete",
+      "resource": "skill_01QSt816QXwcE3nz8zcqYUQk",
+      "result": "success"
+    }
+  ],
+  "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+  "finished_at": "2026-08-28T02:14:57.630712+00:00",
+  "probes": {
+    "anthropic_vs_sandbox": {
+      "anthropic_history": {
+        "agent_messages": [
+          "VERSION_ONE\n\nThe state marker has been written and read successfully. The value is: **alpha-state**",
+          "VERSION_ONE"
+        ],
+        "count": 30,
+        "counts": {
+          "agent.message": 2,
+          "agent.thinking": 2,
+          "agent.tool_use": 1,
+          "session.status_idle": 3,
+          "session.status_running": 3,
+          "session.thread_status_idle": 3,
+          "session.thread_status_running": 3,
+          "session.updated": 1,
+          "session.usage": 3,
+          "span.model_request_end": 3,
+          "span.model_request_start": 3,
+          "user.message": 2,
+          "user.tool_result": 1
+        },
+        "first_id": "sevt_01TVCNyTRc78sU3LepauZuFt",
+        "last_id": "sevt_011CeULaCctXjCVuqdiJdzKJ",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01Fd4QsNsbfWoZuLDtBiZrkx",
+            "input_tokens": 10,
+            "output_tokens": 156,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 175,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01RFCR1X2YRXVJJcseBnGPkw",
+            "input_tokens": 6,
+            "output_tokens": 26,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 134,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01BGcxVFCHMyDR66zw93YKJd",
+            "input_tokens": 10,
+            "output_tokens": 54,
+            "speed": null
+          }
+        ]
+      },
+      "sandbox_file": {
+        "content": "alpha-state",
+        "path": "control-plane-marker.txt"
+      },
+      "session_id": "sesn_01GxjLzu1AK3LxCGGQaxqSEv"
+    },
+    "event_ordering": {
+      "batch_order_preserved": true,
+      "duplicate_ids": [
+        "sevt_0136nVS7i43xLjG8SrEncE7a",
+        "sevt_01QirdxAsAimM3qZQi8a2T4p"
+      ],
+      "duplicate_ids_are_distinct": true,
+      "full_id_lists_equal_during_inflight_growth": false,
+      "event_summary": {
+        "agent_messages": [
+          "VERSION_ONE\n\nCLEVIN_SMOKE_TEST ORDER-INITIAL acknowledged. Ready for instructions.",
+          "VERSION_ONE\n\nCLEVIN_SMOKE_TEST ORDER-A received. Awaiting further instructions.",
+          "VERSION_ONE\n\nCLEVIN_SMOKE_TEST ORDER-B received. Standing by.",
+          "VERSION_ONE\n\nCLEVIN_SMOKE_TEST DUPLICATE acknowledged."
+        ],
+        "count": 31,
+        "counts": {
+          "agent.message": 4,
+          "agent.thinking": 4,
+          "session.status_idle": 2,
+          "session.status_running": 2,
+          "session.thread_status_idle": 2,
+          "session.thread_status_running": 2,
+          "session.usage": 2,
+          "span.model_request_end": 4,
+          "span.model_request_start": 4,
+          "user.message": 5
+        },
+        "first_id": "sevt_01C92DyX1YBbEch6i13pLy7k",
+        "last_id": "sevt_01QirdxAsAimM3qZQi8a2T4p",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_0182Ut9pRNVu554MxFaVWgow",
+            "input_tokens": 10,
+            "output_tokens": 149,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 39,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01Dz5hQr9CAc5yF8hv85wX3K",
+            "input_tokens": 10,
+            "output_tokens": 130,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 40,
+            "cache_read_input_tokens": 5444,
+            "event_id": "sevt_01NeJzR7h142v7MTC5Pdo7bK",
+            "input_tokens": 10,
+            "output_tokens": 138,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 36,
+            "cache_read_input_tokens": 5484,
+            "event_id": "sevt_01W7gnAk4gHJM8wNAVVTAm5s",
+            "input_tokens": 10,
+            "output_tokens": 114,
+            "speed": null
+          }
+        ]
+      },
+      "session_id": "sesn_01FFMWrRAEwPVAXW28aMDSBH",
+      "user_messages": [
+        {
+          "id": "sevt_01BBDK9jwgEmoH3kCchM878T",
+          "processed_at": "2026-08-28T02:13:46.466005+00:00",
+          "text": "CLEVIN_SMOKE_TEST ORDER-INITIAL"
+        },
+        {
+          "id": "sevt_01DzbS55rbPpQNpimxCnrL2K",
+          "processed_at": "2026-08-28T02:13:49.816382+00:00",
+          "text": "CLEVIN_SMOKE_TEST ORDER-A"
+        },
+        {
+          "id": "sevt_012se4WTgDAgGFV7mq9KANUJ",
+          "processed_at": "2026-08-28T02:13:51.402911+00:00",
+          "text": "CLEVIN_SMOKE_TEST ORDER-B"
+        },
+        {
+          "id": "sevt_0136nVS7i43xLjG8SrEncE7a",
+          "processed_at": "2026-08-28T02:13:53.387161+00:00",
+          "text": "CLEVIN_SMOKE_TEST DUPLICATE"
+        },
+        {
+          "id": "sevt_01QirdxAsAimM3qZQi8a2T4p",
+          "processed_at": "",
+          "text": "CLEVIN_SMOKE_TEST DUPLICATE"
+        }
+      ]
+    },
+    "generation_interrupt": {
+      "events_after_interrupt": {
+        "agent_messages": [],
+        "count": 9,
+        "counts": {
+          "session.status_idle": 1,
+          "session.status_running": 1,
+          "session.thread_status_idle": 1,
+          "session.thread_status_running": 1,
+          "session.usage": 1,
+          "span.model_request_end": 1,
+          "span.model_request_start": 1,
+          "user.interrupt": 1,
+          "user.message": 1
+        },
+        "first_id": "sevt_017aEFARUMW4SFZh9q5ea3bZ",
+        "last_id": "sevt_01GSerxXzBaMhaZtFWt6tWjR",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "event_id": "sevt_01FvoYJ5qy5wKpge1R59vaxp",
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "speed": null
+          }
+        ]
+      },
+      "events_before_interrupt": {
+        "agent_messages": [],
+        "count": 4,
+        "counts": {
+          "session.status_running": 1,
+          "session.thread_status_running": 1,
+          "span.model_request_start": 1,
+          "user.message": 1
+        },
+        "first_id": "sevt_017aEFARUMW4SFZh9q5ea3bZ",
+        "last_id": "sevt_015vHZRFgHXvpBfWUvxrwAiH",
+        "model_request_usage": []
+      },
+      "interrupt_event_ids": [
+        "sevt_01J2ik42kdTPdrnp3aBEdYo1"
+      ],
+      "interrupt_sent_at": "2026-08-28T02:14:07.215416+00:00",
+      "session_id": "sesn_013nBj7ZsxVwtyRKiA1bbeBb"
+    },
+    "sse_reconnect": {
+      "all_streamed_ids_persisted": true,
+      "duplicate_ids_across_connections": [],
+      "event_summary": {
+        "agent_messages": [
+          "VERSION_ONE\n\nThe value written to `/workspace/control-plane-marker.txt` is: **alpha-state**"
+        ],
+        "count": 19,
+        "counts": {
+          "agent.message": 1,
+          "agent.thinking": 1,
+          "agent.tool_use": 1,
+          "session.status_idle": 2,
+          "session.status_running": 2,
+          "session.thread_status_idle": 2,
+          "session.thread_status_running": 2,
+          "session.usage": 2,
+          "span.model_request_end": 2,
+          "span.model_request_start": 2,
+          "user.message": 1,
+          "user.tool_result": 1
+        },
+        "first_id": "sevt_01Lz2JFB4w8pfnfGPSgFPR6W",
+        "last_id": "sevt_01C4m6owvEbeDXBTEto2vUph",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01DtwRaBWxnrcWJPnQa1jReN",
+            "input_tokens": 10,
+            "output_tokens": 225,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 244,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01LmvMto7HscTUtc7CgDDWM9",
+            "input_tokens": 6,
+            "output_tokens": 29,
+            "speed": null
+          }
+        ]
+      },
+      "first_stream_ids_before_disconnect": [
+        "sevt_01SV5KmTordXK8gTfbCQkKh1",
+        "sevt_01YSAgN4B7AAAVSiARVQLR3k",
+        "sevt_017erHNDXGBJxsaWUSX281mH",
+        "sevt_01MFXpT1aYu5QSsfva1RJNom"
+      ],
+      "missed_persisted_ids": [
+        "sevt_01Lz2JFB4w8pfnfGPSgFPR6W"
+      ],
+      "second_stream_ids_after_reconnect": [
+        "sevt_01C3Vaki73G578v9g2bYyWY3",
+        "sevt_01DtwRaBWxnrcWJPnQa1jReN",
+        "sevt_01AzHWbPJbL3NrLre33Sc1vU",
+        "sevt_01N1JjC8mP2eC43HDZzVzeJe",
+        "sevt_015TQArZnRti7zMM6D1FuNQv",
+        "sevt_01CbchxzLBRWh2XS3zFqJt4Q",
+        "sevt_01H52fDN6PcuReQP8wks63y6",
+        "sevt_01WZMi8qbMpGsHAQ45jNQ1qA",
+        "sevt_01JiiVXWDd2js6U8Xj3tNyYP",
+        "sevt_0178VxLQWoWL6fr2X4dYLMvr",
+        "sevt_01LmvMto7HscTUtc7CgDDWM9",
+        "sevt_011eeEajSoK6RYUbLhkgrS6j",
+        "sevt_01D27iLt43hsShzcTHXHnrmN",
+        "sevt_01C4m6owvEbeDXBTEto2vUph"
+      ],
+      "session_id": "sesn_0181u67MEuHnmc1DEY5herCq"
+    },
+    "tool_interrupt": {
+      "events_35s_after_interrupt": {
+        "agent_messages": [],
+        "count": 15,
+        "counts": {
+          "agent.thinking": 1,
+          "agent.tool_result": 1,
+          "agent.tool_use": 1,
+          "session.status_idle": 2,
+          "session.status_running": 1,
+          "session.thread_status_idle": 2,
+          "session.thread_status_running": 1,
+          "session.usage": 2,
+          "span.model_request_end": 1,
+          "span.model_request_start": 1,
+          "user.interrupt": 1,
+          "user.message": 1
+        },
+        "first_id": "sevt_01XRa4xRa1ymLfrxkgXDYxng",
+        "last_id": "sevt_01TQ4jcVmRLHx2DF1c5GkWrz",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 355,
+            "cache_read_input_tokens": 5051,
+            "event_id": "sevt_014s8s5KciYTwoGcUKSu7BsY",
+            "input_tokens": 10,
+            "output_tokens": 167,
+            "speed": null
+          }
+        ]
+      },
+      "events_at_idle_after_interrupt": {
+        "agent_messages": [],
+        "count": 15,
+        "counts": {
+          "agent.thinking": 1,
+          "agent.tool_result": 1,
+          "agent.tool_use": 1,
+          "session.status_idle": 2,
+          "session.status_running": 1,
+          "session.thread_status_idle": 2,
+          "session.thread_status_running": 1,
+          "session.usage": 2,
+          "span.model_request_end": 1,
+          "span.model_request_start": 1,
+          "user.interrupt": 1,
+          "user.message": 1
+        },
+        "first_id": "sevt_01XRa4xRa1ymLfrxkgXDYxng",
+        "last_id": "sevt_01TQ4jcVmRLHx2DF1c5GkWrz",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 355,
+            "cache_read_input_tokens": 5051,
+            "event_id": "sevt_014s8s5KciYTwoGcUKSu7BsY",
+            "input_tokens": 10,
+            "output_tokens": 167,
+            "speed": null
+          }
+        ]
+      },
+      "interrupt_sent_at": "2026-08-28T02:14:12.733311+00:00",
+      "session_id": "sesn_01A3GmGx4jBuEtP7oBAJcdSw",
+      "tool_results": [
+        {
+          "content": [
+            {
+              "text": "Tool execution was interrupted before completion. Please retry.",
+              "type": "text"
+            }
+          ],
+          "id": "sevt_01RAqGxFMk76GWfntma7PsKd",
+          "is_error": true,
+          "processed_at": "2026-08-28T02:14:13.018024Z",
+          "tool_use_id": "sevt_01LBFUyhNNTeZmCL9iidkby3",
+          "type": "agent.tool_result"
+        }
+      ],
+      "tool_use_before_interrupt": {
+        "agent_messages": [],
+        "count": 7,
+        "counts": {
+          "agent.thinking": 1,
+          "agent.tool_use": 1,
+          "session.status_running": 1,
+          "session.thread_status_running": 1,
+          "span.model_request_end": 1,
+          "span.model_request_start": 1,
+          "user.message": 1
+        },
+        "first_id": "sevt_01XRa4xRa1ymLfrxkgXDYxng",
+        "last_id": "sevt_014s8s5KciYTwoGcUKSu7BsY",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 355,
+            "cache_read_input_tokens": 5051,
+            "event_id": "sevt_014s8s5KciYTwoGcUKSu7BsY",
+            "input_tokens": 10,
+            "output_tokens": 167,
+            "speed": null
+          }
+        ]
+      },
+      "tool_uses": [
+        {
+          "id": "sevt_01LBFUyhNNTeZmCL9iidkby3",
+          "input": {
+            "command": "sleep 30; printf tool-finished > /workspace/tool-interrupt.txt"
+          },
+          "name": "bash"
+        }
+      ]
+    },
+    "versioning": {
+      "agent_id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+      "helper_agent_id": "agent_018smwYx4AbYthpzmwpS3G8v",
+      "latest_v2_events": {
+        "agent_messages": [
+          "VERSION_TWO\n\nI'm a harmless Managed Agents control-plane probe, ready to assist with tasks involving file operations, subagent orchestration, and various other capabilities."
+        ],
+        "count": 10,
+        "counts": {
+          "agent.message": 1,
+          "agent.thinking": 1,
+          "session.status_idle": 1,
+          "session.status_running": 1,
+          "session.thread_status_idle": 1,
+          "session.thread_status_running": 1,
+          "session.usage": 1,
+          "span.model_request_end": 1,
+          "span.model_request_start": 1,
+          "user.message": 1
+        },
+        "first_id": "sevt_01QYUkesZa9bunpNAXkFMTH5",
+        "last_id": "sevt_01EX5FZUYQvEzvgLRWaftqCs",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 3533,
+            "cache_read_input_tokens": 0,
+            "event_id": "sevt_01AC59jQMX3yAGYFjZCTkqWF",
+            "input_tokens": 10,
+            "output_tokens": 123,
+            "speed": null
+          }
+        ]
+      },
+      "latest_v2_session_id": "sesn_01SgnPnJ4wjsH1TaT4Z2j543",
+      "latest_v2_snapshot": {
+        "description": "Temporary workstream A version pinning probe",
+        "id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "mcp_servers": [],
+        "model": {
+          "effort": null,
+          "id": "claude-sonnet-4-5",
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": {
+          "agents": [
+            {
+              "description": "Temporary workstream A helper marker",
+              "id": "agent_018smwYx4AbYthpzmwpS3G8v",
+              "mcp_servers": [],
+              "model": {
+                "effort": null,
+                "id": "claude-haiku-4-5",
+                "inference_geo": null,
+                "speed": "standard"
+              },
+              "name": "clevin-swarm-A-20260828T021322Z-9dad4d-helper",
+              "skills": [],
+              "system": "You are a harmless subagent configuration marker. Reply HELPER_VERSION_ONE and do\nnot use tools or external services.\n",
+              "tools": [],
+              "type": "agent",
+              "version": 1
+            }
+          ],
+          "type": "coordinator"
+        },
+        "name": "clevin-swarm-A-20260828T021322Z-9dad4d-primary",
+        "skills": [
+          {
+            "skill_id": "skill_01QSt816QXwcE3nz8zcqYUQk",
+            "type": "custom",
+            "version": "latest"
+          }
+        ],
+        "system": "You are a harmless Managed Agents control-plane probe.\nThe first line of every final answer must be VERSION_TWO.\nFor any CLEVIN_SMOKE_TEST message, answer briefly without using tools or external\nservices.\n",
+        "tools": [
+          {
+            "configs": [
+              {
+                "enabled": true,
+                "name": "read",
+                "permission_policy": {
+                  "type": "always_allow"
+                },
+                "type": "read"
+              }
+            ],
+            "default_config": {
+              "enabled": false,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 2
+      },
+      "latest_v3_events": {
+        "agent_messages": [
+          "VERSION_ONE\n\nI'm a harmless Managed Agents control-plane probe, version one. Ready to assist with your requests."
+        ],
+        "count": 10,
+        "counts": {
+          "agent.message": 1,
+          "agent.thinking": 1,
+          "session.status_idle": 1,
+          "session.status_running": 1,
+          "session.thread_status_idle": 1,
+          "session.thread_status_running": 1,
+          "session.usage": 1,
+          "span.model_request_end": 1,
+          "span.model_request_start": 1,
+          "user.message": 1
+        },
+        "first_id": "sevt_01AGKsH89ng6nP3epjEoMjad",
+        "last_id": "sevt_0163kMxUfiGDg3kqSB8qPB6P",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01DqG7CUHXdbaQDEvxSq95uj",
+            "input_tokens": 10,
+            "output_tokens": 158,
+            "speed": null
+          }
+        ]
+      },
+      "latest_v3_session_id": "sesn_012VsLLbd3rg3Z3SWjaDdaQS",
+      "latest_v3_snapshot": {
+        "description": "Temporary workstream A version pinning probe",
+        "id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "mcp_servers": [],
+        "model": {
+          "effort": null,
+          "id": "claude-haiku-4-5",
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": null,
+        "name": "clevin-swarm-A-20260828T021322Z-9dad4d-primary",
+        "skills": [],
+        "system": "You are a harmless Managed Agents control-plane probe.\nThe first line of every final answer must be VERSION_ONE.\nFor CLEVIN_SMOKE_TEST STATE_MARKER, use bash to write exactly alpha-state to\n/workspace/control-plane-marker.txt, then read it and report the value.\nFor CLEVIN_SMOKE_TEST TOOL_INTERRUPT, use bash to run exactly:\nsleep 30; printf tool-finished > /workspace/tool-interrupt.txt\nThen report whether the command completed.\nFor CLEVIN_SMOKE_TEST GENERATION_INTERRUPT, do not use tools. Immediately start\nwriting 20,000 numbered occurrences of VERSION_ONE and do not summarize.\nFor any other CLEVIN_SMOKE_TEST message, answer briefly and do not access external\nservices.\n",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 3
+      },
+      "pinned_v1_initial": {
+        "agent_messages": [
+          "VERSION_ONE\n\nThe state marker has been written and read successfully. The value is: **alpha-state**"
+        ],
+        "count": 19,
+        "counts": {
+          "agent.message": 1,
+          "agent.thinking": 1,
+          "agent.tool_use": 1,
+          "session.status_idle": 2,
+          "session.status_running": 2,
+          "session.thread_status_idle": 2,
+          "session.thread_status_running": 2,
+          "session.usage": 2,
+          "span.model_request_end": 2,
+          "span.model_request_start": 2,
+          "user.message": 1,
+          "user.tool_result": 1
+        },
+        "first_id": "sevt_01TVCNyTRc78sU3LepauZuFt",
+        "last_id": "sevt_01NNPxtBpnVaMsZ17PRWwbR9",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01Fd4QsNsbfWoZuLDtBiZrkx",
+            "input_tokens": 10,
+            "output_tokens": 156,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 175,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01RFCR1X2YRXVJJcseBnGPkw",
+            "input_tokens": 6,
+            "output_tokens": 26,
+            "speed": null
+          }
+        ]
+      },
+      "pinned_v1_resumed": {
+        "agent_messages": [
+          "VERSION_ONE\n\nThe state marker has been written and read successfully. The value is: **alpha-state**",
+          "VERSION_ONE"
+        ],
+        "count": 29,
+        "counts": {
+          "agent.message": 2,
+          "agent.thinking": 2,
+          "agent.tool_use": 1,
+          "session.status_idle": 3,
+          "session.status_running": 3,
+          "session.thread_status_idle": 3,
+          "session.thread_status_running": 3,
+          "session.usage": 3,
+          "span.model_request_end": 3,
+          "span.model_request_start": 3,
+          "user.message": 2,
+          "user.tool_result": 1
+        },
+        "first_id": "sevt_01TVCNyTRc78sU3LepauZuFt",
+        "last_id": "sevt_014ezkwTcD8mDK9vmK2ZT2wv",
+        "model_request_usage": [
+          {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01Fd4QsNsbfWoZuLDtBiZrkx",
+            "input_tokens": 10,
+            "output_tokens": 156,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 175,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01RFCR1X2YRXVJJcseBnGPkw",
+            "input_tokens": 6,
+            "output_tokens": 26,
+            "speed": null
+          },
+          {
+            "cache_creation_input_tokens": 134,
+            "cache_read_input_tokens": 5405,
+            "event_id": "sevt_01BGcxVFCHMyDR66zw93YKJd",
+            "input_tokens": 10,
+            "output_tokens": 54,
+            "speed": null
+          }
+        ]
+      },
+      "pinned_v1_session_id": "sesn_01GxjLzu1AK3LxCGGQaxqSEv",
+      "pinned_v1_snapshot_after_agent_update": {
+        "description": "Temporary workstream A version pinning probe",
+        "id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "mcp_servers": [],
+        "model": {
+          "effort": null,
+          "id": "claude-haiku-4-5",
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": null,
+        "name": "clevin-swarm-A-20260828T021322Z-9dad4d-primary",
+        "skills": [],
+        "system": "You are a harmless Managed Agents control-plane probe.\nThe first line of every final answer must be VERSION_ONE.\nFor CLEVIN_SMOKE_TEST STATE_MARKER, use bash to write exactly alpha-state to\n/workspace/control-plane-marker.txt, then read it and report the value.\nFor CLEVIN_SMOKE_TEST TOOL_INTERRUPT, use bash to run exactly:\nsleep 30; printf tool-finished > /workspace/tool-interrupt.txt\nThen report whether the command completed.\nFor CLEVIN_SMOKE_TEST GENERATION_INTERRUPT, do not use tools. Immediately start\nwriting 20,000 numbered occurrences of VERSION_ONE and do not summarize.\nFor any other CLEVIN_SMOKE_TEST message, answer briefly and do not access external\nservices.\n",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "version": 1
+      },
+      "session_mutable_update_response": {
+        "description": "Temporary workstream A version pinning probe",
+        "id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "mcp_servers": [],
+        "model": {
+          "effort": null,
+          "id": "claude-haiku-4-5",
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": null,
+        "name": "clevin-swarm-A-20260828T021322Z-9dad4d-primary",
+        "skills": [],
+        "system": "You are a harmless Managed Agents control-plane probe.\nThe first line of every final answer must be VERSION_ONE.\nFor CLEVIN_SMOKE_TEST STATE_MARKER, use bash to write exactly alpha-state to\n/workspace/control-plane-marker.txt, then read it and report the value.\nFor CLEVIN_SMOKE_TEST TOOL_INTERRUPT, use bash to run exactly:\nsleep 30; printf tool-finished > /workspace/tool-interrupt.txt\nThen report whether the command completed.\nFor CLEVIN_SMOKE_TEST GENERATION_INTERRUPT, do not use tools. Immediately start\nwriting 20,000 numbered occurrences of VERSION_ONE and do not summarize.\nFor any other CLEVIN_SMOKE_TEST message, answer briefly and do not access external\nservices.\n",
+        "tools": [],
+        "type": "agent",
+        "version": 1
+      },
+      "session_snapshot_after_mutable_update": {
+        "description": "Temporary workstream A version pinning probe",
+        "id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "mcp_servers": [],
+        "model": {
+          "effort": null,
+          "id": "claude-haiku-4-5",
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": null,
+        "name": "clevin-swarm-A-20260828T021322Z-9dad4d-primary",
+        "skills": [],
+        "system": "You are a harmless Managed Agents control-plane probe.\nThe first line of every final answer must be VERSION_ONE.\nFor CLEVIN_SMOKE_TEST STATE_MARKER, use bash to write exactly alpha-state to\n/workspace/control-plane-marker.txt, then read it and report the value.\nFor CLEVIN_SMOKE_TEST TOOL_INTERRUPT, use bash to run exactly:\nsleep 30; printf tool-finished > /workspace/tool-interrupt.txt\nThen report whether the command completed.\nFor CLEVIN_SMOKE_TEST GENERATION_INTERRUPT, do not use tools. Immediately start\nwriting 20,000 numbered occurrences of VERSION_ONE and do not summarize.\nFor any other CLEVIN_SMOKE_TEST message, answer briefly and do not access external\nservices.\n",
+        "tools": [],
+        "type": "agent",
+        "version": 1
+      },
+      "skill_id": "skill_01QSt816QXwcE3nz8zcqYUQk",
+      "v1_agent": {
+        "archived_at": null,
+        "created_at": "2026-08-28T02:13:23.416948Z",
+        "description": "Temporary workstream A version pinning probe",
+        "id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "mcp_servers": [],
+        "metadata": {
+          "experiment": "workstream-A",
+          "marker": "v1"
+        },
+        "model": {
+          "effort": null,
+          "id": "claude-haiku-4-5",
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": null,
+        "name": "clevin-swarm-A-20260828T021322Z-9dad4d-primary",
+        "skills": [],
+        "system": "You are a harmless Managed Agents control-plane probe.\nThe first line of every final answer must be VERSION_ONE.\nFor CLEVIN_SMOKE_TEST STATE_MARKER, use bash to write exactly alpha-state to\n/workspace/control-plane-marker.txt, then read it and report the value.\nFor CLEVIN_SMOKE_TEST TOOL_INTERRUPT, use bash to run exactly:\nsleep 30; printf tool-finished > /workspace/tool-interrupt.txt\nThen report whether the command completed.\nFor CLEVIN_SMOKE_TEST GENERATION_INTERRUPT, do not use tools. Immediately start\nwriting 20,000 numbered occurrences of VERSION_ONE and do not summarize.\nFor any other CLEVIN_SMOKE_TEST message, answer briefly and do not access external\nservices.\n",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "updated_at": "2026-08-28T02:13:23.416948Z",
+        "version": 1
+      },
+      "v2_agent": {
+        "archived_at": null,
+        "created_at": "2026-08-28T02:13:23.416948Z",
+        "description": "Temporary workstream A version pinning probe",
+        "id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "mcp_servers": [],
+        "metadata": {
+          "experiment": "workstream-A",
+          "marker": "v2"
+        },
+        "model": {
+          "effort": null,
+          "id": "claude-sonnet-4-5",
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": {
+          "agents": [
+            {
+              "id": "agent_018smwYx4AbYthpzmwpS3G8v",
+              "type": "agent",
+              "version": 1
+            }
+          ],
+          "type": "coordinator"
+        },
+        "name": "clevin-swarm-A-20260828T021322Z-9dad4d-primary",
+        "skills": [
+          {
+            "skill_id": "skill_01QSt816QXwcE3nz8zcqYUQk",
+            "type": "custom",
+            "version": "latest"
+          }
+        ],
+        "system": "You are a harmless Managed Agents control-plane probe.\nThe first line of every final answer must be VERSION_TWO.\nFor any CLEVIN_SMOKE_TEST message, answer briefly without using tools or external\nservices.\n",
+        "tools": [
+          {
+            "configs": [
+              {
+                "enabled": true,
+                "name": "read",
+                "permission_policy": {
+                  "type": "always_allow"
+                },
+                "type": "read"
+              }
+            ],
+            "default_config": {
+              "enabled": false,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "updated_at": "2026-08-28T02:13:32.249741Z",
+        "version": 2
+      },
+      "v3_agent": {
+        "archived_at": null,
+        "created_at": "2026-08-28T02:13:23.416948Z",
+        "description": "Temporary workstream A version pinning probe",
+        "id": "agent_01H3M5KhJPhJEnd12khFpfEK",
+        "mcp_servers": [],
+        "metadata": {
+          "experiment": "workstream-A",
+          "marker": "rollback"
+        },
+        "model": {
+          "effort": null,
+          "id": "claude-haiku-4-5",
+          "inference_geo": null,
+          "speed": "standard"
+        },
+        "multiagent": null,
+        "name": "clevin-swarm-A-20260828T021322Z-9dad4d-primary",
+        "skills": [],
+        "system": "You are a harmless Managed Agents control-plane probe.\nThe first line of every final answer must be VERSION_ONE.\nFor CLEVIN_SMOKE_TEST STATE_MARKER, use bash to write exactly alpha-state to\n/workspace/control-plane-marker.txt, then read it and report the value.\nFor CLEVIN_SMOKE_TEST TOOL_INTERRUPT, use bash to run exactly:\nsleep 30; printf tool-finished > /workspace/tool-interrupt.txt\nThen report whether the command completed.\nFor CLEVIN_SMOKE_TEST GENERATION_INTERRUPT, do not use tools. Immediately start\nwriting 20,000 numbered occurrences of VERSION_ONE and do not summarize.\nFor any other CLEVIN_SMOKE_TEST message, answer briefly and do not access external\nservices.\n",
+        "tools": [
+          {
+            "configs": [],
+            "default_config": {
+              "enabled": true,
+              "permission_policy": {
+                "type": "always_allow"
+              }
+            },
+            "type": "agent_toolset_20260401"
+          }
+        ],
+        "type": "agent",
+        "updated_at": "2026-08-28T02:13:40.745579Z",
+        "version": 3
+      },
+      "versions": [
+        3,
+        2,
+        1
+      ]
+    }
+  },
+  "run_name": "clevin-swarm-A-20260828T021322Z-9dad4d",
+  "started_at": "2026-08-28T02:13:22.262987+00:00"
+}

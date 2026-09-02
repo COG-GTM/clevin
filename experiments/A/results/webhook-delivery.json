@@ -1,0 +1,69 @@
+{
+  "conclusions": {
+    "duplicate_run_started_drains_twice": true,
+    "non_run_started_events_are_ignored": true,
+    "ordering_does_not_change_run_started_drain_count": true
+  },
+  "delayed": {
+    "drain_calls": [
+      "environment_probe"
+    ],
+    "event_types": [
+      "session.updated",
+      "session.status_run_started"
+    ],
+    "responses": [
+      {
+        "event_type": "session.updated",
+        "status": "ignored"
+      },
+      {
+        "event_type": "session.status_run_started",
+        "spawned": [],
+        "status": "ok"
+      }
+    ]
+  },
+  "duplicate": {
+    "drain_calls": [
+      "environment_probe",
+      "environment_probe"
+    ],
+    "event_types": [
+      "session.status_run_started",
+      "session.status_run_started"
+    ],
+    "responses": [
+      {
+        "event_type": "session.status_run_started",
+        "spawned": [],
+        "status": "ok"
+      },
+      {
+        "event_type": "session.status_run_started",
+        "spawned": [],
+        "status": "ok"
+      }
+    ]
+  },
+  "reordered": {
+    "drain_calls": [
+      "environment_probe"
+    ],
+    "event_types": [
+      "session.status_run_started",
+      "session.updated"
+    ],
+    "responses": [
+      {
+        "event_type": "session.status_run_started",
+        "spawned": [],
+        "status": "ok"
+      },
+      {
+        "event_type": "session.updated",
+        "status": "ignored"
+      }
+    ]
+  }
+}

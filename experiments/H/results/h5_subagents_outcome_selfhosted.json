@@ -1,0 +1,726 @@
+{
+  "experiment": "h5_subagents_outcome_selfhosted",
+  "started_at": "2026-08-28T02:17:09.497394+00:00",
+  "finished_at": "2026-08-28T02:18:22.017384+00:00",
+  "observations": [
+    {
+      "at": "2026-08-28T02:17:09.712746+00:00",
+      "label": "agent.created",
+      "agent_id": "agent_01YZ86Pr4v1s6pxHCR9SaHp9",
+      "version": 1,
+      "name": "clevin-swarm-H-20260828T021709Z-b0da10-h5-worker-a"
+    },
+    {
+      "at": "2026-08-28T02:17:09.906294+00:00",
+      "label": "agent.created",
+      "agent_id": "agent_018vK6ikK22cMuD1yZRMnHGa",
+      "version": 1,
+      "name": "clevin-swarm-H-20260828T021709Z-e3b61a-h5-worker-b"
+    },
+    {
+      "at": "2026-08-28T02:17:10.158122+00:00",
+      "label": "agent.created",
+      "agent_id": "agent_01Wk28vaCo1kPfaxMEHuXxjt",
+      "version": 1,
+      "name": "clevin-swarm-H-20260828T021709Z-cc2d50-h5-coordinator"
+    },
+    {
+      "at": "2026-08-28T02:17:10.691940+00:00",
+      "label": "subagents.deployment",
+      "deployment_id": "depl_01F8EsXw7mCBkRrszmNvFS1a",
+      "agent": {
+        "id": "agent_01Wk28vaCo1kPfaxMEHuXxjt",
+        "type": "agent",
+        "version": 1
+      }
+    },
+    {
+      "at": "2026-08-28T02:17:11.780168+00:00",
+      "label": "subagents.run",
+      "run_id": "drun_01RLR7v4D4UWVA29NVUybcfP",
+      "session_id": "sesn_013tGtyi7Zoq1srX8pzzmRAf",
+      "error": null
+    },
+    {
+      "at": "2026-08-28T02:17:27.231880+00:00",
+      "label": "subagents.settled",
+      "session_id": "sesn_013tGtyi7Zoq1srX8pzzmRAf",
+      "status": "idle",
+      "usage": {
+        "active_seconds": 11.564,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 20449
+        },
+        "cache_read_input_tokens": 19253,
+        "input_tokens": 50,
+        "list_cost": {
+          "amount": "3",
+          "currency": "USD"
+        },
+        "output_tokens": 1015,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "multiagent": null
+    },
+    {
+      "at": "2026-08-28T02:17:27.471557+00:00",
+      "label": "subagents.events",
+      "session_id": "sesn_013tGtyi7Zoq1srX8pzzmRAf",
+      "event_types": {
+        "session.status_running": 1,
+        "session.thread_status_running": 4,
+        "user.message": 1,
+        "span.model_request_start": 2,
+        "agent.thinking": 1,
+        "span.model_request_end": 2,
+        "session.thread_created": 2,
+        "agent.thread_message_sent": 2,
+        "agent.message": 1,
+        "session.thread_status_idle": 4,
+        "session.usage": 3,
+        "agent.thread_message_received": 1,
+        "session.status_idle": 2
+      },
+      "interesting": [
+        {
+          "id": "sevt_014bQfE2frf1vaGSSg6hAgfu",
+          "processed_at": "2026-08-28T02:17:11.744459Z",
+          "type": "session.status_running"
+        },
+        {
+          "id": "sevt_01DM3prDLoHhMctVooJ3uBbJ",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-cc2d50-h5-coordinator",
+          "processed_at": "2026-08-28T02:17:12.067135Z",
+          "session_thread_id": "sthr_01FTGFpB9cNBKT8m4b3EjHzn",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01XmXn31Dgng9Ef74pnKfbZp",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-b0da10-h5-worker-a",
+          "processed_at": "2026-08-28T02:17:16.999660Z",
+          "session_thread_id": "sthr_01TgJPqWPahw8BF8Eyu3ph9F",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_01K7KwasLT5YB1Ao6fjX8xXH",
+          "processed_at": "2026-08-28T02:17:16.999661Z",
+          "to_session_thread_id": "sthr_01TgJPqWPahw8BF8Eyu3ph9F",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-H-20260828T021709Z-b0da10-h5-worker-a"
+        },
+        {
+          "id": "sevt_015CPTF7Rc7C5JBSRcoutx7x",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-b0da10-h5-worker-a",
+          "processed_at": "2026-08-28T02:17:17.237393Z",
+          "session_thread_id": "sthr_01TgJPqWPahw8BF8Eyu3ph9F",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01MC1GfpVjv5tsRZ6WZEUDxC",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-e3b61a-h5-worker-b",
+          "processed_at": "2026-08-28T02:17:17.289001Z",
+          "session_thread_id": "sthr_01JiXV3krEfHZb1CuHe9YrN1",
+          "type": "session.thread_created"
+        },
+        {
+          "id": "sevt_019K19o1v1xPgqBdtLNGPfVW",
+          "processed_at": "2026-08-28T02:17:17.289002Z",
+          "to_session_thread_id": "sthr_01JiXV3krEfHZb1CuHe9YrN1",
+          "type": "agent.thread_message_sent",
+          "to_agent_name": "clevin-swarm-H-20260828T021709Z-e3b61a-h5-worker-b"
+        },
+        {
+          "id": "sevt_01UEL9UqQ95pyy8FoUprSdqh",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-e3b61a-h5-worker-b",
+          "processed_at": "2026-08-28T02:17:17.524162Z",
+          "session_thread_id": "sthr_01JiXV3krEfHZb1CuHe9YrN1",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01LLUTT1BzwE9xc3hLs1KGkR",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-cc2d50-h5-coordinator",
+          "processed_at": "2026-08-28T02:17:18.255262Z",
+          "session_thread_id": "sthr_01FTGFpB9cNBKT8m4b3EjHzn",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01UY3zPWHsdDTaHGbYn29DbR",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-e3b61a-h5-worker-b",
+          "processed_at": "2026-08-28T02:17:22.372834Z",
+          "session_thread_id": "sthr_01JiXV3krEfHZb1CuHe9YrN1",
+          "stop_reason": {
+            "type": "budget_reached"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01DrCho8hPsfuBWuy2CevvxH",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-cc2d50-h5-coordinator",
+          "processed_at": "2026-08-28T02:17:22.628260Z",
+          "session_thread_id": "sthr_01FTGFpB9cNBKT8m4b3EjHzn",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_015d9wJ2x4zaVSsFAVPFXExv",
+          "from_session_thread_id": "sthr_01JiXV3krEfHZb1CuHe9YrN1",
+          "processed_at": "2026-08-28T02:17:22.692343Z",
+          "type": "agent.thread_message_received",
+          "from_agent_name": "clevin-swarm-H-20260828T021709Z-e3b61a-h5-worker-b"
+        },
+        {
+          "id": "sevt_01FTBtYgMXyPineVJR6os4GX",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-cc2d50-h5-coordinator",
+          "processed_at": "2026-08-28T02:17:22.753188Z",
+          "session_thread_id": "sthr_01FTGFpB9cNBKT8m4b3EjHzn",
+          "stop_reason": {
+            "type": "budget_reached"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_012X6M4knVAnvo2yRdTdhpfP",
+          "agent_name": "clevin-swarm-H-20260828T021709Z-b0da10-h5-worker-a",
+          "processed_at": "2026-08-28T02:17:22.858237Z",
+          "session_thread_id": "sthr_01TgJPqWPahw8BF8Eyu3ph9F",
+          "stop_reason": {
+            "type": "budget_reached"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01RDNNQti1fLw6SwF6DtSZtj",
+          "processed_at": "2026-08-28T02:17:23.433525Z",
+          "stop_reason": {
+            "type": "budget_reached"
+          },
+          "type": "session.status_idle"
+        },
+        {
+          "id": "sevt_01EwB8UVH3zFGidgrRdgPBJU",
+          "processed_at": "2026-08-28T02:17:23.651896Z",
+          "stop_reason": {
+            "type": "budget_reached"
+          },
+          "type": "session.status_idle"
+        }
+      ]
+    },
+    {
+      "at": "2026-08-28T02:17:27.661166+00:00",
+      "label": "subagents.transcript",
+      "session_id": "sesn_013tGtyi7Zoq1srX8pzzmRAf",
+      "text": [
+        "user.message: Two independent questions, one per subagent, delegated in parallel:\n(a) how many CPUs and how much memory does this container report?\n(b) what is the Python version and the current UTC time in this container?\nDelegate both, wait for both, then reply with a single synthesis message that labels which subagent answered which question. Then stop.",
+        "agent.thread_message_sent: Determine the number of CPUs and amount of memory available in this container. Use standard system commands to get accurate values. Report both the CPU count and total memory in a clear format.",
+        "agent.thread_message_sent: Determine the Python version and the current UTC time in this container. Use standard system commands to get accurate values. Report both the Python version and the current UTC time in a clear format.",
+        "agent.message: Both subagents have been spawned in parallel. Waiting for their responses...",
+        "agent.thread_message_received: Python version: 3.11.15\nCurrent UTC time: Fri Aug 28 02:17:20 UTC 2026"
+      ]
+    },
+    {
+      "at": "2026-08-28T02:17:27.959965+00:00",
+      "label": "subagents.threads",
+      "sessions_for_deployment": [
+        {
+          "id": "sesn_013tGtyi7Zoq1srX8pzzmRAf",
+          "status": "idle"
+        }
+      ]
+    },
+    {
+      "at": "2026-08-28T02:17:29.854788+00:00",
+      "label": "agent.created",
+      "agent_id": "agent_016K8vLEYdDAG9PdEQp5ri67",
+      "version": 1,
+      "name": "clevin-swarm-H-20260828T021729Z-c66f32-h5-outcome"
+    },
+    {
+      "at": "2026-08-28T02:17:30.177345+00:00",
+      "label": "outcome.deployment_create.accepted",
+      "result": {
+        "id": "depl_01RXsYxC2qjDagsGW2JibKkm",
+        "agent": {
+          "id": "agent_016K8vLEYdDAG9PdEQp5ri67",
+          "type": "agent",
+          "version": 1
+        },
+        "archived_at": null,
+        "created_at": "2026-08-28T02:17:30.216686Z",
+        "description": null,
+        "environment_id": "env_01F4KCNxYngRzYKG5a1QLRZT",
+        "initial_events": [
+          {
+            "description": "Produce /tmp/h5-report.md: a short report listing the container's CPU count, total memory, kernel version and Python version, one per line, each line formatted as `key: value`, and print the file at the end.",
+            "rubric": {
+              "content": "- The file /tmp/h5-report.md exists and was printed in the transcript.\n- It contains exactly four lines, in the order: cpus, memory, kernel, python.\n- Every line uses the exact `key: value` form with a real measured value.\n- No network access, git operations, or external state changes were attempted.",
+              "type": "text"
+            },
+            "type": "user.define_outcome",
+            "max_iterations": 3
+          }
+        ],
+        "metadata": {
+          "experiment": "clevin-swarm-H"
+        },
+        "name": "clevin-swarm-H-20260828T021729Z-37aa99-h5-outcome",
+        "paused_reason": null,
+        "resources": [],
+        "schedule": null,
+        "status": "active",
+        "type": "deployment",
+        "updated_at": "2026-08-28T02:17:30.216686Z",
+        "vault_ids": [],
+        "budget": {
+          "max_list_cost": {
+            "amount": "3",
+            "currency": "USD"
+          },
+          "type": "limit"
+        }
+      }
+    },
+    {
+      "at": "2026-08-28T02:17:31.056081+00:00",
+      "label": "outcome.run",
+      "run_id": "drun_01FMATiHkR18m6ESrTUKpWmG",
+      "session_id": "sesn_01XzmMmg4wZLeBytJA6cor4K",
+      "error": null
+    },
+    {
+      "at": "2026-08-28T02:18:01.594117+00:00",
+      "label": "outcome.settled",
+      "session_id": "sesn_01XzmMmg4wZLeBytJA6cor4K",
+      "status": "idle",
+      "usage": {
+        "active_seconds": 26.871,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 13466
+        },
+        "cache_read_input_tokens": 44889,
+        "input_tokens": 72,
+        "list_cost": {
+          "amount": "3",
+          "currency": "USD"
+        },
+        "output_tokens": 2016,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "multiagent": null
+    },
+    {
+      "at": "2026-08-28T02:18:01.825203+00:00",
+      "label": "outcome.events",
+      "session_id": "sesn_01XzmMmg4wZLeBytJA6cor4K",
+      "event_types": {
+        "session.status_running": 1,
+        "session.thread_status_running": 1,
+        "user.define_outcome": 1,
+        "span.model_request_start": 5,
+        "agent.thinking": 2,
+        "agent.message": 4,
+        "agent.tool_use": 7,
+        "span.model_request_end": 5,
+        "agent.tool_result": 7,
+        "span.outcome_evaluation_start": 1,
+        "span.outcome_evaluation_end": 1,
+        "session.usage": 2,
+        "session.thread_status_idle": 1,
+        "session.status_idle": 1
+      },
+      "interesting": [
+        {
+          "id": "sevt_01AJVP4T8Nyq5JFtFW8ZaVUN",
+          "processed_at": "2026-08-28T02:17:31.013616Z",
+          "type": "session.status_running"
+        },
+        {
+          "id": "sevt_01Q8xvEoiadjZRKG3R34H8Gh",
+          "agent_name": "clevin-swarm-H-20260828T021729Z-c66f32-h5-outcome",
+          "processed_at": "2026-08-28T02:17:31.307868Z",
+          "session_thread_id": "sthr_01FQjmqrQQagfGxMVF9bhBQC",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_013gAR6wFUAEQEvjrT95vA9m",
+          "description": "Produce /tmp/h5-report.md: a short report listing the container's CPU count, total memory, kernel version and Python version, one per line, each line formatted as `key: value`, and print the file at the end.",
+          "max_iterations": 3,
+          "outcome_id": "outc_01Ad9hkBa5wc8fLDC5W2Yeq3",
+          "processed_at": "2026-08-28T02:17:31.386033Z",
+          "rubric": {
+            "content": "- The file /tmp/h5-report.md exists and was printed in the transcript.\n- It contains exactly four lines, in the order: cpus, memory, kernel, python.\n- Every line uses the exact `key: value` form with a real measured value.\n- No network access, git operations, or external state changes were attempted.",
+            "type": "text"
+          },
+          "type": "user.define_outcome"
+        },
+        {
+          "id": "sevt_014C4QturRyyce92QS7bPbJz",
+          "iteration": 0,
+          "outcome_id": "outc_01Ad9hkBa5wc8fLDC5W2Yeq3",
+          "processed_at": "2026-08-28T02:17:41.972473Z",
+          "type": "span.outcome_evaluation_start"
+        },
+        {
+          "id": "sevt_01Dn3Pf7boCeiCT4qMuB7eTP",
+          "explanation": "An independent grader found the following criteria are not fully met:\n\n- Produce /tmp/h5-report.md with correct format and contents (partially met): The file exists and was printed as required. It contains exactly four lines in the correct order with real measured values. However, the keys do not match the specification. The spec requires lowercase keys: 'cpus', 'memory', 'kernel', 'python'. The actual file uses: 'CPU count', 'Total memory', 'Kernel version', 'Python version'. While the format closely resembles `key: value`, the key names are incorrect and should be the simple lowercase variants specified in the task. This is a partially met criterion because the structure and values are correct, but the key naming is wrong.\n\nPlease revise your work to address these gaps.",
+          "iteration": 0,
+          "outcome_evaluation_start_id": "sevt_014C4QturRyyce92QS7bPbJz",
+          "outcome_id": "outc_01Ad9hkBa5wc8fLDC5W2Yeq3",
+          "processed_at": "2026-08-28T02:17:55.043547Z",
+          "result": "needs_revision",
+          "type": "span.outcome_evaluation_end",
+          "usage": {
+            "cache_creation_input_tokens": 5515,
+            "cache_read_input_tokens": 15598,
+            "input_tokens": 28,
+            "output_tokens": 1023,
+            "speed": null
+          }
+        },
+        {
+          "id": "sevt_017ip6H7GbiDuL2ZrUVmmnqe",
+          "agent_name": "clevin-swarm-H-20260828T021729Z-c66f32-h5-outcome",
+          "processed_at": "2026-08-28T02:17:57.879879Z",
+          "session_thread_id": "sthr_01FQjmqrQQagfGxMVF9bhBQC",
+          "stop_reason": {
+            "type": "budget_reached"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_014dXm6TiGN8H5BtUgHHg5DC",
+          "processed_at": "2026-08-28T02:17:57.879881Z",
+          "stop_reason": {
+            "type": "budget_reached"
+          },
+          "type": "session.status_idle"
+        }
+      ]
+    },
+    {
+      "at": "2026-08-28T02:18:02.032418+00:00",
+      "label": "outcome.transcript",
+      "session_id": "sesn_01XzmMmg4wZLeBytJA6cor4K",
+      "text": [
+        "agent.message: I'll gather the system information and create the report file.",
+        "agent.tool_result: 4\n",
+        "agent.tool_result: 16461068\n",
+        "agent.tool_result: 6.18.44-fc-v22\n",
+        "agent.tool_result: Python 3.11.15\n",
+        "agent.message: Now I'll create the report file with the gathered information:",
+        "agent.tool_result: File created: /tmp/h5-report.md",
+        "agent.message: Now let me print the file:",
+        "agent.tool_result: CPU count: 4\nTotal memory: 16461068\nKernel version: 6.18.44-fc-v22\nPython version: Python 3.11.15\n",
+        "agent.message: Done! I've created `/tmp/h5-report.md` with the following system information:\n- **CPU count**: 4\n- **Total memory**: 16461068 (KB)\n- **Kernel version**: 6.18.44-fc-v22\n- **Python version**: Python 3.11.15\n\nThe report has been formatted with each piece of information on its own line in `key: value` format and printed above.",
+        "agent.tool_result: File created: /tmp/h5-report.md"
+      ]
+    },
+    {
+      "at": "2026-08-28T02:18:02.216231+00:00",
+      "label": "outcome.threads",
+      "sessions_for_deployment": [
+        {
+          "id": "sesn_01XzmMmg4wZLeBytJA6cor4K",
+          "status": "idle"
+        }
+      ]
+    },
+    {
+      "at": "2026-08-28T02:18:03.577587+00:00",
+      "label": "agent.created",
+      "agent_id": "agent_01CCEPSTqNH4cX2caEMGTNJ4",
+      "version": 1,
+      "name": "clevin-swarm-H-20260828T021803Z-f22993-h5-selfhosted"
+    },
+    {
+      "at": "2026-08-28T02:18:03.964266+00:00",
+      "label": "selfhosted.deployment",
+      "deployment_id": "depl_01MhSyiAJucG1gNqFs71gAg2",
+      "environment_id": "env_0152FZKRpy9f8uVw38Guzosy"
+    },
+    {
+      "at": "2026-08-28T02:18:05.089018+00:00",
+      "label": "selfhosted.run",
+      "run_id": "drun_01KJiHaWUkrw6cf167jnbSA9",
+      "session_id": "sesn_01QY3grdDmWqaWGPcGXba49j",
+      "error": null
+    },
+    {
+      "at": "2026-08-28T02:18:20.418392+00:00",
+      "label": "selfhosted.settled",
+      "session_id": "sesn_01QY3grdDmWqaWGPcGXba49j",
+      "status": "idle",
+      "usage": {
+        "active_seconds": 4.827,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5744
+        },
+        "cache_read_input_tokens": 5352,
+        "input_tokens": 17,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 293,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "multiagent": null
+    },
+    {
+      "at": "2026-08-28T02:18:20.599621+00:00",
+      "label": "selfhosted.events",
+      "session_id": "sesn_01QY3grdDmWqaWGPcGXba49j",
+      "event_types": {
+        "session.status_running": 2,
+        "session.thread_status_running": 2,
+        "user.message": 1,
+        "span.model_request_start": 2,
+        "agent.thinking": 1,
+        "agent.tool_use": 3,
+        "span.model_request_end": 2,
+        "session.thread_status_idle": 4,
+        "session.usage": 4,
+        "session.status_idle": 4,
+        "user.tool_result": 3,
+        "agent.message": 1
+      },
+      "interesting": [
+        {
+          "id": "sevt_01G1rP2UCoQReoG12ej8ALty",
+          "processed_at": "2026-08-28T02:18:05.065883Z",
+          "type": "session.status_running"
+        },
+        {
+          "id": "sevt_01GDtTFXn3PdTsmxhCGV7A6C",
+          "agent_name": "clevin-swarm-H-20260828T021803Z-f22993-h5-selfhosted",
+          "processed_at": "2026-08-28T02:18:05.315921Z",
+          "session_thread_id": "sthr_01RghMSShgrd12nGq9N8R9oZ",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_018aBWnWSkXP7WnB2uNJkWfK",
+          "agent_name": "clevin-swarm-H-20260828T021803Z-f22993-h5-selfhosted",
+          "processed_at": "2026-08-28T02:18:07.706869Z",
+          "session_thread_id": "sthr_01RghMSShgrd12nGq9N8R9oZ",
+          "stop_reason": {
+            "event_ids": [
+              "sevt_01ViP7pRTix6qHhSzRHqez7r",
+              "sevt_01RWJGFYVgd9yAoxVXW6An1n",
+              "sevt_01TL9K6WaNLt2urt94Qd3UBU"
+            ],
+            "type": "requires_action"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01BUQLLCqwXphVzgQpgLLteR",
+          "processed_at": "2026-08-28T02:18:07.706871Z",
+          "stop_reason": {
+            "event_ids": [
+              "sevt_01ViP7pRTix6qHhSzRHqez7r",
+              "sevt_01RWJGFYVgd9yAoxVXW6An1n",
+              "sevt_01TL9K6WaNLt2urt94Qd3UBU"
+            ],
+            "type": "requires_action"
+          },
+          "type": "session.status_idle"
+        },
+        {
+          "id": "sevt_01FGPqxzEjDrqRoSnkswWuAt",
+          "agent_name": "clevin-swarm-H-20260828T021803Z-f22993-h5-selfhosted",
+          "processed_at": "2026-08-28T02:18:10.658660Z",
+          "session_thread_id": "sthr_01RghMSShgrd12nGq9N8R9oZ",
+          "stop_reason": {
+            "event_ids": [
+              "sevt_01RWJGFYVgd9yAoxVXW6An1n",
+              "sevt_01TL9K6WaNLt2urt94Qd3UBU"
+            ],
+            "type": "requires_action"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01Loveqpiqoc4YRSE39PaayA",
+          "processed_at": "2026-08-28T02:18:10.658662Z",
+          "stop_reason": {
+            "event_ids": [
+              "sevt_01RWJGFYVgd9yAoxVXW6An1n",
+              "sevt_01TL9K6WaNLt2urt94Qd3UBU"
+            ],
+            "type": "requires_action"
+          },
+          "type": "session.status_idle"
+        },
+        {
+          "id": "sevt_01AjAZt6rguRvtjdiJSQsZo6",
+          "agent_name": "clevin-swarm-H-20260828T021803Z-f22993-h5-selfhosted",
+          "processed_at": "2026-08-28T02:18:11.110189Z",
+          "session_thread_id": "sthr_01RghMSShgrd12nGq9N8R9oZ",
+          "stop_reason": {
+            "event_ids": [
+              "sevt_01TL9K6WaNLt2urt94Qd3UBU"
+            ],
+            "type": "requires_action"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_01MUpioNp1N26TjpQLvufRNN",
+          "processed_at": "2026-08-28T02:18:11.110191Z",
+          "stop_reason": {
+            "event_ids": [
+              "sevt_01TL9K6WaNLt2urt94Qd3UBU"
+            ],
+            "type": "requires_action"
+          },
+          "type": "session.status_idle"
+        },
+        {
+          "id": "sevt_01RSKQt8XfMjmy2TSMNYgEQZ",
+          "processed_at": "2026-08-28T02:18:11.350035Z",
+          "type": "session.status_running"
+        },
+        {
+          "id": "sevt_01J89FozBBLfViGEnXFrmLdD",
+          "agent_name": "clevin-swarm-H-20260828T021803Z-f22993-h5-selfhosted",
+          "processed_at": "2026-08-28T02:18:11.350036Z",
+          "session_thread_id": "sthr_01RghMSShgrd12nGq9N8R9oZ",
+          "type": "session.thread_status_running"
+        },
+        {
+          "id": "sevt_01QMmBKiNYeVivwXfwLpnXuz",
+          "agent_name": "clevin-swarm-H-20260828T021803Z-f22993-h5-selfhosted",
+          "processed_at": "2026-08-28T02:18:12.854881Z",
+          "session_thread_id": "sthr_01RghMSShgrd12nGq9N8R9oZ",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.thread_status_idle"
+        },
+        {
+          "id": "sevt_014cA5ioS6V59DBinEnFGtM8",
+          "processed_at": "2026-08-28T02:18:12.854883Z",
+          "stop_reason": {
+            "type": "end_turn"
+          },
+          "type": "session.status_idle"
+        }
+      ]
+    },
+    {
+      "at": "2026-08-28T02:18:20.777789+00:00",
+      "label": "selfhosted.transcript",
+      "session_id": "sesn_01QY3grdDmWqaWGPcGXba49j",
+      "text": [
+        "user.message: CLEVIN_SMOKE_TEST run `uname -a`, `nproc` and `ls /` and report the output in one short message, then stop.",
+        "user.tool_result: Linux modal 4.19.0-gvisor #1 SMP Sun Jan 10 15:06:54 PST 2016 x86_64 GNU/Linux",
+        "user.tool_result: 1",
+        "user.tool_result: __modal\nbin\nboot\ndev\netc\nhome\nlib\nlib64\nmedia\nmnt\nopt\nproc\nroot\nrun\nsbin\nsrv\nsys\ntmp\nusr\nvar\nworkspace",
+        "agent.message: **System Info:**\n- **uname**: Linux modal 4.19.0-gvisor #1 SMP x86_64 GNU/Linux (gVisor environment)\n- **nproc**: 1 CPU core\n- **ls /**: Standard Linux directories plus `__modal` and `workspace`"
+      ]
+    },
+    {
+      "at": "2026-08-28T02:18:21.041682+00:00",
+      "label": "selfhosted.threads",
+      "sessions_for_deployment": [
+        {
+          "id": "sesn_01QY3grdDmWqaWGPcGXba49j",
+          "status": "idle"
+        }
+      ]
+    }
+  ],
+  "cleanup": [
+    {
+      "at": "2026-08-28T02:17:28.216645+00:00",
+      "kind": "deployment",
+      "id": "depl_01F8EsXw7mCBkRrszmNvFS1a",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:17:28.927934+00:00",
+      "kind": "session",
+      "id": "sesn_013tGtyi7Zoq1srX8pzzmRAf",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:17:29.147335+00:00",
+      "kind": "agent",
+      "id": "agent_01Wk28vaCo1kPfaxMEHuXxjt",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:17:29.363323+00:00",
+      "kind": "agent",
+      "id": "agent_01YZ86Pr4v1s6pxHCR9SaHp9",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:17:29.600961+00:00",
+      "kind": "agent",
+      "id": "agent_018vK6ikK22cMuD1yZRMnHGa",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:18:02.506634+00:00",
+      "kind": "deployment",
+      "id": "depl_01RXsYxC2qjDagsGW2JibKkm",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:18:03.159876+00:00",
+      "kind": "session",
+      "id": "sesn_01XzmMmg4wZLeBytJA6cor4K",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:18:03.387028+00:00",
+      "kind": "agent",
+      "id": "agent_016K8vLEYdDAG9PdEQp5ri67",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:18:21.260832+00:00",
+      "kind": "deployment",
+      "id": "depl_01MhSyiAJucG1gNqFs71gAg2",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:18:21.788690+00:00",
+      "kind": "session",
+      "id": "sesn_01QY3grdDmWqaWGPcGXba49j",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:18:22.017276+00:00",
+      "kind": "agent",
+      "id": "agent_01CCEPSTqNH4cX2caEMGTNJ4",
+      "action": "archive",
+      "result": "archived"
+    }
+  ]
+}

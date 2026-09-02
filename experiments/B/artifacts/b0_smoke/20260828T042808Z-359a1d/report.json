@@ -1,0 +1,73 @@
+{
+  "arm": "b0_smoke",
+  "run_id": "20260828T042808Z-359a1d",
+  "session_id": "sesn_011bF2YLtCVW7zq1hFf55q2K",
+  "model": "claude-haiku-4-5",
+  "notes": "plumbing smoke",
+  "environment_id": "env_01NafgppWcCBUZRMxfxXknqE",
+  "elapsed_s": 195.5,
+  "timeline": [
+    {
+      "t": 0.9,
+      "kind": "session_created",
+      "session_id": "sesn_011bF2YLtCVW7zq1hFf55q2K"
+    },
+    {
+      "t": 1.1,
+      "kind": "status",
+      "status": "running"
+    },
+    {
+      "t": 194.9,
+      "kind": "status",
+      "status": "idle"
+    }
+  ],
+  "stop_reason": {
+    "type": "budget_reached"
+  },
+  "metrics": {
+    "event_counts": {
+      "session.status_running": 1,
+      "session.thread_status_running": 1,
+      "user.message": 1,
+      "span.model_request_start": 1,
+      "agent.thinking": 1,
+      "agent.tool_use": 1,
+      "span.model_request_end": 1,
+      "agent.tool_result": 1,
+      "session.thread_status_idle": 1,
+      "session.usage": 1,
+      "session.status_idle": 1
+    },
+    "compactions": 0,
+    "tool_calls": 1,
+    "tool_histogram": {
+      "bash": 1
+    },
+    "error_tool_results": 1,
+    "error_samples": [
+      "\ngzip: stdin: invalid compressed data--crc error\ntar: Child returned status 1\ntar: Error is not recoverable: exiting now\n\n"
+    ],
+    "usage": {
+      "active_seconds": 185.387,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 12461
+      },
+      "cache_read_input_tokens": 0,
+      "input_tokens": 10,
+      "list_cost": {
+        "amount": "6",
+        "currency": "USD"
+      },
+      "output_tokens": 7210,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "agent_message_count": 0
+  },
+  "grade": null
+}

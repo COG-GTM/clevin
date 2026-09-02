@@ -1,0 +1,16 @@
+{
+  "interrupt_event_id": "sevt_01RWWQ5wtkSHGKSJibhGvPrQ",
+  "session_id": "sesn_01A3GmGx4jBuEtP7oBAJcdSw",
+  "terminal_idle_event_id": "sevt_01TQ4jcVmRLHx2DF1c5GkWrz",
+  "tool_result": {
+    "content": "Tool execution was interrupted before completion. Please retry.",
+    "event_id": "sevt_01RAqGxFMk76GWfntma7PsKd",
+    "is_error": true,
+    "tool_use_id": "sevt_01LBFUyhNNTeZmCL9iidkby3"
+  },
+  "tool_use": {
+    "command": "sleep 30; printf tool-finished > /workspace/tool-interrupt.txt",
+    "event_id": "sevt_01LBFUyhNNTeZmCL9iidkby3",
+    "name": "bash"
+  }
+}

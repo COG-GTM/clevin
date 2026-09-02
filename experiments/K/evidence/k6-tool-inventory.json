@@ -1,0 +1,50 @@
+{
+  "session_id": "sesn_018bpVLdhxdQQZcx2eBWKUwY",
+  "settled": {
+    "status": "idle",
+    "stop_reason": {
+      "type": "end_turn"
+    },
+    "timed_out": false
+  },
+  "messages": [
+    {
+      "type": "agent.message",
+      "id": "sevt_0191NmkaeHxyrtxfbJ6zXm39",
+      "at": "2026-08-28T02:31:37.057911Z",
+      "text": "Listing from my tool definitions only \u2014 no commands run, no state changed.\n\n**Tools defined in my function schema (exact names):**\n1. `bash`\n2. `edit`\n3. `read`\n4. `write`\n5. `glob`\n6. `grep`\n7. `web_fetch`\n8. `web_search`\n\n**Referenced in my instructions but not present as callable definitions in this session:** `create_agent`, `send_to_agent`, `list_agents` (subagent orchestration), and the GitHub and Linear MCP servers. I can see no schemas for these, so I cannot confirm they are invocable here.\n\n**Skills API capability:** No. None of the tools above can create or publish a Claude Managed Agents Skill, create a new Skill version, or upload files to the Skills API.\n\n- There is no Skills-specific or Anthropic-API tool in my definitions.\n- `web_fetch` is read-only: it fetches page/PDF contents and cannot issue authenticated POST/PUT requests, and it is restricted to exact URLs supplied by the user or returned by search.\n- `write`/`edit`/`bash` operate only on the local filesystem/shell. `bash` could in principle reach a network endpoint, but I have no Skills API credentials in scope, and running such a command would be a state change that is out of bounds here.\n\nStopping here as re"
+    }
+  ],
+  "usage": {
+    "status": "idle",
+    "usage": {
+      "active_seconds": 9.451,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 220
+      },
+      "cache_read_input_tokens": 8624,
+      "input_tokens": 2,
+      "list_cost": {
+        "amount": "2",
+        "currency": "USD"
+      },
+      "output_tokens": 649,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "budget": {
+      "max_list_cost": {
+        "amount": "20",
+        "currency": "USD"
+      },
+      "type": "limit"
+    },
+    "stats": {
+      "active_seconds": 8.896,
+      "duration_seconds": 16.825997414
+    }
+  }
+}

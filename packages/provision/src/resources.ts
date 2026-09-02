@@ -20,8 +20,10 @@ import type {
 } from "@anthropic-ai/sdk/resources/beta/vaults/vaults";
 import {
   agentDefinition,
+  coordinatorRoster,
   GITHUB_MCP_URL,
   LINEAR_MCP_URL,
+  SUBAGENT_DEFINITIONS,
 } from "./agent-definition.js";
 import type { ProvisionConfig } from "./config.js";
 
@@ -104,6 +106,7 @@ export interface ProvisionManifest {
   schema_version: 1;
   agent_id: string;
   agent_version: number;
+  subagent_ids: string[];
   environment_id: string;
   memory_store_id: string;
   vault_id: string;
@@ -140,7 +143,10 @@ export const vaultDefinition = {
   metadata: { experiment: "clevin-native-primitives" },
 } satisfies VaultCreateParams;
 
-function agentUpdate(version: number): AgentUpdateParams {
+function agentUpdate(
+  version: number,
+  roster: NonNullable<AgentCreateParams["multiagent"]>,
+): AgentUpdateParams {
   return {
     name: agentDefinition.name,
     description: agentDefinition.description,
@@ -150,7 +156,7 @@ function agentUpdate(version: number): AgentUpdateParams {
     mcp_servers: agentDefinition.mcp_servers,
     tools: agentDefinition.tools,
     skills: agentDefinition.skills,
-    multiagent: agentDefinition.multiagent,
+    multiagent: roster,
     version,
   };
 }
@@ -176,17 +182,53 @@ async function reconcileAgent(
   client: ProvisioningClient,
   config: ProvisionConfig,
   existing: AgentResult | undefined,
+  roster: NonNullable<AgentCreateParams["multiagent"]>,
 ): Promise<AgentResult> {
   if (config.agentId === undefined) {
-    return client.beta.agents.create(agentDefinition);
+    return client.beta.agents.create({
+      ...agentDefinition,
+      multiagent: roster,
+    });
   }
   if (existing === undefined) {
     throw new ResourceConfigurationError("Configured Agent was not retrieved");
   }
   return client.beta.agents.update(
     config.agentId,
-    agentUpdate(existing.version),
+    agentUpdate(existing.version, roster),
   );
+}
+
+async function reconcileSubagents(
+  client: ProvisioningClient,
+  config: ProvisionConfig,
+): Promise<string[]> {
+  const configuredIds = config.subagentIds ?? [];
+  const subagentIds: string[] = [];
+  for (const [index, definition] of SUBAGENT_DEFINITIONS.entries()) {
+    const configuredId = configuredIds[index];
+    if (configuredId === undefined) {
+      const created = await client.beta.agents.create(definition);
+      subagentIds.push(created.id);
+      continue;
+    }
+
+    const existing = await client.beta.agents.retrieve(configuredId);
+    const updated = await client.beta.agents.update(configuredId, {
+      name: definition.name,
+      description: definition.description,
+      model: definition.model,
+      system: definition.system,
+      metadata: definition.metadata,
+      mcp_servers: definition.mcp_servers,
+      tools: definition.tools,
+      skills: definition.skills,
+      multiagent: definition.multiagent,
+      version: existing.version,
+    });
+    subagentIds.push(updated.id);
+  }
+  return subagentIds;
 }
 
 async function reconcileEnvironment(
@@ -317,12 +359,19 @@ export async function reconcileResources(
       token: config.githubToken,
     },
   );
-  const agent = await reconcileAgent(client, config, existingAgent);
+  const subagentIds = await reconcileSubagents(client, config);
+  const agent = await reconcileAgent(
+    client,
+    config,
+    existingAgent,
+    coordinatorRoster(subagentIds),
+  );
 
   return {
     schema_version: 1,
     agent_id: agent.id,
     agent_version: agent.version,
+    subagent_ids: subagentIds,
     environment_id: environment.id,
     memory_store_id: memoryStore.id,
     vault_id: vault.id,

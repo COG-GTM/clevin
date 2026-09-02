@@ -1,0 +1,86 @@
+environment: env_01F4KCNxYngRzYKG5a1QLRZT seed_file: file_01Dcy1Udv8VM4K6nH2cza83t
+[b1_repeat +0.9s] session_created {'session_id': 'sesn_011Kqdd2zcwVzwdMMcDYTXbX'}
+[b1_baseline +0.9s] session_created {'session_id': 'sesn_014DCfuUvsNpkxGGjQWHEJUQ'}
+[b4_memory +1.0s] session_created {'session_id': 'sesn_017GjF4Zxx8KP2mkfq7PxbEG'}
+[b2_planned +1.0s] session_created {'session_id': 'sesn_015FewBkngdUWXbEJ6A27EZ6'}
+[b1_baseline +1.1s] status {'status': 'running'}
+[b4_memory +1.1s] status {'status': 'running'}
+[b2_planned +1.1s] status {'status': 'running'}
+[b1_repeat +1.2s] status {'status': 'running'}
+[b1_baseline +122.6s] status {'status': 'idle'}
+[b1_baseline +122.9s] idle {'status': 'idle', 'stop_reason': 'end_turn'}
+[b1_baseline +123.3s] sent {'interrupt': False, 'text': 'Two quick questions before you continue, answer in one line each: (1) what is the release codename? (2) list the standin'}
+[b1_baseline +123.5s] status {'status': 'idle'}
+[b1_baseline] report -> /home/ubuntu/repos/clevin/experiments/B/artifacts/b1_baseline/20260828T043404Z-4f6d35/report.json
+[b2_planned +138.0s] status {'status': 'idle'}
+[b2_planned +138.2s] idle {'status': 'idle', 'stop_reason': 'end_turn'}
+[b2_planned +138.6s] sent {'interrupt': False, 'text': 'Two quick questions before you continue, answer in one line each: (1) what is the release codename? (2) list the standin'}
+[b2_planned +138.8s] status {'status': 'idle'}
+[b2_planned] report -> /home/ubuntu/repos/clevin/experiments/B/artifacts/b2_planned/20260828T043404Z-30a359/report.json
+[b1_repeat +153.1s] status {'status': 'idle'}
+[b1_repeat +153.3s] idle {'status': 'idle', 'stop_reason': 'end_turn'}
+[b1_repeat +153.8s] sent {'interrupt': False, 'text': 'Two quick questions before you continue, answer in one line each: (1) what is the release codename? (2) list the standin'}
+[b1_repeat +153.9s] status {'status': 'idle'}
+[b1_repeat] report -> /home/ubuntu/repos/clevin/experiments/B/artifacts/b1_repeat/20260828T043404Z-6dd04a/report.json
+[b4_memory +168.3s] status {'status': 'idle'}
+[b4_memory +168.5s] idle {'status': 'idle', 'stop_reason': 'end_turn'}
+[b4_memory +169.0s] sent {'interrupt': False, 'text': 'Two quick questions before you continue, answer in one line each: (1) what is the release codename? (2) list the standin'}
+[b4_memory +169.2s] status {'status': 'idle'}
+[b4_memory] report -> /home/ubuntu/repos/clevin/experiments/B/artifacts/b4_memory/20260828T043404Z-0b795c/report.json
+{
+  "b3_subagents": {
+    "error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'multiagent.agents: Field required'}, 'request_id': 'req_011CeUXHD125NYL5FjkAr54z'}"
+  },
+  "b1_baseline": {
+    "session": "sesn_014DCfuUvsNpkxGGjQWHEJUQ",
+    "outcome": "pass",
+    "nudges": 0,
+    "score": "4/4",
+    "elapsed_s": 123.7,
+    "list_cost": {
+      "amount": "26",
+      "currency": "USD"
+    },
+    "compactions": 0,
+    "codename_retained": false
+  },
+  "b2_planned": {
+    "session": "sesn_015FewBkngdUWXbEJ6A27EZ6",
+    "outcome": "pass",
+    "nudges": 0,
+    "score": "4/4",
+    "elapsed_s": 139.0,
+    "list_cost": {
+      "amount": "28",
+      "currency": "USD"
+    },
+    "compactions": 0,
+    "codename_retained": false
+  },
+  "b1_repeat": {
+    "session": "sesn_011Kqdd2zcwVzwdMMcDYTXbX",
+    "outcome": "pass",
+    "nudges": 0,
+    "score": "4/4",
+    "elapsed_s": 154.1,
+    "list_cost": {
+      "amount": "32",
+      "currency": "USD"
+    },
+    "compactions": 0,
+    "codename_retained": false
+  },
+  "b4_memory": {
+    "session": "sesn_017GjF4Zxx8KP2mkfq7PxbEG",
+    "outcome": "pass",
+    "nudges": 0,
+    "score": "4/4",
+    "elapsed_s": 169.4,
+    "list_cost": {
+      "amount": "36",
+      "currency": "USD"
+    },
+    "compactions": 0,
+    "codename_retained": false
+  }
+}

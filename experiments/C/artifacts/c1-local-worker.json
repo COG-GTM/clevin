@@ -1,0 +1,296 @@
+{
+  "session": {
+    "id": "sesn_013yaVScLsvs18vgZxN3BDxd",
+    "agent": {
+      "id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+      "description": "Temporary workstream C reliability/tool-surface harness agent.",
+      "mcp_servers": [],
+      "model": {
+        "id": "claude-haiku-4-5-20251001",
+        "effort": null,
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": null,
+      "name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "skills": [],
+      "system": "You are a reliability test harness agent. You run inside a self-hosted sandbox with native bash and filesystem tools.\n\nRules:\n- Do exactly what the user message asks, using the fewest tool calls possible.\n- Never use git, never touch anything outside /workspace, never inspect or print environment variables, and never modify external state.\n- When a tool call fails, report the failure verbatim in one short sentence, then decide: retry once only if the error looks transient, otherwise stop and explain.\n- Keep your prose replies to at most three short sentences.\n",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "version": 1
+    },
+    "archived_at": null,
+    "budget": {
+      "max_list_cost": {
+        "amount": "100",
+        "currency": "USD"
+      },
+      "type": "limit"
+    },
+    "created_at": "2026-08-28T02:14:11.807408Z",
+    "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+    "metadata": {
+      "case": "c1-local-worker",
+      "experiment": "clevin-swarm-C"
+    },
+    "outcome_evaluations": [],
+    "resources": [],
+    "stats": {
+      "active_seconds": 2.375,
+      "duration_seconds": 6.366887803
+    },
+    "status": "idle",
+    "title": "clevin-swarm-C c1-local-worker",
+    "type": "session",
+    "updated_at": "2026-08-28T02:14:15.745743Z",
+    "usage": {
+      "active_seconds": 3.049,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 5564
+      },
+      "cache_read_input_tokens": 5364,
+      "input_tokens": 16,
+      "list_cost": {
+        "amount": "1",
+        "currency": "USD"
+      },
+      "output_tokens": 194,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "vault_ids": [],
+    "deployment_id": null
+  },
+  "events": [
+    {
+      "id": "sevt_01775wDKgH6kUkqtSfAoW62a",
+      "processed_at": "2026-08-28T02:14:12.495252Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_012PP4xSUzL6Tz2prfcbSTHN",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:14:12.792397Z",
+      "session_thread_id": "sthr_01B32q7vCNvGoMCSYYg9Ljrc",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01MY74if8sfygjfH9FG4kzjV",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST c1: run exactly one bash command `echo c1 && uname -a && pwd`, report its output verbatim, then stop.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T02:14:12.859946Z"
+    },
+    {
+      "id": "sevt_0162joVxhB5Kma6DHPF251ip",
+      "processed_at": "2026-08-28T02:14:12.859947Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01QmfzyfkEg7LymDDzMHsifa",
+      "processed_at": "2026-08-28T02:14:13.901877Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01FjeGeVsM987NPnXt7CDCPD",
+      "input": {
+        "command": "echo c1 && uname -a && pwd"
+      },
+      "name": "bash",
+      "processed_at": "2026-08-28T02:14:14.149545Z",
+      "type": "agent.tool_use",
+      "evaluated_permission": "allow",
+      "session_thread_id": null
+    },
+    {
+      "id": "sevt_01QwaXBo8JgX99SMtxKazxww",
+      "is_error": false,
+      "model_request_start_id": "sevt_0162joVxhB5Kma6DHPF251ip",
+      "model_usage": {
+        "cache_creation_input_tokens": 5364,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 10,
+        "output_tokens": 122,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:14.149546Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_0164btitaZfbWQFVnzZfmsvc",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:14:14.247522Z",
+      "session_thread_id": "sthr_01B32q7vCNvGoMCSYYg9Ljrc",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_01FjeGeVsM987NPnXt7CDCPD"
+        ],
+        "type": "requires_action"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_015xRD87orjXrGDa2eKHCBK6",
+      "processed_at": "2026-08-28T02:14:14.247523Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 1.564,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5364
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 122,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "100",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_011zxXJXtCbTL3CYHCiBWBNA",
+      "processed_at": "2026-08-28T02:14:14.247524Z",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_01FjeGeVsM987NPnXt7CDCPD"
+        ],
+        "type": "requires_action"
+      },
+      "type": "session.status_idle"
+    },
+    {
+      "id": "sevt_01TayLKCmKQ1BTMV7STbdCHP",
+      "tool_use_id": "sevt_01FjeGeVsM987NPnXt7CDCPD",
+      "type": "user.tool_result",
+      "content": [
+        {
+          "text": "c1\nLinux devin-box 5.15.200 #6 SMP Fri Aug 14 19:23:04 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n/tmp/chaos-workspace",
+          "type": "text"
+        }
+      ],
+      "is_error": false,
+      "processed_at": "2026-08-28T02:14:14.410275Z",
+      "session_thread_id": null
+    },
+    {
+      "id": "sevt_01WELUyTDh814auXdtMUidPN",
+      "processed_at": "2026-08-28T02:14:14.477851Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_01VRFwMsuxgCnckWoQDfaTtJ",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:14:14.477852Z",
+      "session_thread_id": "sthr_01B32q7vCNvGoMCSYYg9Ljrc",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01TWWAMrRZG5pkbanoW7gaW1",
+      "processed_at": "2026-08-28T02:14:14.558687Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01HbhT4k9FRseSxdJooU6upq",
+      "content": [
+        {
+          "text": "Output:\n```\nc1\nLinux devin-box 5.15.200 #6 SMP Fri Aug 14 19:23:04 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n/tmp/chaos-workspace\n```",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:14:15.529666Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01Tva9J1CrW6oUcyH8CviekX",
+      "is_error": false,
+      "model_request_start_id": "sevt_01TWWAMrRZG5pkbanoW7gaW1",
+      "model_usage": {
+        "cache_creation_input_tokens": 200,
+        "cache_read_input_tokens": 5364,
+        "input_tokens": 6,
+        "output_tokens": 72,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:14:15.529667Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_018NzjhJyaykGHHtJmJP85Hk",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:14:15.651252Z",
+      "session_thread_id": "sthr_01B32q7vCNvGoMCSYYg9Ljrc",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01Gi94FJJnCESiCrXhopZ5d4",
+      "processed_at": "2026-08-28T02:14:15.651253Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 2.891,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5564
+        },
+        "cache_read_input_tokens": 5364,
+        "input_tokens": 16,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 194,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "100",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01U37eQY9nXg36NRB8eqM5sq",
+      "processed_at": "2026-08-28T02:14:15.651254Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    }
+  ]
+}

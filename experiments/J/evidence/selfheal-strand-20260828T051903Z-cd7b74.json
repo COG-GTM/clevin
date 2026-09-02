@@ -1,0 +1,272 @@
+{
+  "probe": "strand",
+  "run_id": "20260828T051903Z-cd7b74",
+  "started_at": "2026-08-28T05:19:03.071808+00:00",
+  "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+  "timeline": [
+    {
+      "at": "2026-08-28T05:19:04.279113+00:00",
+      "elapsed_s": 1.2,
+      "event": "session_created",
+      "session_id": "sesn_01CX9iE183wRuii4XNUQmpU9"
+    },
+    {
+      "at": "2026-08-28T05:19:18.572764+00:00",
+      "elapsed_s": 15.5,
+      "event": "work_active",
+      "item": {
+        "id": "sesn_01CX9iE183wRuii4XNUQmpU9",
+        "acknowledged_at": "2026-08-28T05:19:11.238916Z",
+        "created_at": "2026-08-28T05:19:03.766150Z",
+        "data": {
+          "id": "sesn_01CX9iE183wRuii4XNUQmpU9",
+          "type": "session"
+        },
+        "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+        "latest_heartbeat_at": "2026-08-28T05:19:14.109681Z",
+        "metadata": {},
+        "secret": null,
+        "started_at": "2026-08-28T05:19:03.925407Z",
+        "state": "active",
+        "stop_requested_at": null,
+        "stopped_at": null,
+        "type": "work",
+        "actor": null
+      },
+      "modal": {
+        "sandbox_id": "sb-vtjKwjcPn6VmGMQl2TpNpw",
+        "status": "running",
+        "volume_path": "clevin-sessions/sessions/sesn_01CX9iE183wRuii4XNUQmpU9",
+        "volume_entries": []
+      }
+    },
+    {
+      "at": "2026-08-28T05:19:18.780902+00:00",
+      "elapsed_s": 15.7,
+      "event": "tool_in_flight",
+      "pending": {
+        "id": "sevt_01S4bMN4QUbmVYpd56gPmXxE",
+        "input": {
+          "command": "bash -lc 'echo J2-STRAND-START; sleep 90; echo J2-STRAND-END'"
+        },
+        "name": "bash",
+        "processed_at": "2026-08-28T05:19:06.763503Z",
+        "type": "agent.tool_use",
+        "evaluated_permission": "allow",
+        "session_thread_id": null
+      }
+    },
+    {
+      "at": "2026-08-28T05:19:19.294484+00:00",
+      "elapsed_s": 16.2,
+      "event": "sandbox_killed",
+      "killed": {
+        "sandbox_id": "sb-vtjKwjcPn6VmGMQl2TpNpw",
+        "status_before": "running",
+        "status_after": "running"
+      }
+    },
+    {
+      "at": "2026-08-28T05:19:20.754668+00:00",
+      "elapsed_s": 17.7,
+      "event": "work_state",
+      "state": "active",
+      "latest_heartbeat_at": "2026-08-28T05:19:14.109681Z",
+      "stopped_at": null,
+      "session_status": "running",
+      "pending": false,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 3
+      }
+    },
+    {
+      "at": "2026-08-28T05:19:42.250213+00:00",
+      "elapsed_s": 39.2,
+      "event": "work_state",
+      "state": "stopped",
+      "latest_heartbeat_at": "2026-08-28T05:19:14.109681Z",
+      "stopped_at": "2026-08-28T05:19:19.565414Z",
+      "session_status": "idle",
+      "pending": false,
+      "queue": {
+        "depth": 0,
+        "oldest_queued_at": null,
+        "pending": 0,
+        "type": "work_queue_stats",
+        "workers_polling": 3
+      }
+    },
+    {
+      "at": "2026-08-28T05:19:42.250306+00:00",
+      "elapsed_s": 39.2,
+      "event": "detection",
+      "detected": true,
+      "seconds_from_kill_to_stopped": 23.0,
+      "stop_after_last_heartbeat_s": 5.5
+    },
+    {
+      "at": "2026-08-28T05:23:43.055277+00:00",
+      "elapsed_s": 280.0,
+      "event": "reclaim",
+      "reclaim_older_than_ms": 1000,
+      "seconds_polled": 240.8,
+      "offers": [],
+      "own_item_reoffered": false
+    },
+    {
+      "at": "2026-08-28T05:23:43.871285+00:00",
+      "elapsed_s": 280.8,
+      "event": "webhook_replay",
+      "status": 200,
+      "body": "{\"status\":\"ok\",\"event_type\":\"session.status_run_started\",\"spawned\":[]}"
+    },
+    {
+      "at": "2026-08-28T05:26:45.937732+00:00",
+      "elapsed_s": 462.9,
+      "event": "webhook_replay_result",
+      "response": {
+        "status": 200,
+        "body": "{\"status\":\"ok\",\"event_type\":\"session.status_run_started\",\"spawned\":[]}"
+      },
+      "events_before": 19,
+      "events_after": 19,
+      "still_pending": false,
+      "session_status": "idle",
+      "modal": {
+        "sandbox_id": null,
+        "status": "stopped",
+        "volume_path": "clevin-sessions/sessions/sesn_01CX9iE183wRuii4XNUQmpU9",
+        "volume_entries": []
+      }
+    },
+    {
+      "at": "2026-08-28T05:26:46.548877+00:00",
+      "elapsed_s": 463.5,
+      "event": "conclusion",
+      "platform_detects_dead_worker": true,
+      "platform_reoffers_work": false,
+      "webhook_replay_redispatches": false,
+      "session_still_stranded": false,
+      "last_idle_stop": {
+        "type": "end_turn"
+      },
+      "final_status": "idle",
+      "final_usage": {
+        "amount": "0",
+        "currency": "USD"
+      }
+    }
+  ],
+  "session_id": "sesn_01CX9iE183wRuii4XNUQmpU9",
+  "killed": {
+    "sandbox_id": "sb-vtjKwjcPn6VmGMQl2TpNpw",
+    "status_before": "running",
+    "status_after": "running"
+  },
+  "detection": {
+    "detected": true,
+    "seconds_from_kill_to_stopped": 23.0,
+    "stop_after_last_heartbeat_s": 5.5,
+    "item": {
+      "id": "sesn_01CX9iE183wRuii4XNUQmpU9",
+      "acknowledged_at": "2026-08-28T05:19:11.238916Z",
+      "created_at": "2026-08-28T05:19:03.766150Z",
+      "data": {
+        "id": "sesn_01CX9iE183wRuii4XNUQmpU9",
+        "type": "session"
+      },
+      "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+      "latest_heartbeat_at": "2026-08-28T05:19:14.109681Z",
+      "metadata": {},
+      "secret": null,
+      "started_at": "2026-08-28T05:19:03.925407Z",
+      "state": "stopped",
+      "stop_requested_at": "2026-08-28T05:19:19.565414Z",
+      "stopped_at": "2026-08-28T05:19:19.565414Z",
+      "type": "work",
+      "actor": null
+    }
+  },
+  "reclaim": {
+    "reclaim_older_than_ms": 1000,
+    "seconds_polled": 240.8,
+    "offers": [],
+    "own_item_reoffered": false
+  },
+  "webhook_replay": {
+    "response": {
+      "status": 200,
+      "body": "{\"status\":\"ok\",\"event_type\":\"session.status_run_started\",\"spawned\":[]}"
+    },
+    "events_before": 19,
+    "events_after": 19,
+    "still_pending": false,
+    "session_status": "idle",
+    "work_item": {
+      "id": "sesn_01CX9iE183wRuii4XNUQmpU9",
+      "acknowledged_at": "2026-08-28T05:19:11.238916Z",
+      "created_at": "2026-08-28T05:19:03.766150Z",
+      "data": {
+        "id": "sesn_01CX9iE183wRuii4XNUQmpU9",
+        "type": "session"
+      },
+      "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+      "latest_heartbeat_at": "2026-08-28T05:19:14.109681Z",
+      "metadata": {},
+      "secret": null,
+      "started_at": "2026-08-28T05:19:03.925407Z",
+      "state": "stopped",
+      "stop_requested_at": "2026-08-28T05:19:19.565414Z",
+      "stopped_at": "2026-08-28T05:19:19.565414Z",
+      "type": "work",
+      "actor": null
+    },
+    "modal": {
+      "sandbox_id": null,
+      "status": "stopped",
+      "volume_path": "clevin-sessions/sessions/sesn_01CX9iE183wRuii4XNUQmpU9",
+      "volume_entries": []
+    }
+  },
+  "conclusion": {
+    "platform_detects_dead_worker": true,
+    "platform_reoffers_work": false,
+    "webhook_replay_redispatches": false,
+    "session_still_stranded": false,
+    "last_idle_stop": {
+      "type": "end_turn"
+    },
+    "final_status": "idle",
+    "final_usage": {
+      "amount": "0",
+      "currency": "USD"
+    }
+  },
+  "final_modal_state": {
+    "sandbox_id": null,
+    "status": "stopped",
+    "volume_path": "clevin-sessions/sessions/sesn_01CX9iE183wRuii4XNUQmpU9",
+    "volume_entries": []
+  },
+  "cleanup_ledger": [
+    {
+      "kind": "agent",
+      "id": "agent_01Hj4dcUHbb5jkJ7D3ctWqxo",
+      "name": "clevin-swarm-J2-strand-20260828T051903Z-cd7b74",
+      "created_at": "2026-08-28T05:19:03.373460+00:00",
+      "cleanup": "archived"
+    },
+    {
+      "kind": "session",
+      "id": "sesn_01CX9iE183wRuii4XNUQmpU9",
+      "name": "J2/strand",
+      "created_at": "2026-08-28T05:19:04.279097+00:00",
+      "cleanup": "retained as evidence (stranded, no live compute)"
+    }
+  ],
+  "finished_at": "2026-08-28T05:26:47.168922+00:00"
+}

@@ -1,0 +1,111 @@
+{
+  "experiment": "h6_polling_wake",
+  "started_at": "2026-08-28T02:21:15.958295+00:00",
+  "finished_at": "2026-08-28T02:23:21.557917+00:00",
+  "observations": [
+    {
+      "at": "2026-08-28T02:21:16.368255+00:00",
+      "label": "agent.created",
+      "agent_id": "agent_018PPXS1K6jwqXd5CTiADYKp",
+      "version": 1,
+      "name": "clevin-swarm-H-20260828T022115Z-bc7ec6-h6-poller"
+    },
+    {
+      "at": "2026-08-28T02:21:16.694640+00:00",
+      "label": "deployment.created",
+      "deployment_id": "depl_01DfMVvFyLrbDTMUozvTLCND",
+      "marker": "H6-20260828T022115Z",
+      "vault_ids": [
+        "vlt_011CeLyihmq1GNjHGxvtWw1q"
+      ]
+    },
+    {
+      "at": "2026-08-28T02:22:02.426197+00:00",
+      "label": "baseline.runs",
+      "count": 1
+    },
+    {
+      "at": "2026-08-28T02:22:18.005158+00:00",
+      "label": "baseline.session",
+      "session_id": "sesn_012vJtDMGa3ah2qvLQcgiH2a",
+      "status": "idle",
+      "text": [
+        "user.message: Search Linear for issues whose title contains the exact string `H6-20260828T022115Z`. Reply with `ORG <linear organization or workspace name>` on the first line, then exactly `FOUND <identifier>` for each match, or the single word `NONE` if there are no matches. Read-only; change nothing.",
+        "agent.mcp_tool_result: {\"id\":\"330d09fb-9e3f-4639-b97c-22ede870bbd9\",\"name\":\"Humza Sandbox\",\"url\":\"https://linear.app/humza-sandbox\"}",
+        "agent.mcp_tool_result: {\"issues\":[],\"hasNextPage\":false}",
+        "agent.message: ORG Humza Sandbox\nNONE"
+      ]
+    },
+    {
+      "at": "2026-08-28T02:22:18.417073+00:00",
+      "label": "stimulus.issue_created",
+      "issue": {
+        "id": "551d351f-befe-453b-82f7-2ad6564db162",
+        "identifier": "HUM-15",
+        "title": "H6-20260828T022115Z clevin-swarm-H polling probe (delete me)",
+        "createdAt": "2026-08-28T02:22:18.416Z"
+      },
+      "injected_at": "2026-08-28T02:22:18.417060+00:00"
+    },
+    {
+      "at": "2026-08-28T02:23:19.466977+00:00",
+      "label": "poll.run",
+      "run_id": "drun_01RbxfYy56obzfPxzmJcz5gy",
+      "session_id": "sesn_017ydJewVpnZ42ZP1cE4ujbu",
+      "run_created_at": "2026-08-28 02:23:05.650085+00:00",
+      "seconds_after_stimulus": 47.233025,
+      "session_status": "idle",
+      "detected": true,
+      "text": [
+        "user.message: Search Linear for issues whose title contains the exact string `H6-20260828T022115Z`. Reply with `ORG <linear organization or workspace name>` on the first line, then exactly `FOUND <identifier>` for each match, or the single word `NONE` if there are no matches. Read-only; change nothing.",
+        "agent.mcp_tool_result: {\"id\":\"330d09fb-9e3f-4639-b97c-22ede870bbd9\",\"name\":\"Humza Sandbox\",\"url\":\"https://linear.app/humza-sandbox\"}",
+        "agent.mcp_tool_result: {\"issues\":[{\"id\":\"HUM-15\",\"title\":\"H6-20260828T022115Z clevin-swarm-H polling probe (delete me)\",\"description\":\"Temporary issue created by the Clevin Managed Agents swarm, workstream H, to measure deployment polling latency. Safe to delete.\",\"priority\":{\"value\":0,\"name\":\"No priority\"},\"url\":\"https://linear.app/humza-sandbox/issue/HUM-15/h6-20260828t022115z-clevin-swarm-h-polling-probe-delete-me\",\"gitBranchName\":\"humzarabbani/hum-15-h6-20260828t022115z-clevin-swarm-h-polling-probe-delete-me\",\"createdAt\":\"2026-08-28T02:22:18.416Z\",\"updatedAt\":\"2026-08-28T02:22:18.416Z\",\"archivedAt\":null,\"completedAt\":null,\"startedAt\":null,\"canceledAt\":null,\"dueDate\":null,\"slaStartedAt\":null,\"slaMediumRiskAt\":null,\"slaHighRiskAt\":null,\"slaBreachesAt\":null,\"status\":\"Backlog\",\"statusType\":\"backlog\",\"labels\":[],\"createdBy\":\"humza.rabbani@cognition.ai\",\"createdById\":\"b715886e-67b8-4cdc-a70d-67e4358d8d8e\",\"team\":\"Humza Sandbox\",\"teamId\":\"527775fc-571b-4d16-bb3b-f8d6e1975013\"}],\"hasNextPage\":false}",
+        "agent.message: ORG Humza Sandbox\nFOUND HUM-15"
+      ]
+    },
+    {
+      "at": "2026-08-28T02:23:19.467039+00:00",
+      "label": "detection.latency",
+      "run_id": "drun_01RbxfYy56obzfPxzmJcz5gy",
+      "seconds_from_issue_creation": 61.049977,
+      "cron": "* * * * *"
+    }
+  ],
+  "cleanup": [
+    {
+      "at": "2026-08-28T02:23:19.829731+00:00",
+      "kind": "linear_issue",
+      "id": "HUM-15",
+      "action": "delete",
+      "result": "{\"data\": {\"issueDelete\": {\"success\": true}}}"
+    },
+    {
+      "at": "2026-08-28T02:23:20.092065+00:00",
+      "kind": "deployment",
+      "id": "depl_01DfMVvFyLrbDTMUozvTLCND",
+      "action": "archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:23:20.777585+00:00",
+      "kind": "session",
+      "id": "sesn_017ydJewVpnZ42ZP1cE4ujbu",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:23:21.323189+00:00",
+      "kind": "session",
+      "id": "sesn_012vJtDMGa3ah2qvLQcgiH2a",
+      "action": "interrupt+archive",
+      "result": "archived"
+    },
+    {
+      "at": "2026-08-28T02:23:21.557834+00:00",
+      "kind": "agent",
+      "id": "agent_018PPXS1K6jwqXd5CTiADYKp",
+      "action": "archive",
+      "result": "archived"
+    }
+  ]
+}

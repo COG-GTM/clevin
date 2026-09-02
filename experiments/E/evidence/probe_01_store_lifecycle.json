@@ -1,0 +1,152 @@
+{
+  "probe": "probe_01_store_lifecycle",
+  "started_at": "2026-08-28T02:07:59.000320+00:00",
+  "finished_at": "2026-08-28T02:08:03.103169+00:00",
+  "observations": [
+    {
+      "label": "created",
+      "at": "2026-08-28T02:07:59.639994+00:00",
+      "store_id": "memstore_011hMQ2TvJvQ5pMe2CiLAp8p",
+      "name": "clevin-swarm-E-20260828T020759Z-0d6241-lifecycle",
+      "derived_slug_guess": "clevin-swarm-e-20260828t020759z-0d6241-lifecycle",
+      "fields": [
+        "archived_at",
+        "created_at",
+        "description",
+        "id",
+        "metadata",
+        "name",
+        "type",
+        "updated_at"
+      ],
+      "description": "Temporary store for workstream E lifecycle probing.",
+      "archived_at": null
+    },
+    {
+      "label": "retrieved",
+      "at": "2026-08-28T02:07:59.810776+00:00",
+      "store_id": "memstore_011hMQ2TvJvQ5pMe2CiLAp8p",
+      "equal_to_created": true
+    },
+    {
+      "label": "declarative_surface",
+      "at": "2026-08-28T02:07:59.810818+00:00",
+      "create_params": [
+        "name",
+        "description",
+        "metadata"
+      ],
+      "update_params": [
+        "name",
+        "description",
+        "metadata"
+      ],
+      "no_scope_field": true,
+      "note": "No repo/task scope, no auto-selection predicate, no per-path ACL in the store object."
+    },
+    {
+      "label": "renamed",
+      "at": "2026-08-28T02:08:00.114606+00:00",
+      "store_id": "memstore_011hMQ2TvJvQ5pMe2CiLAp8p",
+      "new_name": "clevin-swarm-E-20260828T020759Z-0d6241-lifecycle-renamed",
+      "new_slug_guess": "clevin-swarm-e-20260828t020759z-0d6241-lifecycle-renamed",
+      "metadata_after_patch": {
+        "experiment": "clevin-native-primitives",
+        "probe": "01",
+        "swarm_workstream": "E"
+      },
+      "note": "Metadata patch semantics: keys upserted, omitted keys preserved, null deletes."
+    },
+    {
+      "label": "metadata_key_deleted",
+      "at": "2026-08-28T02:08:00.315482+00:00",
+      "metadata": {
+        "experiment": "clevin-native-primitives",
+        "swarm_workstream": "E"
+      }
+    },
+    {
+      "label": "listed_active",
+      "at": "2026-08-28T02:08:00.742777+00:00",
+      "contains_probe_store": true,
+      "active_store_count_first_page": 2
+    },
+    {
+      "label": "wrote_memory_before_archive",
+      "at": "2026-08-28T02:08:01.098229+00:00",
+      "paths": [
+        "/probe01/note.md"
+      ]
+    },
+    {
+      "label": "archived",
+      "at": "2026-08-28T02:08:01.299108+00:00",
+      "store_id": "memstore_011hMQ2TvJvQ5pMe2CiLAp8p",
+      "archived_at": "2026-08-28 02:08:01.289074+00:00"
+    },
+    {
+      "label": "archive_visibility",
+      "at": "2026-08-28T02:08:01.606147+00:00",
+      "hidden_from_default_list": true,
+      "visible_with_include_archived": true
+    },
+    {
+      "label": "read_memories_after_archive",
+      "at": "2026-08-28T02:08:01.758327+00:00",
+      "outcome": "ok"
+    },
+    {
+      "label": "write_memory_after_archive",
+      "at": "2026-08-28T02:08:01.938834+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'cannot modify archived resource: memory store memstore_011hMQ2TvJvQ5pMe2CiLAp8p'}, 'request_id': 'req_011CeUL9G4oaEcos55fhVpdZ'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "cannot modify archived resource: memory store memstore_011hMQ2TvJvQ5pMe2CiLAp8p"
+    },
+    {
+      "label": "update_archived_store",
+      "at": "2026-08-28T02:08:02.547000+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'cannot modify archived resource: memory store memstore_011hMQ2TvJvQ5pMe2CiLAp8p'}, 'request_id': 'req_011CeUL9HSQLvjc2NYo6na8Q'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "cannot modify archived resource: memory store memstore_011hMQ2TvJvQ5pMe2CiLAp8p"
+    },
+    {
+      "label": "unarchive_via_update",
+      "at": "2026-08-28T02:08:02.735222+00:00",
+      "outcome": "rejected",
+      "error_class": "BadRequestError",
+      "message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'cannot modify archived resource: memory store memstore_011hMQ2TvJvQ5pMe2CiLAp8p'}, 'request_id': 'req_011CeUL9KXQvyk4CDte36Kty'}",
+      "status_code": 400,
+      "api_error_type": "invalid_request_error",
+      "api_error_message": "cannot modify archived resource: memory store memstore_011hMQ2TvJvQ5pMe2CiLAp8p"
+    },
+    {
+      "label": "deleted",
+      "at": "2026-08-28T02:08:02.967410+00:00",
+      "outcome": "ok"
+    },
+    {
+      "label": "retrieve_after_delete",
+      "at": "2026-08-28T02:08:03.103033+00:00",
+      "outcome": "rejected",
+      "error_class": "NotFoundError",
+      "message": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'memory store not found: memstore_011hMQ2TvJvQ5pMe2CiLAp8p'}, 'request_id': 'req_011CeUL9M8AfRukLea6VoL1P'}",
+      "status_code": 404,
+      "api_error_type": "not_found_error",
+      "api_error_message": "memory store not found: memstore_011hMQ2TvJvQ5pMe2CiLAp8p"
+    }
+  ],
+  "cleanup": [
+    {
+      "resource": "memory_store memstore_011hMQ2TvJvQ5pMe2CiLAp8p (clevin-swarm-E-20260828T020759Z-0d6241-lifecycle)",
+      "action": "archive + delete",
+      "result": "deleted",
+      "at": "2026-08-28T02:08:02.967459+00:00"
+    }
+  ]
+}

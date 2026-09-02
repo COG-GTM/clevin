@@ -1,0 +1,296 @@
+{
+  "session": {
+    "id": "sesn_01LP1pjukhvc8V5FPw3QA44w",
+    "agent": {
+      "id": "agent_01CDtid4b87nEjESmYBPAE9Y",
+      "description": "Temporary workstream C reliability/tool-surface harness agent.",
+      "mcp_servers": [],
+      "model": {
+        "id": "claude-haiku-4-5-20251001",
+        "effort": null,
+        "inference_geo": null,
+        "speed": "standard"
+      },
+      "multiagent": null,
+      "name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "skills": [],
+      "system": "You are a reliability test harness agent. You run inside a self-hosted sandbox with native bash and filesystem tools.\n\nRules:\n- Do exactly what the user message asks, using the fewest tool calls possible.\n- Never use git, never touch anything outside /workspace, never inspect or print environment variables, and never modify external state.\n- When a tool call fails, report the failure verbatim in one short sentence, then decide: retry once only if the error looks transient, otherwise stop and explain.\n- Keep your prose replies to at most three short sentences.\n",
+      "tools": [
+        {
+          "configs": [],
+          "default_config": {
+            "enabled": true,
+            "permission_policy": {
+              "type": "always_allow"
+            }
+          },
+          "type": "agent_toolset_20260401"
+        }
+      ],
+      "type": "agent",
+      "version": 1
+    },
+    "archived_at": null,
+    "budget": {
+      "max_list_cost": {
+        "amount": "100",
+        "currency": "USD"
+      },
+      "type": "limit"
+    },
+    "created_at": "2026-08-28T02:22:56.501769Z",
+    "environment_id": "env_0152FZKRpy9f8uVw38Guzosy",
+    "metadata": {
+      "case": "c2-tool-hang",
+      "experiment": "clevin-swarm-C"
+    },
+    "outcome_evaluations": [],
+    "resources": [],
+    "stats": {
+      "active_seconds": 2.827,
+      "duration_seconds": 158.95368685
+    },
+    "status": "idle",
+    "title": "clevin-swarm-C c2-tool-hang",
+    "type": "session",
+    "updated_at": "2026-08-28T02:25:31.332390Z",
+    "usage": {
+      "active_seconds": 3.804,
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 5554
+      },
+      "cache_read_input_tokens": 5369,
+      "input_tokens": 17,
+      "list_cost": {
+        "amount": "1",
+        "currency": "USD"
+      },
+      "output_tokens": 204,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      }
+    },
+    "vault_ids": [],
+    "deployment_id": null
+  },
+  "events": [
+    {
+      "id": "sevt_01HpiX2jywqgjQ26pwVtERsi",
+      "processed_at": "2026-08-28T02:22:57.047551Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_015VFzwEvFynBs1HcHP7dBbp",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:22:57.491229Z",
+      "session_thread_id": "sthr_01L7Cofq7RD19nqB5FQVDJh6",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01USptdVs2ZQcJcQcuN4UvXo",
+      "content": [
+        {
+          "text": "CLEVIN_SMOKE_TEST c2: run exactly one bash command `echo CHAOS-hang`, report what happened including any tool error text verbatim, then stop. Retry at most once.",
+          "type": "text"
+        }
+      ],
+      "type": "user.message",
+      "processed_at": "2026-08-28T02:22:57.597868Z"
+    },
+    {
+      "id": "sevt_01TyFMkLL6Hrs932Nh3S9Xgy",
+      "processed_at": "2026-08-28T02:22:57.597869Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_016BbMjHUhXQLmdYXxRUdq88",
+      "processed_at": "2026-08-28T02:22:58.983159Z",
+      "type": "agent.thinking"
+    },
+    {
+      "id": "sevt_01CeoNUUJzvnqp7JgTU5wLD1",
+      "input": {
+        "command": "echo CHAOS-hang"
+      },
+      "name": "bash",
+      "processed_at": "2026-08-28T02:22:59.220708Z",
+      "type": "agent.tool_use",
+      "evaluated_permission": "allow",
+      "session_thread_id": null
+    },
+    {
+      "id": "sevt_01SFGUjc9JAd2owLqtaVfUZR",
+      "is_error": false,
+      "model_request_start_id": "sevt_01TyFMkLL6Hrs932Nh3S9Xgy",
+      "model_usage": {
+        "cache_creation_input_tokens": 5369,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 10,
+        "output_tokens": 154,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:22:59.220709Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01Ft5XiYfoC7h1MZBJcy5h7T",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:22:59.342918Z",
+      "session_thread_id": "sthr_01L7Cofq7RD19nqB5FQVDJh6",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_01CeoNUUJzvnqp7JgTU5wLD1"
+        ],
+        "type": "requires_action"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_01AoA4fUTqnGnMsL7KahKkSa",
+      "processed_at": "2026-08-28T02:22:59.342919Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 2.049,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5369
+        },
+        "cache_read_input_tokens": 0,
+        "input_tokens": 10,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 154,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "100",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01HP21qCBh7R6w3AvRgFfZqr",
+      "processed_at": "2026-08-28T02:22:59.342920Z",
+      "stop_reason": {
+        "event_ids": [
+          "sevt_01CeoNUUJzvnqp7JgTU5wLD1"
+        ],
+        "type": "requires_action"
+      },
+      "type": "session.status_idle"
+    },
+    {
+      "id": "sevt_01DDYQx8U1MY83aAcL7aQrZ2",
+      "tool_use_id": "sevt_01CeoNUUJzvnqp7JgTU5wLD1",
+      "type": "user.tool_result",
+      "content": [
+        {
+          "text": "tool 'bash' timed out",
+          "type": "text"
+        }
+      ],
+      "is_error": true,
+      "processed_at": "2026-08-28T02:25:29.822821Z",
+      "session_thread_id": null
+    },
+    {
+      "id": "sevt_01CuanSZEt3uB7JKrSrt3zUc",
+      "processed_at": "2026-08-28T02:25:29.919555Z",
+      "type": "session.status_running"
+    },
+    {
+      "id": "sevt_01N8BAShDSp5Me2arpBV13Hx",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:25:29.919556Z",
+      "session_thread_id": "sthr_01L7Cofq7RD19nqB5FQVDJh6",
+      "type": "session.thread_status_running"
+    },
+    {
+      "id": "sevt_01TpiD7sAHmuaeaW2pCnM4U8",
+      "processed_at": "2026-08-28T02:25:30.007808Z",
+      "type": "span.model_request_start"
+    },
+    {
+      "id": "sevt_01XYF97XFCC5GHZVPfeW8Z1t",
+      "content": [
+        {
+          "text": "The bash tool timed out with error \"tool 'bash' timed out\". This looks like the command hung as expected from the test name. Stopping as requested\u2014no retry since this appears to be the intended behavior.",
+          "type": "text"
+        }
+      ],
+      "processed_at": "2026-08-28T02:25:31.118650Z",
+      "type": "agent.message"
+    },
+    {
+      "id": "sevt_01KYPGuZpDBdoMbwbcjRZJ2Z",
+      "is_error": false,
+      "model_request_start_id": "sevt_01TpiD7sAHmuaeaW2pCnM4U8",
+      "model_usage": {
+        "cache_creation_input_tokens": 185,
+        "cache_read_input_tokens": 5369,
+        "input_tokens": 7,
+        "output_tokens": 50,
+        "speed": null
+      },
+      "processed_at": "2026-08-28T02:25:31.118651Z",
+      "type": "span.model_request_end"
+    },
+    {
+      "id": "sevt_01UpXUJPnHe7kRYLRXdvvZNo",
+      "agent_name": "clevin-swarm-C-20260828T021326Z-63059d",
+      "processed_at": "2026-08-28T02:25:31.228645Z",
+      "session_thread_id": "sthr_01L7Cofq7RD19nqB5FQVDJh6",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.thread_status_idle"
+    },
+    {
+      "id": "sevt_014vUjBNPwQgBK1yTj3hh25b",
+      "processed_at": "2026-08-28T02:25:31.228646Z",
+      "type": "session.usage",
+      "usage": {
+        "active_seconds": 3.653,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5554
+        },
+        "cache_read_input_tokens": 5369,
+        "input_tokens": 17,
+        "list_cost": {
+          "amount": "1",
+          "currency": "USD"
+        },
+        "output_tokens": 204,
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      },
+      "budget": {
+        "max_list_cost": {
+          "amount": "100",
+          "currency": "USD"
+        },
+        "type": "limit"
+      }
+    },
+    {
+      "id": "sevt_01FSD6MtsovjhhyX87Z7Ltzx",
+      "processed_at": "2026-08-28T02:25:31.228647Z",
+      "stop_reason": {
+        "type": "end_turn"
+      },
+      "type": "session.status_idle"
+    }
+  ]
+}

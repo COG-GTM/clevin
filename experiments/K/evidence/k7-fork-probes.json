@@ -1,0 +1,84 @@
+{
+  "source_session_id": "sesn_012k3LBeNTwXqU63chmX7HeD",
+  "sdk_surface": {
+    "sessions_methods": [
+      "archive",
+      "create",
+      "delete",
+      "list",
+      "retrieve",
+      "update"
+    ],
+    "sessions_subresources": [
+      "events",
+      "resources",
+      "threads",
+      "with_raw_response",
+      "with_streaming_response"
+    ],
+    "create_params": [
+      "agent",
+      "betas",
+      "budget",
+      "environment_id",
+      "initial_events",
+      "metadata",
+      "resources",
+      "title",
+      "vault_ids"
+    ],
+    "initial_event_types": [
+      "user.message",
+      "user.define_outcome"
+    ]
+  },
+  "rest_probes": [
+    {
+      "path": "/v1/sessions/sesn_012k3LBeNTwXqU63chmX7HeD/fork",
+      "method": "POST",
+      "status": 404,
+      "body": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"Not Found\"},\"request_id\":\"req_011CeULGfnXEayuZBWJYwYDR\"}\n"
+    },
+    {
+      "path": "/v1/sessions/sesn_012k3LBeNTwXqU63chmX7HeD/branch",
+      "method": "POST",
+      "status": 404,
+      "body": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"Not Found\"},\"request_id\":\"req_011CeULGgMzujZMz98aonEGK\"}\n"
+    },
+    {
+      "path": "/v1/sessions/sesn_012k3LBeNTwXqU63chmX7HeD/copy",
+      "method": "POST",
+      "status": 404,
+      "body": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"Not Found\"},\"request_id\":\"req_011CeULGgyTYccv1PgZtdcZC\"}\n"
+    },
+    {
+      "path": "/v1/sessions/sesn_012k3LBeNTwXqU63chmX7HeD/checkpoints",
+      "method": "POST",
+      "status": 404,
+      "body": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"Not Found\"},\"request_id\":\"req_011CeULGhXghMqkmAFF5DHFR\"}\n"
+    },
+    {
+      "path": "/v1/sessions/sesn_012k3LBeNTwXqU63chmX7HeD/checkpoints",
+      "method": "GET",
+      "status": 404,
+      "body": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"Not Found\"},\"request_id\":\"req_011CeULGiAeB3ixT2PXrmYNu\"}\n"
+    },
+    {
+      "path": "/v1/sessions",
+      "method": "POST",
+      "status": 400,
+      "body": "{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Failed to parse request body: unknown field \\\"fork_from_session_id\\\"\"},\"request_id\":\"req_011CeULGip5NnmUtgQnwnYo9\"}"
+    },
+    {
+      "path": "/v1/sessions",
+      "method": "POST",
+      "status": 400,
+      "body": "{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Failed to parse request body: unknown field \\\"source_session_id\\\"\"},\"request_id\":\"req_011CeULGjQYkvRjhwhfdL4Q8\"}"
+    }
+  ],
+  "agent_side_initial_event": {
+    "accepted": false,
+    "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Failed to parse request: initial_events[0].type: \"agent.message\" is not a valid value'}, 'request_id': 'req_011CeULGk2FwnAM98vDpP7Ns'}"
+  },
+  "digest_restart_session_id": "sesn_01DJBUKKDatCWuxSsURg3uMr"
+}
