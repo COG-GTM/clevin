@@ -1,0 +1,76 @@
+// Clevin architecture. Edit this file, then run ./render.sh to refresh
+// architecture.png and architecture.svg.
+digraph clevin {
+  graph [rankdir=TB, fontname="DejaVu Sans", fontsize=18, labelloc=t,
+         label="Clevin: one Linear ticket -> one CI-green PR on Claude Managed Agents + Modal",
+         nodesep=0.45, ranksep=0.6, newrank=true, pad=0.3];
+  node  [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=16,
+         fillcolor=white, color="#555555", margin="0.18,0.08"];
+  edge  [fontname="DejaVu Sans", fontsize=13, color="#444444"];
+
+  subgraph cluster_operator {
+    label="Operator machine (this repo)"; style="rounded,filled"; fillcolor="#eef4ff"; color="#7a9cd6";
+    env      [label="Root .env\n(.env.example)", shape=note, fillcolor="#fffbe6"];
+    provision[label="Provision CLI\npackages/provision (TypeScript)\npnpm --filter @clevin/provision provision"];
+    imagebuild[label="Image builder\nsandbox_image.py\nmodal run"];
+    cli      [label="Terminal client\nclevin TICKET-ID | --resume SESSION-ID\nclient.py + agent_runtime.py + event_view.py"];
+  }
+
+  subgraph cluster_anthropic {
+    label="Anthropic Claude Managed Agents (control plane)"; style="rounded,filled"; fillcolor="#fff1e6"; color="#d69a6a";
+    agent    [label="Agent\nclaude-opus-5, effort medium\nticket-to-green-PR system prompt"];
+    session  [label="Session + event log\nbudget, metadata, initial user.message"];
+    envq     [label="Self-hosted Environment\nwork queue (session work items)"];
+    vault    [label="Vault\nLinear + GitHub static bearer credentials"];
+    memstore [label="Memory store\n\"Clevin Repository Learnings\""];
+    hook     [label="Webhook subscription\nsession.status_run_started"];
+    {rank=same; agent; vault; memstore;}
+    {rank=same; session; envq; hook;}
+  }
+
+  subgraph cluster_mcp {
+    label="Remote MCP servers"; style="rounded,filled"; fillcolor="#f3eefc"; color="#9b7ad6";
+    linear   [label="Linear MCP\nmcp.linear.app/mcp"];
+    ghmcp    [label="GitHub MCP\napi.githubcopilot.com/mcp/"];
+  }
+
+  subgraph cluster_modal {
+    label="Modal (app \"clevin\")"; style="rounded,filled"; fillcolor="#ecf8ee"; color="#6aae78";
+    secret   [label="Secret clevin-runtime\n(runtime/.modal-secret.env)", shape=note, fillcolor="#fffbe6"];
+    webhook  [label="webhook function (POST)\nmodal_app.py -> claude_webhook_handler.py\nverify signature, drain queue"];
+    image    [label="Sandbox image\nDebian + git + uv deps\nentrypoint sandbox_entrypoint.py"];
+    sandbox  [label="Per-session Sandbox (named by session ID)\nEnvironmentWorker.handle_item()\nlocal bash / file tools, 3600 s timeout"];
+    volume   [label="Volume clevin-sessions\n/sessions/<session-id> -> /workspace", shape=cylinder];
+    {rank=same; secret; webhook; image;}
+  }
+
+  github [label="GitHub repositories\n(git clone / push over HTTPS)", fillcolor="#f2f2f2"];
+
+  env -> provision [label="secrets + optional IDs"];
+  env -> cli [label="client IDs"];
+  provision -> agent [label="create / update"];
+  provision -> envq [label="create / update"];
+  provision -> vault [label="create / update"];
+  provision -> memstore [label="create / update"];
+  imagebuild -> image [label="build"];
+  imagebuild -> env [label="writes SANDBOX_IMAGE_ID", style=dashed];
+
+  cli -> session [label="create, replay,\nSSE stream"];
+  cli -> sandbox [label="status lookup", style=dashed];
+  agent -> session [style=dotted, arrowhead=none];
+  session -> envq [label="queue work"];
+  session -> hook [label="run started", style=dotted, arrowhead=none];
+  hook -> webhook [label="signed POST"];
+  secret -> webhook [style=dashed];
+  webhook -> envq [label="poll + ACK\n(drain, non-blocking)"];
+  webhook -> sandbox [label="get_or_create\n+ work secret"];
+  image -> sandbox;
+  volume -> sandbox [label="mount"];
+  sandbox -> session [label="heartbeat, tool_use in,\ntool_result out", dir=both];
+  memstore -> sandbox [label="sync /mnt/memory", dir=both];
+  sandbox -> github [label="git (GITHUB_TOKEN\ncredential helper)"];
+  session -> linear [label="MCP calls\n(server-side)"];
+  session -> ghmcp [label="MCP calls\n(server-side)"];
+  vault -> linear [style=dashed, arrowhead=none];
+  vault -> ghmcp [style=dashed, arrowhead=none];
+}
