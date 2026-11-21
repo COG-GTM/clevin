@@ -84,14 +84,18 @@ These steps create real cloud resources. They follow [AGENTS.md](AGENTS.md).
    `ANTHROPIC_WEBHOOK_SECRET` to `runtime/.modal-secret.env`, and rerun the
    `modal secret create` command from step 6 (not the `install` command, which
    overwrites the file) and step 7 (deploy).
-9. Start a ticket session: `uv run --project runtime clevin ENG-123`.
+9. Point the local Modal SDK at the same environment, then start a ticket
+   session: `export MODAL_ENVIRONMENT=clevin` (or set `environment = "clevin"`
+   in your active Modal profile), then `uv run --project runtime clevin ENG-123`.
+   The client looks up the session's sandbox in that environment; without it,
+   a running sandbox shows as stopped.
    Resume or replay one later with
    `uv run --project runtime clevin --resume SESSION-ID`.
 
 The client prints a resource table (Agent, Environment, Session, Modal
-Sandbox and Volume; the Modal links appear only when `MODAL_WORKSPACE_SLUG` and
-`MODAL_ENVIRONMENT=clevin` are exported in your shell), streams the session's
-events, and prints the final status, usage and budget. Pressing Ctrl+C disconnects the client only; the remote
+Sandbox and Volume; the Modal links appear only when `MODAL_WORKSPACE_SLUG` is
+exported in your shell and the Modal environment is set as in step 9), streams
+the session's events, and prints the final status, usage and budget. Pressing Ctrl+C disconnects the client only; the remote
 session keeps running.
 
 ## Configuration
@@ -104,7 +108,8 @@ session keeps running.
 | `CLEVIN_ENVIRONMENT_ID`, `CLEVIN_VAULT_ID`, `CLEVIN_MEMORY_STORE_ID` | provision (optional), client (required) | client: yes |
 | `CLEVIN_LINEAR_CREDENTIAL_ID`, `CLEVIN_GITHUB_CREDENTIAL_ID` | provision | no |
 | `ANTHROPIC_WORKSPACE_ID` | client, for Claude Console links | no |
-| `MODAL_WORKSPACE_SLUG`, `MODAL_ENVIRONMENT` | client, for Modal dashboard links; read from the shell environment only, not from `.env` | no |
+| `MODAL_WORKSPACE_SLUG` | client, for Modal dashboard links; read from the shell environment only, not from `.env` | no |
+| `MODAL_ENVIRONMENT` | client (Modal SDK), for the sandbox lookup and dashboard links; shell environment or the active Modal profile's `environment`, not `.env` | set to `clevin` |
 | `ANTHROPIC_ENVIRONMENT_ID`, `ANTHROPIC_ENVIRONMENT_KEY`, `ANTHROPIC_WEBHOOK_SECRET`, `SANDBOX_IMAGE_ID`, `GITHUB_TOKEN` | Modal webhook, via the `clevin-runtime` secret | yes |
 
 Values in the process environment override the root `.env` file.

@@ -12,5 +12,5 @@
 - Create or update the named Modal secret: `uv run --project runtime modal secret create clevin-runtime --from-dotenv runtime/.modal-secret.env --force --env clevin`
 - Deploy the Modal webhook: `uv run --project runtime modal deploy runtime/src/clevin_runtime/modal_app.py --env clevin`
 - After registering the Modal URL as an Anthropic `session.status_run_started` webhook, add `ANTHROPIC_WEBHOOK_SECRET` to `runtime/.modal-secret.env`, rerun the secret-create command, and rerun the Modal deploy command.
-- Start a ticket session: `uv run --project runtime clevin TICKET-ID`
+- Start a ticket session (with `MODAL_ENVIRONMENT=clevin` exported so the client finds the sandbox): `uv run --project runtime clevin TICKET-ID`
 - Resume a session: `uv run --project runtime clevin --resume SESSION-ID`
