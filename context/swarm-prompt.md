@@ -208,7 +208,7 @@ uv run --project runtime clevin TICKET-ID          # start a ticket session
 uv run --project runtime clevin --resume SESSION-ID  # resume one
 uv run --project runtime modal app list -e clevin   # Modal control plane (always via uv)
 uv run --project runtime modal deploy runtime/src/clevin_runtime/modal_app.py --env clevin
-uv run --project runtime modal run runtime/src/clevin_runtime/sandbox_image.py  # rebuild the image
+uv run --project runtime modal run --env clevin runtime/src/clevin_runtime/sandbox_image.py  # rebuild the image
 pnpm --filter @clevin/provision provision           # reconcile Anthropic resources — mutates production, see below
 ```
 
