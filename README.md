@@ -64,27 +64,34 @@ These steps create real cloud resources. They follow [AGENTS.md](AGENTS.md).
    same resources instead of creating new ones.
 3. In Claude Console, generate the Environment key for the self-hosted
    Environment and store it; the API cannot return it later.
-4. Build the sandbox image:
-   `uv run --project runtime modal run runtime/src/clevin_runtime/sandbox_image.py`.
+4. Create the Modal environment the app deploys to (once per workspace):
+   `uv run --project runtime modal environment create clevin`. The image
+   build, secret and deploy below all pass `--env clevin`: `modal deploy` looks
+   up the `clevin-runtime` secret in the environment it deploys to, so a secret
+   created in your default environment is not found.
+5. Build the sandbox image:
+   `uv run --project runtime modal run --env clevin runtime/src/clevin_runtime/sandbox_image.py`.
    It prints `SANDBOX_IMAGE_ID` and writes it into `.env` when `.env` exists.
-5. Create the Modal secret file and secret:
+6. Create the Modal secret file and secret:
    `install -m 600 runtime/.env.example runtime/.modal-secret.env`, fill in
    `ANTHROPIC_ENVIRONMENT_ID`, `ANTHROPIC_ENVIRONMENT_KEY`, `SANDBOX_IMAGE_ID`
    and `GITHUB_TOKEN`, then
-   `uv run --project runtime modal secret create clevin-runtime --from-dotenv runtime/.modal-secret.env --force`.
-6. Deploy the webhook:
+   `uv run --project runtime modal secret create clevin-runtime --from-dotenv runtime/.modal-secret.env --force --env clevin`.
+7. Deploy the webhook:
    `uv run --project runtime modal deploy runtime/src/clevin_runtime/modal_app.py --env clevin`.
-7. Register the Modal URL in Anthropic as a webhook for
+8. Register the Modal URL in Anthropic as a webhook for
    `session.status_run_started`, add its signing secret as
-   `ANTHROPIC_WEBHOOK_SECRET` to `runtime/.modal-secret.env`, and rerun steps 5
-   (secret create) and 6 (deploy).
-8. Start a ticket session: `uv run --project runtime clevin ENG-123`.
+   `ANTHROPIC_WEBHOOK_SECRET` to `runtime/.modal-secret.env`, and rerun the
+   `modal secret create` command from step 6 (not the `install` command, which
+   overwrites the file) and step 7 (deploy).
+9. Start a ticket session: `uv run --project runtime clevin ENG-123`.
    Resume or replay one later with
    `uv run --project runtime clevin --resume SESSION-ID`.
 
 The client prints a resource table (Agent, Environment, Session, Modal
-Sandbox and Volume), streams the session's events, and prints the final status,
-usage and budget. Pressing Ctrl+C disconnects the client only; the remote
+Sandbox and Volume; the Modal links appear only when `MODAL_WORKSPACE_SLUG` and
+`MODAL_ENVIRONMENT=clevin` are exported in your shell), streams the session's
+events, and prints the final status, usage and budget. Pressing Ctrl+C disconnects the client only; the remote
 session keeps running.
 
 ## Configuration
@@ -97,7 +104,7 @@ session keeps running.
 | `CLEVIN_ENVIRONMENT_ID`, `CLEVIN_VAULT_ID`, `CLEVIN_MEMORY_STORE_ID` | provision (optional), client (required) | client: yes |
 | `CLEVIN_LINEAR_CREDENTIAL_ID`, `CLEVIN_GITHUB_CREDENTIAL_ID` | provision | no |
 | `ANTHROPIC_WORKSPACE_ID` | client, for Claude Console links | no |
-| `MODAL_WORKSPACE_SLUG` | client, for Modal dashboard links | no |
+| `MODAL_WORKSPACE_SLUG`, `MODAL_ENVIRONMENT` | client, for Modal dashboard links; read from the shell environment only, not from `.env` | no |
 | `ANTHROPIC_ENVIRONMENT_ID`, `ANTHROPIC_ENVIRONMENT_KEY`, `ANTHROPIC_WEBHOOK_SECRET`, `SANDBOX_IMAGE_ID`, `GITHUB_TOKEN` | Modal webhook, via the `clevin-runtime` secret | yes |
 
 Values in the process environment override the root `.env` file.
